@@ -1,0 +1,476 @@
+# Chunks — 2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc.pdf
+
+Tổng: **46** chunk
+
+## 1. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n001`
+- Section: Thông báo tuyển sinh trình độ tiến sĩ năm 2025
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Thông báo tuyển sinh trình độ tiến sĩ năm 2025]
+Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh (Bộ Giao thông vận tải) thông báo tuyển sinh trình độ tiến sĩ năm 2025. Số văn bản: 241115-04/UTH-SĐH, ban hành ngày 15 tháng 11 năm 2024. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 2. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n002`
+- Section: 1.1. Yêu cầu chung đối với người dự tuyển
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 1.1. Yêu cầu chung đối với người dự tuyển]
+Đã tốt nghiệp thạc sĩ hoặc tốt nghiệp đại học hạng giỏi trở lên ngành phù hợp, hoặc tốt nghiệp trình độ tương đương bậc 7 theo Khung trình độ quốc gia Việt Nam ở một số ngành đào tạo chuyên sâu đặc thù phù hợp với ngành đào tạo tiến sĩ. Đáp ứng yêu cầu đầu vào theo chuẩn chương trình đào tạo do Bộ Giáo dục và Đào tạo ban hành và của chương trình đào tạo tiến sĩ đăng ký dự tuyển. Có kinh nghiệm nghiên cứu thể hiện qua luận văn thạc sĩ của chương trình đào tạo định hướng nghiên cứu; hoặc bài báo, báo cáo khoa học đã công bố; hoặc có thời gian công tác từ 02 năm (24 tháng) trở lên là giảng viên, nghiên cứu viên của các cơ sở đào tạo, tổ chức khoa học và công nghệ. Có dự thảo đề cương nghiên cứu và dự kiến kế hoạch học tập, nghiên cứu toàn khóa. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 3. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n003`
+- Section: 1.2. Trình độ ngoại ngữ
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 1.2. Trình độ ngoại ngữ]
+Người dự tuyển là công dân Việt Nam phải đạt yêu cầu về năng lực ngoại ngữ được minh chứng bằng một trong những văn bằng, chứng chỉ sau: Bằng tốt nghiệp trình độ đại học trở lên do một cơ sở đào tạo nước ngoài, phân hiệu của cơ sở đào tạo nước ngoài ở Việt Nam hoặc cơ sở đào tạo của Việt Nam cấp cho người học toàn thời gian bằng tiếng nước ngoài; Bằng tốt nghiệp trình độ đại học ngành ngôn ngữ tiếng nước ngoài do các cơ sở đào tạo của Việt Nam cấp; Có một trong các chứng chỉ ngoại ngữ quy định tại Phụ lục 1 của Thông báo này còn hiệu lực tính đến ngày đăng ký dự tuyển hoặc các chứng chỉ ngoại ngữ khác tương đương trình độ bậc 4 (theo khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam) do Bộ Giáo dục và Đào tạo công bố. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 4. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n004`
+- Section: 1.3. Người dự tuyển là công dân nước ngoài
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 1.3. Người dự tuyển là công dân nước ngoài]
+Nếu đăng ký theo học chương trình đào tạo trình độ tiến sĩ bằng tiếng Việt phải có chứng chỉ tiếng Việt tối thiểu từ bậc 4 trở lên theo Khung năng lực tiếng Việt dùng cho người nước ngoài và phải đáp ứng yêu cầu về ngoại ngữ thứ hai do cơ sở đào tạo quyết định, trừ trường hợp là người bản ngữ của ngôn ngữ được sử dụng trong chương trình đào tạo trình độ tiến sĩ. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 5. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n005`
+- Section: 1.4. Đề cương nghiên cứu
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 1.4. Đề cương nghiên cứu]
+Đề cương nghiên cứu cần cung cấp một cái nhìn toàn diện về các công trình đã được công bố liên quan đến chủ đề nghiên cứu. Cần phải rõ ràng về lý do chọn lựa hướng nghiên cứu, bao gồm mục tiêu cần đạt được, các nhiệm vụ sẽ thực hiện, và những kết quả nghiên cứu dự kiến đạt được. Cần thể hiện rõ năng lực của người dự tuyển thông qua việc mô tả những kinh nghiệm và kiến thức đã tích lũy, cũng như sự chuẩn bị cụ thể cho dự án nghiên cứu đề xuất. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 6. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n006`
+- Section: 1.5. Người hướng dẫn
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 1.5. Người hướng dẫn]
+Mỗi nghiên cứu sinh (NCS) có 01 hoặc 02 người hướng dẫn, trong đó có 01 người là cán bộ cơ hữu hoặc có hợp đồng giảng dạy, nghiên cứu khoa học với Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh theo quy định của pháp luật; làm việc theo chế độ trọn thời gian với thời hạn của hợp đồng phù hợp với kế hoạch học tập, nghiên cứu toàn khóa của nghiên cứu sinh. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 7. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n007`
+- Section: 2. Hình thức tuyển sinh và thời gian đào tạo
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 2. Hình thức tuyển sinh và thời gian đào tạo]
+Xét tuyển thông qua Hồ sơ dự tuyển và Đề cương nghiên cứu (Ngành, mã số ngành tuyển sinh, chỉ tiêu, ngành phù hợp chi tiết tại Phụ lục 2). Thời gian đào tạo là 03 năm (36 tháng) với người dự tuyển có bằng thạc sĩ và 04 năm (48 tháng) đối với người dự tuyển tốt nghiệp đại học hạng giỏi trở lên. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 8. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n008`
+- Section: 3.1. Hình thức đào tạo
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 3.1. Hình thức đào tạo]
+Đào tạo theo hình thức Giáo dục chính quy, NCS phải tuân thủ thời gian học tập và nghiên cứu tại Trường Đại học Giao thông vận tải TP. HCM theo kế hoạch đã được phê duyệt. NCS được phép hoàn thành chương trình đào tạo sớm hơn so với kế hoạch học tập và nghiên cứu toàn khóa không quá 01 năm (12 tháng), hoặc chậm hơn so với kế hoạch nhưng tổng thời gian đào tạo không được vượt quá 06 năm (72 tháng) tính từ ngày quyết định công nhận nghiên cứu sinh có hiệu lực đến thời điểm hoàn thành các thủ tục trình luận án cho cơ sở đào tạo, trước khi thực hiện quy trình phản biện độc lập và thành lập Hội đồng đánh giá luận án của Trường. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 9. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_001_r000`
+- Section: 3.2. Ngành đào tạo
+- Năm: 2025 | Hệ: sau_dai_hoc
+- ⚠️ Cần review: dòng tiêu đề bảng, không có dữ liệu ngành cụ thể
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 3.2. Ngành đào tạo]
+Cột 1: TT. Cột 2: Ngành đào tạo. Cột 3: Mã ngành. Cột 4: Chỉ tiêu dự kiến. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 10. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_001_r001`
+- Section: 3.2. Ngành đào tạo
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Mã: `9520216` (cần xác minh: False)
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 3.2. Ngành đào tạo]
+Cột 1: 1. Cột 2: Kỹ thuật điều khiển và tự động hóa. Cột 3: 9520216. Cột 4: 18. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 11. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_001_r002`
+- Section: 3.2. Ngành đào tạo
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Mã: `9520116` (cần xác minh: False)
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 3.2. Ngành đào tạo]
+Cột 1: 2. Cột 2: Kỹ thuật cơ khí động lực. Cột 3: 9520116. Cột 4: 12. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 12. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_001_r003`
+- Section: 3.2. Ngành đào tạo
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Mã: `9840106` (cần xác minh: False)
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 3.2. Ngành đào tạo]
+Cột 1: 3. Cột 2: Khoa học hàng hải. Cột 3: 9840106. Cột 4: 32. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 13. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_001_r004`
+- Section: 3.2. Ngành đào tạo
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Mã: `9580205` (cần xác minh: False)
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 3.2. Ngành đào tạo]
+Cột 1: 4. Cột 2: Kỹ thuật xây dựng công trình giao thông. Cột 3: 9580205. Cột 4: 20. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 14. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_001_r005`
+- Section: 3.2. Ngành đào tạo
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Mã: `9840103` (cần xác minh: False)
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 3.2. Ngành đào tạo]
+Cột 1: 5. Cột 2: Tổ chức và quản lý vận tải. Cột 3: 9840103. Cột 4: 40. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 15. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_001_r006`
+- Section: 3.2. Ngành đào tạo
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Mã: `9580302` (cần xác minh: False)
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 3.2. Ngành đào tạo]
+Cột 1: 6. Cột 2: Quản lý xây dựng. Cột 3: 9580302. Cột 4: 28. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 16. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n009`
+- Section: 4.1. Hình thức đăng ký
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 4.1. Hình thức đăng ký]
+Đăng ký online qua đường link: https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-tien-si/. Lưu ý: Toàn bộ hồ sơ là các file scan, người dự tuyển chịu trách nhiệm về mặt pháp lý với nội dung kê khai và các văn bản nộp hồ sơ trực tuyến. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 17. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n010`
+- Section: 4.2. Hồ sơ dự tuyển
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 4.2. Hồ sơ dự tuyển]
+Hồ sơ dự tuyển bao gồm các giấy tờ và biểu mẫu kèm theo link đăng ký dự tuyển được cung cấp ở trên (ứng viên chỉ cần thực hiện các bước hướng dẫn trên link đăng ký). Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 18. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n011`
+- Section: 4.3. Quy trình và thời gian xét tuyển
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 4.3. Quy trình và thời gian xét tuyển]
+Quy trình: Người dự tuyển đăng ký dự tuyển bằng cách nộp hồ sơ online vào: https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-tien-si/. Thời gian xét tuyển: Nhà trường thực hiện tuyển sinh trình độ tiến sĩ nhiều đợt trong năm. Thời gian nhận hồ sơ: từ ngày 01/01/2025 đến 31/12/2025. Thời gian xét tuyển sinh: Nhà trường sẽ tổ chức xét tuyển theo đợt trong năm. Thời gian công bố kết quả trúng tuyển và nhập học: 05 ngày làm việc kể từ ngày người dự tuyển hoàn thiện đề cương nghiên cứu theo yêu cầu của hội đồng đánh giá đề cương và được người hướng dẫn xác nhận. Sau khi có kết quả trúng tuyển, người dự tuyển nộp bổ sung các văn bằng, chứng chỉ bản công chứng và mang bản chính đến để đối chiếu tại Viện Đào tạo sau đại học – Phòng B201 – Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 19. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n012`
+- Section: 5.1. Lệ phí tuyển sinh
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 5.1. Lệ phí tuyển sinh]
+Lệ phí xét tuyển: 1.500.000 đồng/người dự tuyển. Hình thức nộp lệ phí: chuyển khoản. Tên tài khoản: Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh. Ngân hàng: Vietinbank (Ngân hàng Thương mại cổ phần Công Thương Việt Nam). Số tài khoản: 1100 0012 6050. Nội dung chuyển khoản: "dự tuyển tiến sĩ 2025 - HỌ VÀ TÊN - Ngành đào tạo", ví dụ: du tuyen tien si 2025 Nguyen Van A. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 20. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n013`
+- Section: 5.2. Học phí
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | 5.2. Học phí]
+Học phí chương trình đào tạo trình độ tiến sĩ (được tính theo tín chỉ) và lộ trình tăng học phí, theo quy định hiện hành. Học phí: 33.300.000 đồng (Ba mươi ba triệu ba trăm ngàn đồng)/1 năm học. Hình thức nộp lệ phí: chuyển khoản. Tên tài khoản: Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh. Ngân hàng: Vietinbank (Ngân hàng Thương mại cổ phần Công Thương Việt Nam). Số tài khoản: 1100 0012 6050. Nội dung chuyển khoản: "dự tuyển tiến sĩ 2025 - HỌ VÀ TÊN - Ngành đào tạo". Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 21. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n014`
+- Section: Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển]
+Ban hành kèm theo Thông tư số 18/2021/TT-BGDĐT ngày 28 tháng 6 năm 2021 của Bộ trưởng Bộ Giáo dục và Đào tạo. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 22. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_002_r001`
+- Section: Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển]
+Stt: 1. Ngôn ngữ: Tiếng Anh. Bằng/Chứng chỉ/Chứng nhận: TOEFL iBT. Trình độ/Thang điểm: Từ 46 trở lên. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 23. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_002_r002`
+- Section: Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển]
+Stt: 1. Ngôn ngữ: Tiếng Anh. Bằng/Chứng chỉ/Chứng nhận: IELTS. Trình độ/Thang điểm: Từ 5.5 trở lên. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 24. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_002_r003`
+- Section: Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển]
+Stt: 1. Ngôn ngữ: Tiếng Anh. Bằng/Chứng chỉ/Chứng nhận: Cambridge Assessment English. Trình độ/Thang điểm: B2 First/B2 Business Vantage/Linguaskill. Thang điểm: từ 160 trở lên. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 25. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_002_r004`
+- Section: Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển]
+Stt: 2. Ngôn ngữ: Tiếng Pháp. Bằng/Chứng chỉ/Chứng nhận: CIEP/Alliance française diplomas. Trình độ/Thang điểm: TCF từ 400 trở lên; DELF B2 trở lên; Diplôme de Langue. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 26. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_002_r005`
+- Section: Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển]
+Stt: 3. Ngôn ngữ: Tiếng Đức. Bằng/Chứng chỉ/Chứng nhận: Goethe-Institut. Trình độ/Thang điểm: Goethe-Zertifikat B2 trở lên. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 27. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_002_r006`
+- Section: Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển]
+Stt: 3. Ngôn ngữ: Tiếng Đức. Bằng/Chứng chỉ/Chứng nhận: The German TestDaF language certificate. Trình độ/Thang điểm: TestDaF level 4 (TDN 4) trở lên. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 28. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_002_r007`
+- Section: Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển]
+Stt: 4. Ngôn ngữ: Tiếng Trung Quốc. Bằng/Chứng chỉ/Chứng nhận: Chinese Hanyu Shuiping Kaoshi (HSK). Trình độ/Thang điểm: HSK level 4 trở lên. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 29. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_002_r008`
+- Section: Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển]
+Stt: 5. Ngôn ngữ: Tiếng Nhật. Bằng/Chứng chỉ/Chứng nhận: Japanese Language Proficiency Test (JLPT). Trình độ/Thang điểm: N3 trở lên. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 30. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_002_r009`
+- Section: Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển]
+Stt: 6. Ngôn ngữ: Tiếng Nga. Bằng/Chứng chỉ/Chứng nhận: ТРКИ - Тест по русскому языку как иностранному (TORFL - Test of Russian as a Foreign Language). Trình độ/Thang điểm: ТРКИ-2 trở lên. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 31. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_002_r010`
+- Section: Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 1 - Danh sách một số chứng chỉ tiếng nước ngoài minh chứng cho trình độ ngoại ngữ của người dự tuyển]
+Stt: 7. Ngôn ngữ: Các ngôn ngữ tiếng nước ngoài khác. Bằng/Chứng chỉ/Chứng nhận: Chứng chỉ đánh giá theo Khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam. Trình độ/Thang điểm: Từ bậc 4 trở lên. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 32. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n015`
+- Section: Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025]
+Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025, kèm danh mục ngành/nhóm ngành tốt nghiệp đại học hoặc thạc sĩ phù hợp để đăng ký dự tuyển vào từng ngành đào tạo tiến sĩ. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 33. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_003_r001`
+- Section: Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Mã: `9520216` (cần xác minh: False)
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025]
+TT: 1. Ngành đào tạo: Kỹ thuật điều khiển và tự động hóa. Mã ngành: 9520216. Ngành/nhóm ngành tốt nghiệp đại học/thạc sĩ phù hợp: 1. Kỹ thuật điều khiển và tự động hóa. 2. Kỹ thuật viễn thông. 3. Kỹ thuật điện tử. 4. Kỹ thuật nhiệt. 5. Kỹ thuật robot và trí tuệ nhân tạo. 6. Kỹ thuật điện. 7. Kỹ thuật đo lường và tin học công nghiệp. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 34. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_003_r002`
+- Section: Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Mã: `9520116` (cần xác minh: False)
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025]
+TT: 2. Ngành đào tạo: Kỹ thuật cơ khí động lực. Mã ngành: 9520116. Ngành/nhóm ngành tốt nghiệp đại học/thạc sĩ phù hợp: 1. Kỹ thuật cơ khí động lực. 2. Kỹ thuật ô tô. 3. Kỹ thuật cơ khí. 4. Cơ kỹ thuật. 5. Kỹ thuật cơ điện tử. 6. Kỹ thuật nhiệt. 7. Kỹ thuật công nghiệp. 8. Kỹ thuật hệ thống công nghiệp. 9. Kỹ thuật hàng không. 10. Kỹ thuật tàu thủy. 11. Kỹ thuật không gian. 12. Kỹ thuật an toàn giao thông. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 35. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_003_r003`
+- Section: Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Mã: `9840106` (cần xác minh: False)
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025]
+TT: 3. Ngành đào tạo: Khoa học hàng hải. Mã ngành: 9840106. Ngành/nhóm ngành tốt nghiệp đại học/thạc sĩ phù hợp: 1. Khai thác vận tải. 2. Kinh tế vận tải. 3. Quản lý hoạt động bay. 4. Logistics và quản lý chuỗi cung ứng. 5. Tổ chức và quản lý vận tải. 6. Khoa học hàng không. 7. Khoa học dữ liệu. 8. Toán ứng dụng. 9. Kỹ thuật xây dựng công trình biển. 10. Kỹ thuật điều khiển và tự động hóa. 11. Kỹ thuật điện. 12. Kỹ thuật viễn thông. 13. Kỹ thuật cơ khí động lực. 14. Quản trị dịch vụ du lịch và lữ hành. 15. Các ngành khác thuộc nhóm: Kinh doanh và quản lý, kinh tế học, quản trị-quản lý, quản lý xây dựng, kiến trúc và quy hoạch, quản lý công nghiệp, máy tính và công nghệ thông tin. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 36. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_003_r004`
+- Section: Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Mã: `9580205` (cần xác minh: False)
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025]
+TT: 4. Ngành đào tạo: Kỹ thuật xây dựng công trình giao thông. Mã ngành: 9580205. Ngành/nhóm ngành tốt nghiệp đại học/thạc sĩ phù hợp: 1. Kỹ thuật xây dựng công trình giao thông. 2. Kỹ thuật xây dựng. 3. Kỹ thuật xây dựng công trình thủy. 4. Kỹ thuật xây dựng công trình biển. 5. Kỹ thuật xây dựng công trình ngầm. 6. Kỹ thuật xây dựng công trình đặc biệt. 7. Kỹ thuật cơ sở hạ tầng. 8. Địa kỹ thuật xây dựng. 9. Kỹ thuật tài nguyên nước. 10. Kỹ thuật cấp thoát nước. 11. Kinh tế xây dựng. 12. Quản lý xây dựng. 13. Công nghệ kỹ thuật xây dựng cầu đường. 14. Địa chất thủy văn - công trình. 15. Công nghệ kỹ thuật vật liệu xây dựng. 16. Quản lý đô thị và công trình. 17. Xây dựng cầu - đường. 18. Công nghệ kỹ thuật công trình xây dựng. 19. Công nghệ kỹ thuật xây dựng. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 37. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_003_r005`
+- Section: Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Mã: `9840103` (cần xác minh: False)
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025]
+TT: 5. Ngành đào tạo: Tổ chức và quản lý vận tải. Mã ngành: 9840103. Ngành/nhóm ngành tốt nghiệp đại học/thạc sĩ phù hợp: 1. Khai thác vận tải. 2. Kinh tế vận tải. 3. Quản lý hoạt động bay. 4. Khoa học hàng hải. 5. Logistics và quản lý chuỗi cung ứng. 6. Tổ chức và quản lý vận tải. 7. Khoa học hàng không. 8. Khoa học dữ liệu. 9. Toán ứng dụng. 10. Quản trị dịch vụ du lịch và lữ hành. 11. Các ngành khác thuộc nhóm: Kinh doanh và quản lý, kinh tế học, quản trị-quản lý, quản lý xây dựng, kiến trúc và quy hoạch, quản lý công nghiệp, máy tính và công nghệ thông tin. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 38. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_003_r006`
+- Section: Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Mã: `9580302` (cần xác minh: False)
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025]
+TT: 6. Ngành đào tạo: Quản lý xây dựng. Mã ngành: 9580302. Ngành/nhóm ngành tốt nghiệp đại học/thạc sĩ phù hợp: 1. Kinh tế xây dựng. 2. Quản lý dự án. 3. Bất động sản. 4. Quản lý đô thị và công trình. 5. Kỹ thuật xây dựng. 6. Kỹ thuật xây dựng công trình giao thông. 7. Kỹ thuật xây dựng công trình thủy. 8. Kỹ thuật xây dựng công trình biển. 9. Kỹ thuật xây dựng công trình ngầm. 10. Kỹ thuật xây dựng công trình đặc biệt. 11. Kỹ thuật cơ sở hạ tầng. 12. Công nghệ kỹ thuật công trình xây dựng. 13. Công nghệ kỹ thuật xây dựng. 14. Công nghệ kỹ thuật giao thông. 15. Quản lý công nghiệp. 16. Kinh tế đầu tư. 17. Kinh tế phát triển. 18. Quản lý kinh tế. 19. Quản trị kinh doanh. 20. Quản lý xây dựng. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 39. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n016`
+- Section: Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025 - Ghi chú
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 2 - Danh mục các ngành tuyển sinh trình độ tiến sĩ năm 2025 - Ghi chú]
+Đối với những ngành đào tạo người dự tuyển tốt nghiệp trình độ thạc sĩ hoặc đại học (hoặc tương đương trở lên) ở nước ngoài về; những ngành đào tạo trước đây đã thay đổi so với danh mục thống kê ngành đào tạo của Bộ GDĐT; những ngành đào tạo phù hợp nhưng chưa được thống kê tại Phụ lục này sẽ do Hội đồng chuyên môn của Nhà trường xem xét, quyết định. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 40. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n017`
+- Section: Phụ lục 3 - Kế hoạch học tập, nghiên cứu toàn khóa của nghiên cứu sinh
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 3 - Kế hoạch học tập, nghiên cứu toàn khóa của nghiên cứu sinh]
+Ban hành kèm theo Thông tư số 18/2021/TT-BGDĐT ngày 28 tháng 6 năm 2021 của Bộ trưởng Bộ Giáo dục và Đào tạo. Mẫu kế hoạch gồm các trường thông tin: Cơ sở đào tạo, Họ và tên nghiên cứu sinh, Tên đề tài, Ngành đào tạo, Mã ngành đào tạo. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 41. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_004_r001`
+- Section: Phụ lục 3 - Kế hoạch học tập, nghiên cứu toàn khóa của nghiên cứu sinh
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 3 - Kế hoạch học tập, nghiên cứu toàn khóa của nghiên cứu sinh]
+Năm học: Năm thứ 1. Nội dung học tập, nghiên cứu: Các học phần về chuyên môn bổ sung (nếu có). Khối lượng học tập, nghiên cứu đăng ký: 10 - 12 tín chỉ. Kết quả dự kiến: Chứng nhận kết thúc học phần. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 42. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_004_r002`
+- Section: Phụ lục 3 - Kế hoạch học tập, nghiên cứu toàn khóa của nghiên cứu sinh
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 3 - Kế hoạch học tập, nghiên cứu toàn khóa của nghiên cứu sinh]
+Năm học: Năm thứ 1. Nội dung học tập, nghiên cứu: Các học phần về phương pháp nghiên cứu. Khối lượng học tập, nghiên cứu đăng ký: 04 - 06 tín chỉ. Kết quả dự kiến: Chứng nhận kết thúc học phần. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 43. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_004_r003`
+- Section: Phụ lục 3 - Kế hoạch học tập, nghiên cứu toàn khóa của nghiên cứu sinh
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 3 - Kế hoạch học tập, nghiên cứu toàn khóa của nghiên cứu sinh]
+Năm học: Năm thứ 2. Nội dung học tập, nghiên cứu: Thực hiện phần 1 của Luận án. Khối lượng học tập, nghiên cứu đăng ký: đến 24 tín chỉ. Kết quả dự kiến: Chương Tổng quan về vấn đề nghiên cứu, phương pháp nghiên cứu,.... Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 44. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_004_r004`
+- Section: Phụ lục 3 - Kế hoạch học tập, nghiên cứu toàn khóa của nghiên cứu sinh
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 3 - Kế hoạch học tập, nghiên cứu toàn khóa của nghiên cứu sinh]
+Năm học: Năm thứ 3. Nội dung học tập, nghiên cứu: Thực hiện phần 2 của Luận án. Khối lượng học tập, nghiên cứu đăng ký: đến 30 tín chỉ. Kết quả dự kiến: Luận án và các bài công bố,.... Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 45. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_table_004_r005`
+- Section: Phụ lục 3 - Kế hoạch học tập, nghiên cứu toàn khóa của nghiên cứu sinh
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 3 - Kế hoạch học tập, nghiên cứu toàn khóa của nghiên cứu sinh]
+Năm học: Năm thứ 4. Nội dung học tập, nghiên cứu: Thực hiện phần 3 của Luận án. Khối lượng học tập, nghiên cứu đăng ký: Số tín chỉ còn lại của chương trình 04 năm. Kết quả dự kiến: Luận án và các bài công bố,.... Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```
+
+## 46. `2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_n018`
+- Section: Phụ lục 3 - Kế hoạch học tập, nghiên cứu toàn khóa của nghiên cứu sinh - Ghi chú
+- Năm: 2025 | Hệ: sau_dai_hoc
+- Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+
+```text
+[Năm 2025 | Hệ sau_dai_hoc | Phụ lục 3 - Kế hoạch học tập, nghiên cứu toàn khóa của nghiên cứu sinh - Ghi chú]
+Phần in nghiêng là ví dụ về các nội dung trong kế hoạch học tập, nghiên cứu toàn khóa. Kế hoạch cụ thể của nghiên cứu sinh được xây dựng căn cứ vào quy định của cơ sở đào tạo về chương trình đào tạo tiến sĩ đã công bố. Nguồn: https://sdh.ut.edu.vn/ | https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/ | https://grad.ut.edu.vn/admission/register
+```

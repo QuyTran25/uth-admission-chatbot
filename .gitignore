@@ -30,7 +30,11 @@ desktop.ini
 # Ignore data content but keep directory structures
 backend/data/raw/*
 !backend/data/raw/.gitkeep
-backend/data/processed/*
+backend/data/processed/docling/
+backend/data/processed/footnotes/
+backend/data/processed/merged/
+backend/data/processed/pastedown/
+backend/data/processed/section/
 !backend/data/processed/.gitkeep
 backend/data/index/*
 !backend/data/index/.gitkeep

@@ -1,0 +1,1770 @@
+{
+  "source_file": {
+    "file_name": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+    "file_stem": "2025_diem-chuan_dai-hoc-chinh-quy",
+    "extension": ".pdf",
+    "program_type": "dai_hoc_chinh_quy",
+    "admission_year": 2025
+  },
+  "chunks": [
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r001",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 1,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Khoa học dữ liệu - chương trình tiên tiến",
+        "ma_nganh": "7460108A"
+      },
+      "code_info": {
+        "code_raw": "7460108A",
+        "code_corrected": "7460108A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 1. Mã ngành tuyển sinh: 7460108A. Tên ngành/chuyên ngành: Khoa học dữ liệu - chương trình tiên tiến. Điểm chuẩn: 999. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7460108A -> 7460108A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r002",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 2,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Ngôn ngữ Anh – chương trình tiên tiến",
+        "ma_nganh": "7220201A"
+      },
+      "code_info": {
+        "code_raw": "7220201A",
+        "code_corrected": "7220201A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 2. Mã ngành tuyển sinh: 7220201A. Tên ngành/chuyên ngành: Ngôn ngữ Anh – chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7220201A -> 7220201A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r003",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 3,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Ngôn ngữ Anh (chuyên ngành Tiếng Anh thương mại, logistics và vận tải quốc tế) - chương trình hoàn toàn bằng tiếng Anh",
+        "ma_nganh": "7220201E"
+      },
+      "code_info": {
+        "code_raw": "7220201E",
+        "code_corrected": "7220201E",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 3. Mã ngành tuyển sinh: 7220201E. Tên ngành/chuyên ngành: Ngôn ngữ Anh (chuyên ngành Tiếng Anh thương mại, logistics và vận tải quốc tế) - chương trình hoàn toàn bằng tiếng Anh. Điểm chuẩn: 775. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7220201E -> 7220201E"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r004",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 4,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Luật – chương trình tiên tiến",
+        "ma_nganh": "7380101A"
+      },
+      "code_info": {
+        "code_raw": "7380101A",
+        "code_corrected": "7380101A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 4. Mã ngành tuyển sinh: 7380101A. Tên ngành/chuyên ngành: Luật – chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7380101A -> 7380101A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r005",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 5,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Quản trị kinh doanh – chương trình tiên tiến",
+        "ma_nganh": "7340101A"
+      },
+      "code_info": {
+        "code_raw": "7340101A",
+        "code_corrected": "7340101A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 5. Mã ngành tuyển sinh: 7340101A. Tên ngành/chuyên ngành: Quản trị kinh doanh – chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7340101A -> 7340101A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r006",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 6,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Hệ thống thông tin quản lý - chương trình tiên tiến",
+        "ma_nganh": "7340405A"
+      },
+      "code_info": {
+        "code_raw": "7340405A",
+        "code_corrected": "7340405A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 6. Mã ngành tuyển sinh: 7340405A. Tên ngành/chuyên ngành: Hệ thống thông tin quản lý - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7340405A -> 7340405A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r007",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 7,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Hệ thống thông tin quản lý (chuyên ngành Kinh tế số và Trí tuệ nhân tạo) - chương trình tiên tiến",
+        "ma_nganh": "734040502A"
+      },
+      "code_info": {
+        "code_raw": "734040502A",
+        "code_corrected": "734040502A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 7. Mã ngành tuyển sinh: 734040502A. Tên ngành/chuyên ngành: Hệ thống thông tin quản lý (chuyên ngành Kinh tế số và Trí tuệ nhân tạo) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 734040502A -> 734040502A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r008",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 8,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Hệ thống thông tin quản lý (chuyên ngành Kinh tế số và Trí tuệ nhân tạo) - chương trình hoàn toàn bằng tiếng Anh",
+        "ma_nganh": "734040502E"
+      },
+      "code_info": {
+        "code_raw": "734040502E",
+        "code_corrected": "734040502E",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 8. Mã ngành tuyển sinh: 734040502E. Tên ngành/chuyên ngành: Hệ thống thông tin quản lý (chuyên ngành Kinh tế số và Trí tuệ nhân tạo) - chương trình hoàn toàn bằng tiếng Anh. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 734040502E -> 734040502E"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r009",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 9,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Công nghệ thông tin (chuyên ngành Truyền thông số và Đổi mới sáng tạo) - chương trình tiên tiến",
+        "ma_nganh": "748020107A"
+      },
+      "code_info": {
+        "code_raw": "748020107A",
+        "code_corrected": "748020107A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 9. Mã ngành tuyển sinh: 748020107A. Tên ngành/chuyên ngành: Công nghệ thông tin (chuyên ngành Truyền thông số và Đổi mới sáng tạo) - chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 748020107A -> 748020107A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r010",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 10,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Công nghệ thông tin (chuyên ngành Smart logistics) - chương trình tiên tiến",
+        "ma_nganh": "748020105A"
+      },
+      "code_info": {
+        "code_raw": "748020105A",
+        "code_corrected": "748020105A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 10. Mã ngành tuyển sinh: 748020105A. Tên ngành/chuyên ngành: Công nghệ thông tin (chuyên ngành Smart logistics) - chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 748020105A -> 748020105A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r011",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 11,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Công nghệ thông tin (chuyên ngành Khoa học dữ liệu và AI) - chương trình tiên tiến",
+        "ma_nganh": "748020104A"
+      },
+      "code_info": {
+        "code_raw": "748020104A",
+        "code_corrected": "748020104A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 11. Mã ngành tuyển sinh: 748020104A. Tên ngành/chuyên ngành: Công nghệ thông tin (chuyên ngành Khoa học dữ liệu và AI) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 748020104A -> 748020104A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r012",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 12,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Công nghệ thông tin (chuyên ngành Công nghệ ô tô số) - chương trình tiên tiến",
+        "ma_nganh": "748020106A"
+      },
+      "code_info": {
+        "code_raw": "748020106A",
+        "code_corrected": "748020106A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 12. Mã ngành tuyển sinh: 748020106A. Tên ngành/chuyên ngành: Công nghệ thông tin (chuyên ngành Công nghệ ô tô số) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 748020106A -> 748020106A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r013",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 13,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Công nghệ thông tin (chuyên ngành Công nghệ thông tin) - chương trình tiên tiến",
+        "ma_nganh": "748020101A"
+      },
+      "code_info": {
+        "code_raw": "748020101A",
+        "code_corrected": "748020101A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 13. Mã ngành tuyển sinh: 748020101A. Tên ngành/chuyên ngành: Công nghệ thông tin (chuyên ngành Công nghệ thông tin) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 748020101A -> 748020101A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r014",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 14,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Công nghệ thông tin (chuyên ngành Công nghệ thông tin) - chương trình hoàn toàn bằng tiếng Anh",
+        "ma_nganh": "748020101E"
+      },
+      "code_info": {
+        "code_raw": "748020101E",
+        "code_corrected": "748020101E",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 14. Mã ngành tuyển sinh: 748020101E. Tên ngành/chuyên ngành: Công nghệ thông tin (chuyên ngành Công nghệ thông tin) - chương trình hoàn toàn bằng tiếng Anh. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 748020101E -> 748020101E"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r015",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 15,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Mạng máy tính và truyền thông dữ liệu (chuyên ngành Mạng máy tính và truyền thông dữ liệu; Kỹ thuật thiết kế vi mạch và AI) - chương trình tiên tiến",
+        "ma_nganh": "7480102A"
+      },
+      "code_info": {
+        "code_raw": "7480102A",
+        "code_corrected": "7480102A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 15. Mã ngành tuyển sinh: 7480102A. Tên ngành/chuyên ngành: Mạng máy tính và truyền thông dữ liệu (chuyên ngành Mạng máy tính và truyền thông dữ liệu; Kỹ thuật thiết kế vi mạch và AI) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7480102A -> 7480102A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r016",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 16,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Công nghệ kỹ thuật giao thông (chuyên ngành Quy hoạch và quản lý giao thông; Logistics và hạ tầng giao thông) - chương trình tiên tiến",
+        "ma_nganh": "7510104A"
+      },
+      "code_info": {
+        "code_raw": "7510104A",
+        "code_corrected": "7510104A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 16. Mã ngành tuyển sinh: 7510104A. Tên ngành/chuyên ngành: Công nghệ kỹ thuật giao thông (chuyên ngành Quy hoạch và quản lý giao thông; Logistics và hạ tầng giao thông) - chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7510104A -> 7510104A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r017",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 17,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Công nghệ kỹ thuật cơ khí - chương trình tiên tiến",
+        "ma_nganh": "7510201A"
+      },
+      "code_info": {
+        "code_raw": "7510201A",
+        "code_corrected": "7510201A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 17. Mã ngành tuyển sinh: 7510201A. Tên ngành/chuyên ngành: Công nghệ kỹ thuật cơ khí - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7510201A -> 7510201A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r018",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 18,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Công nghệ kỹ thuật ô tô - chương trình tiên tiến",
+        "ma_nganh": "7510205A"
+      },
+      "code_info": {
+        "code_raw": "7510205A",
+        "code_corrected": "7510205A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 18. Mã ngành tuyển sinh: 7510205A. Tên ngành/chuyên ngành: Công nghệ kỹ thuật ô tô - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7510205A -> 7510205A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r019",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 19,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Công nghệ kỹ thuật điều khiển và tự động hóa - chương trình tiên tiến",
+        "ma_nganh": "7510303A"
+      },
+      "code_info": {
+        "code_raw": "7510303A",
+        "code_corrected": "7510303A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 19. Mã ngành tuyển sinh: 7510303A. Tên ngành/chuyên ngành: Công nghệ kỹ thuật điều khiển và tự động hóa - chương trình tiên tiến. Điểm chuẩn: 931. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7510303A -> 7510303A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r020",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 20,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Logistics và quản lý chuỗi cung ứng - chương trình tiên tiến",
+        "ma_nganh": "7510605A"
+      },
+      "code_info": {
+        "code_raw": "7510605A",
+        "code_corrected": "7510605A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 20. Mã ngành tuyển sinh: 7510605A. Tên ngành/chuyên ngành: Logistics và quản lý chuỗi cung ứng - chương trình tiên tiến. Điểm chuẩn: 963. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7510605A -> 7510605A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r021",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 21,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Logistics và quản lý chuỗi cung ứng - chương trình hoàn toàn bằng tiếng Anh",
+        "ma_nganh": "7510605E"
+      },
+      "code_info": {
+        "code_raw": "7510605E",
+        "code_corrected": "7510605E",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 21. Mã ngành tuyển sinh: 7510605E. Tên ngành/chuyên ngành: Logistics và quản lý chuỗi cung ứng - chương trình hoàn toàn bằng tiếng Anh. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7510605E -> 7510605E"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r022",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_001",
+      "row_index": 22,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật cơ khí (chuyên ngành Cơ khí tự động) - chương trình tiên tiến",
+        "ma_nganh": "752010304A"
+      },
+      "code_info": {
+        "code_raw": "752010304A",
+        "code_corrected": "752010304A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 22. Mã ngành tuyển sinh: 752010304A. Tên ngành/chuyên ngành: Kỹ thuật cơ khí (chuyên ngành Cơ khí tự động) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 752010304A -> 752010304A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r001",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 1,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật cơ khí (chuyên ngành Cơ khí đường sắt tốc độ cao và đường sắt đô thị) - chương trình tiên tiến",
+        "ma_nganh": "752010308A"
+      },
+      "code_info": {
+        "code_raw": "752010308A",
+        "code_corrected": "752010308A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 23. Mã ngành tuyển sinh: 752010308A. Tên ngành/chuyên ngành: Kỹ thuật cơ khí (chuyên ngành Cơ khí đường sắt tốc độ cao và đường sắt đô thị) - chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 752010308A -> 752010308A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r002",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 2,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật cơ khí (chuyên ngành kỹ thuật cơ khí hàng không) - chương trình tiên tiến",
+        "ma_nganh": "752010309A"
+      },
+      "code_info": {
+        "code_raw": "752010309A",
+        "code_corrected": "752010309A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 24. Mã ngành tuyển sinh: 752010309A. Tên ngành/chuyên ngành: Kỹ thuật cơ khí (chuyên ngành kỹ thuật cơ khí hàng không) - chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 752010309A -> 752010309A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r003",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 3,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật tàu thủy (chuyên ngành Kỹ thuật tàu thủy, công trình nổi và quản lý hệ thống công nghiệp)",
+        "ma_nganh": "7520122"
+      },
+      "code_info": {
+        "code_raw": "7520122",
+        "code_corrected": "7520122",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 25. Mã ngành tuyển sinh: 7520122. Tên ngành/chuyên ngành: Kỹ thuật tàu thủy (chuyên ngành Kỹ thuật tàu thủy, công trình nổi và quản lý hệ thống công nghiệp). Điểm chuẩn: 668. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7520122 -> 7520122"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r004",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 4,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật ô tô (chuyên ngành Cơ khí ô tô; Cơ điện tử ô tô) - chương trình tiên tiến",
+        "ma_nganh": "7520130A"
+      },
+      "code_info": {
+        "code_raw": "7520130A",
+        "code_corrected": "7520130A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 26. Mã ngành tuyển sinh: 7520130A. Tên ngành/chuyên ngành: Kỹ thuật ô tô (chuyên ngành Cơ khí ô tô; Cơ điện tử ô tô) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7520130A -> 7520130A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r005",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 5,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật điện (chuyên ngành Điện công nghiệp; Hệ thống điện giao thông; Năng lượng tái tạo)",
+        "ma_nganh": "7520201"
+      },
+      "code_info": {
+        "code_raw": "7520201",
+        "code_corrected": "7520201",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 27. Mã ngành tuyển sinh: 7520201. Tên ngành/chuyên ngành: Kỹ thuật điện (chuyên ngành Điện công nghiệp; Hệ thống điện giao thông; Năng lượng tái tạo). Điểm chuẩn: 936. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7520201 -> 7520201"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r006",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 6,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật điện tử - viễn thông - chương trình tiên tiến",
+        "ma_nganh": "7520207A"
+      },
+      "code_info": {
+        "code_raw": "7520207A",
+        "code_corrected": "7520207A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 28. Mã ngành tuyển sinh: 7520207A. Tên ngành/chuyên ngành: Kỹ thuật điện tử - viễn thông - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7520207A -> 7520207A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r007",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 7,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật điều khiển và tự động hóa - chương trình tiên tiến",
+        "ma_nganh": "7520216A"
+      },
+      "code_info": {
+        "code_raw": "7520216A",
+        "code_corrected": "7520216A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 29. Mã ngành tuyển sinh: 7520216A. Tên ngành/chuyên ngành: Kỹ thuật điều khiển và tự động hóa - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7520216A -> 7520216A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r008",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 8,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật điều khiển và tự động hóa (chuyên ngành Kỹ thuật điều khiển tự động và thông tin tín hiệu đường sắt tốc độ cao) - chương trình tiên tiến",
+        "ma_nganh": "752021603A"
+      },
+      "code_info": {
+        "code_raw": "752021603A",
+        "code_corrected": "752021603A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 30. Mã ngành tuyển sinh: 752021603A. Tên ngành/chuyên ngành: Kỹ thuật điều khiển và tự động hóa (chuyên ngành Kỹ thuật điều khiển tự động và thông tin tín hiệu đường sắt tốc độ cao) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 752021603A -> 752021603A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r009",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 9,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật môi trường (chuyên ngành Kỹ thuật môi trường; Quản lý an toàn và môi trường)",
+        "ma_nganh": "7520320"
+      },
+      "code_info": {
+        "code_raw": "7520320",
+        "code_corrected": "7520320",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 31. Mã ngành tuyển sinh: 7520320. Tên ngành/chuyên ngành: Kỹ thuật môi trường (chuyên ngành Kỹ thuật môi trường; Quản lý an toàn và môi trường). Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7520320 -> 7520320"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r010",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 10,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Hướng liên ngành: Kỹ thuật môi trường và Logistics (chuyên ngành Logistics xanh và phát triển bền vững) – chương trình tiên tiến",
+        "ma_nganh": "7520320A"
+      },
+      "code_info": {
+        "code_raw": "7520320A",
+        "code_corrected": "7520320A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 32. Mã ngành tuyển sinh: 7520320A. Tên ngành/chuyên ngành: Hướng liên ngành: Kỹ thuật môi trường và Logistics (chuyên ngành Logistics xanh và phát triển bền vững) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7520320A -> 7520320A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r011",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 11,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật xây dựng (chuyên ngành Xây dựng dân dụng và công nghiệp)",
+        "ma_nganh": "758020101"
+      },
+      "code_info": {
+        "code_raw": "758020101",
+        "code_corrected": "758020101",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 33. Mã ngành tuyển sinh: 758020101. Tên ngành/chuyên ngành: Kỹ thuật xây dựng (chuyên ngành Xây dựng dân dụng và công nghiệp). Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 758020101 -> 758020101"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r012",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 12,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật xây dựng (chuyên ngành Thiết kế nội thất) – chương trình tiên tiến",
+        "ma_nganh": "758020105A"
+      },
+      "code_info": {
+        "code_raw": "758020105A",
+        "code_corrected": "758020105A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 34. Mã ngành tuyển sinh: 758020105A. Tên ngành/chuyên ngành: Kỹ thuật xây dựng (chuyên ngành Thiết kế nội thất) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 758020105A -> 758020105A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r013",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 13,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật xây dựng (chuyên ngành Kỹ thuật xây dựng dân dụng Ứng dụng công nghệ số)",
+        "ma_nganh": "758020106"
+      },
+      "code_info": {
+        "code_raw": "758020106",
+        "code_corrected": "758020106",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 35. Mã ngành tuyển sinh: 758020106. Tên ngành/chuyên ngành: Kỹ thuật xây dựng (chuyên ngành Kỹ thuật xây dựng dân dụng Ứng dụng công nghệ số). Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 758020106 -> 758020106"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r014",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 14,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật xây dựng công trình thủy (chuyên ngành Xây dựng và quản lý cảng - công trình giao thông thủy)",
+        "ma_nganh": "7580202"
+      },
+      "code_info": {
+        "code_raw": "7580202",
+        "code_corrected": "7580202",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 36. Mã ngành tuyển sinh: 7580202. Tên ngành/chuyên ngành: Kỹ thuật xây dựng công trình thủy (chuyên ngành Xây dựng và quản lý cảng - công trình giao thông thủy). Điểm chuẩn: 668. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7580202 -> 7580202"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r015",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 15,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật xây dựng công trình giao thông (chuyên ngành Xây dựng cầu đường; Xây dựng đường bộ; Xây dựng công trình giao thông đô thị)",
+        "ma_nganh": "7580205"
+      },
+      "code_info": {
+        "code_raw": "7580205",
+        "code_corrected": "7580205",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 37. Mã ngành tuyển sinh: 7580205. Tên ngành/chuyên ngành: Kỹ thuật xây dựng công trình giao thông (chuyên ngành Xây dựng cầu đường; Xây dựng đường bộ; Xây dựng công trình giao thông đô thị). Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7580205 -> 7580205"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r016",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 16,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kỹ thuật xây dựng công trình giao thông (chuyên ngành Xây dựng đường sắt tốc độ cao và đường sắt đô thị)",
+        "ma_nganh": "758020512"
+      },
+      "code_info": {
+        "code_raw": "758020512",
+        "code_corrected": "758020512",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 38. Mã ngành tuyển sinh: 758020512. Tên ngành/chuyên ngành: Kỹ thuật xây dựng công trình giao thông (chuyên ngành Xây dựng đường sắt tốc độ cao và đường sắt đô thị). Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 758020512 -> 758020512"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r017",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 17,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kinh tế xây dựng (chuyên ngành Kinh tế xây dựng) - chương trình tiên tiến",
+        "ma_nganh": "758030101A"
+      },
+      "code_info": {
+        "code_raw": "758030101A",
+        "code_corrected": "758030101A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 39. Mã ngành tuyển sinh: 758030101A. Tên ngành/chuyên ngành: Kinh tế xây dựng (chuyên ngành Kinh tế xây dựng) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 758030101A -> 758030101A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r018",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 18,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kinh tế xây dựng (chuyên ngành Kinh tế và quản lý bất động sản) - chương trình tiên tiến",
+        "ma_nganh": "758030103A"
+      },
+      "code_info": {
+        "code_raw": "758030103A",
+        "code_corrected": "758030103A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 40. Mã ngành tuyển sinh: 758030103A. Tên ngành/chuyên ngành: Kinh tế xây dựng (chuyên ngành Kinh tế và quản lý bất động sản) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 758030103A -> 758030103A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r019",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 19,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Quản lý xây dựng - chương trình tiên tiến",
+        "ma_nganh": "7580302A"
+      },
+      "code_info": {
+        "code_raw": "7580302A",
+        "code_corrected": "7580302A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 41. Mã ngành tuyển sinh: 7580302A. Tên ngành/chuyên ngành: Quản lý xây dựng - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7580302A -> 7580302A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r020",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 20,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Khai thác vận tải (chuyên ngành Quản trị logistics và vận tải đa phương thức) - chương trình tiên tiến",
+        "ma_nganh": "784010101A"
+      },
+      "code_info": {
+        "code_raw": "784010101A",
+        "code_corrected": "784010101A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 42. Mã ngành tuyển sinh: 784010101A. Tên ngành/chuyên ngành: Khai thác vận tải (chuyên ngành Quản trị logistics và vận tải đa phương thức) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 784010101A -> 784010101A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r021",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 21,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Khai thác vận tải (chuyên ngành Khai thác đường sắt tốc độ cao) - chương trình tiên tiến",
+        "ma_nganh": "784010104A"
+      },
+      "code_info": {
+        "code_raw": "784010104A",
+        "code_corrected": "784010104A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 43. Mã ngành tuyển sinh: 784010104A. Tên ngành/chuyên ngành: Khai thác vận tải (chuyên ngành Khai thác đường sắt tốc độ cao) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 784010104A -> 784010104A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r022",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 22,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Khai thác vận tải (chuyên ngành Quản lý và kinh doanh vận tải) - chương trình tiên tiến",
+        "ma_nganh": "784010102A"
+      },
+      "code_info": {
+        "code_raw": "784010102A",
+        "code_corrected": "784010102A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 44. Mã ngành tuyển sinh: 784010102A. Tên ngành/chuyên ngành: Khai thác vận tải (chuyên ngành Quản lý và kinh doanh vận tải) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 784010102A -> 784010102A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r023",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 23,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kinh tế vận tải (chuyên ngành Kinh tế hàng hải và đường thủy) - chương trình tiên tiến",
+        "ma_nganh": "784010403A"
+      },
+      "code_info": {
+        "code_raw": "784010403A",
+        "code_corrected": "784010403A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 45. Mã ngành tuyển sinh: 784010403A. Tên ngành/chuyên ngành: Kinh tế vận tải (chuyên ngành Kinh tế hàng hải và đường thủy) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 784010403A -> 784010403A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r024",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_002",
+      "row_index": 24,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Kinh tế vận tải (chuyên ngành Kinh tế hàng không) - chương trình tiên tiến",
+        "ma_nganh": "784010404A"
+      },
+      "code_info": {
+        "code_raw": "784010404A",
+        "code_corrected": "784010404A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 46. Mã ngành tuyển sinh: 784010404A. Tên ngành/chuyên ngành: Kinh tế vận tải (chuyên ngành Kinh tế hàng không) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 784010404A -> 784010404A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t002_r001",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_003",
+      "row_index": 1,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Khoa học hàng hải (chuyên ngành Kỹ thuật điện, điện tử và điều khiển; Cơ điện tử)",
+        "ma_nganh": "7840106"
+      },
+      "code_info": {
+        "code_raw": "7840106",
+        "code_corrected": "7840106",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 47. Mã ngành tuyển sinh: 7840106. Tên ngành/chuyên ngành: Khoa học hàng hải (chuyên ngành Kỹ thuật điện, điện tử và điều khiển; Cơ điện tử). Điểm chuẩn: 668. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7840106 -> 7840106"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t002_r002",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_003",
+      "row_index": 2,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Khoa học hàng hải (chuyên ngành Quản lý hàng hải và đường thủy) - chương trình tiên tiến",
+        "ma_nganh": "784010613A"
+      },
+      "code_info": {
+        "code_raw": "784010613A",
+        "code_corrected": "784010613A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 48. Mã ngành tuyển sinh: 784010613A. Tên ngành/chuyên ngành: Khoa học hàng hải (chuyên ngành Quản lý hàng hải và đường thủy) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 784010613A -> 784010613A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t002_r003",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_003",
+      "row_index": 3,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Khoa học hàng hải (chuyên ngành Điều khiển và quản lý tàu biển)",
+        "ma_nganh": "784010606"
+      },
+      "code_info": {
+        "code_raw": "784010606",
+        "code_corrected": "784010606",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 49. Mã ngành tuyển sinh: 784010606. Tên ngành/chuyên ngành: Khoa học hàng hải (chuyên ngành Điều khiển và quản lý tàu biển). Điểm chuẩn: 668. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 784010606 -> 784010606"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t002_r004",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_003",
+      "row_index": 4,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Khoa học hàng hải (chuyên ngành Khai thác máy tàu thủy và quản lý kỹ thuật)",
+        "ma_nganh": "784010607"
+      },
+      "code_info": {
+        "code_raw": "784010607",
+        "code_corrected": "784010607",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 50. Mã ngành tuyển sinh: 784010607. Tên ngành/chuyên ngành: Khoa học hàng hải (chuyên ngành Khai thác máy tàu thủy và quản lý kỹ thuật). Điểm chuẩn: 668. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 784010607 -> 784010607"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t002_r005",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_003",
+      "row_index": 5,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Khoa học hàng hải (chuyên ngành Quản lý cảng và logistics) - chương trình tiên tiến",
+        "ma_nganh": "784010609A"
+      },
+      "code_info": {
+        "code_raw": "784010609A",
+        "code_corrected": "784010609A",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 51. Mã ngành tuyển sinh: 784010609A. Tên ngành/chuyên ngành: Khoa học hàng hải (chuyên ngành Quản lý cảng và logistics) - chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 784010609A -> 784010609A"
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t002_r006",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_003",
+      "row_index": 6,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Nhóm ngành liên quan đường sắt tốc độ cao và đường sắt đô thị (Kỹ thuật; Công nghệ kỹ thuật; Kiến trúc và Xây dựng)",
+        "ma_nganh": "7580201I"
+      },
+      "code_info": {
+        "ma_nganh": "7580201I",
+        "raw_ocr_value": "75802011",
+        "code_needs_verification": true,
+        "note": "Ký tự cuối là chữ cái 'I' (giống các mã 7580201I/7520103I/7840101I cùng nhóm ngành đường sắt), OCR gốc đọc nhầm thành số 1 hoặc dấu '/'."
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 52. Mã ngành tuyển sinh: 7580201I. Tên ngành/chuyên ngành: Nhóm ngành liên quan đường sắt tốc độ cao và đường sắt đô thị (Kỹ thuật; Công nghệ kỹ thuật; Kiến trúc và Xây dựng). Điểm chuẩn: 668. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "Đã sửa mã ngành từ '75802011' thành '7580201I' (nghi vấn lỗi OCR I/1)."
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t002_r007",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_003",
+      "row_index": 7,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Nhóm ngành liên quan đường sắt tốc độ cao và đường sắt đô thị (Công nghệ thông tin; Viễn thông, Điện; năng lượng, Cơ khí)",
+        "ma_nganh": "7520103I"
+      },
+      "code_info": {
+        "ma_nganh": "7520103I",
+        "raw_ocr_value": "7520103/",
+        "code_needs_verification": true,
+        "note": "Ký tự cuối là chữ cái 'I' (giống các mã 7580201I/7520103I/7840101I cùng nhóm ngành đường sắt), OCR gốc đọc nhầm thành số 1 hoặc dấu '/'."
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 53. Mã ngành tuyển sinh: 7520103I. Tên ngành/chuyên ngành: Nhóm ngành liên quan đường sắt tốc độ cao và đường sắt đô thị (Công nghệ thông tin; Viễn thông, Điện; năng lượng, Cơ khí). Điểm chuẩn: 668. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "Đã sửa mã ngành từ '7520103/' thành '7520103I' (nghi vấn lỗi OCR I/1)."
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t002_r008",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_003",
+      "row_index": 8,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Nhóm ngành liên quan đường sắt tốc độ cao và đường sắt đô thị (Kinh tế; Quản lý; vận hành và khai thác)",
+        "ma_nganh": "7840101I"
+      },
+      "code_info": {
+        "ma_nganh": "7840101I",
+        "raw_ocr_value": "78401011",
+        "code_needs_verification": true,
+        "note": "Ký tự cuối là chữ cái 'I' (giống các mã 7580201I/7520103I/7840101I cùng nhóm ngành đường sắt), OCR gốc đọc nhầm thành số 1 hoặc dấu '/'."
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 54. Mã ngành tuyển sinh: 7840101I. Tên ngành/chuyên ngành: Nhóm ngành liên quan đường sắt tốc độ cao và đường sắt đô thị (Kinh tế; Quản lý; vận hành và khai thác). Điểm chuẩn: 668. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "Đã sửa mã ngành từ '78401011' thành '7840101I' (nghi vấn lỗi OCR I/1)."
+      ]
+    },
+    {
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t002_r009",
+      "source_file": "2025_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2025,
+      "table_id": "table_003",
+      "row_index": 9,
+      "section_name": "DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP",
+      "segment_context": "",
+      "row_identifiers": {
+        "ten_nganh": "Nhóm ngành tuyển chung (dành cho đối tượng chưa xác định được ngành học) – Chương trình tiên tiến",
+        "ma_nganh": "7480201L"
+      },
+      "code_info": {
+        "code_raw": "7480201L",
+        "code_corrected": "7480201L",
+        "code_changed": false,
+        "code_needs_verification": true,
+        "code_reason": "no_whitelist_match"
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2025 | Hệ dai_hoc_chinh_quy | DANH SÁCH ĐIỂM CHUẨN PHƯƠNG THỨC XÉT TUYỂN KẾT HỢP]\nSTT 55. Mã ngành tuyển sinh: 7480201L. Tên ngành/chuyên ngành: Nhóm ngành tuyển chung (dành cho đối tượng chưa xác định được ngành học) – Chương trình tiên tiến. Điểm chuẩn: 668. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "mã cần xác minh: 7480201L -> 7480201L"
+      ]
+    }
+  ],
+  "chunk_count": 55,
+  "generated_by": "chunking.py (step 6)"
+}

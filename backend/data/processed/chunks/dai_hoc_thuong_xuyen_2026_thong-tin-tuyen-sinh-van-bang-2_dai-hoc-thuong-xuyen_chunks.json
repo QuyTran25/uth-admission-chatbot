@@ -1,0 +1,766 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_s000",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": null,
+      "row_index": null,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": null,
+      "code_info": null,
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]\nBỘ XÂY DỰNG\nTRƯỜNG ĐẠI HỌC GIAO THÔNG VẬN TẢI TP. HỒ CHÍ MINH\nTRUNG TÂM ĐÀO TẠO THƯỜNG XUYÊN – LIÊN KẾT ĐÀO TẠO\nHotline: 0835.68.68.98 – Website: giaothongvantaitphcm.edu.vn\n———o0o———\nTHÔNG BÁO TUYỂN SINH\nVĂN BẰNG 2 ĐẠI HỌC NĂM 2026\n1. Danh sách ngành tuyển sinh: Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r000",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 0,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 1,
+        "ten_nganh": "Công nghệ thông tin",
+        "ma_nganh_tuyen_sinh": "7480201"
+      },
+      "code_info": {
+        "code": "7480201",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 1. Tên ngành/Chuyên ngành: Công nghệ thông tin. Mã ngành Tuyển sinh: 7480201. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r001",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 1,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 2,
+        "ten_nganh": "Logistics và quản lý chuỗi cung ứng",
+        "ma_nganh_tuyen_sinh": "7510605"
+      },
+      "code_info": {
+        "code": "7510605",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 2. Tên ngành/Chuyên ngành: Logistics và quản lý chuỗi cung ứng. Mã ngành Tuyển sinh: 7510605. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r002",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 2,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 3,
+        "ten_nganh": "Kỹ thuật cơ khí (chuyên ngành Cơ khí đường sắt tốc độ cao và đường sắt đô thị)",
+        "ma_nganh_tuyen_sinh": "752010308"
+      },
+      "code_info": {
+        "code": "752010308",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 3. Tên ngành/Chuyên ngành: Kỹ thuật cơ khí (chuyên ngành Cơ khí đường sắt tốc độ cao và đường sắt đô thị). Mã ngành Tuyển sinh: 752010308. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r003",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 3,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 4,
+        "ten_nganh": "Kỹ thuật tàu thủy",
+        "ma_nganh_tuyen_sinh": "7520122"
+      },
+      "code_info": {
+        "code": "7520122",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 4. Tên ngành/Chuyên ngành: Kỹ thuật tàu thủy. Mã ngành Tuyển sinh: 7520122. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r004",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 4,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 5,
+        "ten_nganh": "Kỹ thuật điện (chuyên ngành Điện công nghiệp)",
+        "ma_nganh_tuyen_sinh": "752020102"
+      },
+      "code_info": {
+        "code": "752020102",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 5. Tên ngành/Chuyên ngành: Kỹ thuật điện (chuyên ngành Điện công nghiệp). Mã ngành Tuyển sinh: 752020102. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r005",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 5,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 6,
+        "ten_nganh": "Kỹ thuật điện (chuyên ngành Năng lượng tái tạo)",
+        "ma_nganh_tuyen_sinh": "752020104"
+      },
+      "code_info": {
+        "code": "752020104",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 6. Tên ngành/Chuyên ngành: Kỹ thuật điện (chuyên ngành Năng lượng tái tạo). Mã ngành Tuyển sinh: 752020104. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r006",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 6,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 7,
+        "ten_nganh": "Kỹ thuật điện tử – viễn thông",
+        "ma_nganh_tuyen_sinh": "7520207"
+      },
+      "code_info": {
+        "code": "7520207",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 7. Tên ngành/Chuyên ngành: Kỹ thuật điện tử – viễn thông. Mã ngành Tuyển sinh: 7520207. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r007",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 7,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 8,
+        "ten_nganh": "Kỹ thuật điều khiển và tự động hóa (chuyên ngành Tự động hóa Công nghiệp)",
+        "ma_nganh_tuyen_sinh": "752021601"
+      },
+      "code_info": {
+        "code": "752021601",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 8. Tên ngành/Chuyên ngành: Kỹ thuật điều khiển và tự động hóa (chuyên ngành Tự động hóa Công nghiệp). Mã ngành Tuyển sinh: 752021601. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r008",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 8,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 9,
+        "ten_nganh": "Kỹ thuật điều khiển và tự động hóa (chuyên ngành Kỹ thuật điều khiển tự động và thông tin tín hiệu đường sắt tốc độ cao)",
+        "ma_nganh_tuyen_sinh": "752021603"
+      },
+      "code_info": {
+        "code": "752021603",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 9. Tên ngành/Chuyên ngành: Kỹ thuật điều khiển và tự động hóa (chuyên ngành Kỹ thuật điều khiển tự động và thông tin tín hiệu đường sắt tốc độ cao). Mã ngành Tuyển sinh: 752021603. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r009",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 9,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 10,
+        "ten_nganh": "Kỹ thuật ô tô (chuyên ngành Cơ khí ô tô)",
+        "ma_nganh_tuyen_sinh": "752013001"
+      },
+      "code_info": {
+        "code": "752013001",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 10. Tên ngành/Chuyên ngành: Kỹ thuật ô tô (chuyên ngành Cơ khí ô tô). Mã ngành Tuyển sinh: 752013001. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r010",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 10,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 11,
+        "ten_nganh": "Kỹ thuật xây dựng (chuyên ngành Xây dựng dân dụng và công nghiệp)",
+        "ma_nganh_tuyen_sinh": "758020101"
+      },
+      "code_info": {
+        "code": "758020101",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 11. Tên ngành/Chuyên ngành: Kỹ thuật xây dựng (chuyên ngành Xây dựng dân dụng và công nghiệp). Mã ngành Tuyển sinh: 758020101. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r011",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 11,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 12,
+        "ten_nganh": "Kỹ thuật xây dựng (chuyên ngành Thiết kế nội thất)",
+        "ma_nganh_tuyen_sinh": "758020104"
+      },
+      "code_info": {
+        "code": "758020104",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 12. Tên ngành/Chuyên ngành: Kỹ thuật xây dựng (chuyên ngành Thiết kế nội thất). Mã ngành Tuyển sinh: 758020104. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r012",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 12,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 13,
+        "ten_nganh": "Kỹ thuật xây dựng công trình giao thông (chuyên ngành Xây dựng cầu đường)",
+        "ma_nganh_tuyen_sinh": "758020501"
+      },
+      "code_info": {
+        "code": "758020501",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 13. Tên ngành/Chuyên ngành: Kỹ thuật xây dựng công trình giao thông (chuyên ngành Xây dựng cầu đường). Mã ngành Tuyển sinh: 758020501. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r013",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 13,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 14,
+        "ten_nganh": "Kỹ thuật xây dựng công trình giao thông (chuyên ngành Xây dựng đường sắt tốc độ cao và đường sắt đô thị)",
+        "ma_nganh_tuyen_sinh": "758020512"
+      },
+      "code_info": {
+        "code": "758020512",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 14. Tên ngành/Chuyên ngành: Kỹ thuật xây dựng công trình giao thông (chuyên ngành Xây dựng đường sắt tốc độ cao và đường sắt đô thị). Mã ngành Tuyển sinh: 758020512. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r014",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 14,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 15,
+        "ten_nganh": "Kinh tế xây dựng (chuyên ngành Kinh tế xây dựng)",
+        "ma_nganh_tuyen_sinh": "758030101"
+      },
+      "code_info": {
+        "code": "758030101",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 15. Tên ngành/Chuyên ngành: Kinh tế xây dựng (chuyên ngành Kinh tế xây dựng). Mã ngành Tuyển sinh: 758030101. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r015",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 15,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 16,
+        "ten_nganh": "Kinh tế xây dựng (chuyên ngành Kinh tế và quản lý bất động sản)",
+        "ma_nganh_tuyen_sinh": "758030103"
+      },
+      "code_info": {
+        "code": "758030103",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 16. Tên ngành/Chuyên ngành: Kinh tế xây dựng (chuyên ngành Kinh tế và quản lý bất động sản). Mã ngành Tuyển sinh: 758030103. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r016",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 16,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 17,
+        "ten_nganh": "Quản lý xây dựng",
+        "ma_nganh_tuyen_sinh": "7580302"
+      },
+      "code_info": {
+        "code": "7580302",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 17. Tên ngành/Chuyên ngành: Quản lý xây dựng. Mã ngành Tuyển sinh: 7580302. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r017",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 17,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 18,
+        "ten_nganh": "Khai thác vận tải (chuyên ngành Quản lý và kinh doanh vận tải)",
+        "ma_nganh_tuyen_sinh": "784010102"
+      },
+      "code_info": {
+        "code": "784010102",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 18. Tên ngành/Chuyên ngành: Khai thác vận tải (chuyên ngành Quản lý và kinh doanh vận tải). Mã ngành Tuyển sinh: 784010102. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r018",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 18,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 19,
+        "ten_nganh": "Khai thác vận tải (chuyên ngành Khai thác đường sắt tốc độ cao)",
+        "ma_nganh_tuyen_sinh": "784010104"
+      },
+      "code_info": {
+        "code": "784010104",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 19. Tên ngành/Chuyên ngành: Khai thác vận tải (chuyên ngành Khai thác đường sắt tốc độ cao). Mã ngành Tuyển sinh: 784010104. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r019",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 19,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 20,
+        "ten_nganh": "Kinh tế vận tải (chuyên ngành Kinh tế hàng hải và đường thủy)",
+        "ma_nganh_tuyen_sinh": "784010403"
+      },
+      "code_info": {
+        "code": "784010403",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 20. Tên ngành/Chuyên ngành: Kinh tế vận tải (chuyên ngành Kinh tế hàng hải và đường thủy). Mã ngành Tuyển sinh: 784010403. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r020",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 20,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 21,
+        "ten_nganh": "Khoa học hàng hải (chuyên ngành Điều khiển và quản lý tàu biển)",
+        "ma_nganh_tuyen_sinh": "784010606"
+      },
+      "code_info": {
+        "code": "784010606",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 21. Tên ngành/Chuyên ngành: Khoa học hàng hải (chuyên ngành Điều khiển và quản lý tàu biển). Mã ngành Tuyển sinh: 784010606. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_t000_r021",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": "table_001",
+      "row_index": 21,
+      "section_name": "1. Danh sách ngành tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": {
+        "tt": 22,
+        "ten_nganh": "Khoa học hàng hải (chuyên ngành Khai thác máy tàu thủy và quản lý kỹ thuật)",
+        "ma_nganh_tuyen_sinh": "784010607"
+      },
+      "code_info": {
+        "code": "784010607",
+        "code_needs_verification": false
+      },
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 1. Danh sách ngành tuyển sinh]\nTT: 22. Tên ngành/Chuyên ngành: Khoa học hàng hải (chuyên ngành Khai thác máy tàu thủy và quản lý kỹ thuật). Mã ngành Tuyển sinh: 784010607. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_s001",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": null,
+      "row_index": null,
+      "section_name": "2. Hình thức tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": null,
+      "code_info": null,
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 2. Hình thức tuyển sinh]\n2. Hình thức tuyển sinh: Xét tuyển bằng tốt nghiệp Đại học. Không thi tuyển. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_s002",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": null,
+      "row_index": null,
+      "section_name": "3. Đối tượng tuyển sinh",
+      "segment_context": "",
+      "row_identifiers": null,
+      "code_info": null,
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 3. Đối tượng tuyển sinh]\n3. Đối tượng tuyển sinh: Thí sinh đã có ít nhất 01 bằng tốt nghiệp Đại học. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_s003",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": null,
+      "row_index": null,
+      "section_name": "4. Hình thức đào tạo & Thời gian đào tạo",
+      "segment_context": "",
+      "row_identifiers": null,
+      "code_info": null,
+      "footnotes": [
+        "Lưu ý: Học văn bằng 2, sinh viên sẽ được xét miễn giảm tín chỉ đối với các môn trong chương trình đào tạo của trường Đại học Giao thông Vận tải TPHCM, mà sinh viên đã học ở bậc Trung cấp, Cao đẳng hoặc trường Đại học khác."
+      ],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 4. Hình thức đào tạo & Thời gian đào tạo]\n4. Hình thức đào tạo & Thời gian đào tạo:\nHình thức đào tạo: Đào tạo theo tín chỉ. Học phí: 700.000đ/ tín chỉ. Thời gian đào tạo: Từ 2,0 năm. (Thời gian hoàn thành chương trình học có thể ngắn hơn, tuỳ thuộc vào số lượng tín chỉ sinh viên đăng ký học mỗi kỳ hoặc (và) số lượng tín chỉ sinh viên được xét miễn giảm).\n*** Lưu ý: Học văn bằng 2, sinh viên sẽ được xét miễn giảm tín chỉ đối với các môn trong chương trình đào tạo của trường Đại học Giao thông Vận tải TPHCM, mà sinh viên đã học ở bậc Trung cấp, Cao đẳng hoặc trường Đại học khác. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_s004",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": null,
+      "row_index": null,
+      "section_name": "5. Thời gian & Địa điểm học",
+      "segment_context": "",
+      "row_identifiers": null,
+      "code_info": null,
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 5. Thời gian & Địa điểm học]\n5. Thời gian & Địa điểm học:\nThời gian học: Linh hoạt trong ngày hoặc trong tuần. Địa điểm học: Quận Bình Tân hoặc Quận Bình Thạnh, TP Hồ Chí Minh. Sinh viên sẽ được thông báo khi nhập học. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_s005",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": null,
+      "row_index": null,
+      "section_name": "6. Hồ sơ đăng ký xét tuyển Văn bằng 2 đại học Giao thông Vận tải TPHCM",
+      "segment_context": "",
+      "row_identifiers": null,
+      "code_info": null,
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [
+        "https://giaothongvantaitphcm.edu.vn/thong-tin-cac-loai-mau-don-cua-truong-dai-hoc-giao-thong-van-tai-tphcm/"
+      ],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 6. Hồ sơ đăng ký xét tuyển Văn bằng 2 đại học Giao thông Vận tải TPHCM]\n6. Hồ sơ đăng ký xét tuyển Văn bằng 2 đại học Giao thông Vận tải TPHCM:\nThí sinh chuẩn bị 01 bộ hồ sơ theo yêu cầu của trường, gồm: Phiếu đăng ký Xét tuyển; Bằng Đại học; Bảng điểm Đại học; Bằng tốt nghiệp Trung học phổ thông; CMND / CCCD.\n*** Thí sinh tải mẫu Phiếu tuyển sinh và Phiếu đăng ký xét tuyển tại đây: https://giaothongvantaitphcm.edu.vn/thong-tin-cac-loai-mau-don-cua-truong-dai-hoc-giao-thong-van-tai-tphcm/ Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/ | https://giaothongvantaitphcm.edu.vn/thong-tin-cac-loai-mau-don-cua-truong-dai-hoc-giao-thong-van-tai-tphcm/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_s006",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": null,
+      "row_index": null,
+      "section_name": "7. Thời gian nhận hồ sơ và lệ phí hồ sơ xét tuyển",
+      "segment_context": "",
+      "row_identifiers": null,
+      "code_info": null,
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 7. Thời gian nhận hồ sơ và lệ phí hồ sơ xét tuyển]\n7. Thời gian nhận hồ sơ và lệ phí hồ sơ xét tuyển:\nThời gian nhận hồ sơ: Trường nhận hồ sơ dự tuyển từ ngày ra thông báo này. Lệ phí hồ sơ và xét tuyển: 500.000đ / hồ sơ. Kết quả xét tuyển: Nhà trường gửi kết quả xét tuyển trực tiếp đến email hoặc địa chỉ thí sinh ghi trên hồ sơ dự tuyển. (Kết quả xét tuyển được công bố trong vòng 1 tuần). Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/",
+      "needs_review": []
+    },
+    {
+      "chunk_id": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_s007",
+      "source_file": "2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen.docx",
+      "program_type": "dai_hoc_thuong_xuyen",
+      "admission_year": 2026,
+      "table_id": null,
+      "row_index": null,
+      "section_name": "8. Liên hệ tư vấn và nộp hồ sơ",
+      "segment_context": "",
+      "row_identifiers": null,
+      "code_info": null,
+      "footnotes": [],
+      "source_urls": [
+        "https://dkxt.ut.edu.vn/",
+        "https://giaothongvantaitphcm.edu.vn/"
+      ],
+      "extra_urls": [
+        "https://www.facebook.com/daotao.truongdaihocgiaothongvantaitphcm/"
+      ],
+      "text": "[Năm 2026 | Hệ dai_hoc_thuong_xuyen | 8. Liên hệ tư vấn và nộp hồ sơ]\n8. Liên hệ tư vấn và nộp hồ sơ:\nPhòng Tuyển sinh – Trung tâm Đào tạo Thường xuyên.\nVPTS: 234 - 236 Đường Số 1, Phường An Lạc, TP Hồ Chí Minh (đ/c cũ: 234 - 236 Đường Số 1, Bình Trị Đông B, Bình Tân, TP. HCM).\nVPTS: Số 37/5 Ngô Tất Tố, P. Thạnh Mỹ Tây, TPHCM (đ/c cũ: Số 37/5 Ngô Tất Tố, Phường 19, Quận Bình Thạnh, TPHCM).\nWebsite: giaothongvantaitphcm.edu.vn. Fanpage: facebook.com/daotao.truongdaihocgiaothongvantaitphcm. Điện Thoại: 0835.68.68.98 (zalo).\nVăn phòng làm việc và nhận hồ sơ sáng từ 7h30 đến 11h30, chiều từ 13h30 đến 17h30 từ Thứ hai đến Chủ nhật. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/ | https://www.facebook.com/daotao.truongdaihocgiaothongvantaitphcm/",
+      "needs_review": []
+    }
+  ],
+  "chunk_count": 30,
+  "generated_by": ""
+}
