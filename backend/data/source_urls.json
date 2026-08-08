@@ -1,0 +1,36 @@
+{
+  "dai_hoc_chinh_quy": {
+    "source_urls": [
+      "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+    ],
+    "extra_urls": [
+      "https://hocbong.uth.edu.vn/"
+    ]
+  },
+  "dai_hoc_thuong_xuyen": {
+    "source_urls": [
+      "https://dkxt.ut.edu.vn/",
+      "https://giaothongvantaitphcm.edu.vn/"
+    ],
+    "extra_urls": []
+  },
+  "lien_ket_quoc_te": {
+    "source_urls": [
+      "https://iec.ut.edu.vn/vi/trang-chu/"
+    ],
+    "extra_urls": []
+  },
+  "sau_dai_hoc": {
+    "source_urls": [
+      "https://sdh.ut.edu.vn/"
+    ],
+    "extra_urls": [
+      "https://grad.ut.edu.vn/admission/register",
+      "https://sdh.ut.edu.vn/dang-ky-tuyen-sinh-thac-si/"
+    ]
+  },
+  "thong_tin_chung": {
+    "source_urls": [],
+    "extra_urls": []
+  }
+}

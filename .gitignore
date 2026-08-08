@@ -1,0 +1,45 @@
+# Python Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python compiler cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE and Editor settings
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment config (Gemini API Key, etc.)
+.env
+
+# Ignore data content but keep directory structures
+backend/data/raw/*
+!backend/data/raw/.gitkeep
+backend/data/processed/*
+!backend/data/processed/.gitkeep
+backend/data/index/*
+!backend/data/index/.gitkeep
+
+# Ignore frontend build outputs and packages
+node_modules/
+dist/
+build/
+.eslintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

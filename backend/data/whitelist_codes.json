@@ -1,0 +1,39 @@
+{
+  "version": "2026-08-06",
+  "source": "derived from 2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy.pdf (67 unique codes after digit rule)",
+  "standard_pattern": "^UTH[A-Z]{3}\\d{2}[A-Z]$",
+  "description": "Whitelist 2 lớp: standard = auto-accept khi apply_digit_rule cho ra mã match; ambiguous = luôn cần verification dù match",
+  "standard": [
+    "UTHCCK01A", "UTHCDK01A", "UTHCGT01D", "UTHCOT01A",
+    "UTHGIT01V", "UTHGIT02V",
+    "UTHHQL01A", "UTHHQL02A", "UTHHQL02E",
+    "UTHKCK01A", "UTHKCK02A", "UTHKCK03A",
+    "UTHKDK01A", "UTHKDK02A", "UTHKDK03A",
+    "UTHKDL01A", "UTHKDV01A",
+    "UTHKGT01D", "UTHKGT02D",
+    "UTHKHH01A", "UTHKHH01V", "UTHKHH02A", "UTHKHH03D", "UTHKHH05A",
+    "UTHKMT01D", "UTHKMT02A", "UTHKMT02V",
+    "UTHKOT01A",
+    "UTHKQX01A",
+    "UTHKTD01A",
+    "UTHKTH01A", "UTHKTH01V", "UTHKTH02A", "UTHKTH03A",
+    "UTHKTT01D",
+    "UTHKTV01A", "UTHKTV01V", "UTHKTV02A",
+    "UTHKTX01A", "UTHKTX02A",
+    "UTHKXD01A", "UTHKXD02A", "UTHKXD03A",
+    "UTHKXT01D",
+    "UTHLAW01A", "UTHLAW01V",
+    "UTHLOG01A", "UTHLOG01E", "UTHLOG01V",
+    "UTHMMT01A",
+    "UTHNNA01A", "UTHNNA01E", "UTHNNA01V",
+    "UTHQTD01A", "UTHQTD01V",
+    "UTHUIT01A", "UTHUIT02A", "UTHUIT02V", "UTHUIT03A", "UTHUIT04A", "UTHUIT05A", "UTHUIT05E"
+  ],
+  "ambiguous": [
+    "UTHIECKTV",
+    "UTHIECL0G",
+    "UTHIECL0W",
+    "UTHKDK0AA",
+    "UTHKHH0AD"
+  ]
+}
