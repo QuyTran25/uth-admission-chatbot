@@ -38,6 +38,7 @@ backend/data/processed/section/
 !backend/data/processed/.gitkeep
 backend/data/index/*
 !backend/data/index/.gitkeep
+backend/data/processed/chunks/
 
 # Ignore frontend build outputs and packages
 node_modules/

@@ -1,10 +1,11 @@
-# Chunks — unknown
+# Chunks — thong_tin_chung_2026_thong-tin-lien-he
 
 Tổng: **1** chunk
 
 ## 1. `2026_thong-tin-lien-he_s000`
 - Section: ---
 - Năm: 2026 | Hệ: thong_tin_chung
+- Nguồn: https://uth.edu.vn/
 
 ```text
 [Năm 2026 | Hệ thong_tin_chung | ---]
@@ -18,5 +19,6 @@ Thông tin liên hệ chính thức của Trường Đại học Giao thông V�
 - Điện thoại Tuyển sinh: 028 3512 8986
 - Điện thoại Phòng Đào tạo: 0283 8992862
 - Điện thoại Văn thư: 028 3899 1373
-- Email: ut-hcmc@ut.edu.vn
+- Email: ut-hcmc@ut.edu.vn Nguồn: https://uth.edu.vn/
 ```
+

@@ -30,7 +30,9 @@
     ]
   },
   "thong_tin_chung": {
-    "source_urls": [],
+    "source_urls": [
+      "https://uth.edu.vn/"
+    ],
     "extra_urls": []
   }
 }

@@ -8,3 +8,5 @@ google-generativeai>=0.4.0
 pydantic-settings>=2.2.0
 pandas>=2.2.0
 pytest>=8.0.0
+# Vietnamese word segmentation — bắt buộc với bkai-foundation-models/vietnamese-bi-encoder
+underthesea>=6.8.4

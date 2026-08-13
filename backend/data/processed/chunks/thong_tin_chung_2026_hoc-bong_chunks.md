@@ -1,10 +1,11 @@
-# Chunks — unknown
+# Chunks — thong_tin_chung_2026_hoc-bong
 
 Tổng: **1** chunk
 
 ## 1. `2026_hoc-bong_s000`
 - Section: Thông tin chung
 - Năm: 2026 | Hệ: thong_tin_chung
+- Nguồn: https://uth.edu.vn/
 
 ```text
 [Năm 2026 | Hệ thong_tin_chung | Thông tin chung]
@@ -33,5 +34,6 @@ Không chỉ tập trung vào thành tích học tập, UTH còn chú trọng đ
 – Học bổng dành cho sinh viên là người dân tộc thiểu số;
 – Học bổng dành cho con em thuộc các ngành giáo dục, giao thông, xây dựng.
 Thí sinh có thể đăng ký xét học bổng trực tuyến tại địa chỉ: https://hocbong.uth.edu.vn/ và cung cấp đầy đủ thông tin theo hướng dẫn của hệ thống.
-Với hệ thống học bổng phong phú, giá trị cao, Trường Đại học Giao thông vận tải TP. Hồ Chí Minh kỳ vọng sẽ tạo thêm nhiều cơ hội để thí sinh 2K8 tiếp cận môi trường học tập chất lượng, đồng thời phát huy năng lực và định hướng nghề nghiệp trong tương lai.
+Với hệ thống học bổng phong phú, giá trị cao, Trường Đại học Giao thông vận tải TP. Hồ Chí Minh kỳ vọng sẽ tạo thêm nhiều cơ hội để thí sinh 2K8 tiếp cận môi trường học tập chất lượng, đồng thời phát huy năng lực và định hướng nghề nghiệp trong tương lai. Nguồn: https://uth.edu.vn/
 ```
+
