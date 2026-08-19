@@ -8,7 +8,7 @@ Tổng: **66** chunk
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 Trường Đại học Giao thông vận tải Thành Phố Hồ Chí Minh (UTH) trân trọng công bố danhsách điểm chuẩn trúng tuyển theo phương thức xét tuyển kết hợp vào hệ Đạihọc chính quy năm 2026.
 DANH SÁCH ĐIỂM CHUẨNPHƯƠNG THỨC XÉT TUYỂN KẾT HỢP Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
@@ -19,7 +19,7 @@ DANH SÁCH ĐIỂM CHUẨNPHƯƠNG THỨC XÉT TUYỂN KẾT HỢP Nguồn: http
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 1. Mã xét tuyển: UTHCCK01A. Tên mã xét tuyển: Công nghệ kỹ thuật cơ khí – chương trình tiên tiến. Điểm chuẩn: 936. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -29,7 +29,7 @@ STT: 1. Mã xét tuyển: UTHCCK01A. Tên mã xét tuyển: Công nghệ kỹ th
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 2. Mã xét tuyển: UTHCDK01A. Tên mã xét tuyển: Công nghệ kỹ thuật điều khiển và tự động hóa – chương trình tiên tiến. Điểm chuẩn: 1080. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -39,7 +39,7 @@ STT: 2. Mã xét tuyển: UTHCDK01A. Tên mã xét tuyển: Công nghệ kỹ th
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 3. Mã xét tuyển: UTHCGT01D. Tên mã xét tuyển: Công nghệ kỹ thuật giao thông (chuyên ngành Quy hoạch và quản lý giao thông; Logistics và hạ tầng giao thông) – Chương trình chuẩn. Điểm chuẩn: 900. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -49,7 +49,7 @@ STT: 3. Mã xét tuyển: UTHCGT01D. Tên mã xét tuyển: Công nghệ kỹ th
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 4. Mã xét tuyển: UTHCOT01A. Tên mã xét tuyển: Công nghệ kỹ thuật ô tô – chương trình tiên tiến. Điểm chuẩn: 931. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -59,7 +59,7 @@ STT: 4. Mã xét tuyển: UTHCOT01A. Tên mã xét tuyển: Công nghệ kỹ th
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 5. Mã xét tuyển: UTHGIT01V. Tên mã xét tuyển: Công nghệ thông tin (chuyên ngành Công nghệ thông tin; Khoa học dữ liệu và AI) – chương trình tiên tiến. Điểm chuẩn: 600. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -69,7 +69,7 @@ STT: 5. Mã xét tuyển: UTHGIT01V. Tên mã xét tuyển: Công nghệ thông 
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 6. Mã xét tuyển: UTHGIT02V. Tên mã xét tuyển: Nhóm chương trình về Công nghệ số và kinh tế số (chuyên ngành Truyền thông số và Đổi mới sáng tạo; Kinh tế số và Trí tuệ nhân tạo) – chương trình tiên tiến. Điểm chuẩn: 600. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -79,7 +79,7 @@ STT: 6. Mã xét tuyển: UTHGIT02V. Tên mã xét tuyển: Nhóm chương trìn
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 7. Mã xét tuyển: UTHHQL01A. Tên mã xét tuyển: Hệ thống thông tin quản lý – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -89,7 +89,7 @@ STT: 7. Mã xét tuyển: UTHHQL01A. Tên mã xét tuyển: Hệ thống thông 
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 8. Mã xét tuyển: UTHHQL02A. Tên mã xét tuyển: Hệ thống thông tin quản lý (chuyên ngành Kinh tế số và Trí tuệ nhân tạo) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -99,7 +99,7 @@ STT: 8. Mã xét tuyển: UTHHQL02A. Tên mã xét tuyển: Hệ thống thông 
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 9. Mã xét tuyển: UTHHQL02E. Tên mã xét tuyển: Hệ thống thông tin quản lý (chuyên ngành Kinh tế số và Trí tuệ nhân tạo) – chương trình hoàn toàn bằng tiếng Anh. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -109,7 +109,7 @@ STT: 9. Mã xét tuyển: UTHHQL02E. Tên mã xét tuyển: Hệ thống thông 
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 10. Mã xét tuyển: UTHKCK01A. Tên mã xét tuyển: Kỹ thuật cơ khí (chuyên ngành Cơ khí tự động) – chương trình tiên tiến. Điểm chuẩn: 898. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -119,7 +119,7 @@ STT: 10. Mã xét tuyển: UTHKCK01A. Tên mã xét tuyển: Kỹ thuật cơ kh
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 11. Mã xét tuyển: UTHKCK02A. Tên mã xét tuyển: Kỹ thuật cơ khí (chuyên ngành Cơ khí đường sắt tốc độ cao và đường sắt đô thị) – chương trình tiên tiến. Điểm chuẩn: 680. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -129,7 +129,7 @@ STT: 11. Mã xét tuyển: UTHKCK02A. Tên mã xét tuyển: Kỹ thuật cơ kh
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 12. Mã xét tuyển: UTHKCK03A. Tên mã xét tuyển: Kỹ thuật cơ khí (chuyên ngành kỹ thuật cơ khí hàng không) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -139,7 +139,7 @@ STT: 12. Mã xét tuyển: UTHKCK03A. Tên mã xét tuyển: Kỹ thuật cơ kh
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 13. Mã xét tuyển: UTHKDK01A. Tên mã xét tuyển: Kỹ thuật điều khiển và tự động hóa – chương trình tiên tiến. Điểm chuẩn: 963. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -149,7 +149,7 @@ STT: 13. Mã xét tuyển: UTHKDK01A. Tên mã xét tuyển: Kỹ thuật điề
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 14. Mã xét tuyển: UTHKDK02A. Tên mã xét tuyển: Kỹ thuật điều khiển và tự động hóa (chuyên ngành Hệ thống điều khiển thiết bị bay không người lái (UAS) – chương trình tiên tiến. Điểm chuẩn: 680. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -159,7 +159,7 @@ STT: 14. Mã xét tuyển: UTHKDK02A. Tên mã xét tuyển: Kỹ thuật điề
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 15. Mã xét tuyển: UTHKDK03A. Tên mã xét tuyển: Kỹ thuật điều khiển và tự động hóa (chuyên ngành Kỹ thuật năng lượng gió và tự động hóa) – chương trình tiên tiến. Điểm chuẩn: 680. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -169,7 +169,7 @@ STT: 15. Mã xét tuyển: UTHKDK03A. Tên mã xét tuyển: Kỹ thuật điề
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 16. Mã xét tuyển: UTHKDK04A. Tên mã xét tuyển: Kỹ thuật điều khiển và tự động hóa (chuyên ngành Kỹ thuật điều khiển tự động và thông tin tín hiệu đường sắt tốc độ cao và đường sắt đô thị) – chương trình tiên tiến. Điểm chuẩn: 680. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -179,7 +179,7 @@ STT: 16. Mã xét tuyển: UTHKDK04A. Tên mã xét tuyển: Kỹ thuật điề
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 17. Mã xét tuyển: UTHKDL01A. Tên mã xét tuyển: Khoa học dữ liệu (chuyên ngành Khoa học dữ liệu; Block chain và AI) – chương trình tiên tiến. Điểm chuẩn: 780. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -189,7 +189,7 @@ STT: 17. Mã xét tuyển: UTHKDL01A. Tên mã xét tuyển: Khoa học dữ li�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 18. Mã xét tuyển: UTHKDV01A. Tên mã xét tuyển: Kỹ thuật điện tử – viễn thông – chương trình tiên tiến. Điểm chuẩn: 868. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -199,7 +199,7 @@ STT: 18. Mã xét tuyển: UTHKDV01A. Tên mã xét tuyển: Kỹ thuật điệ
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 19. Mã xét tuyển: UTHKGT01D. Tên mã xét tuyển: Kỹ thuật xây dựng công trình giao thông (chuyên ngành Xây dựng cầu đường; Xây dựng đường bộ; Xây dựng công trình giao thông đô thị) – chương trình chuẩn. Điểm chuẩn: 919. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -209,7 +209,7 @@ STT: 19. Mã xét tuyển: UTHKGT01D. Tên mã xét tuyển: Kỹ thuật xây d
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 20. Mã xét tuyển: UTHKGT02D. Tên mã xét tuyển: Kỹ thuật xây dựng công trình giao thông (chuyên ngành Xây dựng đường sắt tốc độ cao và đường sắt đô thị) – chương trình chuẩn. Điểm chuẩn: 680. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -219,7 +219,7 @@ STT: 20. Mã xét tuyển: UTHKGT02D. Tên mã xét tuyển: Kỹ thuật xây d
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 21. Mã xét tuyển: UTHKHH01A. Tên mã xét tuyển: Khoa học hàng hải (chuyên ngành Kỹ thuật điện, điện tử và điều khiển; Cơ điện tử) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -229,7 +229,7 @@ STT: 21. Mã xét tuyển: UTHKHH01A. Tên mã xét tuyển: Khoa học hàng h�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 22. Mã xét tuyển: UTHKHH01V. Tên mã xét tuyển: Khoa học hàng hải (chuyên ngành Quản lý hàng hải và đường thủy; Quản lý cảng và logistics) – chương trình tiên tiến. Điểm chuẩn: 600. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -239,7 +239,7 @@ STT: 22. Mã xét tuyển: UTHKHH01V. Tên mã xét tuyển: Khoa học hàng h�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 23. Mã xét tuyển: UTHKHH02A. Tên mã xét tuyển: Khoa học hàng hải (chuyên ngành Quản lý hàng hải và đường thủy) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -249,7 +249,7 @@ STT: 23. Mã xét tuyển: UTHKHH02A. Tên mã xét tuyển: Khoa học hàng h�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 24. Mã xét tuyển: UTHKHH03D. Tên mã xét tuyển: Khoa học hàng hải (chuyên ngành Điều khiển và quản lý tàu biển) – chương trình chuẩn. Điểm chuẩn: 903. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -259,7 +259,7 @@ STT: 24. Mã xét tuyển: UTHKHH03D. Tên mã xét tuyển: Khoa học hàng h�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 25. Mã xét tuyển: UTHKHH04D. Tên mã xét tuyển: Khoa học hàng hải (chuyên ngành Khai thác máy tàu thủy và quản lý kỹ thuật) – chương trình chuẩn. Điểm chuẩn: 901. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -269,7 +269,7 @@ STT: 25. Mã xét tuyển: UTHKHH04D. Tên mã xét tuyển: Khoa học hàng h�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 26. Mã xét tuyển: UTHKHH05A. Tên mã xét tuyển: Khoa học hàng hải (chuyên ngành Quản lý cảng và logistics) – chương trình tiên tiến. Điểm chuẩn: 836. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -279,7 +279,7 @@ STT: 26. Mã xét tuyển: UTHKHH05A. Tên mã xét tuyển: Khoa học hàng h�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 27. Mã xét tuyển: UTHKMT01D. Tên mã xét tuyển: Kỹ thuật môi trường (chuyên ngành Kỹ thuật môi trường; Quản lý an toàn và môi trường) – chương trình chuẩn. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -289,7 +289,7 @@ STT: 27. Mã xét tuyển: UTHKMT01D. Tên mã xét tuyển: Kỹ thuật môi t
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 28. Mã xét tuyển: UTHKMT02A. Tên mã xét tuyển: Hướng liên ngành: Logistics và Môi trường (chuyên ngành Logistics xanh và phát triển bền vững) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -299,7 +299,7 @@ STT: 28. Mã xét tuyển: UTHKMT02A. Tên mã xét tuyển: Hướng liên ngà
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 29. Mã xét tuyển: UTHKMT02V. Tên mã xét tuyển: Hướng liên ngành: Logistics và Môi trường (chuyên ngành Logistics xanh và phát triển bền vững) – chương trình tiên tiến. Điểm chuẩn: 600. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -309,7 +309,7 @@ STT: 29. Mã xét tuyển: UTHKMT02V. Tên mã xét tuyển: Hướng liên ngà
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 30. Mã xét tuyển: UTHKOT01A. Tên mã xét tuyển: Kỹ thuật ô tô (chuyên ngành Cơ khí ô tô; Cơ điện tử ô tô) – chương trình tiên tiến. Điểm chuẩn: 836. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -319,7 +319,7 @@ STT: 30. Mã xét tuyển: UTHKOT01A. Tên mã xét tuyển: Kỹ thuật ô tô
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 31. Mã xét tuyển: UTHKQX01A. Tên mã xét tuyển: Quản lý xây dựng – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -329,7 +329,7 @@ STT: 31. Mã xét tuyển: UTHKQX01A. Tên mã xét tuyển: Quản lý xây d�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 32. Mã xét tuyển: UTHKTD01A. Tên mã xét tuyển: Kỹ thuật điện (chuyên ngành Điện công nghiệp; Hệ thống điện giao thông; Năng lượng tái tạo) – chương trình tiên tiến. Điểm chuẩn: 868. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -339,7 +339,7 @@ STT: 32. Mã xét tuyển: UTHKTD01A. Tên mã xét tuyển: Kỹ thuật điệ
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 33. Mã xét tuyển: UTHKTH01A. Tên mã xét tuyển: Khai thác vận tải (chuyên ngành Quản trị logistics và vận tải đa phương thức) – chương trình tiên tiến. Điểm chuẩn: 868. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -349,7 +349,7 @@ STT: 33. Mã xét tuyển: UTHKTH01A. Tên mã xét tuyển: Khai thác vận t�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 34. Mã xét tuyển: UTHKTH01V. Tên mã xét tuyển: Khai thác vận tải (chuyên ngành Quản lý và kinh doanh vận tải; Quản trị logistics và vận tải đa phương thức) – chương trình tiên tiến. Điểm chuẩn: 600. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -359,7 +359,7 @@ STT: 34. Mã xét tuyển: UTHKTH01V. Tên mã xét tuyển: Khai thác vận t�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 35. Mã xét tuyển: UTHKTH02A. Tên mã xét tuyển: Khai thác vận tải (chuyên ngành Khai thác đường sắt tốc độ cao và đường sắt đô thị) – chương trình tiên tiến. Điểm chuẩn: 680. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -369,7 +369,7 @@ STT: 35. Mã xét tuyển: UTHKTH02A. Tên mã xét tuyển: Khai thác vận t�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 36. Mã xét tuyển: UTHKTH03A. Tên mã xét tuyển: Khai thác vận tải (chuyên ngành Quản lý và kinh doanh vận tải) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -379,7 +379,7 @@ STT: 36. Mã xét tuyển: UTHKTH03A. Tên mã xét tuyển: Khai thác vận t�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 37. Mã xét tuyển: UTHKTT01D. Tên mã xét tuyển: Kỹ thuật tàu thủy (chuyên ngành Kỹ thuật tàu thủy, công trình nổi và quản lý hệ thống công nghiệp) – chương trình chuẩn. Điểm chuẩn: 680. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -389,7 +389,7 @@ STT: 37. Mã xét tuyển: UTHKTT01D. Tên mã xét tuyển: Kỹ thuật tàu t
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 38. Mã xét tuyển: UTHKTV01A. Tên mã xét tuyển: Kinh tế vận tải (chuyên ngành Kinh tế hàng hải và đường thủy) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -399,7 +399,7 @@ STT: 38. Mã xét tuyển: UTHKTV01A. Tên mã xét tuyển: Kinh tế vận t�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 39. Mã xét tuyển: UTHKTV01V. Tên mã xét tuyển: Kinh tế vận tải (chuyên ngành Kinh tế hàng hải và đường thủy) – chương trình tiên tiến. Điểm chuẩn: 600. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -409,7 +409,7 @@ STT: 39. Mã xét tuyển: UTHKTV01V. Tên mã xét tuyển: Kinh tế vận t�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 40. Mã xét tuyển: UTHKTV02A. Tên mã xét tuyển: Kinh tế vận tải (chuyên ngành Kinh tế hàng không) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -419,7 +419,7 @@ STT: 40. Mã xét tuyển: UTHKTV02A. Tên mã xét tuyển: Kinh tế vận t�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 41. Mã xét tuyển: UTHKTX01A. Tên mã xét tuyển: Kinh tế xây dựng (chuyên ngành Kinh tế xây dựng) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -429,7 +429,7 @@ STT: 41. Mã xét tuyển: UTHKTX01A. Tên mã xét tuyển: Kinh tế xây dự
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 42. Mã xét tuyển: UTHKTX02A. Tên mã xét tuyển: Kinh tế xây dựng (chuyên ngành Kinh tế và quản lý bất động sản) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -439,7 +439,7 @@ STT: 42. Mã xét tuyển: UTHKTX02A. Tên mã xét tuyển: Kinh tế xây dự
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 43. Mã xét tuyển: UTHKXD01A. Tên mã xét tuyển: Kỹ thuật xây dựng (chuyên ngành Xây dựng dân dụng và công nghiệp) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -449,7 +449,7 @@ STT: 43. Mã xét tuyển: UTHKXD01A. Tên mã xét tuyển: Kỹ thuật xây d
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 44. Mã xét tuyển: UTHKXD02A. Tên mã xét tuyển: Kỹ thuật xây dựng (chuyên ngành Thiết kế nội thất) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -459,7 +459,7 @@ STT: 44. Mã xét tuyển: UTHKXD02A. Tên mã xét tuyển: Kỹ thuật xây d
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 45. Mã xét tuyển: UTHKXD03A. Tên mã xét tuyển: Kỹ thuật xây dựng (chuyên ngành Kỹ thuật xây dựng dân dụng Ứng dụng công nghệ số) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -469,7 +469,7 @@ STT: 45. Mã xét tuyển: UTHKXD03A. Tên mã xét tuyển: Kỹ thuật xây d
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 46. Mã xét tuyển: UTHKXT01D. Tên mã xét tuyển: Kỹ thuật xây dựng công trình thủy (chuyên ngành Xây dựng và quản lý cảng – công trình giao thông thủy) – chương trình chuẩn. Điểm chuẩn: 680. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -479,7 +479,7 @@ STT: 46. Mã xét tuyển: UTHKXT01D. Tên mã xét tuyển: Kỹ thuật xây d
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 47. Mã xét tuyển: UTHLAW01A. Tên mã xét tuyển: Luật (Chuyên ngành Luật và chính sách hàng hải) – chương trình tiên tiến. Điểm chuẩn: 868. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -489,7 +489,7 @@ STT: 47. Mã xét tuyển: UTHLAW01A. Tên mã xét tuyển: Luật (Chuyên ng�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 48. Mã xét tuyển: UTHLAW01V. Tên mã xét tuyển: Luật (Chuyên ngành Luật và chính sách hàng hải) – chương trình tiên tiến. Điểm chuẩn: 800. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -499,7 +499,7 @@ STT: 48. Mã xét tuyển: UTHLAW01V. Tên mã xét tuyển: Luật (Chuyên ng�
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 49. Mã xét tuyển: UTHLOG01A. Tên mã xét tuyển: Logistics và quản lý chuỗi cung ứng – chương trình tiên tiến. Điểm chuẩn: 999. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -509,7 +509,7 @@ STT: 49. Mã xét tuyển: UTHLOG01A. Tên mã xét tuyển: Logistics và quả
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 50. Mã xét tuyển: UTHLOG01E. Tên mã xét tuyển: Logistics và quản lý chuỗi cung ứng – chương trình hoàn toàn bằng tiếng Anh. Điểm chuẩn: 789. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -519,7 +519,7 @@ STT: 50. Mã xét tuyển: UTHLOG01E. Tên mã xét tuyển: Logistics và quả
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 51. Mã xét tuyển: UTHLOG01V. Tên mã xét tuyển: Logistics và quản lý chuỗi cung ứng – chương trình tiên tiến. Điểm chuẩn: 680. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -529,7 +529,7 @@ STT: 51. Mã xét tuyển: UTHLOG01V. Tên mã xét tuyển: Logistics và quả
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 52. Mã xét tuyển: UTHMMT01A. Tên mã xét tuyển: Mạng máy tính và truyền thông dữ liệu (chuyên ngành Mạng máy tính và truyền thông dữ liệu; Kỹ thuật thiết kế vi mạch và AI) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -539,7 +539,7 @@ STT: 52. Mã xét tuyển: UTHMMT01A. Tên mã xét tuyển: Mạng máy tính v
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 53. Mã xét tuyển: UTHNNA01A. Tên mã xét tuyển: Ngôn ngữ Anh – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -549,7 +549,7 @@ STT: 53. Mã xét tuyển: UTHNNA01A. Tên mã xét tuyển: Ngôn ngữ Anh –
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 54. Mã xét tuyển: UTHNNA01E. Tên mã xét tuyển: Ngôn ngữ Anh (chuyên ngành Tiếng anh thương mại, logistics và vận tải quốc tế) – chương trình hoàn toàn bằng tiếng Anh. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -559,7 +559,7 @@ STT: 54. Mã xét tuyển: UTHNNA01E. Tên mã xét tuyển: Ngôn ngữ Anh (ch
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 55. Mã xét tuyển: UTHNNA01V. Tên mã xét tuyển: Ngôn ngữ Anh – chương trình tiên tiến. Điểm chuẩn: 600. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -569,7 +569,7 @@ STT: 55. Mã xét tuyển: UTHNNA01V. Tên mã xét tuyển: Ngôn ngữ Anh –
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 56. Mã xét tuyển: UTHQTD01A. Tên mã xét tuyển: Quản trị kinh doanh (chuyên ngành Quản trị kinh doanh; Kinh tế biển; Quản lý và công nghệ UAV; Kinh tế không gian tầm thấp) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -579,7 +579,7 @@ STT: 56. Mã xét tuyển: UTHQTD01A. Tên mã xét tuyển: Quản trị kinh d
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 57. Mã xét tuyển: UTHQTD01V. Tên mã xét tuyển: Quản trị kinh doanh (chuyên ngành Quản trị kinh doanh; Kinh tế biển; Quản lý và công nghệ UAV; Kinh tế không gian tầm thấp) – chương trình tiên tiến. Điểm chuẩn: 600. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -589,7 +589,7 @@ STT: 57. Mã xét tuyển: UTHQTD01V. Tên mã xét tuyển: Quản trị kinh d
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 58. Mã xét tuyển: UTHUIT01A. Tên mã xét tuyển: Công nghệ thông tin (chuyên ngành Truyền thông số và Đổi mới sáng tạo) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -599,7 +599,7 @@ STT: 58. Mã xét tuyển: UTHUIT01A. Tên mã xét tuyển: Công nghệ thông
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 59. Mã xét tuyển: UTHUIT02A. Tên mã xét tuyển: Công nghệ thông tin (chuyên ngành Smart logistics) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -609,7 +609,7 @@ STT: 59. Mã xét tuyển: UTHUIT02A. Tên mã xét tuyển: Công nghệ thông
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 60. Mã xét tuyển: UTHUIT02V. Tên mã xét tuyển: Công nghệ thông tin (chuyên ngành Smart logistics) – chương trình tiên tiến. Điểm chuẩn: 600. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -619,7 +619,7 @@ STT: 60. Mã xét tuyển: UTHUIT02V. Tên mã xét tuyển: Công nghệ thông
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 61. Mã xét tuyển: UTHUIT03A. Tên mã xét tuyển: Công nghệ thông tin (chuyên ngành Khoa học dữ liệu và AI) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -629,7 +629,7 @@ STT: 61. Mã xét tuyển: UTHUIT03A. Tên mã xét tuyển: Công nghệ thông
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 62. Mã xét tuyển: UTHUIT04A. Tên mã xét tuyển: Công nghệ thông tin (chuyên ngành Công nghệ ô tô số) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -639,7 +639,7 @@ STT: 62. Mã xét tuyển: UTHUIT04A. Tên mã xét tuyển: Công nghệ thông
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 63. Mã xét tuyển: UTHUIT05A. Tên mã xét tuyển: Công nghệ thông tin (chuyên ngành Công nghệ thông tin) – chương trình tiên tiến. Điểm chuẩn: 720. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -649,7 +649,7 @@ STT: 63. Mã xét tuyển: UTHUIT05A. Tên mã xét tuyển: Công nghệ thông
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 STT: 64. Mã xét tuyển: UTHUIT05E. Tên mã xét tuyển: Công nghệ thông tin (chuyên ngành Công nghệ thông tin) – chương trình hoàn toàn bằng tiếng Anh. Điểm chuẩn: 686. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/
 ```
 
@@ -659,7 +659,7 @@ STT: 64. Mã xét tuyển: UTHUIT05E. Tên mã xét tuyển: Công nghệ thông
 - Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_chinh_quy | Thông tin chung]
+[Năm 2026 | Hệ Đại học chính quy | Thông tin chung]
 * Mã xét tuyển kết thúc bằng V: Chương trình học tại Giảng đường Nguyễn Văn Thư (Vũng Tàu).
 Thí sinh đủ điều kiện trúng tuyển cần theo dõi hướng dẫn nhập học trên website/trang thông tin tuyển sinh của Trường để hoàn tất thủ tục đúng thời hạn.
 Nhà trường chúc mừng các thí sinh đã nỗ lực, xuất sắc trúng tuyển và chính thức trở thành Tân sinh viên UTH năm 2026! Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/

@@ -20,7 +20,7 @@ from pathlib import Path
 from typing import List, Dict, Optional
 
 sys.path.insert(0, str(Path(__file__).parent))
-from utils import logger, save_json, load_json, get_raw_files, FOLDER_MAPPING
+from utils import logger, save_json, load_json, get_raw_files, FOLDER_MAPPING, split_long_text, MAX_TEXT_LEN, MIN_TEXT_LEN, PROGRAM_TYPE_DISPLAY
 
 SOURCE_URLS_PATH = Path("backend/data/source_urls.json")
 OUTPUT_DIR = Path("backend/data/processed/chunks")
@@ -44,6 +44,13 @@ def make_text_suffix(source_urls_cfg: dict) -> str:
     if all_urls:
         return " Nguồn: " + " | ".join(all_urls)
     return ""
+
+
+def build_prefix(program_type: str, admission_year: Optional[int], section: str) -> str:
+    """Xây dựng prefix chuẩn cho chunk [Năm | Hệ | Mục]."""
+    prog_display = PROGRAM_TYPE_DISPLAY.get(program_type, program_type)
+    year_display = str(admission_year) if admission_year is not None else ""
+    return f"[Năm {year_display} | Hệ {prog_display} | {section}]" if year_display else f"[Hệ {prog_display} | {section}]"
 
 
 def build_chunk(
@@ -99,21 +106,22 @@ def process_docx(file_info: dict, source_urls_cfg: dict) -> List[dict]:
         text = "\n".join(current_paragraphs).strip()
         if not text:
             return
-        prefix = f"[Hệ {program_type} | {current_section}]"
-        if admission_year:
-            prefix = f"[Năm {admission_year} | Hệ {program_type} | {current_section}]"
-        full_text = f"{prefix}\n{text}"
-        chunks.append(build_chunk(
-            chunk_id=f"{file_stem}_s{chunk_counter:03d}",
-            source_file=source_file,
-            program_type=program_type,
-            admission_year=admission_year,
-            section_name=current_section,
-            text=full_text,
-            source_urls_cfg=source_urls_cfg,
-            chunk_type="text",
-        ))
-        chunk_counter += 1
+        # Tách section dài thành các phần <= MAX_TEXT_LEN, cắt tại ranh giới câu
+        parts = split_long_text(text, MAX_TEXT_LEN, MIN_TEXT_LEN)
+        for part in parts:
+            prefix = build_prefix(program_type, admission_year, current_section)
+            full_text = f"{prefix}\n{part}"
+            chunks.append(build_chunk(
+                chunk_id=f"{file_stem}_s{chunk_counter:03d}",
+                source_file=source_file,
+                program_type=program_type,
+                admission_year=admission_year,
+                section_name=current_section,
+                text=full_text,
+                source_urls_cfg=source_urls_cfg,
+                chunk_type="text",
+            ))
+            chunk_counter += 1
 
     for element in doc.element.body:
         tag = element.tag.split("}")[-1] if "}" in element.tag else element.tag
@@ -181,9 +189,7 @@ def process_docx(file_info: dict, source_urls_cfg: dict) -> List[dict]:
                 if not kv_parts:
                     continue
 
-                prefix = f"[Hệ {program_type} | {current_section}]"
-                if admission_year:
-                    prefix = f"[Năm {admission_year} | Hệ {program_type} | {current_section}]"
+                prefix = build_prefix(program_type, admission_year, current_section)
                 row_text = f"{prefix}\n" + ". ".join(kv_parts) + "."
 
                 chunks.append(build_chunk(
@@ -235,21 +241,35 @@ def process_md(file_info: dict, source_urls_cfg: dict) -> List[dict]:
         section_name = re.sub(r"^#+\s*", "", heading_line).strip() or "Thông tin chung"
         body = "\n".join(lines[1:]).strip() if len(lines) > 1 else section_text
 
-        prefix = f"[Hệ {program_type} | {section_name}]"
-        if admission_year:
-            prefix = f"[Năm {admission_year} | Hệ {program_type} | {section_name}]"
-        full_text = f"{prefix}\n{body}" if body else f"{prefix}\n{section_text}"
+        prefix = build_prefix(program_type, admission_year, section_name)
 
-        chunks.append(build_chunk(
-            chunk_id=f"{file_stem}_s{idx:03d}",
-            source_file=source_file,
-            program_type=program_type,
-            admission_year=admission_year,
-            section_name=section_name,
-            text=full_text,
-            source_urls_cfg=source_urls_cfg,
-            chunk_type="text",
-        ))
+        # Tách body dài thành các phần <= MAX_TEXT_LEN, cắt tại ranh giới câu
+        if body:
+            parts = split_long_text(body, MAX_TEXT_LEN, MIN_TEXT_LEN)
+            for part_idx, part in enumerate(parts):
+                full_text = f"{prefix}\n{part}"
+                chunks.append(build_chunk(
+                    chunk_id=f"{file_stem}_s{idx:03d}_p{part_idx:03d}",
+                    source_file=source_file,
+                    program_type=program_type,
+                    admission_year=admission_year,
+                    section_name=section_name,
+                    text=full_text,
+                    source_urls_cfg=source_urls_cfg,
+                    chunk_type="text",
+                ))
+        else:
+            full_text = f"{prefix}\n{section_text}"
+            chunks.append(build_chunk(
+                chunk_id=f"{file_stem}_s{idx:03d}",
+                source_file=source_file,
+                program_type=program_type,
+                admission_year=admission_year,
+                section_name=section_name,
+                text=full_text,
+                source_urls_cfg=source_urls_cfg,
+                chunk_type="text",
+            ))
 
     logger.info(f"MD {source_file}: {len(chunks)} chunks")
     return chunks

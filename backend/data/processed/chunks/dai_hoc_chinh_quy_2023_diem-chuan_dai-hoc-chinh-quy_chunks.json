@@ -10,24 +10,17 @@
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r001",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 1,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "1",
-        "ma_tuyen_sinh": "7220201",
-        "ten_nganh": "Ngôn ngữ Anh",
-        "ten_chuyen_nganh": "Ngôn ngữ Anh",
-        "diem_trung_tuyen": "24.50",
-        "to_hop_xet_tuyen": "A01, D01, D14, D15"
+        "ten_nganh": "Ngon ngữ Anh"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7220201",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -35,28 +28,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7220201. Tên ngành: Ngôn ngữ Anh. Tên chuyên ngành: Ngôn ngữ Anh. Điểm trúng tuyển: 24.50. Tổ hợp xét tuyển: A01, D01, D14, D15.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 7220701. Tên ngành: Ngon ngữ Anh. trung tuyon: 24,50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r002",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 2,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "2",
-        "ma_tuyen_sinh": "7340405",
-        "ten_nganh": "Hệ thống thông tin quản lý",
-        "ten_chuyen_nganh": "Hệ thống thông tin quản lý",
-        "diem_trung_tuyen": "24.50"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "7340405",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -64,28 +49,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7340405. Tên ngành: Hệ thống thông tin quản lý. Tên chuyên ngành: Hệ thống thông tin quản lý. Điểm trúng tuyển: 24.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 7340405. trung tuyon: 24,60. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r003",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 3,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "3",
-        "ma_tuyen_sinh": "7460108",
-        "ten_nganh": "Khoa học dữ liệu",
-        "ten_chuyen_nganh": "Khoa học dữ liệu",
-        "diem_trung_tuyen": "24.50"
+        "ten_nganh": "Khoa hoc dữ lleu"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7460108",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -93,28 +75,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7460108. Tên ngành: Khoa học dữ liệu. Tên chuyên ngành: Khoa học dữ liệu. Điểm trúng tuyển: 24.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 7460108. Tên ngành: Khoa hoc dữ lleu. trung tuyon: 24,50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r004",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 4,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "4",
-        "ma_tuyen_sinh": "7480102",
-        "ten_nganh": "Mạng máy tính và truyền thông dữ liệu",
-        "ten_chuyen_nganh": "Mạng máy tính và truyền thông dữ liệu",
-        "diem_trung_tuyen": "24.75"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "7480102",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -122,28 +96,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7480102. Tên ngành: Mạng máy tính và truyền thông dữ liệu. Tên chuyên ngành: Mạng máy tính và truyền thông dữ liệu. Điểm trúng tuyển: 24.75.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntrung tuyon: 24.75. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r005",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 5,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "5",
-        "ma_tuyen_sinh": "7480201",
-        "ten_nganh": "Công nghệ thông tin",
-        "ten_chuyen_nganh": "Công nghệ thông tin",
-        "diem_trung_tuyen": "25.65"
+        "ten_nganh": "Công nghệ thông tIn"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7480201",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -151,28 +122,22 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7480201. Tên ngành: Công nghệ thông tin. Tên chuyên ngành: Công nghệ thông tin. Điểm trúng tuyển: 25.65.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 7480201. Tên ngành: Công. Tên chuyên ngành: Công nghệ thông tIn. trung tuyon: 25.65. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r006",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 6,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "6",
-        "ma_tuyen_sinh": "7520103",
-        "ten_nganh": "Kỹ thuật cơ khí",
-        "ten_chuyen_nganh": "Quản lý và khai thác Máy xếp dỡ - Xây dựng",
-        "diem_trung_tuyen": "24.75"
+        "ten_nganh": "Xay dựng"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7520103",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -180,28 +145,22 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7520103. Tên ngành: Kỹ thuật cơ khí. Tên chuyên ngành: Quản lý và khai thác Máy xếp dỡ - Xây dựng. Điểm trúng tuyển: 24.75.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nTên chuyên ngành: Xay dựng. trung tuyon: 24.75. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r007",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 7,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "6",
-        "ma_tuyen_sinh": "7520103",
-        "ten_nganh": "Kỹ thuật cơ khí",
-        "ten_chuyen_nganh": "Cơ khí tự động",
-        "diem_trung_tuyen": "24.75"
+        "ten_nganh": "Kỹ thuật co khí"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7520103",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -209,28 +168,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7520103. Tên ngành: Kỹ thuật cơ khí. Tên chuyên ngành: Cơ khí tự động. Điểm trúng tuyển: 24.75.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 7520103. Tên ngành: Kỹ thuật co khí. trung tuyon: 21.75. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r008",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 8,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "6",
-        "ma_tuyen_sinh": "7520103",
-        "ten_nganh": "Kỹ thuật cơ khí",
-        "ten_chuyen_nganh": "Công nghệ kỹ thuật logistics",
-        "diem_trung_tuyen": "24.75"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "7520103",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -238,28 +189,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7520103. Tên ngành: Kỹ thuật cơ khí. Tên chuyên ngành: Công nghệ kỹ thuật logistics. Điểm trúng tuyển: 24.75.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntrung tuyon: 24,75. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r009",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 9,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "7",
-        "ma_tuyen_sinh": "7520122",
-        "ten_nganh": "Kỹ thuật tàu thủy",
-        "ten_chuyen_nganh": "Kỹ thuật tàu thủy, công trình nổi và quản lý hệ thống công nghiệp",
-        "diem_trung_tuyen": "19.50"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "7520122",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -267,28 +213,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7520122. Tên ngành: Kỹ thuật tàu thủy. Tên chuyên ngành: Kỹ thuật tàu thủy, công trình nổi và quản lý hệ thống công nghiệp. Điểm trúng tuyển: 19.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 7520122. trung tuyon: 19.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r010",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 10,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "8",
-        "ma_tuyen_sinh": "752013001",
-        "ten_nganh": "Kỹ thuật ô tô",
-        "ten_chuyen_nganh": "Cơ khí ô tô",
-        "diem_trung_tuyen": "25.50"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "752013001",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -296,28 +237,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 752013001. Tên ngành: Kỹ thuật ô tô. Tên chuyên ngành: Cơ khí ô tô. Điểm trúng tuyển: 25.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 752013001. trung tuyon: 25.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r011",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 11,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "8",
-        "ma_tuyen_sinh": "752013002",
-        "ten_nganh": "Kỹ thuật ô tô",
-        "ten_chuyen_nganh": "Cơ điện tử ô tô",
-        "diem_trung_tuyen": "25.50"
+        "ten_nganh": "Kỹthuậtò tô"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "752013002",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -325,28 +263,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 752013002. Tên ngành: Kỹ thuật ô tô. Tên chuyên ngành: Cơ điện tử ô tô. Điểm trúng tuyển: 25.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nTên ngành: Kỹthuậtò tô. trung tuyon: 25.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r012",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 12,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "8",
-        "ma_tuyen_sinh": "752013003",
-        "ten_nganh": "Kỹ thuật ô tô",
-        "ten_chuyen_nganh": "Ô tô điện",
-        "diem_trung_tuyen": "23.75"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "752013003",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -354,28 +284,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 752013003. Tên ngành: Kỹ thuật ô tô. Tên chuyên ngành: Ô tô điện. Điểm trúng tuyển: 23.75.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 752013003. trung tuyon: 23.75. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r013",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 13,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "9",
-        "ma_tuyen_sinh": "7520201",
-        "ten_nganh": "Kỹ thuật điện",
-        "ten_chuyen_nganh": "Điện công nghiệp",
-        "diem_trung_tuyen": "24.50"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "7520201",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -383,28 +308,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7520201. Tên ngành: Kỹ thuật điện. Tên chuyên ngành: Điện công nghiệp. Điểm trúng tuyển: 24.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntrung tuyon: 24.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r014",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 14,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "9",
-        "ma_tuyen_sinh": "7520201",
-        "ten_nganh": "Kỹ thuật điện",
-        "ten_chuyen_nganh": "Hệ thống điện giao thông",
-        "diem_trung_tuyen": "24.50"
+        "ten_nganh": "HÊ thong dlen glao thong"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7520201",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -412,28 +334,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7520201. Tên ngành: Kỹ thuật điện. Tên chuyên ngành: Hệ thống điện giao thông. Điểm trúng tuyển: 24.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 7520201. Tên ngành: Kỹ thuật diện. Tên chuyên ngành: HÊ thong dlen glao thong. trung tuyon: 24.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r015",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 15,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "9",
-        "ma_tuyen_sinh": "7520201",
-        "ten_nganh": "Kỹ thuật điện",
-        "ten_chuyen_nganh": "Năng lượng tái tạo",
-        "diem_trung_tuyen": "24.50"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "7520201",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -441,28 +355,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7520201. Tên ngành: Kỹ thuật điện. Tên chuyên ngành: Năng lượng tái tạo. Điểm trúng tuyển: 24.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntrung tuyon: 24.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r016",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 16,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "10",
-        "ma_tuyen_sinh": "7520207",
-        "ten_nganh": "Kỹ thuật điện tử - viễn thông",
-        "ten_chuyen_nganh": "Điện tử viễn thông",
-        "diem_trung_tuyen": "24.75"
+        "ten_nganh": "Kỹ thuật diện tử"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7520207",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -470,28 +381,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7520207. Tên ngành: Kỹ thuật điện tử - viễn thông. Tên chuyên ngành: Điện tử viễn thông. Điểm trúng tuyển: 24.75.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nTT: 10. tuyen sinh: 7520207. Tên ngành: Kỹ thuật diện tử. trung tuyon: 24,75. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r017",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 17,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "11",
-        "ma_tuyen_sinh": "7520216",
-        "ten_nganh": "Kỹ thuật điều khiển và tự động hóa",
-        "ten_chuyen_nganh": "Tự động hoá công nghiệp",
-        "diem_trung_tuyen": "25.00"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "7520216",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -499,29 +402,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7520216. Tên ngành: Kỹ thuật điều khiển và tự động hóa. Tên chuyên ngành: Tự động hoá công nghiệp. Điểm trúng tuyển: 25.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 7520216. trung tuyon: 25.00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r018",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 18,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "12",
-        "ma_tuyen_sinh": "7580201",
-        "ten_nganh": "Kỹ thuật xây dựng",
-        "ten_chuyen_nganh": "Xây dựng dân dụng và công nghiệp",
-        "diem_trung_tuyen": "24.25",
-        "to_hop_xet_tuyen": "A00, A01, D01, D07"
+        "ten_nganh": "nghlep cong"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7580201",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -529,29 +428,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7580201. Tên ngành: Kỹ thuật xây dựng. Tên chuyên ngành: Xây dựng dân dụng và công nghiệp. Điểm trúng tuyển: 24.25. Tổ hợp xét tuyển: A00, A01, D01, D07.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nTên chuyên ngành: nghlep cong. trung tuyon: 24,25. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r019",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 19,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "12",
-        "ma_tuyen_sinh": "7580201",
-        "ten_nganh": "Kỹ thuật xây dựng",
-        "ten_chuyen_nganh": "Kỹ thuật kết cấu công trình",
-        "diem_trung_tuyen": "24.25",
-        "to_hop_xet_tuyen": "A00, A01, D01, D07"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "7580201",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -559,29 +449,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7580201. Tên ngành: Kỹ thuật xây dựng. Tên chuyên ngành: Kỹ thuật kết cấu công trình. Điểm trúng tuyển: 24.25. Tổ hợp xét tuyển: A00, A01, D01, D07.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nTT: 12. tuyen sinh: 7580201. trung tuyon: 24.25. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r020",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 20,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "12",
-        "ma_tuyen_sinh": "7580201",
-        "ten_nganh": "Kỹ thuật xây dựng",
-        "ten_chuyen_nganh": "Kỹ thuật nền móng và công trình ngầm",
-        "diem_trung_tuyen": "24.25",
-        "to_hop_xet_tuyen": "A00, A01, D01, D07"
+        "ten_nganh": "Kỹ thuat nen mong và cong trinh ngam"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7580201",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -589,29 +475,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7580201. Tên ngành: Kỹ thuật xây dựng. Tên chuyên ngành: Kỹ thuật nền móng và công trình ngầm. Điểm trúng tuyển: 24.25. Tổ hợp xét tuyển: A00, A01, D01, D07.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nTên chuyên ngành: Kỹ thuat nen mong và cong trinh ngam. trung tuyon: 24.25. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r021",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 21,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "12",
-        "ma_tuyen_sinh": "7580201",
-        "ten_nganh": "Kỹ thuật xây dựng",
-        "ten_chuyen_nganh": "Thiết kế nội thất",
-        "diem_trung_tuyen": "24.25",
-        "to_hop_xet_tuyen": "A00, A01, D01, D07"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "7580201",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -619,28 +496,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7580201. Tên ngành: Kỹ thuật xây dựng. Tên chuyên ngành: Thiết kế nội thất. Điểm trúng tuyển: 24.25. Tổ hợp xét tuyển: A00, A01, D01, D07.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntrung tuyon: 24.25. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r022",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 22,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "13",
-        "ma_tuyen_sinh": "7580202",
-        "ten_nganh": "Kỹ thuật xây dựng công trình thủy",
-        "ten_chuyen_nganh": "Xây dựng và quản lý cảng - công trình giao thông thủy",
-        "diem_trung_tuyen": "17.00"
+        "ten_nganh": "Kỹ thuật xây dựng cong trinh thúy"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7580202",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -648,28 +522,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7580202. Tên ngành: Kỹ thuật xây dựng công trình thủy. Tên chuyên ngành: Xây dựng và quản lý cảng - công trình giao thông thủy. Điểm trúng tuyển: 17.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nTT: 13. tuyen sinh: 7580202. Tên ngành: Kỹ thuật xây dựng cong trinh thúy. trung tuyon: 17.00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r023",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 23,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "14",
-        "ma_tuyen_sinh": "7580205",
-        "ten_nganh": "Kỹ thuật xây dựng công trình giao thông",
-        "ten_chuyen_nganh": "Xây dựng cầu đường",
-        "diem_trung_tuyen": "21.75"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "7580205",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -677,28 +543,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7580205. Tên ngành: Kỹ thuật xây dựng công trình giao thông. Tên chuyên ngành: Xây dựng cầu đường. Điểm trúng tuyển: 21.75.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntrung tuyon: 21.75. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r024",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 24,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "14",
-        "ma_tuyen_sinh": "7580205",
-        "ten_nganh": "Kỹ thuật xây dựng công trình giao thông",
-        "ten_chuyen_nganh": "Xây dựng đường bộ",
-        "diem_trung_tuyen": "21.75"
+        "ten_nganh": "Xay dựng duong bo"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7580205",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -706,28 +569,22 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7580205. Tên ngành: Kỹ thuật xây dựng công trình giao thông. Tên chuyên ngành: Xây dựng đường bộ. Điểm trúng tuyển: 21.75.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nTT: 14. Tên ngành: Kỹ thuật xẳy dựng. Tên chuyên ngành: Xay dựng duong bo. trung tuyon: 21.75. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r025",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 25,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "14",
-        "ma_tuyen_sinh": "7580205",
-        "ten_nganh": "Kỹ thuật xây dựng công trình giao thông",
-        "ten_chuyen_nganh": "Xây dựng công trình giao thông đô thị",
-        "diem_trung_tuyen": "21.75"
+        "ten_nganh": "trinh giao thông cong"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7580205",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -735,28 +592,22 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7580205. Tên ngành: Kỹ thuật xây dựng công trình giao thông. Tên chuyên ngành: Xây dựng công trình giao thông đô thị. Điểm trúng tuyển: 21.75.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 7580205. Tên ngành: trinh giao thông cong. trung tuyon: 21.75. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r026",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 26,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "14",
-        "ma_tuyen_sinh": "7580205",
-        "ten_nganh": "Kỹ thuật xây dựng công trình giao thông",
-        "ten_chuyen_nganh": "Quy hoạch và quản lý giao thông",
-        "diem_trung_tuyen": "21.75"
+        "ten_nganh": "Cuy"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7580205",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -764,28 +615,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7580205. Tên ngành: Kỹ thuật xây dựng công trình giao thông. Tên chuyên ngành: Quy hoạch và quản lý giao thông. Điểm trúng tuyển: 21.75.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nTên chuyên ngành: Cuy. trung tuyon: 21.75. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r027",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 27,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "14",
-        "ma_tuyen_sinh": "7580205",
-        "ten_nganh": "Kỹ thuật xây dựng công trình giao thông",
-        "ten_chuyen_nganh": "Logistics và hạ tầng giao thông",
-        "diem_trung_tuyen": "21.75"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "7580205",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -793,28 +636,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7580205. Tên ngành: Kỹ thuật xây dựng công trình giao thông. Tên chuyên ngành: Logistics và hạ tầng giao thông. Điểm trúng tuyển: 21.75.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntrung tuyon: 21.75. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r028",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 28,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "15",
-        "ma_tuyen_sinh": "758030101",
-        "ten_nganh": "Kinh tế xây dựng",
-        "ten_chuyen_nganh": "Kinh tế xây dựng",
-        "diem_trung_tuyen": "24.50"
+        "ten_nganh": "Kinh te xây dựng"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "758030101",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -822,28 +662,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 758030101. Tên ngành: Kinh tế xây dựng. Tên chuyên ngành: Kinh tế xây dựng. Điểm trúng tuyển: 24.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nTT: 15. tuyen sinh: 758030101. Tên ngành: Kinh te xây dựng. trung tuyon: 24.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r029",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 29,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "15",
-        "ma_tuyen_sinh": "758030103",
-        "ten_nganh": "Kinh tế xây dựng",
-        "ten_chuyen_nganh": "Kinh tế và quản lý bất động sản",
-        "diem_trung_tuyen": "23.50"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "758030103",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -851,28 +683,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 758030103. Tên ngành: Kinh tế xây dựng. Tên chuyên ngành: Kinh tế và quản lý bất động sản. Điểm trúng tuyển: 23.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 758030103. trung tuyon: 23.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r030",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 30,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "16",
-        "ma_tuyen_sinh": "7580302",
-        "ten_nganh": "Quản lý xây dựng",
-        "ten_chuyen_nganh": "Quản lý xây dựng",
-        "diem_trung_tuyen": "23.50"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "7580302",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -880,28 +707,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7580302. Tên ngành: Quản lý xây dựng. Tên chuyên ngành: Quản lý xây dựng. Điểm trúng tuyển: 23.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nTT: 16. tuyen sinh: 7580302. trung tuyon: 23.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r031",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 31,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "17",
-        "ma_tuyen_sinh": "784010101",
-        "ten_nganh": "Khai thác vận tải",
-        "ten_chuyen_nganh": "Quản trị logistics và vận tải đa phương thức",
-        "diem_trung_tuyen": "25.65"
+        "ten_nganh": "Khai thác vantai"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "784010101",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -909,28 +733,22 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 784010101. Tên ngành: Khai thác vận tải. Tên chuyên ngành: Quản trị logistics và vận tải đa phương thức. Điểm trúng tuyển: 25.65.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 784010101. Tên ngành: Khai thác vantai. trung tuyon: 25.65. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r032",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 32,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "17",
-        "ma_tuyen_sinh": "784010102",
-        "ten_nganh": "Khai thác vận tải",
-        "ten_chuyen_nganh": "Quản lý và kinh doanh vận tải",
-        "diem_trung_tuyen": "24.75"
+        "ten_nganh": "Quản lý va kinh doanh van tai"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "784010102",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -938,28 +756,22 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 784010102. Tên ngành: Khai thác vận tải. Tên chuyên ngành: Quản lý và kinh doanh vận tải. Điểm trúng tuyển: 24.75.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nTT: 17. Tên chuyên ngành: Quản lý va kinh doanh van tai. trung tuyon: 24,75. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r033",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 33,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "18",
-        "ma_tuyen_sinh": "784010401",
-        "ten_nganh": "Kinh tế vận tải",
-        "ten_chuyen_nganh": "Kinh tế vận tải biển",
-        "diem_trung_tuyen": "25.00"
+        "ten_nganh": "Kinh tevantai"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "784010401",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -967,28 +779,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 784010401. Tên ngành: Kinh tế vận tải. Tên chuyên ngành: Kinh tế vận tải biển. Điểm trúng tuyển: 25.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 784010401. Tên ngành: Kinh tevantai. trung tuyon: 25.00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r034",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 34,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "18",
-        "ma_tuyen_sinh": "784010402",
-        "ten_nganh": "Kinh tế vận tải",
-        "ten_chuyen_nganh": "Kinh tế vận tải hàng không",
-        "diem_trung_tuyen": "24.75"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "784010402",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -996,28 +800,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 784010402. Tên ngành: Kinh tế vận tải. Tên chuyên ngành: Kinh tế vận tải hàng không. Điểm trúng tuyển: 24.75.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nTT: 18. tuyen sinh: 784010402 784010604. trung tuyon: 24.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r035",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 35,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "19",
-        "ma_tuyen_sinh": "784010604",
-        "ten_nganh": "Khoa học hàng hải",
-        "ten_chuyen_nganh": "Quản lý hàng hải",
-        "diem_trung_tuyen": "24.50"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "784010604",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1025,28 +824,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 784010604. Tên ngành: Khoa học hàng hải. Tên chuyên ngành: Quản lý hàng hải. Điểm trúng tuyển: 24.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 784010606. trung tuyon: 21.25. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r036",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 36,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "19",
-        "ma_tuyen_sinh": "784010606",
-        "ten_nganh": "Khoa học hàng hải",
-        "ten_chuyen_nganh": "Điều khiển và quản lý tàu biển",
-        "diem_trung_tuyen": "21.25"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "784010606",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1054,28 +848,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 784010606. Tên ngành: Khoa học hàng hải. Tên chuyên ngành: Điều khiển và quản lý tàu biển. Điểm trúng tuyển: 21.25.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 784010807. trung tuyon: 20.00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r037",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 37,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "19",
-        "ma_tuyen_sinh": "784010607",
-        "ten_nganh": "Khoa học hàng hải",
-        "ten_chuyen_nganh": "Khai thác máy tàu thủy và quản lý kỹ thuật",
-        "diem_trung_tuyen": "20.00"
+        "ten_nganh": "Khoahpc hài"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "784010607",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1083,28 +874,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 784010607. Tên ngành: Khoa học hàng hải. Tên chuyên ngành: Khai thác máy tàu thủy và quản lý kỹ thuật. Điểm trúng tuyển: 20.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nTT: 19. tuyen sinh: 784010608. Tên ngành: Khoahpc hài. trung tuyon: 17.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r038",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 38,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "19",
-        "ma_tuyen_sinh": "784010608",
-        "ten_nganh": "Khoa học hàng hải",
-        "ten_chuyen_nganh": "Kỹ thuật điện, điện tử và điều khiển",
-        "diem_trung_tuyen": "17.50"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "784010608",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1112,28 +895,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 784010608. Tên ngành: Khoa học hàng hải. Tên chuyên ngành: Kỹ thuật điện, điện tử và điều khiển. Điểm trúng tuyển: 17.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 784010809. trung tuyon: 25.00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r039",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 39,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "19",
-        "ma_tuyen_sinh": "784010609",
-        "ten_nganh": "Khoa học hàng hải",
-        "ten_chuyen_nganh": "Quản lý cảng và logistics",
-        "diem_trung_tuyen": "25.00"
+        "ten_nganh": "Luat và chinh sách hang hảl"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "784010609",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1141,28 +921,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 784010609. Tên ngành: Khoa học hàng hải. Tên chuyên ngành: Quản lý cảng và logistics. Điểm trúng tuyển: 25.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 784010610. Tên chuyên ngành: Luat và chinh sách hang hảl. trung tuyon: 23.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r040",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 40,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "19",
-        "ma_tuyen_sinh": "784010610",
-        "ten_nganh": "Khoa học hàng hải",
-        "ten_chuyen_nganh": "Luật và chính sách hàng hải",
-        "diem_trung_tuyen": "23.50"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "784010610",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1170,28 +942,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 784010610. Tên ngành: Khoa học hàng hải. Tên chuyên ngành: Luật và chính sách hàng hải. Điểm trúng tuyển: 23.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntuyen sinh: 784010611. trung tuyon: 19.00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r041",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 41,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "19",
-        "ma_tuyen_sinh": "784010611",
-        "ten_nganh": "Khoa học hàng hải",
-        "ten_chuyen_nganh": "Cơ điện tử",
-        "diem_trung_tuyen": "19.00"
+        "ten_nganh": "Kỹ thuật môi trường"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "784010611",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1199,29 +968,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 784010611. Tên ngành: Khoa học hàng hải. Tên chuyên ngành: Cơ điện tử. Điểm trúng tuyển: 19.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nTT: 20. tuyen sinh: 7520320. Tên ngành: Kỹ thuật môi trường. trung tuyon: 20.75 20.75. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r042",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_001",
       "row_index": 42,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "20",
-        "ma_tuyen_sinh": "7520320",
-        "ten_nganh": "Kỹ thuật môi trường",
-        "ten_chuyen_nganh": "Kỹ thuật môi trường",
-        "diem_trung_tuyen": "20.75",
-        "to_hop_xet_tuyen": "A00, A01, D01, B00"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "7520320",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1229,29 +989,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7520320. Tên ngành: Kỹ thuật môi trường. Tên chuyên ngành: Kỹ thuật môi trường. Điểm trúng tuyển: 20.75. Tổ hợp xét tuyển: A00, A01, D01, B00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\ntrung tuyon: TỔ HỢP XÉTTUYẺN. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
-      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r043",
+      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r000",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
-      "table_id": "table_001",
-      "row_index": 43,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN",
+      "table_id": "table_002",
+      "row_index": 0,
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "20",
-        "ma_tuyen_sinh": "7520320",
-        "ten_nganh": "Kỹ thuật môi trường",
-        "ten_chuyen_nganh": "Quản lý an toàn và môi trường",
-        "diem_trung_tuyen": "20.75",
-        "to_hop_xet_tuyen": "A00, A01, D01, B00"
+        "ten_nganh": "Tên noanh"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7520320",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1259,28 +1015,22 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHUẨN]\nMã tuyển sinh: 7520320. Tên ngành: Kỹ thuật môi trường. Tên chuyên ngành: Quản lý an toàn và môi trường. Điểm trúng tuyển: 20.75. Tổ hợp xét tuyển: A00, A01, D01, B00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMã xét tuyển: Ma tuyon sinh. Ngành/Chuyên ngành đào tạo: Tên noanh. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r001",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 1,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "1",
-        "ma_tuyen_sinh": "7340405H",
-        "ten_nganh": "Hệ thống thông tin quản lý",
-        "ten_chuyen_nganh": "Hệ thống thông tin quản lý",
-        "diem_trung_tuyen": "23.50"
+        "ten_nganh": "Hêthong tin quàn lý thong"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7340405H",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1288,28 +1038,22 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 7340405H. Tên ngành: Hệ thống thông tin quản lý. Tên chuyên ngành: Hệ thống thông tin quản lý. Điểm trúng tuyển: 23.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMã xét tuyển: 7340405h. Ngành/Chuyên ngành đào tạo: Hêthong tin quàn lý thong. Môn tự chọn: 23.50 25,65. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r002",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 2,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "2",
-        "ma_tuyen_sinh": "7460108H",
-        "ten_nganh": "Khoa học dữ liệu",
-        "ten_chuyen_nganh": "Khoa học dữ liệu",
-        "diem_trung_tuyen": "23.50"
+        "ten_nganh": "Khoa hpc dữ liiu"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7460108H",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1317,28 +1061,22 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 7460108H. Tên ngành: Khoa học dữ liệu. Tên chuyên ngành: Khoa học dữ liệu. Điểm trúng tuyển: 23.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMã xét tuyển: 746010844. Ngành/Chuyên ngành đào tạo: Khoa hpc dữ liiu. Môn tự chọn: 23.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r003",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 3,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "3",
-        "ma_tuyen_sinh": "7480201H",
-        "ten_nganh": "Công nghệ thông tin",
-        "ten_chuyen_nganh": "Công nghệ thông tin",
-        "diem_trung_tuyen": "23.50"
+        "ten_nganh": "ừng"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7480201H",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1346,28 +1084,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 7480201H. Tên ngành: Công nghệ thông tin. Tên chuyên ngành: Công nghệ thông tin. Điểm trúng tuyển: 23.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nNgành/Chuyên ngành đào tạo: ừng. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r004",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 4,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "4",
-        "ma_tuyen_sinh": "751060502H",
-        "ten_nganh": "Logistics và quản lý chuỗi cung ứng",
-        "ten_chuyen_nganh": "Logistics và quản lý chuỗi cung ứng",
-        "diem_trung_tuyen": "25.65"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "751060502H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1375,28 +1105,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 751060502H. Tên ngành: Logistics và quản lý chuỗi cung ứng. Tên chuyên ngành: Logistics và quản lý chuỗi cung ứng. Điểm trúng tuyển: 25.65.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMã xét tuyển: 7520102071|. Môn tự chọn: 23,25. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r005",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 5,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "5",
-        "ma_tuyen_sinh": "752010304H",
-        "ten_nganh": "Kỹ thuật cơ khí",
-        "ten_chuyen_nganh": "Cơ khí tự động",
-        "diem_trung_tuyen": "23.25"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "752010304H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1404,28 +1129,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 752010304H. Tên ngành: Kỹ thuật cơ khí. Tên chuyên ngành: Cơ khí tự động. Điểm trúng tuyển: 23.25.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn tự chọn: 22,00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r006",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 6,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "5",
-        "ma_tuyen_sinh": "752010307H",
-        "ten_nganh": "Kỹ thuật cơ khí",
-        "ten_chuyen_nganh": "Công nghệ kỹ thuật logistics",
-        "diem_trung_tuyen": "22.00"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "752010307H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1433,28 +1153,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 752010307H. Tên ngành: Kỹ thuật cơ khí. Tên chuyên ngành: Công nghệ kỹ thuật logistics. Điểm trúng tuyển: 22.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMã xét tuyển: 752013001H. Môn tự chọn: 24,00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r007",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 7,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "6",
-        "ma_tuyen_sinh": "752013001H",
-        "ten_nganh": "Kỹ thuật ô tô",
-        "ten_chuyen_nganh": "Cơ khí ô tô",
-        "diem_trung_tuyen": "24.00"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "752013001H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1462,28 +1177,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 752013001H. Tên ngành: Kỹ thuật ô tô. Tên chuyên ngành: Cơ khí ô tô. Điểm trúng tuyển: 24.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn tự chọn: 24.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r008",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 8,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "6",
-        "ma_tuyen_sinh": "752013002H",
-        "ten_nganh": "Kỹ thuật ô tô",
-        "ten_chuyen_nganh": "Cơ điện tử ô tô",
-        "diem_trung_tuyen": "24.50"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "752013002H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1491,28 +1201,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 752013002H. Tên ngành: Kỹ thuật ô tô. Tên chuyên ngành: Cơ điện tử ô tô. Điểm trúng tuyển: 24.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn tự chọn: 22.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r009",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 9,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "6",
-        "ma_tuyen_sinh": "752013003H",
-        "ten_nganh": "Kỹ thuật ô tô",
-        "ten_chuyen_nganh": "Ô tô điện",
-        "diem_trung_tuyen": "22.50"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "752013003H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1520,28 +1225,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 752013003H. Tên ngành: Kỹ thuật ô tô. Tên chuyên ngành: Ô tô điện. Điểm trúng tuyển: 22.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn tự chọn: 22.00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r010",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 10,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "7",
-        "ma_tuyen_sinh": "752020102H",
-        "ten_nganh": "Kỹ thuật điện",
-        "ten_chuyen_nganh": "Điện công nghiệp",
-        "diem_trung_tuyen": "22.00"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "752020102H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1549,28 +1249,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 752020102H. Tên ngành: Kỹ thuật điện. Tên chuyên ngành: Điện công nghiệp. Điểm trúng tuyển: 22.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn bắt buộc: thong. Môn tự chọn: 22,00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r011",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 11,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "8",
-        "ma_tuyen_sinh": "7520207H",
-        "ten_nganh": "Kỹ thuật điện tử - viễn thông",
-        "ten_chuyen_nganh": "Điện tử viễn thông",
-        "diem_trung_tuyen": "22.00"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "7520207H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1578,28 +1273,26 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 7520207H. Tên ngành: Kỹ thuật điện tử - viễn thông. Tên chuyên ngành: Điện tử viễn thông. Điểm trúng tuyển: 22.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn tự chọn: 22,50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r012",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 12,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "9",
-        "ma_tuyen_sinh": "7520216H",
-        "ten_nganh": "Kỹ thuật điều khiển và tự động hóa",
-        "ten_chuyen_nganh": "Tự động hoá công nghiệp",
-        "diem_trung_tuyen": "22.50"
+        "stt": "10",
+        "ten_nganh": "Kỹ thuat xay dựng"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7520216H",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1607,29 +1300,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 7520216H. Tên ngành: Kỹ thuật điều khiển và tự động hóa. Tên chuyên ngành: Tự động hoá công nghiệp. Điểm trúng tuyển: 22.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMã xét tuyển: 758020104H. Ngành/Chuyên ngành đào tạo: Kỹ thuat xay dựng. Môn bắt buộc: nghiep cong. Môn tự chọn: 2100. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r013",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 13,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "10",
-        "ma_tuyen_sinh": "758020101H",
-        "ten_nganh": "Kỹ thuật xây dựng",
-        "ten_chuyen_nganh": "Xây dựng dân dụng và công nghiệp",
-        "diem_trung_tuyen": "21.00",
-        "to_hop_xet_tuyen": "A00, A01, D01, D07"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "758020101H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1637,29 +1321,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 758020101H. Tên ngành: Kỹ thuật xây dựng. Tên chuyên ngành: Xây dựng dân dụng và công nghiệp. Điểm trúng tuyển: 21.00. Tổ hợp xét tuyển: A00, A01, D01, D07.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn tự chọn: 2100. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r014",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 14,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "10",
-        "ma_tuyen_sinh": "758020104H",
-        "ten_nganh": "Kỹ thuật xây dựng",
-        "ten_chuyen_nganh": "Thiết kế nội thất",
-        "diem_trung_tuyen": "21.00",
-        "to_hop_xet_tuyen": "A00, A01, D01, D07"
+        "ten_nganh": "Kỹ thuat xay dưng cong trinh gỉao thong"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "758020104H",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1667,28 +1347,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 758020104H. Tên ngành: Kỹ thuật xây dựng. Tên chuyên ngành: Thiết kế nội thất. Điểm trúng tuyển: 21.00. Tổ hợp xét tuyển: A00, A01, D01, D07.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nNgành/Chuyên ngành đào tạo: Kỹ thuat xay dưng cong trinh gỉao thong. Môn tự chọn: 17.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r015",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 15,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "11",
-        "ma_tuyen_sinh": "758020501H",
-        "ten_nganh": "Kỹ thuật xây dựng công trình giao thông",
-        "ten_chuyen_nganh": "Xây dựng cầu đường",
-        "diem_trung_tuyen": "17.50"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "758020501H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1696,28 +1368,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 758020501H. Tên ngành: Kỹ thuật xây dựng công trình giao thông. Tên chuyên ngành: Xây dựng cầu đường. Điểm trúng tuyển: 17.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn tự chọn: 17.50. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r016",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 16,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "11",
-        "ma_tuyen_sinh": "758020511H",
-        "ten_nganh": "Kỹ thuật xây dựng công trình giao thông",
-        "ten_chuyen_nganh": "Logistics và hạ tầng giao thông",
-        "diem_trung_tuyen": "17.50"
+        "stt": "12"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "758020511H",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1725,28 +1394,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 758020511H. Tên ngành: Kỹ thuật xây dựng công trình giao thông. Tên chuyên ngành: Logistics và hạ tầng giao thông. Điểm trúng tuyển: 17.50.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn bắt buộc: Kinh te xuy dựng. Môn tự chọn: 22,00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r017",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 17,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "12",
-        "ma_tuyen_sinh": "758030101H",
-        "ten_nganh": "Kinh tế xây dựng",
-        "ten_chuyen_nganh": "Kinh tế xây dựng",
-        "diem_trung_tuyen": "22.00"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "758030101H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1754,28 +1418,25 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 758030101H. Tên ngành: Kinh tế xây dựng. Tên chuyên ngành: Kinh tế xây dựng. Điểm trúng tuyển: 22.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn tự chọn: 2100. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r018",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 18,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "12",
-        "ma_tuyen_sinh": "758030103H",
-        "ten_nganh": "Kinh tế xây dựng",
-        "ten_chuyen_nganh": "Kinh tế và quản lý bất động sản",
-        "diem_trung_tuyen": "21.00"
+        "stt": "13"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "758030103H",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1783,28 +1444,26 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 758030103H. Tên ngành: Kinh tế xây dựng. Tên chuyên ngành: Kinh tế và quản lý bất động sản. Điểm trúng tuyển: 21.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn bắt buộc: Quan lv xay dung. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r019",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 19,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "13",
-        "ma_tuyen_sinh": "7580302H",
-        "ten_nganh": "Quản lý xây dựng",
-        "ten_chuyen_nganh": "Quản lý xây dựng",
-        "diem_trung_tuyen": "21.00"
+        "stt": "14",
+        "ten_nganh": "Khai thácvan tải"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "7580302H",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1812,28 +1471,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 7580302H. Tên ngành: Quản lý xây dựng. Tên chuyên ngành: Quản lý xây dựng. Điểm trúng tuyển: 21.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMã xét tuyển: 7840101024. Ngành/Chuyên ngành đào tạo: Khai thácvan tải. Môn tự chọn: 25,00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r020",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 20,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "14",
-        "ma_tuyen_sinh": "784010101H",
-        "ten_nganh": "Khai thác vận tải",
-        "ten_chuyen_nganh": "Quản trị Logistics và vận tải đa phương thức",
-        "diem_trung_tuyen": "25.00"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "784010101H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1841,28 +1492,26 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 784010101H. Tên ngành: Khai thác vận tải. Tên chuyên ngành: Quản trị Logistics và vận tải đa phương thức. Điểm trúng tuyển: 25.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn tự chọn: 23.00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r021",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 21,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "14",
-        "ma_tuyen_sinh": "784010102H",
-        "ten_nganh": "Khai thác vận tải",
-        "ten_chuyen_nganh": "Quản lý và kinh doanh vận tải",
-        "diem_trung_tuyen": "23.00"
+        "stt": "15",
+        "ten_nganh": "Kinh tevin tai"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "784010102H",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1870,28 +1519,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 784010102H. Tên ngành: Khai thác vận tải. Tên chuyên ngành: Quản lý và kinh doanh vận tải. Điểm trúng tuyển: 23.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nNgành/Chuyên ngành đào tạo: Kinh tevin tai. Môn tự chọn: 23.00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r022",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 22,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "15",
-        "ma_tuyen_sinh": "784010401H",
-        "ten_nganh": "Kinh tế vận tải",
-        "ten_chuyen_nganh": "Kinh tế vận tải biển",
-        "diem_trung_tuyen": "23.00"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "784010401H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1899,28 +1540,26 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 784010401H. Tên ngành: Kinh tế vận tải. Tên chuyên ngành: Kinh tế vận tải biển. Điểm trúng tuyển: 23.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn tự chọn: 23.00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r023",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 23,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
       "row_identifiers": {
-        "stt": "15",
-        "ma_tuyen_sinh": "784010402H",
-        "ten_nganh": "Kinh tế vận tải",
-        "ten_chuyen_nganh": "Kinh tế vận tải hàng không",
-        "diem_trung_tuyen": "23.00"
+        "stt": "16",
+        "ten_nganh": "Khoa hoc hang haỉ"
       },
-      "code_info": {
-        "ma_tuyen_sinh": "784010402H",
-        "code_needs_verification": false
-      },
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1928,28 +1567,20 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 784010402H. Tên ngành: Kinh tế vận tải. Tên chuyên ngành: Kinh tế vận tải hàng không. Điểm trúng tuyển: 23.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMã xét tuyển: 784010611H. Ngành/Chuyên ngành đào tạo: Khoa hoc hang haỉ. Môn tự chọn: 21.25. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r024",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 24,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "16",
-        "ma_tuyen_sinh": "784010604H",
-        "ten_nganh": "Khoa học hàng hải",
-        "ten_chuyen_nganh": "Quản lý hàng hải",
-        "diem_trung_tuyen": "21.25"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "784010604H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1957,28 +1588,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 784010604H. Tên ngành: Khoa học hàng hải. Tên chuyên ngành: Quản lý hàng hải. Điểm trúng tuyển: 21.25.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn tự chọn: 18.00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r025",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 25,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "16",
-        "ma_tuyen_sinh": "784010606H",
-        "ten_nganh": "Khoa học hàng hải",
-        "ten_chuyen_nganh": "Điều khiển và quản lý tàu biển",
-        "diem_trung_tuyen": "18.00"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "784010606H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -1986,28 +1612,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 784010606H. Tên ngành: Khoa học hàng hải. Tên chuyên ngành: Điều khiển và quản lý tàu biển. Điểm trúng tuyển: 18.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn tự chọn: 17.00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r026",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 26,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "16",
-        "ma_tuyen_sinh": "784010607H",
-        "ten_nganh": "Khoa học hàng hải",
-        "ten_chuyen_nganh": "Khai thác máy tàu thủy và quản lý kỹ thuật",
-        "diem_trung_tuyen": "17.00"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "784010607H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -2015,28 +1636,23 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 784010607H. Tên ngành: Khoa học hàng hải. Tên chuyên ngành: Khai thác máy tàu thủy và quản lý kỹ thuật. Điểm trúng tuyển: 17.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn tự chọn: 20.00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
       "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r027",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "table_row",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
       "table_id": "table_002",
       "row_index": 27,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN",
       "segment_context": "",
-      "row_identifiers": {
-        "stt": "16",
-        "ma_tuyen_sinh": "784010609H",
-        "ten_nganh": "Khoa học hàng hải",
-        "ten_chuyen_nganh": "Quản lý cảng và logistics",
-        "diem_trung_tuyen": "24.00"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "784010609H",
-        "code_needs_verification": false
-      },
+      "row_identifiers": {},
+      "code_info": null,
       "footnotes": [],
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
@@ -2044,97 +1660,147 @@
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 784010609H. Tên ngành: Khoa học hàng hải. Tên chuyên ngành: Quản lý cảng và logistics. Điểm trúng tuyển: 24.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHUÂN]\nMôn bắt buộc: Co dlen tư. Môn tự chọn: 17.00. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/",
+      "needs_review": [
+        "thiếu identifier ngành/mã"
+      ]
     },
     {
-      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r028",
+      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_txt_s000",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "text",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
-      "table_id": "table_002",
-      "row_index": 28,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
-      "segment_context": "",
-      "row_identifiers": {
-        "stt": "16",
-        "ma_tuyen_sinh": "784010610H",
-        "ten_nganh": "Khoa học hàng hải",
-        "ten_chuyen_nganh": "Luật và chính sách hàng hải",
-        "diem_trung_tuyen": "20.00"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "784010610H",
-        "code_needs_verification": false
-      },
-      "footnotes": [],
+      "section_name": "Điểm chuẩn Trường Đại học Giao thông vận tải TPHCM 2023",
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
       ],
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 784010610H. Tên ngành: Khoa học hàng hải. Tên chuyên ngành: Luật và chính sách hàng hải. Điểm trúng tuyển: 20.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | Điểm chuẩn Trường Đại học Giao thông vận tải TPHCM 2023]\n04:57 24/08/2023\n(Chinhphu.vn) Các ngành liên quan đến Logistics có điểm chuẩn dẫn đầu tại Trường Đại học Giao thông vận tải TPHCM; theo công bố sáng 23/8. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
-      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t001_r029",
+      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_txt_s001",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "text",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
-      "table_id": "table_002",
-      "row_index": 29,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
-      "segment_context": "",
-      "row_identifiers": {
-        "stt": "16",
-        "ma_tuyen_sinh": "784010611H",
-        "ten_nganh": "Khoa học hàng hải",
-        "ten_chuyen_nganh": "Cơ điện tử",
-        "diem_trung_tuyen": "17.00"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "784010611H",
-        "code_needs_verification": false
-      },
-      "footnotes": [],
+      "section_name": "Điểm chuẩn dao động từ 17 25,65 điểm",
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
       ],
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMã tuyển sinh: 784010611H. Tên ngành: Khoa học hàng hải. Tên chuyên ngành: Cơ điện tử. Điểm trúng tuyển: 17.00.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | Điểm chuẩn dao động từ 17 25,65 điểm]\nNgày 23/8, Hội tuyển sinh Trường Đại học Giao thông vận tải TPHCM thông báo điểm trúng tuyển đại học chính quy theo phương thức sử dụng kết thi tốt nghiệp THPT năm 2023. Điểm chuẩn năm nay của trường dao động 17-25,65 điểm. Trong đó, ngành Quản trị Logistics và vận tải đa phương thức (chương trình chuẩn) và Logistics và quản lý chuỗi cung ứng (chương trình chất lượng cao) Công nghệ thông tin có điểm chuẩn cao nhất trường 25,65. Các ngành khác liên quan đến Logistics cũng có điểm chuẩn cao ở trường này s0 với năm ngoái. đồng quả Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     },
     {
-      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t002_r001",
+      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_txt_s002",
       "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "text",
       "program_type": "dai_hoc_chinh_quy",
       "admission_year": 2023,
-      "table_id": "table_003",
-      "row_index": 1,
-      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH HOÀN TOÀN BẰNG TIẾNG ANH",
-      "segment_context": "",
-      "row_identifiers": {
-        "stt": "1",
-        "ma_tuyen_sinh": "751060501E",
-        "ten_nganh": "Logistics và quản lý chuỗi cung ứng",
-        "ten_chuyen_nganh": "Quản trị logistics và vận tải đa phương thức",
-        "diem_trung_tuyen": "25.65",
-        "to_hop_xet_tuyen": "A00, A01, D01, D07"
-      },
-      "code_info": {
-        "ma_tuyen_sinh": "751060501E",
-        "code_needs_verification": false
-      },
-      "footnotes": [],
+      "section_name": "ĐlỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHẤT LƯỢNG CAO",
       "source_urls": [
         "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
       ],
       "extra_urls": [
         "https://hocbong.uth.edu.vn/"
       ],
-      "text": "[Năm 2023 | Hệ dai_hoc_chinh_quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 - CHƯƠNG TRÌNH HOÀN TOÀN BẰNG TIẾNG ANH]\nMã tuyển sinh: 751060501E. Tên ngành: Logistics và quản lý chuỗi cung ứng. Tên chuyên ngành: Quản trị logistics và vận tải đa phương thức. Điểm trúng tuyển: 25.65. Tổ hợp xét tuyển: A00, A01, D01, D07.\nNguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐlỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH CHẤT LƯỢNG CAO]\nMa\ntuyon sinh\nTên noanh\n7340405h\nHêthong\ntin quàn lý\n746010844\nKhoa hpc dữ liiu\n23.50\n23.50\n25,65\n23,25\n7520102071|\n22,00\n752013001H\n24,00\n24.50\n22.50\n22.00\nthong\n22,00\n22,50\nnghiep\n2100\n10\nKỹ thuat xay dựng\n758020104H\n2100\n17.50\nKỹ thuat xay dưng cong trinh gỉao thong\n17.50\nKinh te xuy dựng\n22,00\n12\n2100\n13\nQuan lv xay dung\n25,00\n14\nKhai thácvan tải\n7840101024\n23.00\n23.00\n15\nKinh tevin tai\n23.00\n21.25\n18.00\n17.00\n16\nKhoa hoc hang haỉ\n20.00\n784010611H\nCo dlen tư\n17.00 Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+    },
+    {
+      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_txt_s003",
+      "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "text",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2023,
+      "section_name": "ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH HOÀN TOÀN BĂNG TIẾNG ANH",
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM TRÚNG TUYỂN SỬ DỤNG KẾT QUẢ THI THPT 2023 CHƯƠNG TRÌNH HOÀN TOÀN BĂNG TIẾNG ANH]\nTT\n25.65\nAOO (Toán; Lỷ Hoal;\nA01 (Toán, Lý,\nAnhl;\nAnhl;\nvà đã bao gỗm điểm ưu tiên khu vực, dỗi tượng\ntheo Quy che tuyen sinh cua Bo Giao duc va Đào tao,\nthong\nừng\ncong\nTieng Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+    },
+    {
+      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_txt_s004",
+      "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "text",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2023,
+      "section_name": "Điểm chuẩn Trường Đai học Giao thông vận tải TPHCM",
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2023 | Hệ Đại học chính quy | Điểm chuẩn Trường Đai học Giao thông vận tải TPHCM]\nĐiểm trúng tuyển (điểm chuẩn) là tổng điểm 3 môn trong tổ hợp đăng ký xét tuyển; thang điểm 30 không nhân hệ số và đã bao gồm điểm ưu tiên khu vực, đối tượng theo Quy chế tuyển sinh. Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+    },
+    {
+      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_txt_s005",
+      "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "text",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2023,
+      "section_name": "Thí sinh trúng tuyển Iưu ý:",
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2023 | Hệ Đại học chính quy | Thí sinh trúng tuyển Iưu ý:]\nTừ ngày 24/8/2023 đến trước 17 giờ 00 ngày 08/9/2023, tất cả thí sinh trúng tuyển cần xác nhận nhập học trực tuyến trên Hệ thống sinh chung của Bộ GDĐT tại địa chỉ: tuyển\nhttp:llthisinh thitotnghiepthpt.edu.vn\nThí sinh có thể tra cứu kết trúng tuyển vào Trường Đại học Giao thông Vận tải TPHCM; tải Giấy báo trúng tuyển và xem thông tin chi tiết về thủ tục tiếp đón tân sinh viên tại website: quả\nhttps:lltracuu23.ut.edu.vn\nNếu có vướng mắc; thí sinh vui lòng liên hệ qua:\nEmail tuyensinh@ut.edu.vn;\nHotlinelZalo: 0942882324;\nVăn phòng Trung tâm Tư vấn Tuyển sinh tại địa chỉ: 2 Võ Oanh, Phường 25, Quận Bình Thạnh, TPHCM.\nTham khảo thêm Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+    },
+    {
+      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_txt_s006",
+      "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "text",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2023,
+      "section_name": "CẬP NHẬT: ĐIỂM CHUẨN 100 TRƯỜNG ĐẠI HỌC; HỌC VIỆN NĂM 2023",
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2023 | Hệ Đại học chính quy | CẬP NHẬT: ĐIỂM CHUẨN 100 TRƯỜNG ĐẠI HỌC; HỌC VIỆN NĂM 2023]\nTham khảo thêm\nĐiểm chuẩn Trường Đại học Cần Thơ năm 2023\nTham khảo thêm\nĐiểm chuẩn Trường Đại học Duy Tân năm 2023 D\nTham khảo thêm\nTrường Đại học Luật Hà Nội công bố điểm chuẩn năm 2023\nTham khảo thêm\nĐiểm chuẩn Học viện Ngoai giao năm 2023 Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+    },
+    {
+      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_txt_s007",
+      "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "text",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2023,
+      "section_name": "ĐIỂM CHUẨN 17 HỌC VIỆN, NHÀ TRƯỜNG QUÂN ĐỘI NĂM 2023",
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2023 | Hệ Đại học chính quy | ĐIỂM CHUẨN 17 HỌC VIỆN, NHÀ TRƯỜNG QUÂN ĐỘI NĂM 2023]\nTham khảo thêm\nĐiểm chuẩn Trường Đại học Sư phạm TPHCM năm 2023\nTham khảo thêm\nĐiểm chuẩn Trường Đại học Khoa học và Công nghệ Hà Nội năm 2023 D\nTham khảo thêm\nĐiểm chuẩn Trường Đại học Kiến trúc TPHCM năm 2023\nTham khảo thêm\nĐiểm chuẩn Trường Đại học Sư phạm Kỹ thuật Vĩnh Long năm 2023 D\nTham khảo thêm\nĐiểm chuẩn Trường Đại học Cửu Long năm 2023 D\nTham khảo thêm\nĐiểm chuẩn Trường Đại học Hùng Vương năm 2023\nTham khảo thêm\nĐiểm chuẩn các Trường Đại học khối ngành Sư phạm\nTham khảo thêm\nCác trường đại học, học viện công bố điểm chuẩn tuyển sinh năm 2023\nTham khảo thêm Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
+    },
+    {
+      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_txt_s008",
+      "source_file": "2023_diem-chuan_dai-hoc-chinh-quy.pdf",
+      "chunk_type": "text",
+      "program_type": "dai_hoc_chinh_quy",
+      "admission_year": 2023,
+      "section_name": "Điểm chuẩn các Trường Đại học khối ngành xã hội 2023 Q",
+      "source_urls": [
+        "https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/"
+      ],
+      "extra_urls": [
+        "https://hocbong.uth.edu.vn/"
+      ],
+      "text": "[Năm 2023 | Hệ Đại học chính quy | Điểm chuẩn các Trường Đại học khối ngành xã hội 2023 Q]\nTham khảo thêm\nTham khảo thêm\nĐiểm chuẩn khối các Trường Đại học Y, Dược 2023\nTham khảo thêm\nĐiểm chuẩn Trường Đại học Xây dựng Hà Nội 2923 D Nguồn: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/ | https://hocbong.uth.edu.vn/"
     }
   ],
-  "chunk_count": 73,
-  "generated_by": "chunking.py (step 6) - reviewed & corrected manually 2026-08-07"
+  "chunk_count": 79,
+  "generated_by": "chunking.py (step 6)"
 }

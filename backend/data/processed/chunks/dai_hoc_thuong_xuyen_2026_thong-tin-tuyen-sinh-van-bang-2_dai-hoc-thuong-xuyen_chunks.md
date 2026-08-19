@@ -1,6 +1,6 @@
 # Chunks — dai_hoc_thuong_xuyen_2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen
 
-Tổng: **24** chunk
+Tổng: **26** chunk
 
 ## 1. `2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_s000`
 - Section: Thông tin chung
@@ -8,7 +8,7 @@ Tổng: **24** chunk
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 BỘ XÂY DỰNG
 TRƯỜNG ĐẠI HỌC GIAO THÔNG VẬN TẢI TP. HỒ CHÍ MINH
 TRUNG TÂM ĐÀO TẠO THƯỜNG XUYÊN – LIÊN KẾT ĐÀO TẠO
@@ -25,7 +25,7 @@ VĂN BẰNG 2 ĐẠI HỌC NĂM 2026
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 1.. Tên ngành/Chuyên ngành: Công nghệ thông tin. Mã ngành Tuyển sinh: 7480201. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -35,7 +35,7 @@ TT: 1.. Tên ngành/Chuyên ngành: Công nghệ thông tin. Mã ngành Tuyển 
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 2.. Tên ngành/Chuyên ngành: Logistics và quản lý chuỗi cung ứng. Mã ngành Tuyển sinh: 7510605. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -45,7 +45,7 @@ TT: 2.. Tên ngành/Chuyên ngành: Logistics và quản lý chuỗi cung ứng.
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 3.. Tên ngành/Chuyên ngành: Kỹ thuật cơ khí (chuyên ngành Cơ khí đường sắt tốc độ cao và đường sắt đô thị). Mã ngành Tuyển sinh: 752010308. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -55,7 +55,7 @@ TT: 3.. Tên ngành/Chuyên ngành: Kỹ thuật cơ khí (chuyên ngành Cơ kh
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 4.. Tên ngành/Chuyên ngành: Kỹ thuật tàu thủy. Mã ngành Tuyển sinh: 7520122. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -65,7 +65,7 @@ TT: 4.. Tên ngành/Chuyên ngành: Kỹ thuật tàu thủy. Mã ngành Tuyển
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 5.. Tên ngành/Chuyên ngành: Kỹ thuật điện (chuyên ngành Điện công nghiệp). Mã ngành Tuyển sinh: 752020102. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -75,7 +75,7 @@ TT: 5.. Tên ngành/Chuyên ngành: Kỹ thuật điện (chuyên ngành Điện
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 6.. Tên ngành/Chuyên ngành: Kỹ thuật điện (chuyên ngành Năng lượng tái tạo). Mã ngành Tuyển sinh: 752020104. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -85,7 +85,7 @@ TT: 6.. Tên ngành/Chuyên ngành: Kỹ thuật điện (chuyên ngành Năng l
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 7.. Tên ngành/Chuyên ngành: Kỹ thuật điện tử – viễn thông. Mã ngành Tuyển sinh: 7520207. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -95,7 +95,7 @@ TT: 7.. Tên ngành/Chuyên ngành: Kỹ thuật điện tử – viễn thông.
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 8.. Tên ngành/Chuyên ngành: Kỹ thuật điều khiển và tự động hóa (chuyên ngành Tự động hóa Công nghiệp). Mã ngành Tuyển sinh: 752021601. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -105,7 +105,7 @@ TT: 8.. Tên ngành/Chuyên ngành: Kỹ thuật điều khiển và tự độn
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 9.. Tên ngành/Chuyên ngành: Kỹ thuật điều khiển và tự động hóa (chuyên ngành Kỹ thuật điều khiển tự động và thông tin tín hiệu đường sắt tốc độ cao). Mã ngành Tuyển sinh: 752021603. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -115,7 +115,7 @@ TT: 9.. Tên ngành/Chuyên ngành: Kỹ thuật điều khiển và tự độn
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 10.. Tên ngành/Chuyên ngành: Kỹ thuật ô tô (chuyên ngành Cơ khí ô tô). Mã ngành Tuyển sinh: 752013001. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -125,7 +125,7 @@ TT: 10.. Tên ngành/Chuyên ngành: Kỹ thuật ô tô (chuyên ngành Cơ kh�
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 11.. Tên ngành/Chuyên ngành: Kỹ thuật xây dựng (chuyên ngành Xây dựng dân dụng và công nghiệp). Mã ngành Tuyển sinh: 758020101. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -135,7 +135,7 @@ TT: 11.. Tên ngành/Chuyên ngành: Kỹ thuật xây dựng (chuyên ngành X�
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 12.. Tên ngành/Chuyên ngành: Kỹ thuật xây dựng (chuyên ngành Thiết kế nội thất). Mã ngành Tuyển sinh: 758020104. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -145,7 +145,7 @@ TT: 12.. Tên ngành/Chuyên ngành: Kỹ thuật xây dựng (chuyên ngành Th
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 13.. Tên ngành/Chuyên ngành: Kỹ thuật xây dựng công trình giao thông (chuyên ngành Xây dựng cầu đường). Mã ngành Tuyển sinh: 758020501. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -155,7 +155,7 @@ TT: 13.. Tên ngành/Chuyên ngành: Kỹ thuật xây dựng công trình giao 
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 14.. Tên ngành/Chuyên ngành: Kỹ thuật xây dựng công trình giao thông (chuyên ngành Xây dựng đường sắt tốc độ cao và đường sắt đô thị). Mã ngành Tuyển sinh: 758020512. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -165,7 +165,7 @@ TT: 14.. Tên ngành/Chuyên ngành: Kỹ thuật xây dựng công trình giao 
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 15.. Tên ngành/Chuyên ngành: Kinh tế xây dựng (chuyên ngành Kinh tế xây dựng). Mã ngành Tuyển sinh: 758030101. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -175,7 +175,7 @@ TT: 15.. Tên ngành/Chuyên ngành: Kinh tế xây dựng (chuyên ngành Kinh 
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 16.. Tên ngành/Chuyên ngành: Kinh tế xây dựng (chuyên ngành Kinh tế và quản lý bất động sản). Mã ngành Tuyển sinh: 758030103. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -185,7 +185,7 @@ TT: 16.. Tên ngành/Chuyên ngành: Kinh tế xây dựng (chuyên ngành Kinh 
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 17.. Tên ngành/Chuyên ngành: Quản lý xây dựng. Mã ngành Tuyển sinh: 7580302. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -195,7 +195,7 @@ TT: 17.. Tên ngành/Chuyên ngành: Quản lý xây dựng. Mã ngành Tuyển 
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 18.. Tên ngành/Chuyên ngành: Khai thác vận tải (chuyên ngành Quản lý và kinh doanh vận tải). Mã ngành Tuyển sinh: 784010102. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -205,7 +205,7 @@ TT: 18.. Tên ngành/Chuyên ngành: Khai thác vận tải (chuyên ngành Qu�
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 19.. Tên ngành/Chuyên ngành: Khai thác vận tải (chuyên ngành Khai thác đường sắt tốc độ cao). Mã ngành Tuyển sinh: 784010104. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -215,7 +215,7 @@ TT: 19.. Tên ngành/Chuyên ngành: Khai thác vận tải (chuyên ngành Khai
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 20.. Tên ngành/Chuyên ngành: Kinh tế vận tải (chuyên ngành Kinh tế hàng hải và đường thủy). Mã ngành Tuyển sinh: 784010403. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -225,7 +225,7 @@ TT: 20.. Tên ngành/Chuyên ngành: Kinh tế vận tải (chuyên ngành Kinh 
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 21.. Tên ngành/Chuyên ngành: Khoa học hàng hải (chuyên ngành Điều khiển và quản lý tàu biển). Mã ngành Tuyển sinh: 784010606. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -235,7 +235,7 @@ TT: 21.. Tên ngành/Chuyên ngành: Khoa học hàng hải (chuyên ngành Đi�
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 TT: 22.. Tên ngành/Chuyên ngành: Khoa học hàng hải (chuyên ngành Khai thác máy tàu thủy và quản lý kỹ thuật). Mã ngành Tuyển sinh: 784010607. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 ```
 
@@ -245,20 +245,22 @@ TT: 22.. Tên ngành/Chuyên ngành: Khoa học hàng hải (chuyên ngành Khai
 - Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
 
 ```text
-[Năm 2026 | Hệ dai_hoc_thuong_xuyen | Thông tin chung]
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
 2. Hình thức tuyển sinh:
-Xét tuyển bằng tốt nghiệp Đại học. Không thi tuyển.
-3. Đối tượng tuyển sinh:
-Thí sinh đã có ít nhất 01 bằng tốt nghiệp Đại học.
-4. Hình thức đào tạo & Thời gian đào tạo:
-Hình thức đào tạo: Đào tạo theo tín chỉ.
-Học phí: 700.000đ/ tín chỉ.
-Thời gian đào tạo: Từ 2,0 năm. (Thời gian hoàn thành chương trình học có thể ngắn hơn, tuỳ thuộc vào số lượng tín chỉ sinh viên đăng ký học mỗi kỳ hoặc (và) số lượng tín chỉ sinh viên được xét miễn giảm).
-*** Lưu ý: Học văn bằng 2, sinh viên sẽ được xét miễn giảm tín chỉ đối với các môn trong chương trình đào tạo của trường Đại học Giao thông Vận tải TPHCM, mà sinh viên đã học ở bậc Trung cấp, Cao đẳng hoặc trường Đại học khác.
-5. Thời gian & Địa điểm học:
-Thời gian học: Linh hoạt trong ngày hoặc trong tuần.
-Địa điểm học: Quận Bình Tân hoặc Quận Bình Thạnh, TP Hồ Chí Minh. Sinh viên sẽ được thông báo khi nhập học.
-6. Hồ sơ đăng ký xét tuyển Văn bằng 2 đại học Giao thông Vận tải TPHCM:
+Xét tuyển bằng tốt nghiệp Đại học. Không thi tuyển. 3. Đối tượng tuyển sinh:
+Thí sinh đã có ít nhất 01 bằng tốt nghiệp Đại học. 4. Hình thức đào tạo & Thời gian đào tạo:
+Hình thức đào tạo: Đào tạo theo tín chỉ. Học phí: 700.000đ/ tín chỉ. Thời gian đào tạo: Từ 2,0 năm. (Thời gian hoàn thành chương trình học có thể ngắn hơn, tuỳ thuộc vào số lượng tín chỉ sinh viên đăng ký học mỗi kỳ hoặc (và) số lượng tín chỉ sinh viên được xét miễn giảm). *** Lưu ý: Học văn bằng 2, sinh viên sẽ được xét miễn giảm tín chỉ đối với các môn trong chương trình đào tạo của trường Đại học Giao thông Vận tải TPHCM, mà sinh viên đã học ở bậc Trung cấp, Cao đẳng hoặc trường Đại học khác. 5. Thời gian & Địa điểm học:
+Thời gian học: Linh hoạt trong ngày hoặc trong tuần. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
+```
+
+## 25. `2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_s024`
+- Section: Thông tin chung
+- Năm: 2026 | Hệ: dai_hoc_thuong_xuyen
+- Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
+
+```text
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
+Địa điểm học: Quận Bình Tân hoặc Quận Bình Thạnh, TP Hồ Chí Minh. Sinh viên sẽ được thông báo khi nhập học. 6. Hồ sơ đăng ký xét tuyển Văn bằng 2 đại học Giao thông Vận tải TPHCM:
 Thí sinh chuẩn bị 01 bộ hồ sơ theo yêu cầu của trường, gồm:
 Phiếu đăng ký Xét tuyển;
 Bằng Đại học;
@@ -267,10 +269,17 @@ Bằng tốt nghiệp Trung học phổ thông;
 CMND / CCCD;
 *** Thí sinh tải mẫu Phiếu tuyển sinh và Phiếu đăng ký xét tuyển tại đây
 7. Thời gian nhận hồ sơ và lệ phí hồ sơ xét tuyển:
-Thời gian nhận hồ sơ: Trường nhận hồ sơ dự tuyển từ ngày ra thông báo này.
-Lệ phí hồ sơ và xét tuyển: 500.000đ / hồ sơ.
-Kết quả xét tuyển: Nhà trường gửi kết quả xét tuyển trực tiếp đến email hoặc địa chỉ thí sinh ghi trên hồ sơ dự tuyển. (Kết quả xét tuyển được công bố trong vòng 1 tuần).
-8. Liên hệ tư vấn và nộp hồ sơ:
+Thời gian nhận hồ sơ: Trường nhận hồ sơ dự tuyển từ ngày ra thông báo này. Lệ phí hồ sơ và xét tuyển: 500.000đ / hồ sơ. Kết quả xét tuyển: Nhà trường gửi kết quả xét tuyển trực tiếp đến email hoặc địa chỉ thí sinh ghi trên hồ sơ dự tuyển. (Kết quả xét tuyển được công bố trong vòng 1 tuần). 8. Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
+```
+
+## 26. `2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_s025`
+- Section: Thông tin chung
+- Năm: 2026 | Hệ: dai_hoc_thuong_xuyen
+- Nguồn: https://dkxt.ut.edu.vn/ | https://giaothongvantaitphcm.edu.vn/
+
+```text
+[Năm 2026 | Hệ Đại học thường xuyên | Thông tin chung]
+Liên hệ tư vấn và nộp hồ sơ:
 Phòng Tuyển sinh – Trung tâm Đào tạo Thường xuyên
 VPTS: 234 - 236 Đường Số 1, Phường An Lạc, TP Hồ Chí Minh (đ/c cũ: 234 - 236 Đường Số 1, Bình Trị Đông B, Bình Tân, TP. HCM)
 VPTS: Số 37/5 Ngô Tất Tố, P. Thạnh Mỹ Tây, TPHCM (đ/c cũ: Số 37/5 Ngô Tất Tố, Phường 19, Quận Bình Thạnh, TPHCM)

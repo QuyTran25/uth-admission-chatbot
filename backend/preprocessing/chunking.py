@@ -1,5 +1,5 @@
 """
-Bước 6 — Row-level KV Chunking (cốt lõi)
+Bước 6 — Row-level KV Chunking (cốt lõi) + Text Block Chunking
 
 Input : backend/data/processed/pastedown/*.json
 Output: backend/data/processed/chunks/*.json (data) + spot_check_report.md
@@ -11,13 +11,16 @@ Quyết định đã chốt:
 - Whitelist 2 lớp cho mã xét tuyển (apply_digit_rule -> match whitelist -> auto-accept)
 - JSON là single source of truth (export_derived.py sinh JSONL/MD/TXT từ đây)
 - Header template chuẩn cho bảng continuation (cắt qua trang, mất header khi merge)
+- Text blocks từ Docling texts[] được chunk theo section, giới hạn độ dài MAX_TEXT_LEN
 """
 import json
+import sys
 import re
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
-from utils import logger, save_json, load_json
+sys.path.insert(0, str(Path(__file__).parent))
+from utils import logger, save_json, load_json, split_long_text, MAX_TEXT_LEN, MIN_TEXT_LEN, PROGRAM_TYPE_DISPLAY
 
 # ---------------------------------------------------------------------------
 # Hằng số
@@ -44,6 +47,17 @@ HEADER_TEMPLATES = {
 
 # Rule digit cho mã: 2 chữ số ở vị trí index 6,7 của chuỗi "UTH"+3 ký tự+2 số+suf
 DIGIT_MAP = {"O": "0", "I": "1", "S": "5", "Z": "2"}
+
+
+# ============================================================
+# Constants for text block chunking
+# ============================================================
+
+# Labels to skip when chunking text blocks
+SKIP_LABELS = {"page_header", "page_footer", "caption", "footnote"}
+
+# Keywords to detect footnote-like list_items (overlap with table footnote_symbols)
+FOOTNOTE_KEYWORDS = ["NTC1", "NTC2", "NTC3", "Ghi chú", "ghi chú", "Chú thích", "chú thích"]
 
 
 # ---------------------------------------------------------------------------
@@ -302,9 +316,11 @@ def make_chunk_for_row(
     section = fix_header_text(table.get("section_name", ""))
     seg = table.get("segment_context") or ""
     program_type = doc_meta.get("program_type", "")
-    year = doc_meta.get("admission_year", "")
+    year = doc_meta.get("admission_year")
 
-    prefix = f"[Năm {year} | Hệ {program_type} | {section}]"
+    prog_display = PROGRAM_TYPE_DISPLAY.get(program_type, program_type)
+    year_display = str(year) if year is not None else ""
+    prefix = f"[Năm {year_display} | Hệ {prog_display} | {section}]" if year_display else f"[Hệ {prog_display} | {section}]"
     if seg:
         prefix += f" [{seg}]"
 
@@ -326,6 +342,7 @@ def make_chunk_for_row(
     chunk = {
         "chunk_id": f"{doc_meta.get('file_stem', 'doc')}_t{tidx:03d}_r{row_idx:03d}",
         "source_file": doc_meta.get("file_name", ""),
+        "chunk_type": "table_row",
         "program_type": program_type,
         "admission_year": year,
         "table_id": table.get("table_id", ""),
@@ -354,6 +371,76 @@ def make_chunk_for_row(
     return chunk
 
 
+def chunk_text_blocks(docling_out: dict, doc_meta: dict, source_urls_config: dict) -> List[dict]:
+    """Extract text blocks from Docling texts[], chunk by section with MAX_TEXT_LEN limit."""
+    texts = docling_out.get("texts", [])
+    program_type = doc_meta.get("program_type", "")
+    year = doc_meta.get("admission_year")  # keep None
+    file_stem = doc_meta.get("file_stem", "doc")
+    file_name = doc_meta.get("file_name", "")
+    url_cfg = (source_urls_config or {}).get(program_type, {})
+
+    chunks = []
+    current_section = "Thông tin chung"
+    current_parts = []
+    chunk_idx = 0
+
+    def flush():
+        nonlocal chunk_idx
+        body = "\n".join(current_parts).strip()
+        if not body:
+            return
+        # Dùng split_long_text để cắt thông minh
+        parts = split_long_text(body, MAX_TEXT_LEN, MIN_TEXT_LEN)
+        for part in parts:
+            _emit_chunk(part, current_section, chunk_idx)
+            chunk_idx += 1
+        current_parts.clear()
+
+    def _emit_chunk(text, section, idx):
+        prog_display = PROGRAM_TYPE_DISPLAY.get(program_type, program_type)
+        year_display = str(year) if year is not None else ""
+        prefix = f"[Năm {year_display} | Hệ {prog_display} | {section}]" if year_display else f"[Hệ {prog_display} | {section}]"
+        all_urls = url_cfg.get("source_urls", []) + url_cfg.get("extra_urls", [])
+        url_suffix = " Nguồn: " + " | ".join(all_urls) if all_urls else ""
+        chunks.append({
+            "chunk_id": f"{file_stem}_txt_s{idx:03d}",
+            "source_file": file_name,
+            "chunk_type": "text",
+            "program_type": program_type,
+            "admission_year": year,  # keep None
+            "section_name": section,
+            "source_urls": url_cfg.get("source_urls", []),
+            "extra_urls": url_cfg.get("extra_urls", []),
+            "text": f"{prefix}\n{text}{url_suffix}",
+        })
+
+    def is_footnote_like(text: str) -> bool:
+        for kw in FOOTNOTE_KEYWORDS:
+            if kw in text:
+                return True
+        return False
+
+    for item in texts:
+        label = item.get("label", "")
+        text = (item.get("text") or "").strip()
+        if not text or label in SKIP_LABELS:
+            continue
+        if label == "list_item" and is_footnote_like(text):
+            logger.debug(f"Skip footnote-like list_item: {text[:80]}")
+            continue
+
+        if label == "section_header":
+            flush()
+            current_section = text
+            current_parts = []
+        else:
+            current_parts.append(text)
+
+    flush()
+    return chunks
+
+
 def chunk_document(doc_dict: dict, whitelist: Dict[str, List[str]], source_urls_config: Dict[str, dict] = None) -> List[dict]:
     docling_out = doc_dict.get("docling_output", {})
     tables = docling_out.get("tables", [])
@@ -361,6 +448,8 @@ def chunk_document(doc_dict: dict, whitelist: Dict[str, List[str]], source_urls_
     doc_meta["table_annotation_global"] = " ".join(docling_out.get("table_annotations", [])).strip()
 
     chunks: List[dict] = []
+
+    # Nhánh 1: bảng (giữ nguyên + chunk_type)
     for tidx, table in enumerate(tables):
         header_count, header_paths = detect_header_rows(table)
         grid = build_cell_map(table)
@@ -370,7 +459,12 @@ def chunk_document(doc_dict: dict, whitelist: Dict[str, List[str]], source_urls_
             if chunk:
                 chunks.append(chunk)
 
-    logger.info(f"Chunking complete: {len(chunks)} chunks from {len(tables)} tables.")
+    # Nhánh 2: text blocks (MỚI)
+    text_chunks = chunk_text_blocks(docling_out, doc_meta, source_urls_config)
+    chunks.extend(text_chunks)
+
+    logger.info(f"Chunking complete: {len(chunks)} chunks total "
+                f"({len(chunks) - len(text_chunks)} table_row, {len(text_chunks)} text)")
     return chunks
 
 

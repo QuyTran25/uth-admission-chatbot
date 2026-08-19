@@ -2,13 +2,13 @@
 
 Tổng: **1** chunk
 
-## 1. `2026_dia-chi-chinh_s000`
+## 1. `2026_dia-chi-chinh_s000_p000`
 - Section: ---
 - Năm: 2026 | Hệ: thong_tin_chung
 - Nguồn: https://uth.edu.vn/
 
 ```text
-[Năm 2026 | Hệ thong_tin_chung | ---]
+[Năm 2026 | Hệ Thông tin chung | ---]
 nguon: https://uth.edu.vn/
 nam_tuyen_sinh: 2026
 loai_du_lieu: thong_tin_truong

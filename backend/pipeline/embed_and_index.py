@@ -178,6 +178,7 @@ def build_faiss_index(
                 "section_name": chunk.get("section_name", ""),
                 "source_urls": chunk.get("source_urls", []),
                 "extra_urls": chunk.get("extra_urls", []),
+                "chunk_type": chunk.get("chunk_type", ""),
                 "text": chunk.get("text", ""),
             }
             f.write(json.dumps(meta, ensure_ascii=False) + "\n")
@@ -231,6 +232,7 @@ def build_bm25_index(
                 "section_name": chunk.get("section_name", ""),
                 "source_urls": chunk.get("source_urls", []),
                 "extra_urls": chunk.get("extra_urls", []),
+                "chunk_type": chunk.get("chunk_type", ""),
                 "text": chunk.get("text", ""),
             }
             f.write(json.dumps(meta, ensure_ascii=False) + "\n")

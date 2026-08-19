@@ -23,6 +23,15 @@ FOLDER_MAPPING = {
     "THÔNG TIN CHUNG": "thong_tin_chung"
 }
 
+# Display name mapping for Vietnamese program types
+PROGRAM_TYPE_DISPLAY = {
+    "dai_hoc_chinh_quy": "Đại học chính quy",
+    "dai_hoc_thuong_xuyen": "Đại học thường xuyên",
+    "sau_dai_hoc": "Sau đại học",
+    "lien_ket_quoc_te": "Liên kết quốc tế",
+    "thong_tin_chung": "Thông tin chung"
+}
+
 def get_raw_files(raw_dir: str = "backend/data/raw") -> List[Dict[str, Any]]:
     """
     Recursively scans the raw directory and returns metadata for each file.
@@ -93,3 +102,61 @@ def save_json(data: Any, file_path: str) -> bool:
     except Exception as e:
         logger.error(f"Failed to save JSON to {file_path}: {e}")
         return False
+
+
+# ============================================================
+# Text splitting utilities (shared between chunking.py and simple_chunker.py)
+# ============================================================
+
+import re
+
+MAX_TEXT_LEN = 800
+MIN_TEXT_LEN = 30
+
+# Tách câu tiếng Việt (giữ dấu chấm/hỏi/chấm than)
+_SENTENCE_SPLIT_RE = re.compile(r'(?<=[.!?])\s+')
+
+
+def split_long_text(text: str, max_len: int = MAX_TEXT_LEN, min_len: int = MIN_TEXT_LEN) -> List[str]:
+    """
+    Tách text dài thành các đoạn <= max_len, ưu tiên cắt tại ranh giới câu.
+    Trả về list các đoạn đã strip, bỏ qua đoạn < min_len.
+    """
+    text = text.strip()
+    if not text:
+        return []
+    if len(text) <= max_len:
+        return [text] if len(text) >= min_len else []
+
+    # 1. Tách thành câu
+    sentences = _SENTENCE_SPLIT_RE.split(text)
+    # Gộp lại các câu cho tới khi gần max_len
+    parts = []
+    current = ""
+    for sent in sentences:
+        sent = sent.strip()
+        if not sent:
+            continue
+        # Nếu 1 câu tự nó đã > max_len -> cắt cứng
+        if len(sent) > max_len:
+            if current:
+                parts.append(current.strip())
+                current = ""
+            # Cắt cứng câu dài
+            for i in range(0, len(sent), max_len):
+                sub = sent[i:i+max_len].strip()
+                if len(sub) >= min_len:
+                    parts.append(sub)
+            continue
+
+        # Thử gộp câu vào current
+        if current and len(current) + 1 + len(sent) > max_len:
+            parts.append(current.strip())
+            current = sent
+        else:
+            current = (current + " " + sent).strip() if current else sent
+
+    if current and len(current) >= min_len:
+        parts.append(current.strip())
+
+    return parts
