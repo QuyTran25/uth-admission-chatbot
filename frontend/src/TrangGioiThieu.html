@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Trường Đại học Giao thông vận tải TP.HCM - Đào tạo nhân lực chất lượng cao cho ngành giao thông vận tải">
+  <title>UTH - Trường Đại học Giao thông vận tải TP.HCM</title>
+  <link rel="stylesheet" href="CSS/Global.css">
+  <link rel="stylesheet" href="CSS/HeroSection.css">
+  <link rel="stylesheet" href="CSS/VideoSection.css">
+  <link rel="stylesheet" href="CSS/StatisticsSection.css">
+  <link rel="stylesheet" href="CSS/DiscoverySection.css">
+  <link rel="stylesheet" href="CSS/ContactSection.css">
+  <link rel="stylesheet" href="CSS/CTASection.css">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- Hero Section -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-illustration" role="img" aria-label="Minh họa AI Assistant của UTH">
+          UTH AI Assistant
+        </div>
+        <div class="hero-content">
+          <h1 id="hero-title" class="hero-title">
+            Khám phá <span>UTH</span> - Nơi khởi đầu sự nghiệp
+          </h1>
+          <p class="hero-subtitle">
+            Trường Đại học Giao thông vận tải TP.HCM - Hơn 35 năm đào tạo nhân lực chất lượng cao cho ngành giao thông
+            vận tải
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" onclick="scrollToContact()">
+              Khám phá ngay
+            </button>
+            <p class="hero-actions-hint">Kéo xuống để xem thêm thông tin</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Introduction Section -->
+    <section class="video-section" aria-labelledby="video-title">
+      <div class="video-container">
+        <video class="video-poster" poster="images/uth-campus.jpg" playsinline muted loop id="campusVideo"></video>
+        <div class="video-background"></div>
+        <button class="video-play-btn" aria-label="Phát video giới thiệu UTH" onclick="playVideo()">
+          <svg viewBox="0 0 22 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 0L22 14L2 28V0Z" fill="currentColor" />
+          </svg>
+        </button>
+        <h2 id="video-title" class="video-title">UTH Campus</h2>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics-section" aria-labelledby="stats-title">
+      <div class="container">
+        <h2 id="stats-title" class="section-title">SỐ LIỆU ẤN TƯỢNG</h2>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-number">35+</div>
+            <div class="stat-title">Năm hình thành & Phát triển</div>
+            <p class="stat-description">Hành trình hơn ba thập kỷ đào tạo nhân lực chất lượng cao cho ngành giao thông
+              vận tải.</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-number">50+</div>
+            <div class="stat-title">Câu lạc bộ sinh viên</div>
+            <p class="stat-description">Môi trường năng động giúp sinh viên phát triển kỹ năng mềm, nghệ thuật và thể
+              thao.</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-number">6</div>
+            <div class="stat-title">Cơ sở đào tạo chính quy hiện đại</div>
+            <p class="stat-description">Hệ thống cơ sở trải dài từ TP.HCM, Vũng Tàu đến Đồng Nai với trang thiết bị tiên
+              tiến.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discovery Grid Section -->
+    <section class="discovery-section" aria-labelledby="discovery-title">
+      <div class="container">
+        <h2 id="discovery-title" class="section-title">Khám phá <span>UTH</span></h2>
+        <div class="discovery-grid">
+          <article class="discovery-card">
+            <img class="discovery-image" src="images/contact-info.jpg" alt="Thông tin liên hệ UTH">
+            <div class="discovery-overlay">
+              <img class="discovery-icon" src="icons/contact-icon.svg" alt="Icon liên hệ">
+              <h3 class="discovery-title">Thông tin liên hệ</h3>
+            </div>
+          </article>
+          <article class="discovery-card">
+            <img class="discovery-image" src="images/website.jpg" alt="Website UTH">
+            <div class="discovery-overlay">
+              <img class="discovery-icon" src="icons/web-icon.svg" alt="Icon website">
+              <h3 class="discovery-title">Website UTH</h3>
+            </div>
+          </article>
+          <article class="discovery-card">
+            <img class="discovery-image" src="images/vr360.jpg" alt="VR 360 UTH">
+            <div class="discovery-overlay">
+              <img class="discovery-icon" src="icons/vr-icon.svg" alt="Icon VR">
+              <h3 class="discovery-title">VR 360</h3>
+            </div>
+          </article>
+          <article class="discovery-card">
+            <img class="discovery-image" src="images/intro-video.jpg" alt="Video giới thiệu UTH">
+            <div class="discovery-overlay">
+              <img class="discovery-icon" src="icons/video-icon.svg" alt="Icon video">
+              <h3 class="discovery-title">Video giới thiệu</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" class="section-title">Liên hệ <span>UTH</span></h2>
+        <div class="contact-grid">
+          <div class="contact-map-card">
+            <img class="contact-map" src="images/uth-map.jpg" alt="Bản đồ cơ sở UTH">
+            <div class="map-info-overlay">
+              <p class="map-info-title">Trường ĐH Giao thông vận tải TP.HCM</p>
+              <p class="map-info-address">Số 2 Võ Oanh, Phường 25, Quận Bình Thạnh, TP.HCM</p>
+            </div>
+          </div>
+          <div class="contact-details-card">
+            <div class="contact-info-grid">
+              <div class="contact-info-item">
+                <div class="contact-icon-wrapper">
+                  <svg viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10 0C4.477 0 0 4.477 0 10C0 17.2 8.5 25 10 25C11.5 25 20 17.2 20 10C20 4.477 15.523 0 10 0ZM10 16C6.686 16 4 13.314 4 10C4 6.686 6.686 4 10 4C13.314 4 16 6.686 16 10C16 13.314 13.314 16 10 16Z"
+                      fill="currentColor" />
+                  </svg>
+                </div>
+                <div class="contact-info-content">
+                  <span class="contact-info-label">Cơ sở đào tạo</span>
+                  <div class="contact-info-list">
+                    <div class="contact-info-value">
+                      <span class="contact-info-key">Cơ sở 1:</span>
+                      <span class="contact-info-text">Số 2 Võ Oanh, P.25, Q. Bình Thạnh, TP.HCM</span>
+                    </div>
+                    <div class="contact-info-value">
+                      <span class="contact-info-key">Cơ sở 2:</span>
+                      <span class="contact-info-text">Số 10 đường 12, P. Long Thạnh Mỹ, TP.Thủ Đức</span>
+                    </div>
+                    <div class="contact-info-value">
+                      <span class="contact-info-key">Cơ sở 3:</span>
+                      <span class="contact-info-text">Km 12, đường 30/4, Xã Long Bình, Huyện Long Thành, Đồng Nai</span>
+                    </div>
+                    <div class="contact-info-value">
+                      <span class="contact-info-key">Cơ sở 4:</span>
+                      <span class="contact-info-text">Số 1 đường Nguyễn Tất Thành, Phường 12, TP.Vũng Tàu</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon-wrapper">
+                  <svg viewBox="0 0 22.5 22.5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.25 6.75H2.25C1.007 6.75 0 7.757 0 9V13.5C0 14.743 1.007 15.75 2.25 15.75H20.25C21.493 15.75 22.5 14.743 22.5 13.5V9C22.5 7.757 21.493 6.75 20.25 6.75ZM20.25 9H2.25V13.5H20.25V9Z"
+                      fill="currentColor" />
+                  </svg>
+                </div>
+                <div class="contact-info-content">
+                  <span class="contact-info-label">Tuyển sinh</span>
+                  <div class="contact-info-list">
+                    <div class="contact-info-value">
+                      <span class="contact-info-text">Hotline: 028 3899 6199</span>
+                    </div>
+                    <div class="contact-info-value">
+                      <span class="contact-info-text">Email: tuyensinh@uth.edu.vn</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-icon-wrapper">
+                  <svg viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M22.5 10C22.5 16.904 16.904 22.5 10 22.5C3.096 22.5 0 16.904 0 10C0 3.096 3.096 0 10 0C16.904 0 22.5 3.096 22.5 10ZM10 2C5.582 2 2 5.582 2 10C2 14.418 5.582 18 10 18C14.418 18 18 14.418 18 10C18 5.582 14.418 2 10 2ZM10 16C6.686 16 4 13.314 4 10C4 6.686 6.686 4 10 4C13.314 4 16 6.686 16 10C16 13.314 13.314 16 10 16ZM10 6C9.447 6 9 6.447 9 7V11C9 11.553 9.447 12 10 12C10.553 12 11 11.553 11 11V7C11 6.447 10.553 6 10 6Z"
+                      fill="currentColor" />
+                  </svg>
+                </div>
+                <div class="contact-info-content">
+                  <span class="contact-info-label">Website</span>
+                  <div class="contact-info-list">
+                    <a href="https://uth.edu.vn/" target="_blank" class="contact-info-link">www.ut.edu.vn</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner Section -->
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="cta-banner">
+        <div class="cta-content">
+          <button class="cta-video-btn" aria-label="Xem video giới thiệu UTH" onclick="playVideo()">
+            <svg viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 0L24 16L2 32V0Z" fill="currentColor" />
+            </svg>
+          </button>
+          <div class="cta-text">
+            <h2 id="cta-title" class="cta-title">Sẵn sàng trở thành một phần của UTH?</h2>
+            <p class="cta-description">Hãy để UTH đồng hành cùng bạn trên con đường chinh phục ước mơ và xây dựng tương
+              lai rạng rỡ.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function scrollToContact() {
+      document.querySelector('.contact-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function playVideo() {
+      const video = document.getElementById('campusVideo');
+      if (video.paused) {
+        video.play().catch(() => {
+          window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+        });
+      }
+    }
+  </script>
+</body>
+
+</html>

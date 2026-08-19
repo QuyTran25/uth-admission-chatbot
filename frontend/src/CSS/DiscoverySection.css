@@ -1,0 +1,116 @@
+/* Discovery Grid Section */
+.discovery-section {
+  background-color: var(--bg-white);
+  padding: 80px 0;
+}
+
+.discovery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.discovery-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.discovery-card {
+  position: relative;
+  height: 320px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.discovery-card-link:hover .discovery-card {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.discovery-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.discovery-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 26px;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 100, 95, .90) 0%,
+      rgba(0, 115, 105, .72) 28%,
+      rgba(0, 115, 105, .35) 55%,
+      rgba(0, 115, 105, .08) 100%
+    );
+}
+
+.discovery-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.discovery-icon {
+  font-size: 34px;
+  margin-bottom: 14px;
+  color: #fff;
+  align-self: flex-start;
+}
+
+.discovery-title {
+  margin: 0;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.15;
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.section-title span {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .discovery-grid {
+    gap: 18px;
+    grid-template-columns: 1fr;
+  }
+
+  .discovery-card {
+    width: 100%;
+    height: 250px;
+  }
+
+  .discovery-title {
+    font-size: 20px;
+  }
+}
