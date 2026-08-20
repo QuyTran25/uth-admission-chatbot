@@ -1,0 +1,67 @@
+/* Chat Hero Section */
+.chat-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center everything */
+  text-align: center;
+  padding: 128px 0 64px;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.chat-hero__icon-wrapper {
+  margin-bottom: 24px;
+}
+
+.chat-hero__icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.chat-hero__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 48px;
+  color: var(--text-dark);
+}
+
+.chat-hero__title-dark {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.96px;
+  color: var(--text-dark);
+}
+
+.chat-hero__title-primary {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.96px;
+  color: var(--primary-dark);
+}
+
+.chat-hero__title-mark {
+  font-family: 'Liberation Serif', serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.96px;
+  color: var(--text-dark);
+}
+
+.chat-hero__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.45px;
+  color: var(--text-gray);
+  max-width: 672px;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from './Header.jsx';
 import './CSS/Global.css';
 import './CSS/HeroSection.css';
@@ -10,6 +11,8 @@ import './CSS/CTASection.css';
 import './CSS/Footer.css';
 
 const TrangGioiThieu = () => {
+  const navigate = useNavigate();
+  
   const scrollToContact = () => {
     document.querySelector('.contact-section')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -23,6 +26,10 @@ const TrangGioiThieu = () => {
         });
       }
     }
+  };
+  
+  const goToChat = () => {
+    navigate('/chat');
   };
 
   return (
@@ -47,7 +54,7 @@ const TrangGioiThieu = () => {
             </p>
 
             <div className="hero-actions">
-              <button className="btn btn-primary" onClick={scrollToContact}>
+              <button className="btn btn-primary" onClick={goToChat}>
                 Trò chuyện với trợ lý
               </button>
 
@@ -231,7 +238,7 @@ const TrangGioiThieu = () => {
                 </h2>
               </div>
             </div>
-            <button className="cta-start-btn">Bắt đầu</button>
+            <button className="cta-start-btn" onClick={goToChat}>Bắt đầu</button>
           </div>
         </div>
       </section>

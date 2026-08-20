@@ -1,0 +1,28 @@
+/* Chat Footer */
+.chat-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--bg-white);
+  border-top: 1px solid rgba(188, 201, 198, 0.3);
+  padding: 32px 40px;
+}
+
+.chat-footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.chat-footer__text {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(61, 73, 71, 0.6);
+  text-align: center;
+}
