@@ -1,0 +1,146 @@
+/*
+ * TrangGioiThieu.css — Hero Section (Trang bìa giới thiệu)
+ * Bao gồm: Hình minh họa 3D, tiêu đề chính, phụ đề, nút CTA
+ */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 140px 0px 80px;
+  width: 100%;
+  min-height: 700px;
+  background: radial-gradient(
+    58.42% 96.67% at 50% 50%,
+    rgba(30, 165, 154, 0.03) 0%,
+    rgba(30, 165, 154, 0) 80%
+  );
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 0px 40px;
+  width: 100%;
+  max-width: var(--uth-max-width);
+  margin: 0 auto;
+}
+
+/* ---- Illustration ---- */
+.hero__illustration {
+  position: relative;
+  flex: 0 0 480px;
+  height: 262px;
+}
+
+.hero__illustration-blur {
+  position: absolute;
+  left: -120px;
+  right: -120px;
+  top: -65px;
+  bottom: -65px;
+  background: rgba(30, 165, 154, 0.05);
+  filter: blur(40px);
+  border-radius: var(--uth-radius-full);
+  z-index: 0;
+}
+
+.hero__illustration-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  background: linear-gradient(135deg, var(--uth-primary-bg-subtle), var(--uth-bg));
+}
+
+.hero__illustration-placeholder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  background: linear-gradient(135deg, rgba(30, 165, 154, 0.15), rgba(30, 165, 154, 0.05));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: var(--uth-primary);
+}
+
+/* ---- Text Content ---- */
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 580px;
+}
+
+.hero__title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 70px;
+  letter-spacing: -1.6px;
+  color: var(--uth-dark);
+  text-align: left;
+}
+
+.hero__subtitle {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  color: var(--uth-gray-700);
+  opacity: 0.8;
+  text-align: left;
+}
+
+.hero__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 23.5px;
+  padding-top: 24px;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 48px;
+  background: var(--uth-primary);
+  color: var(--uth-white);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  border-radius: var(--uth-radius-full);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.hero__btn:hover {
+  background: var(--uth-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0px 14px 20px -3px rgba(30, 165, 154, 0.3),
+              0px 6px 8px -4px rgba(30, 165, 154, 0.2);
+}
+
+.hero__btn:active {
+  transform: translateY(0);
+}
+
+.hero__hint {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--uth-gray-700);
+  opacity: 0.6;
+  text-align: center;
+}

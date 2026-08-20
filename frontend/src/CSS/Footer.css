@@ -1,0 +1,140 @@
+/* Footer Section */
+.footer {
+  background: #f8fafc;
+  padding: 60px 40px 40px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  margin-right: 150px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.footer-tagline {
+  color: #64748b;
+  font-size: 23px;
+}
+
+/* Contact Form Styles */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.widget_text .widget-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 24px 0 16px;
+  text-transform: uppercase;
+}
+
+.wpcf7-form-control {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.wpcf7-textarea {
+  min-height: 80px;
+}
+
+.wpcf7-submit {
+  background: var(--primary-color, #1ea59a);
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.wpcf7-submit:hover {
+  filter: brightness(1.1);
+}
+
+.footer-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+.footer-links ul,
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #475569;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #475569;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.social-link i {
+  font-size: 24px;
+}
+
+.social-link:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 20px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}

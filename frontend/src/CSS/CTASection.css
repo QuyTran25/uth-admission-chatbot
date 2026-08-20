@@ -1,0 +1,139 @@
+/* CTA Banner Section */
+.cta-section {
+  padding: 80px 40px 100px;
+}
+
+.cta-banner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 40px;
+  background: var(--primary-color);
+  box-shadow: var(--shadow-lg);
+  padding: 64px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: -160px;
+  right: -160px;
+  width: 320px;
+  height: 320px;
+  background: rgba(255, 255, 255, 0.05);
+  filter: blur(50px);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.cta-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -128px;
+  left: -128px;
+  width: 256px;
+  height: 256px;
+  background: rgba(0, 0, 0, 0.05);
+  filter: blur(40px);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.cta-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.cta-icon-box {
+  width: 96px;
+  height: 96px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  border: none;
+}
+
+.cta-icon-box:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+.cta-icon-box i {
+  font-size: 40px;
+  color: var(--bg-white);
+}
+
+.cta-text {
+  flex: 1;
+}
+
+.cta-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: var(--bg-white);
+}
+
+.cta-start-btn {
+  background: var(--bg-white);
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 18px;
+  padding: 18px 48px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+
+.cta-start-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+  .cta-banner {
+    padding: 40px 24px;
+    border-radius: 24px;
+  }
+  
+  .cta-content {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .cta-left {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .cta-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  .cta-start-btn {
+    width: 100%;
+  }
+}

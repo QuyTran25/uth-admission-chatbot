@@ -1,0 +1,98 @@
+/*
+ * Header.css — Navbar/Header của trang giới thiệu
+ * Bao gồm: Logo UTH, menu điều hướng, nút CTA
+ */
+
+:root {
+  --uth-primary: #1EA59A;
+  --uth-primary-hover: #006A63;
+  --uth-white: #FFFFFF;
+  --uth-gray-700: #3D4947;
+  --uth-max-width: 1280px;
+  --uth-radius-full: 9999px;
+  --uth-shadow-md: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+  height: 80px;
+  max-width: var(--uth-max-width);
+  margin: 0 auto;
+  background: rgba(248, 249, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(188, 201, 198, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ---- Logo ---- */
+.header__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header__logo-img {
+  height: 48px;
+  width: auto;
+}
+
+/* ---- Navigation ---- */
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header__nav-link {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--uth-gray-700);
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.header__nav-link:hover,
+.header__nav-link.active {
+  color: var(--uth-primary);
+}
+
+/* ---- CTA Button ---- */
+.header__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--uth-primary);
+  color: var(--uth-white);
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: var(--uth-radius-full);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--uth-shadow-md);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.header__cta:hover {
+  background: var(--uth-primary-hover);
+  transform: translateY(-1px);
+}
+
+.header__cta:active {
+  transform: translateY(0);
+}
