@@ -13,6 +13,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.index_store import index_store
 from app.api.endpoints.retrieve import router as retrieve_router
+from app.api.endpoints.mock_retriever import router as mock_router
+from app.api.endpoints.chat import router as chat_router
 
 logger = logging.getLogger("main")
 
@@ -36,14 +38,15 @@ async def lifespan(app: FastAPI):
 # ---------------------------------------------------------------------------
 
 app = FastAPI(
-    title="UTH Admission Chatbot — Retrieval API",
+    title="UTH Admission Chatbot API",
     description=(
-        "Retrieval API cho hệ thống chatbot tuyển sinh UTH. "
-        "Hỗ trợ BM25, Dense (FAISS) và Hybrid Retrieval (RRF + Weighted Sum). "
-        "Lọc theo admission_year và program_type. "
-        "Mặc định năm 2026 theo Mục 2.1 đề cương."
+        "API chatbot tư vấn tuyển sinh UTH. "
+        "Hỗ trợ câu hỏi tạo sinh (Gemini), trích dẫn nguồn, phát hiện ngoài phạm vi. "
+        "Retrieval: BM25 + Dense (FAISS) Hybrid Weighted 0.4/0.6. "
+        "Filters: year_filter + oos_filter (Hướng C). "
+        "Post-generation: Attribution Gate (chunk_id check)."
     ),
-    version="1.0.0",
+    version="2.0.0",
     lifespan=lifespan,
 )
 
@@ -58,6 +61,8 @@ app.add_middleware(
 
 # Mount router
 app.include_router(retrieve_router, prefix="/api/v1", tags=["retrieval"])
+app.include_router(mock_router, prefix="/api/v1/mock", tags=["mock-retrieval"])
+app.include_router(chat_router, prefix="/api/v1", tags=["chat"])
 
 
 # ---------------------------------------------------------------------------

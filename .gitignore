@@ -40,6 +40,15 @@ backend/data/index/*
 !backend/data/index/.gitkeep
 backend/data/processed/chunks/
 
+backend/eval/results/direction_c_eval.csv
+backend/eval/results/gate_budget_grid_search.csv
+backend/eval/results/gate_combo_grid.csv
+backend/eval/results/gate_multivariate_diagnosis.csv
+backend/eval/results/gate_score_diagnosis.csv
+backend/eval/results/pipeline_union_eval.csv
+backend/eval/results/pipeline_union_eval_dev.csv
+backend/eval/results/relevance_scores_log.csv
+
 # Ignore frontend build outputs and packages
 node_modules/
 dist/
