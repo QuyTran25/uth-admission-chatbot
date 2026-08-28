@@ -28,11 +28,13 @@ class Settings(BaseSettings):
     # k cho RRF: final_score = 1 / (k + rank)
     RRF_K: int = 60
 
-    # --- Retrieval Gate thresholds (sẽ hiệu chỉnh Tuần 5) ---
-    # RETRIEVAL_GATE_THRESHOLD: float = 0.0  # placeholder
+    GEMINI_API_KEY: str = "your_gemini_api_key_here"
+    GEMINI_MODEL: str = "models/gemini-3.6-flash"
+    GEMINI_TEMPERATURE: float = 0.1
+    GEMINI_MAX_TOKENS: int = 1024
 
     class Config:
-        env_file = ".env"
+        env_file = "../.env"
         env_file_encoding = "utf-8"
 
     @property

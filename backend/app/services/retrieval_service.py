@@ -37,11 +37,17 @@ class ScoredChunk:
     source_file: str
     source_urls: List[str] = field(default_factory=list)
     extra_urls: List[str] = field(default_factory=list)
+    score_raw: Optional[float] = None
+
+    def __post_init__(self):
+        if self.score_raw is None:
+            self.score_raw = self.score
 
     def to_dict(self) -> dict:
         return {
             "chunk_id": self.chunk_id,
             "score": round(self.score, 6),
+            "score_raw": round(self.score_raw, 6) if self.score_raw is not None else round(self.score, 6),
             "text": self.text,
             "metadata": {
                 "admission_year": self.admission_year,
@@ -70,9 +76,10 @@ def apply_filters(
     """
     response_meta = {}
 
-    # Default admission_year = 2026 nếu không được chỉ rõ
     year = filters.get("admission_year")
-    if not year:
+    if year in ["all", "ALL"]:
+        year = None
+    elif not year and "admission_year" not in filters:
         year = settings.DEFAULT_ADMISSION_YEAR
         response_meta["year_defaulted"] = True
         response_meta["year_used"] = year
@@ -80,7 +87,12 @@ def apply_filters(
 
     filtered = meta_list
     if year:
-        filtered = [m for m in filtered if m.get("admission_year") == year]
+        try:
+            year_val = int(year)
+            filtered = [m for m in filtered if m.get("admission_year") == year_val]
+        except (ValueError, TypeError):
+            filtered = [m for m in filtered if m.get("admission_year") == year]
+
     prog = filters.get("program_type")
     if prog:
         filtered = [m for m in filtered if m.get("program_type") == prog]
@@ -231,6 +243,13 @@ def search_hybrid(
     # Merge response_meta (ưu tiên bm25's vì cùng filter logic)
     resp_meta = {**resp_meta_d, **resp_meta_b}
 
+    # Lưu top-1 cid của BM25 và Dense để phục vụ tính toán consensus
+    resp_meta["bm25_top1_cid"] = bm25_results[0].chunk_id if bm25_results else None
+    resp_meta["dense_top1_cid"] = dense_results[0].chunk_id if dense_results else None
+    # Đồng thời lưu source_file tương ứng để kiểm tra đồng thuận tài liệu nguồn
+    resp_meta["bm25_top1_file"] = bm25_results[0].source_file if bm25_results else None
+    resp_meta["dense_top1_file"] = dense_results[0].source_file if dense_results else None
+
     if fusion_method == "rrf":
         combined = _fuse_rrf(bm25_results, dense_results)
     else:
@@ -323,3 +342,68 @@ def _fuse_weighted(
             extra_urls=c.extra_urls,
         ))
     return results
+
+
+def retrieve_with_dynamic_routing(
+    query: str,
+    filter_year: Optional[int] = None,
+    program_type: Optional[str] = None,
+    top_k: int = 5,
+) -> Tuple[List[ScoredChunk], dict]:
+    """
+    Truy xuất tài liệu với cơ chế định tuyến động & Boost 20% cho năm 2026.
+
+    - Filter Mode (Có năm cụ thể): Chạy search_hybrid với filter cứng.
+      Gán score_raw = score cho tất cả ScoredChunk để nhất quán.
+    - No-Filter Mode + Boost (Không rõ năm): Chạy search_hybrid với filters={'admission_year': 'all'}.
+      - Nhân score của các chunk thuộc năm 2026 với 1.2 (Boost ranking).
+      - Lưu score chuẩn hóa gốc chưa boost vào score_raw.
+      - Sắp xếp lại theo score giảm dần và lấy top_k.
+    """
+    if filter_year is not None:
+        filters = {
+            "admission_year": filter_year,
+            "program_type": program_type
+        }
+        # Gọi search_hybrid sử dụng alpha=0.4 (Weighted Hybrid tối ưu theo báo cáo)
+        chunks, resp_meta = search_hybrid(
+            query,
+            top_k=top_k,
+            filters=filters,
+            fusion_method="weighted",
+            alpha=0.4
+        )
+        # Đảm bảo trường score_raw được gán bằng score trong Filter Mode
+        for chunk in chunks:
+            chunk.score_raw = chunk.score
+            
+        return chunks, resp_meta
+    else:
+        filters = {
+            "admission_year": "all",
+            "program_type": program_type
+        }
+        # Lấy dư chunks để tránh mất mát sau khi boost & rerank
+        fetch_k = max(top_k * 3, 20)
+        chunks, resp_meta = search_hybrid(
+            query,
+            top_k=fetch_k,
+            filters=filters,
+            fusion_method="weighted",
+            alpha=0.4
+        )
+
+        # Áp dụng boost 20% cho chunk năm 2026
+        for chunk in chunks:
+            # chunk.score_raw đã được khởi tạo bằng chunk.score trong __post_init__
+            if chunk.admission_year == 2026:
+                chunk.score = chunk.score * 1.2
+
+        # Sắp xếp lại danh sách chunks theo score đã boost giảm dần
+        chunks.sort(key=lambda x: x.score, reverse=True)
+
+        # Cắt lấy top_k
+        final_chunks = chunks[:top_k]
+
+        return final_chunks, resp_meta
+
