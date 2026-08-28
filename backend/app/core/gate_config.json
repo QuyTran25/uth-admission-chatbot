@@ -1,0 +1,7 @@
+{
+    "consensus_type": "file",
+    "threshold_default": 0.0,
+    "threshold_consensus": 0.0,
+    "margin_threshold": null,
+    "note": "Gate disabled — FPR budget exhausted by L1 (year_filter) + L2 (Hướng C). Any threshold >0.59 adds FPR >20% on residual. Attribution Gate handles remaining refusal."
+}
