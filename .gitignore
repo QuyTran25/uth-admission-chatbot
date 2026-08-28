@@ -40,6 +40,8 @@ backend/data/index/*
 !backend/data/index/.gitkeep
 backend/data/processed/chunks/
 
+
+#Đây là các file dữ liệu dạng CSV phát sinh tự động khi chạy các script đo đạc thực nghiệm trên máy cục bộ
 backend/eval/results/direction_c_eval.csv
 backend/eval/results/gate_budget_grid_search.csv
 backend/eval/results/gate_combo_grid.csv
