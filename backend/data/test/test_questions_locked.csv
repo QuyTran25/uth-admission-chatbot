@@ -1,0 +1,438 @@
+﻿id,category,intent,user_query,admission_year,expected_behavior,chunk_id, core_fact,expected_response
+3,in_scope,Hỏi công thức tính điểm,Cách tính điểm xét tuyển kết hợp của trường như thế nào?,2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_txt_s006,UTH120 = 0.4 * Max (k1*ĐGNL; k2*Điểm học bạ năm lớp 12; k3*Điểm thi tốt nghiệp) + 0.3 * Điểm học bạ năm lớp 12 + 0.3 * Điểm thi tốt nghiệp + Điểm ưu tiên (nếu có),"Chào bạn! Mình gửi bạn công thức tính điểm xét tuyển (UTH120) của phương thức Xét tuyển kết hợp đại học chính quy 2026 nhé:
+
+UTH120 = 0.4 * Max (k1*ĐGNL; k2*Điểm học bạ năm lớp 12; k3*Điểm thi tốt nghiệp) + 0.3 * Điểm học bạ năm lớp 12 + 0.3 * Điểm thi tốt nghiệp + Điểm ưu tiên (nếu có).
+
+Để tính thử điểm chính xác nhất, bạn có thể truy cập:
+Website: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
+Hotline hỗ trợ: 0832 488 288
+
+☺️"
+13,year_control,Hỏi điểm chuẩn 2025 Ngôn ngữ Anh,Ngành Ngôn ngữ Anh năm 2025 lấy bao nhiêu điểm vậy trường?,2025.0,answer,2025_diem-chuan_dai-hoc-chinh-quy_t000_r000,Mã 7220201A (Tiên tiến): 800 điểm · Mã 7220201E (100% TA): 775 điểm (xét kết hợp 2025),"Chào bạn! Điểm chuẩn ngành Ngôn ngữ Anh (Đại học chính quy - Xét kết hợp 2025) theo dữ liệu như sau:
+
+- Mã 7220201A (Chương trình tiên tiến): 800 điểm.
+- Mã 7220201E (Chương trình hoàn toàn bằng Tiếng Anh): 775 điểm.
+
+Bạn cần hỏi thêm về học phí hay môn học, vui lòng liên hệ:
+Hotline: 0832 488 288
+Website: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
+
+Chúc bạn tìm được ngành phù hợp! ☺️"
+14,year_control,Hỏi điểm chuẩn 2025 CNTT,Năm ngoái 2025 ngành CNTT tiên tiến lấy bao nhiêu điểm ạ?,2025.0,answer,2025_diem-chuan_dai-hoc-chinh-quy_t000_r000,CNTT tiên tiến (mã 748020101A): 800 điểm (xét kết hợp 2025),"Chào bạn! ☺️
+
+Năm 2025, chuyên ngành Công nghệ thông tin (chương trình tiên tiến, mã 748020101A) thuộc hệ Đại học chính quy có điểm chuẩn xét tuyển kết hợp là 800 điểm.
+
+Cần tư vấn thêm về khối ngành CNTT, bạn liên hệ nhé:
+Hotline: 028 3512 8986
+Tra cứu thông tin: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
+
+☺️"
+31,out_of_scope,Tư vấn định hướng ngành,Em học khối kinh tế nhưng không thích tính toán nhiều thì nên chọn Quản trị hay Logistics ạ?,2026.0,refuse,,Chatbot không tư vấn định hướng cá nhân; gợi ý tham khảo khung đào tạo trên website,"Chào bạn! ☺️
+
+Mỗi ngành học đều có chương trình và đặc thù riêng. Rất tiếc, mình là chatbot nên không hỗ trợ tư vấn chọn định hướng cá nhân. Bạn vui lòng tham khảo chi tiết các môn học của từng ngành trên website trường để có lựa chọn phù hợp nhất nhé.
+
+Tra cứu thông tin ngành tại: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
+Hotline tư vấn: 0835.68.68.98
+
+Chúc bạn sớm tìm được đam mê! ☺️"
+32,out_of_scope,Hỏi về lương sau tốt nghiệp,"Ngành Kỹ thuật tàu thủy ra trường làm lương có cao không, được bao nhiêu một tháng?",2026.0,refuse,,"Chatbot không cung cấp dự báo mức lương; phụ thuộc vị trí, công ty, năng lực","Chào bạn! Mình là trợ lý tuyển sinh UTH. ☺️
+
+Xin lỗi bạn, mình không cung cấp các thông tin liên quan đến dự báo mức lương sau khi tốt nghiệp. Mức thu nhập sẽ phụ thuộc vào vị trí, quy mô công ty và năng lực thực tế của bạn lúc đi làm.
+
+Để tìm hiểu về chuẩn đầu ra, bạn ghé thăm: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
+Hotline: 0832 488 288
+
+☺️"
+41,in_scope,Hỏi ngành Quản trị kinh doanh (ĐHCQ),Cho mình xin mã đăng ký xét tuyển 2026 của ngành Quản trị kinh doanh.,2026.0,answer,2026_diem-chuan_dai-hoc-chinh-quy_t000_r055,"UTHQTD01A (tiên tiến, cơ sở chính) · UTHQTD01V (tiên tiến, Vũng Tàu); tổ hợp: Toán + 2 môn NTC1","Chào bạn! Mình gửi mã ngành để bạn tham khảo nhé. ☺️
+
+Năm 2026, ngành Quản trị kinh doanh (chương trình tiên tiến) của UTH có mã xét tuyển là UTHQTD01A (Dạy tại cơ sở chính) hoặc UTHQTD01V (Dạy tại Campus Vũng Tàu). Tổ hợp yêu cầu bắt buộc môn Toán và 2 môn trong NTC1.
+
+Nộp hồ sơ trực tuyến: https://tuyensinh.ut.edu.vn/dai-hoc-chinh-quy/
+Hotline: 0832 488 288
+
+☺️"
+47,in_scope,Hỏi lệ phí thi Thạc sĩ,Em nộp hồ sơ xét tuyển Thạc sĩ thì lệ phí xét tuyển là bao nhiêu?,2026.0,answer,2026_thong-tin-tuyen-sinh-thac-si_sau-dai-hoc_txt_s017,Lệ phí xét tuyển ThS 2026: 500.000 đ/ứng viên (không hoàn lại); nộp qua chuyển khoản,"Chào bạn! ☺️
+
+Lệ phí xét tuyển trình độ Thạc sĩ năm 2026 tại UTH là 500.000 đồng/ứng viên (lệ phí này không hoàn lại). Bạn nộp lệ phí theo hình thức chuyển khoản qua tài khoản ngân hàng của trường.
+
+Đăng ký xét tuyển trực tuyến tại: https://tuyensinh.ut.edu.vn/sau-dai-hoc/
+Chúc bạn có kỳ tuyển sinh thuận lợi! ☺️"
+48,in_scope,Hỏi điều kiện tiếng Anh Thạc sĩ,Nếu chưa có bằng tiếng anh Bậc 3 thì có được thi Thạc sĩ không?,2026.0,answer,2026_thong-tin-tuyen-sinh-thac-si_sau-dai-hoc_txt_s003,Chưa có Bậc 3 → có thể thi đánh giá năng lực ngoại ngữ đầu vào ThS do UTH tổ chức (tương đương Bậc 3),"Chào bạn! Bạn yên tâm nhé ☺️
+
+Nếu bạn chưa đáp ứng các điều kiện ngoại ngữ miễn trừ (như bằng Bậc 3), bạn có thể đăng ký tham gia kỳ đánh giá năng lực ngoại ngữ đầu vào trình độ thạc sĩ do UTH tổ chức (tương đương Bậc 3).
+
+Mọi thông tin chi tiết về kỳ thi này, bạn xem tại:
+Website: https://tuyensinh.ut.edu.vn/sau-dai-hoc/
+Hotline: 028 3512 8986
+
+☺️"
+65,in_scope,Hỏi phương thức xét tuyển Vb2,Học văn bằng 2 trường mình có cần phải thi đầu vào không ad?,2026.0,answer,2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_s023,"Tuyển sinh văn bằng 2 xét tuyển bằng tốt nghiệp Đại học, không thi tuyển.","Chào bạn! ☺️
+
+Không bạn nhé. Chương trình Văn bằng 2 đại học tại UTH áp dụng hình thức xét tuyển dựa trên bằng tốt nghiệp Đại học thứ nhất của thí sinh và hoàn toàn không tổ chức thi tuyển đầu vào.
+
+Bạn có thể nộp hồ sơ xét tuyển trực tuyến tại:
+Website: https://dkxt.ut.edu.vn/
+Hotline hỗ trợ: 0835.68.68.98
+
+Chúc bạn nộp hồ sơ thuận lợi! ☺️"
+75,year_control,Hỏi điểm chuẩn Mạng máy tính 2025,Xét tuyển kết hợp 2025 ngành Mạng máy tính và truyền thông dữ liệu tiên tiến lấy bao nhiêu điểm?,2025.0,answer,2025_diem-chuan_dai-hoc-chinh-quy_t000_r015,"Ngành Mạng máy tính và truyền thông dữ liệu (chương trình tiên tiến, mã 7480102A) năm 2025: điểm chuẩn xét kết hợp là 800 điểm.","Chào bạn! Mình là trợ lý tuyển sinh UTH. ☺️
+
+Đối với phương thức xét tuyển kết hợp năm 2025, ngành Mạng máy tính và truyền thông dữ liệu (chương trình tiên tiến, mã 7480102A) có điểm trúng tuyển là 800 điểm.
+
+Tra cứu thông tin và nộp hồ sơ tại: https://tuyensinh.ut.edu.vn/
+Hotline: 0832 488 288
+
+☺️"
+83,in_scope,Hỏi điểm chuẩn Kỹ thuật cơ khí 2026,Mình muốn biết điểm chuẩn chính thức 2026 ngành Kỹ thuật cơ khí ạ.,2026.0,answer,2026_diem-chuan_dai-hoc-chinh-quy_t000_r009,"Ngành Kỹ thuật cơ khí (chuyên ngành Cơ khí tự động, mã UTHKCK01A) năm 2026: điểm chuẩn là 898.","Chào bạn! Mình là trợ lý tuyển sinh UTH. ☺️
+
+Năm 2026, ngành Kỹ thuật cơ khí (chuyên ngành Cơ khí tự động - chương trình tiên tiến, mã UTHKCK01A) có điểm chuẩn là 898 điểm.
+
+Tra cứu tại: https://tuyensinh.ut.edu.vn/ ☺️"
+88,out_of_scope,Hỏi lương ngành Cầu đường,Tốt nghiệp Xây dựng cầu đường ra làm kỹ sư giám sát lương khởi điểm bao nhiêu?,2026.0,refuse,2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_txt_s000,Câu hỏi ngoài phạm vi tuyển sinh. Chatbot không cung cấp dữ liệu về mức lương.,"Chào bạn! ☺️
+
+Rất tiếc, mình không cung cấp các dữ liệu về dự báo mức lương sau tốt nghiệp. Thông tin này thường biến động theo thị trường lao động và năng lực thực tế của mỗi kỹ sư.
+
+Để biết chuẩn đầu ra ngành Xây dựng cầu đường, bạn ghé thăm: https://tuyensinh.ut.edu.vn/ nhé."
+94,out_of_scope,Hỏi tỷ lệ chọi,"Tỷ lệ chọi hệ vừa học vừa làm có cao không ad, có dễ đậu không?",2026.0,refuse,2026_thong-tin-tuyen-sinh_dai-hoc-thuong-xuyen_s034,"Chatbot không dự đoán tỷ lệ chọi. Hệ vừa học vừa làm 2026 xét tuyển bằng tốt nghiệp THPT, không thi tuyển.","Chào bạn! ☺️
+
+Mình không đưa ra dự đoán về tỷ lệ chọi hay đánh giá mức độ ""dễ đậu"" của các hệ đào tạo. Tuy nhiên, hệ Vừa học vừa làm 2026 hiện đang xét tuyển bằng tốt nghiệp THPT và KHÔNG thi tuyển đầu vào. Bạn cứ tự tin nộp hồ sơ nhé.
+
+Đăng ký trực tuyến tại: https://dkxt.ut.edu.vn/
+Hotline hệ ĐTTX: 0835.68.68.98 ☺️"
+95,out_of_scope,Hỏi về đề thi,Đề thi Đánh giá năng lực của trường mình có khó không ạ?,2026.0,refuse,2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_txt_s000,UTH không tự tổ chức kỳ thi ĐGNL riêng mà sử dụng kết quả kỳ thi ĐGNL của ĐHQG TP.HCM.,"Chào bạn! Mình là trợ lý tuyển sinh UTH. ☺️
+
+Trường Đại học GTVT TP.HCM không tự tổ chức kỳ thi ĐGNL riêng mà sử dụng kết quả kỳ thi Đánh giá năng lực của ĐH Quốc gia TP.HCM. Do đó, mình không thể đưa ra nhận xét hay dự đoán về độ khó của đề thi này.
+
+Chúc bạn ôn luyện tốt và đạt điểm cao! Hotline: 0832 488 288."
+97,in_scope,Hỏi mã xét tuyển Kỹ thuật xây dựng,Mã ngành Kỹ thuật xây dựng chuyên ngành Thiết kế nội thất 2026 là gì ạ?,2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_t001_r010,"Ngành Kỹ thuật xây dựng (chuyên ngành Thiết kế nội thất) chương trình tiên tiến có mã xét tuyển UTHKXD02A, môn bắt buộc Toán, 2 môn tự chọn trong NTC1.","Chào bạn! ☺️
+
+Năm 2026, ngành Kỹ thuật xây dựng (chuyên ngành Thiết kế nội thất - chương trình tiên tiến) có mã xét tuyển là UTHKXD02A. Ngành yêu cầu môn bắt buộc là Toán và 2 môn tự chọn trong nhóm NTC1.
+
+Nộp hồ sơ trực tuyến: https://ts26.uth.edu.vn/
+Chúc bạn đăng ký nguyện vọng thành công! ☺️"
+99,in_scope,Hỏi mã ngành liên kết Logistic,Mã đăng ký chương trình 2+2 Logistics và quản lý chuỗi cung ứng là gì?,2026.0,answer,2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_txt_s001,Chương trình liên kết (2+2) ngành Logistics và quản lý chuỗi cung ứng có mã xét tuyển là UTHIECLOG.,"Chào bạn! Mình là trợ lý tuyển sinh UTH. ☺️
+
+Đối với Chương trình liên kết đào tạo với nước ngoài (2+2), ngành Logistics và quản lý chuỗi cung ứng có mã xét tuyển là UTHIECLOG.
+
+Chi tiết chương trình bạn có thể xem tại: https://iec.ut.edu.vn/
+Hotline Viện IEC: 0906 681 588
+
+☺️"
+101,year_control,Hỏi điểm chuẩn năm 2025 ngành Luật,Cho em hỏi điểm chuẩn ngành Luật hệ tiên tiến xét kết hợp năm 2025 là bao nhiêu?,2025.0,answer,2025_diem-chuan_dai-hoc-chinh-quy_t000_r004,"Ngành Luật (chương trình tiên tiến, mã 7380101A) năm 2025: điểm chuẩn xét kết hợp là 800 điểm.","Chào bạn! Mình là trợ lý tuyển sinh UTH. ☺️
+
+Theo dữ liệu năm 2025, ngành Luật (chương trình tiên tiến, mã 7380101A) có điểm trúng tuyển phương thức xét kết hợp là 800 điểm bạn nhé.
+
+Cần hỗ trợ thêm về chương trình, bạn có thể xem tại:
+Website: https://tuyensinh.ut.edu.vn/
+Hotline: 0835.68.68.98
+
+Chúc bạn tìm được thông tin hữu ích! ☺️"
+102,year_control,Hỏi điểm chuẩn năm 2024 Kỹ thuật điện tử viễn thông,Mình xin điểm chuẩn thi THPT 2024 của ngành Kỹ thuật điện tử - viễn thông.,2024.0,answer,2024_diem-chuan_dai-hoc-chinh-quy_t000_r022,"Ngành Kỹ thuật điện tử - viễn thông (chương trình tiên tiến, mã 7520207A) năm 2024: điểm chuẩn thi THPT là 20.0 điểm.","Chào bạn! ☺️
+
+Năm 2024, ngành Kỹ thuật điện tử - viễn thông (chương trình tiên tiến, mã 7520207A) có điểm chuẩn theo phương thức thi tốt nghiệp THPT là 20.0 điểm.
+
+Mọi thắc mắc về tuyển sinh, bạn vui lòng tra cứu qua:
+Website: https://tuyensinh.ut.edu.vn/
+Hotline: 0832 488 288
+
+☺️"
+104,year_control,Hỏi điểm chuẩn năm 2022 Khai thác vận tải (Học bạ),Em tìm điểm xét học bạ năm 2022 chuyên ngành Quản lý và kinh doanh vận tải.,2022.0,answer,2022_diem-chuan_dai-hoc-chinh-quy_t002_r008,"Ngành Khai thác vận tải (mã 7840101) năm 2022: điểm chuẩn xét học bạ là 26.5 điểm, điểm thi THPT là 15.0 điểm.","Chào bạn! Mình xin cung cấp thông tin điểm trúng tuyển hệ đại trà 2022 nhé. ☺️
+
+Chuyên ngành Quản lý và kinh doanh vận tải (thuộc ngành Khai thác vận tải, mã 7840101) có điểm chuẩn xét học bạ năm 2022 là 26.5 điểm. (Điểm thi THPT cùng năm là 15.0 điểm).
+
+Trang thông tin tuyển sinh: https://tuyensinh.ut.edu.vn/. Chúc bạn một ngày tốt lành!"
+105,in_scope,Hỏi mã ngành HTTT Quản lý học bằng Tiếng Anh 2026,Năm 2026 ngành Hệ thống thông tin quản lý dạy 100% tiếng Anh có mã đăng ký là gì?,2026.0,answer,2026_diem-chuan_dai-hoc-chinh-quy_t000_r008,Ngành Hệ thống thông tin quản lý (chuyên ngành Kinh tế số và Trí tuệ nhân tạo) – chương trình hoàn toàn bằng Tiếng Anh có mã xét tuyển là UTHHQL02E.,"Chào bạn! ☺️
+
+Đối với kỳ tuyển sinh 2026, chuyên ngành Kinh tế số và Trí tuệ nhân tạo (thuộc ngành Hệ thống thông tin quản lý) chương trình hoàn toàn bằng Tiếng Anh có mã xét tuyển là UTHHQL02E. Tổ hợp xét tuyển yêu cầu môn Toán và 2 môn trong NTC1.
+
+Đăng ký trực tuyến tại hệ thống chung của Bộ GD&ĐT: https://ts26.uth.edu.vn/
+Hotline: 0832 488 288. ☺️"
+108,in_scope,Hỏi học bổng Hạng C ĐH Hàng hải Hàn Quốc,"Chương trình liên kết Đại học Hàng hải và Hải dương Hàn Quốc, học bổng Hạng C là giảm bao nhiêu tiền?",2026.0,answer,2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_t005_r003,Học bổng Hạng C chương trình LKQT với ĐH Hàng hải và Hải dương Hàn Quốc: giảm 25% học phí.,"Chào bạn! ☺️
+
+Đối với chương trình liên kết cùng Đại học Hàng hải và Hải dương Hàn Quốc, học bổng Hạng C tương đương mức giảm 25% học phí (khoảng 46 triệu đồng/kỳ học phí còn lại).
+
+Thông chi tiết về học bổng bạn có thể xem tại: https://iec.ut.edu.vn/. Chúc bạn săn học bổng thành công! ☺️"
+109,in_scope,Hỏi điều kiện duy trì học bổng ĐH Tongmyong,Điểm GPA bao nhiêu thì mới giữ được học bổng ở các học kỳ tiếp theo tại ĐH Tongmyong?,2026.0,answer,2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_txt_s011,Điều kiện duy trì học bổng tại ĐH Tongmyong: hoàn thành tối thiểu 12 tín chỉ/học kỳ và GPA từ 2.5 trở lên.,"Chào bạn! ☺️
+
+Để học bổng tiếp tục được duy trì trong các học kỳ chính thức tại ĐH Tongmyong (Hàn Quốc), sinh viên cần hoàn thành tối thiểu từ 12 tín chỉ trở lên và có điểm trung bình GPA từ 2.5 trở lên nhé.
+
+Zalo tư vấn: 0906 681 588."
+114,in_scope,Hỏi thời gian học bổ sung kiến thức Thạc sĩ,Khoảng khi nào thì trường xếp lớp học bổ sung kiến thức cho học viên cao học 2026 vậy?,2026.0,answer,2026_thong-tin-tuyen-sinh-thac-si_sau-dai-hoc_txt_s014,"Thời gian học bổ sung kiến thức Thạc sĩ 2026: dự kiến ngày 28/9/2026 (học linh hoạt thứ 2 – thứ 7, trực tiếp kết hợp trực tuyến).","Chào bạn! ☺️
+
+Theo kế hoạch tuyển sinh thạc sĩ năm 2026, thời gian tổ chức học bổ sung kiến thức dự kiến là vào ngày 28/9/2026. Lịch học sẽ linh hoạt trong ngày từ thứ 2 đến thứ 7 (trực tiếp kết hợp trực tuyến).
+
+Bạn theo dõi thông báo tại website: https://sdh.ut.edu.vn/ nhé!"
+122,in_scope,Hỏi thời gian nhận hồ sơ Tiến sĩ 2025,Thời hạn cuối cùng để nộp hồ sơ xét nghiên cứu sinh 2025 là ngày nào?,2025.0,answer,2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_txt_s010,Thời gian nhận hồ sơ xét tuyển Tiến sĩ 2025: từ ngày 01/01/2025 đến hết ngày 31/12/2025.,"Chào bạn! ☺️
+
+Nhà trường thực hiện tuyển sinh trình độ Tiến sĩ nhiều đợt trong năm. Thời gian nhận hồ sơ xét tuyển năm 2025 kéo dài từ ngày 01/01/2025 đến hết ngày 31/12/2025.
+
+Bạn có thể nộp hồ sơ bất kỳ lúc nào qua link: https://sdh.ut.edu.vn/. Chúc bạn hoàn thành hồ sơ thuận lợi! ☺️"
+125,in_scope,Hỏi hình thức đăng ký Đào tạo thường xuyên,Muốn đăng ký xét tuyển hệ Đào tạo thường xuyên thì mình phải tới trường nộp hồ sơ giấy đúng không?,2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-thuong-xuyen_s034,"Hệ Đào tạo thường xuyên 2026: đăng ký xét tuyển trực tuyến (online) tại dkxt.ut.edu.vn, không cần đến trường nộp hồ sơ giấy.","Chào bạn! Mình là trợ lý tuyển sinh UTH. ☺️
+
+Hiện tại trường nhận hồ sơ bằng hình thức Đăng ký xét tuyển trực tuyến (online) rất tiện lợi nhé. Thí sinh chỉ cần tạo tài khoản, kê khai thông tin và cung cấp minh chứng tại địa chỉ: https://dkxt.ut.edu.vn/.
+
+Cần hỗ trợ, bạn gọi ngay Zalo: 0835.68.68.98."
+142,out_of_scope,So sánh lương khởi điểm,Sinh viên tốt nghiệp ngành Cơ khí ô tô hay Kỹ thuật điện có lương khởi điểm cao hơn?,,refuse,,So sánh lương khởi điểm giữa các ngành nằm ngoài phạm vi thông tin tuyển sinh chính thức.,"Chào bạn! Lương khởi điểm sau khi ra trường phụ thuộc vào nhiều yếu tố như năng lực cá nhân, vị trí công việc, quy mô doanh nghiệp và kinh nghiệm làm việc thực tế của bạn, chứ không chỉ phụ thuộc vào ngành học.
+
+Cả hai ngành Cơ khí ô tô (nằm trong ngành Kỹ thuật ô tô) và Kỹ thuật điện đều là những ngành trọng điểm tại UTH và đang có nhu cầu nhân lực lớn trên thị trường lao động. 
+
+Nếu bạn muốn tìm hiểu kỹ hơn về chương trình đào tạo và cơ hội việc làm của hai ngành này tại UTH năm 2026, bạn có thể tham khảo tại website tuyển sinh của trường hoặc gửi câu hỏi cụ thể về chương trình học để mình hỗ trợ nhé! ☺️"
+149,in_scope,Hỏi điểm chuẩn Kỹ thuật cơ khí động lực,Điểm chuẩn Kỹ thuật cơ khí động lực là bao nhiêu?,2026.0,answer,2026_thong-tin-tuyen-sinh-thac-si_sau-dai-hoc_t000_r017,"Kỹ thuật cơ khí động lực là ngành đào tạo trình độ Thạc sĩ (Sau đại học) năm 2026 với chỉ tiêu 30 học viên, không có điểm chuẩn xét tuyển đại học chính quy.","Chào bạn! ☺️
+
+Trong đề án tuyển sinh năm 2026 của UTH, ngành Kỹ thuật cơ khí động lực (chuyên ngành Quản lý hệ thống công nghiệp và logistics) là chương trình đào tạo trình độ Thạc sĩ (Sau đại học) với chỉ tiêu tuyển sinh dự kiến là 30 chỉ tiêu. Vì đây là chương trình đào tạo trình độ Thạc sĩ nên không có điểm chuẩn trúng tuyển theo điểm thi THPT hay học bạ như hệ đại học chính quy.
+
+Nếu bạn muốn tìm hiểu về tuyển sinh Thạc sĩ ngành này, bạn có thể tham khảo tại website Viện Đào tạo Sau đại học: https://sdh.ut.edu.vn/ hoặc liên hệ hotline: 028 3512 8986 để được hỗ trợ nhé.
+
+☺️"
+151,in_scope,Hỏi chính sách ưu tiên ngành Đường sắt tốc độ cao,Em định xét tuyển vào ngành Đường sắt tốc độ cao thì có được ưu tiên gì không ad?,2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_txt_s009,Thí sinh đăng ký vào nhóm chuyên ngành ưu tiên của Nhà nước như Đường sắt tốc độ cao được ưu tiên xét tuyển theo Tiêu chí 5 trong Đề án tuyển sinh năm 2026.,"Chào bạn! ☺️
+
+Theo Đề án tuyển sinh năm 2026 của UTH, ngành Đường sắt tốc độ cao (và các chuyên ngành ưu tiên của Nhà nước như công nghệ thông tin, trí tuệ nhân tạo) có chính sách ưu tiên nổi bật như sau:
+- Thí sinh đăng ký vào các ngành này được áp dụng Tiêu chí 5 trong xét tuyển ưu tiên.
+- Thí sinh có thư giới thiệu từ các địa phương có nhu cầu nhân lực về ngành nghề, hoặc từ các tập đoàn, doanh nghiệp đã ký kết hợp tác với UTH sẽ được ưu tiên xét tuyển.
+
+Bạn có thể cập nhật thông tin chi tiết về hồ sơ xét tuyển và thư giới thiệu tại website: https://ts26.uth.edu.vn/
+
+Chúc bạn đăng ký xét tuyển thành công! ☺️"
+155,in_scope,Hỏi tổ hợp môn Quản trị kinh doanh,Tổ hợp môn xét tuyển ngành Quản trị kinh doanh của UTH gồm những môn nào?,2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_t000_r013,Tổ hợp môn xét tuyển ngành Quản trị kinh doanh (mã xét tuyển UTHQTD01A) năm 2026 gồm môn bắt buộc là Toán và 2 môn tự chọn trong nhóm NTC1/NTC2.,"Chào bạn! ☺️
+
+Năm 2026, tổ hợp môn xét tuyển đối với ngành Quản trị kinh doanh (mã xét tuyển UTHQTD01A, chương trình tiên tiến) tại UTH bao gồm:
+- Môn bắt buộc: Toán
+- Môn tự chọn: Thí sinh chọn 2 môn tự chọn trong nhóm Môn tự chọn 2 (NTC2) gồm Toán, Vật lý, Hóa học, Sinh học, Lịch sử, Địa lý, Giáo dục công dân, Giáo dục kinh tế và pháp luật, Tin học, Công nghệ Công nghiệp, Công nghệ Nông nghiệp, Tiếng Anh, Tiếng Trung, Tiếng Nhật.
+
+Chúc bạn ôn tập tốt và đạt kết quả cao! ☺️"
+160,year_control,Hỏi điểm kết hợp Kỹ thuật môi trường 2025,Điểm xét kết hợp 2025 ngành Kỹ thuật môi trường là bao nhiêu?,2025.0,answer,2025_diem-chuan_dai-hoc-chinh-quy_t001_r009,Điểm chuẩn trúng tuyển theo phương thức xét tuyển kết hợp năm 2025 ngành Kỹ thuật môi trường (mã ngành 7520320) là 720 điểm.,"Chào bạn! ☺️
+
+Năm 2025, điểm chuẩn trúng tuyển theo phương thức xét tuyển kết hợp của ngành Kỹ thuật môi trường (chuyên ngành Kỹ thuật môi trường; Quản lý an toàn và môi trường, mã ngành 7520320) tại UTH là 720 điểm.
+
+Chúc bạn ôn thi tốt và đạt kết quả cao! ☺️"
+168,year_control,Hỏi điểm chuẩn 2022 Quản lý hàng hải,Năm 2022 ngành Quản lý hàng hải lấy điểm chuẩn học bạ bao nhiêu?,2022.0,answer,2022_diem-chuan_dai-hoc-chinh-quy_t001_r004,Điểm chuẩn học bạ năm 2022 ngành Quản lý hàng hải (mã 784010604) là 24.0 điểm; điểm thi THPT là 15.0 điểm.,"Chào bạn! ☺️
+
+Năm 2022, điểm chuẩn trúng tuyển xét học bạ của ngành Quản lý hàng hải (mã ngành 784010604) tại UTH là 24.0 điểm (thang 30). Điểm thi tốt nghiệp THPT tương ứng là 15.0 điểm.
+
+Hotline hỗ trợ tuyển sinh: 0832 488 288
+Website: https://tuyensinh.ut.edu.vn/
+
+Chúc bạn đăng ký nguyện vọng thành công! ☺️"
+173,in_scope,Hỏi chỉ tiêu Thạc sĩ Kỹ thuật xây dựng 2026,Năm 2026 chỉ tiêu tuyển sinh Thạc sĩ Kỹ thuật xây dựng là bao nhiêu?,2026.0,answer,2026_thong-tin-tuyen-sinh-thac-si_sau-dai-hoc_t000_r001,Chỉ tiêu tuyển sinh Thạc sĩ ngành Kỹ thuật xây dựng (mã ngành 8580201) năm 2026 là 32 học viên.,"Chào bạn! ☺️
+
+Theo Đề án tuyển sinh năm 2026, chỉ tiêu tuyển sinh trình độ Thạc sĩ ngành Kỹ thuật xây dựng (mã ngành 8580201, chuyên ngành Kỹ thuật xây dựng) tại UTH là 32 học viên (dự kiến).
+
+Để đăng ký và tìm hiểu thêm thông tin chi tiết:
+Website: https://sdh.ut.edu.vn/
+Đăng ký trực tuyến: https://grad.ut.edu.vn/admission/register
+
+Chúc bạn đăng ký thành công! ☺️"
+176,in_scope,Hỏi chứng chỉ tiếng Trung HSK dự tuyển Tiến sĩ,Dự tuyển Tiến sĩ UTH bằng tiếng Trung thì cần chứng chỉ HSK mấy?,2025.0,answer,2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_t001_r007,Chứng chỉ tiếng Trung Quốc được chấp nhận dự tuyển Tiến sĩ tại UTH năm 2025 là HSK (Chinese Hanyu Shuiping Kaoshi) từ level 4 trở lên.,"Chào bạn! ☺️
+
+Theo danh sách chứng chỉ ngoại ngữ được chấp nhận trong tuyển sinh Tiến sĩ tại UTH năm 2025, nếu bạn sử dụng tiếng Trung Quốc, chứng chỉ cần đạt là:
+- Chứng chỉ: Chinese Hanyu Shuiping Kaoshi (HSK).
+- Trình độ yêu cầu: HSK level 4 trở lên.
+
+Để biết thêm về các chứng chỉ ngoại ngữ khác được chấp nhận và thông tin đăng ký dự tuyển:
+Website: https://sdh.ut.edu.vn/
+Đăng ký: https://grad.ut.edu.vn/admission/register
+
+Chúc bạn đăng ký thành công! ☺️"
+177,in_scope,Hỏi chỉ tiêu Tiến sĩ Khoa học hàng hải 2025,Năm 2025 UTH tuyển bao nhiêu chỉ tiêu Tiến sĩ ngành Khoa học hàng hải?,2025.0,answer,2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_t000_r003,Chỉ tiêu tuyển sinh Tiến sĩ ngành Khoa học hàng hải (mã ngành 9840106) tại UTH năm 2025 là 32 nghiên cứu sinh.,"Chào bạn! ☺️
+
+Theo Đề án tuyển sinh năm 2025, chỉ tiêu tuyển sinh trình độ Tiến sĩ ngành Khoa học hàng hải (mã ngành 9840106) tại UTH là 32 nghiên cứu sinh (dự kiến).
+
+Thông tin đăng ký:
+Website: https://sdh.ut.edu.vn/
+Đăng ký: https://grad.ut.edu.vn/admission/register
+
+Chúc bạn đăng ký thành công! ☺️"
+180,in_scope,Hỏi thời gian liên thông từ trung cấp lên đại học,"Mình có bằng trung cấp, muốn liên thông lên đại học tại UTH thì học bao lâu?",2026.0,answer,2026_thong-tin-tuyen-sinh-lien-thong-dai-hoc_dai-hoc-thuong-xuyen_s023,Hệ liên thông từ Trung cấp lên Đại học tại UTH năm 2026 có thời gian đào tạo từ 2.5 đến 3.0 năm. Hệ liên thông từ Cao đẳng lên Đại học từ 1.5 đến 2.0 năm. Học phí 700.000đ/tín chỉ. Xét tuyển bằng bằng tốt nghiệp (không thi tuyển).,"Chào bạn! ☺️
+
+Nếu bạn có bằng tốt nghiệp Trung cấp và muốn liên thông lên Đại học tại UTH, thông tin cụ thể như sau:
+- Hình thức xét tuyển: Xét tuyển bằng bằng tốt nghiệp Trung cấp (không thi tuyển).
+- Thời gian đào tạo: Từ 2.5 đến 3.0 năm (tùy số tín chỉ được miễn giảm và tốc độ học).
+- Hình thức đào tạo: Đào tạo theo tín chỉ.
+- Học phí: 700.000 đồng/tín chỉ.
+- Tuyển sinh cả đúng ngành và trái ngành.
+
+Đăng ký xét tuyển:
+Website: https://dkxt.ut.edu.vn/
+Hotline: 0832 488 288
+
+Chúc bạn đăng ký thành công! ☺️"
+196,in_scope,Hỏi điểm chuẩn Quản lý xây dựng 2026,Điểm chuẩn năm 2026 ngành Quản lý xây dựng chương trình tiên tiến mã UTHKQX01A là bao nhiêu?,2026.0,answer,2026_diem-chuan_dai-hoc-chinh-quy_t000_r030,Điểm chuẩn năm 2026 ngành Quản lý xây dựng chương trình tiên tiến (mã xét tuyển UTHKQX01A) là 720 điểm.,"Chào bạn! ☺️
+
+Theo công bố điểm chuẩn năm 2026 của UTH, ngành Quản lý xây dựng chương trình tiên tiến (mã xét tuyển UTHKQX01A) có điểm chuẩn trúng tuyển là 720 điểm.
+
+Hotline: 0832 488 288
+Website: https://tuyensinh.ut.edu.vn/
+
+Chúc bạn đăng ký thành công! ☺️"
+205,in_scope,Hỏi về chương trình Kỹ thuật tàu thủy,Năm nay ngành Kỹ thuật tàu thủy có hệ tiên tiến không hay chỉ đại trà?,2026.0,answer,2026_diem-chuan_dai-hoc-chinh-quy_t000_r036,"Ngành Kỹ thuật tàu thủy (chuyên ngành Kỹ thuật tàu thủy, công trình nổi và quản lý hệ thống công nghiệp, mã UTHKTT01D) năm 2026 chỉ tuyển chương trình chuẩn (đại trà), không có tiên tiến.","Chào bạn! ☺️
+
+Theo đề án tuyển sinh 2026, ngành Kỹ thuật tàu thủy (chuyên ngành Kỹ thuật tàu thủy, công trình nổi và quản lý hệ thống công nghiệp, mã UTHKTT01D) chỉ tuyển sinh chương trình chuẩn (đại trà) bạn nhé.
+
+Website tra cứu: https://tuyensinh.ut.edu.vn/"
+210,in_scope,Hỏi địa chỉ trụ sở chính,Địa chỉ của trường mình ở đâu vậy ad?,2026.0,answer,2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_txt_s006,"Trụ sở chính của Trường Đại học Giao thông vận tải TP.HCM (UTH) tại Số 2 đường Võ Oanh, phường Thạnh Mỹ Tây, TP.HCM. Hotline: 028 3512 8986.","Chào bạn! ☺️
+
+Trụ sở chính của Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh (UTH) nằm tại: Số 2 đường Võ Oanh, phường Thạnh Mỹ Tây, Thành phố Hồ Chí Minh.
+
+Rất hân hạnh được đón tiếp bạn ghé thăm trường! Hotline: 028 3512 8986
+☺️"
+219,year_control,Hỏi điểm chuẩn 2022 THPT Khai thác máy tàu thủy,Cho em xin điểm thi THPT ngành Khai thác máy tàu thủy 2022.,2022.0,answer,2022_diem-chuan_dai-hoc-chinh-quy_t000_r006,"Điểm chuẩn thi THPT 2022 ngành Khoa học hàng hải (chuyên ngành Khai thác máy tàu thủy và quản lý kỹ thuật, mã 784010607) là 15.0 điểm.","Chào bạn! ☺️
+
+Dựa vào dữ liệu năm 2022, ngành Khoa học hàng hải chuyên ngành Khai thác máy tàu thủy và quản lý kỹ thuật (mã 784010607) lấy điểm chuẩn thi THPT là 15.0 điểm.
+
+Website tra cứu đề án: https://tuyensinh.ut.edu.vn/
+☺️"
+220,year_control,Hỏi điểm chuẩn 2025 Thiết kế nội thất,Năm 2025 Thiết kế nội thất lấy điểm xét kết hợp bao nhiêu vậy ad?,2025.0,answer,2025_diem-chuan_dai-hoc-chinh-quy_t001_r012,"Điểm chuẩn kết hợp 2025 ngành Kỹ thuật xây dựng (chuyên ngành Thiết kế nội thất, chương trình tiên tiến, mã 758020105A) là 720 điểm.","Chào bạn! ☺️
+
+Năm 2025, ngành Kỹ thuật xây dựng chuyên ngành Thiết kế nội thất (chương trình tiên tiến, mã 758020105A) có mức điểm chuẩn là 720 điểm.
+
+Chúc bạn có nhiều cảm hứng sáng tạo! Hotline: 0835.68.68.98"
+228,year_control,Đối tượng tuyển sinh đào tạo từ xa ngành Kinh tế xây dựng,Hệ Đào tạo từ xa ngành Kinh tế xây dựng năm 2026 có tuyển người tốt nghiệp trung cấp không?,2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-thuong-xuyen_s034,"Đối với đào tạo từ xa năm 2026, trường không xét tuyển người đã tốt nghiệp trình độ trung cấp (ngoại trừ ngành Ngôn ngữ Anh chỉ xét tuyển người tốt nghiệp đại học).","Chào bạn! ☺️
+
+Theo quy chế tuyển sinh hệ đại học thường xuyên năm 2026, đối với phương thức tổ chức đào tạo từ xa (bao gồm cả ngành Kinh tế xây dựng), nhà trường không xét tuyển đối với người đã tốt nghiệp trình độ trung cấp bạn nhé. (Riêng ngành Ngôn ngữ Anh đào tạo từ xa chỉ xét tuyển người đã có bằng tốt nghiệp đại học).
+
+Thông tin chi tiết tại website: https://dkxt.ut.edu.vn/ ☺️"
+234,year_control,Hỏi điểm chuẩn Kỹ thuật điện tử viễn thông,Điểm chuẩn của ngành Kỹ thuật điện tử viễn thông là bao nhiêu?,2026.0,fallback_warning,2025_diem-chuan_dai-hoc-chinh-quy_t001_r006,Điểm chuẩn kết hợp 2025 ngành Kỹ thuật điện tử viễn thông tiên tiến (mã 7520207A) là 800 điểm. Chưa có điểm 2026.,"Chào bạn! UTH hiện chưa công bố điểm chuẩn năm 2026. Bạn tham khảo điểm năm ngoái của ngành nhé:
+- Năm 2025, ngành Kỹ thuật điện tử viễn thông (chương trình tiên tiến, mã 7520207A) lấy điểm chuẩn là 800 điểm theo phương thức xét kết hợp.
+Chúc bạn ôn tập thật tốt! ☺️"
+235,year_control,Hỏi điểm chuẩn Khai thác máy tàu thủy,Điểm chuẩn ngành Khai thác máy tàu thủy thế nào ạ?,2026.0,fallback_warning,2025_diem-chuan_dai-hoc-chinh-quy_t002_r004,Điểm chuẩn kết hợp 2025 ngành Khoa học hàng hải chuyên ngành Khai thác máy tàu thủy và quản lý kỹ thuật (mã 784010607) là 668 điểm. Chưa có điểm 2026.,"Chào bạn! Hiện tại UTH chưa có điểm chuẩn năm 2026. Bạn tham khảo điểm các năm trước của ngành Khoa học hàng hải chuyên ngành Khai thác máy tàu thủy và quản lý kỹ thuật (mã 784010607) nhé:
+- Năm 2025 (Xét kết hợp): 668 điểm.
+- Năm 2024 (Thi THPT): 16.0 điểm.
+Chi tiết liên hệ hotline: 028 3512 8986. ☺️"
+240,year_control,Hỏi điểm chuẩn Khoa học dữ liệu,Khoa học dữ liệu lấy bao nhiêu điểm vậy ad?,2026.0,fallback_warning,2025_diem-chuan_dai-hoc-chinh-quy_t000_r001,Điểm chuẩn kết hợp 2025 ngành Khoa học dữ liệu chương trình tiên tiến (mã 7460108A) là 999 điểm. Chưa có điểm 2026.,"Chào bạn! Do chưa có thông tin điểm năm 2026, mình xin gửi bạn điểm tuyển sinh năm 2025 để tham khảo nha. Ngành Khoa học dữ liệu (chương trình tiên tiến, mã 7460108A) năm 2025 có điểm chuẩn xét tuyển kết hợp là 999 điểm. Website tra cứu đề án: https://tuyensinh.ut.edu.vn/ ☺️"
+241,out_of_scope,Nhận xét giảng viên,Ad nhận xét giúp em thầy Nguyễn Văn A dạy Điện tử viễn thông có khó tính lắm không?,2026.0,refuse,,Chatbot không đưa ra nhận xét cá nhân hay đánh giá giảng viên.,"Chào bạn! ☺️
+
+Mình là trợ lý tuyển sinh UTH và không hỗ trợ đưa ra các nhận xét, đánh giá cá nhân về các thầy cô giảng viên trong trường. Mong bạn thông cảm nhé.
+
+Bạn có thể tham khảo khung chương trình đào tạo của ngành tại: https://tuyensinh.ut.edu.vn/ ☺️"
+249,out_of_scope,Nhận xét đề thi và chiến thuật thi,"Đề Toán năm nay khó quá, ad thấy em có nên xét khối D07 để lấy điểm Hóa kéo lại không?",2026.0,refuse,,Chatbot không đưa ra nhận xét về độ khó của đề thi hay tư vấn các chiến thuật chọn khối thi cá nhân.,"Chào bạn! ☺️
+
+Mình không đưa ra nhận xét về độ khó của đề thi hay tư vấn các chiến thuật chọn khối thi cá nhân. Việc đăng ký khối xét tuyển nào hoàn toàn phụ thuộc vào việc bạn tự tin môn học nào nhất nhé.
+
+Tra cứu tổ hợp môn xét tuyển tại: https://tuyensinh.ut.edu.vn/
+Chúc bạn ôn thi tốt! ☺️"
+260,year_control,Hỏi địa chỉ nộp hồ sơ văn bằng 2 tại An Lạc,Cho em hỏi địa chỉ VPTS nộp hồ sơ xét tuyển văn bằng 2 tại phường An Lạc ở đâu ạ?,2026.0,answer,2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_s025,"Địa chỉ VPTS nộp hồ sơ Văn bằng 2 tại An Lạc là 234 - 236 Đường Số 1, Phường An Lạc, TP Hồ Chí Minh.","Chào bạn! Địa chỉ văn phòng tuyển sinh nộp hồ sơ xét tuyển văn bằng 2 tại Phường An Lạc là: 234 - 236 Đường Số 1, Phường An Lạc, TP Hồ Chí Minh bạn nhé."
+263,year_control,Hỏi lịch học hệ vừa học vừa làm,Hệ vừa học vừa làm của trường mình học vào thứ 7 và chủ nhật hay buổi tối ạ?,2024.0,answer,2024_diem-chuan_dai-hoc-chinh-quy_txt_s007,Hệ vừa học vừa làm học vào 2 ngày cuối tuần và các buổi tối trong tuần.,"Chào bạn! Chương trình đào tạo hệ vừa học vừa làm của UTH có khung giờ học linh hoạt: học vào 2 ngày cuối tuần (Thứ 7, Chủ nhật) và các buổi tối trong tuần bạn nhé."
+273,year_control,Hỏi điểm chuẩn Tự động hóa năm 2025,Điểm chuẩn ngành Kỹ thuật điều khiển và tự động hóa chương trình tiên tiến mã 7520216A năm 2025 lấy bao nhiêu điểm?,2025.0,answer,2025_diem-chuan_dai-hoc-chinh-quy_t001_r007,Điểm chuẩn ngành Kỹ thuật điều khiển và tự động hóa chương trình tiên tiến (mã 7520216A) năm 2025 là 800.,Chào bạn! Điểm chuẩn trúng tuyển phương thức kết hợp năm 2025 của ngành Kỹ thuật điều khiển và tự động hóa chương trình tiên tiến (mã tuyển sinh: 7520216A) là 800 điểm bạn nhé.
+278,year_control,Hỏi học phí đại học thường xuyên trúng tuyển từ 01/08/2026,Cho em hỏi học phí hệ đại học thường xuyên áp dụng cho thí sinh trúng tuyển từ ngày 01/08/2026 là bao nhiêu ạ?,2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-thuong-xuyen_s036,Học phí hệ đại học thường xuyên trúng tuyển từ 01/08/2026 là 770.000 đồng/tín chỉ.,"Chào bạn! Theo quy định học phí hệ đại học thường xuyên năm 2026 của UTH, học phí áp dụng cho thí sinh trúng tuyển từ ngày 01/08/2026 là 770.000 đồng/tín chỉ bạn nhé (trước thời gian này là 700.000 đồng/tín chỉ)."
+279,year_control,Hỏi về tuyển sinh ngành liên kết Pukyong năm 2026,Ngành Logistics và Quản lý chuỗi cung ứng liên kết với Pukyong năm 2026 có chỉ tiêu bao nhiêu và học mấy năm ở Hàn Quốc ạ?,2026.0,answer,2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_t000_r002,"Chỉ tiêu tuyển sinh là 10, học 2 năm ở Việt Nam và 2 năm ở Hàn Quốc.",Chào bạn! Chương trình liên kết quốc tế 2+2 ngành Logistics và Quản lý chuỗi cung ứng toàn cầu với Đại học Quốc gia Pukyong năm 2026 có chỉ tiêu là 10. Thời gian đào tạo gồm 2 năm học tại Việt Nam và 2 năm học tại Hàn Quốc bạn nhé.
+284,year_control,Hỏi điểm chuẩn CNTT học bằng tiếng Anh (Không năm),Ngành CNTT chương trình 100% tiếng Anh lấy điểm có cao không?,,fallback_warning,2025_diem-chuan_dai-hoc-chinh-quy_t000_r014,"Năm 2025 ngành CNTT chương trình hoàn toàn bằng tiếng Anh lấy 800 điểm kết hợp, 2024 thi THPT lấy 16.0 điểm. Chưa có điểm 2026.","Chào bạn! ☺️
+Hiện chưa có điểm chuẩn 2026. Mức điểm tham khảo của ngành CNTT chương trình hoàn toàn bằng Tiếng Anh các năm trước như sau:
+- 2025 (Xét kết hợp): 800 điểm.
+- 2024 (Thi THPT): 16.0 điểm.
+*(Cách tính điểm từ năm 2025 đã thay đổi)*.
+Website tra cứu: 
+Hotline hỗ trợ: 0832 488 288 ☺️"
+303,in_scope,Hỏi ngưỡng đầu vào ĐHCQ,Trường có quy định điểm sàn hay mức điểm ngưỡng đầu vào năm nay là bao nhiêu không?,2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_txt_s004,Ngưỡng bảo đảm chất lượng đầu vào đại học chính quy 2026 thực hiện theo Điều 9 Quy chế tuyển sinh đại học năm 2026 của Bộ GD&ĐT.,"Chào bạn! ☺️
+Theo điều kiện tuyển sinh chung năm 2026, thí sinh cần phải đạt ngưỡng bảo đảm chất lượng đầu vào (ngưỡng đầu vào) theo quy định tại Điều 9 Quy chế tuyển sinh trình độ đại học năm 2026 của Bộ Giáo dục và Đào tạo. Mức điểm cụ thể sẽ được trường thông báo sau khi có hướng dẫn của Bộ nhé.
+Theo dõi thông báo tại: https://tuyensinh.ut.edu.vn
+☺️"
+304,in_scope,Hỏi ưu tiên bằng thư giới thiệu địa phương,"Em ở tỉnh, được Sở gửi thư giới thiệu về nhu cầu nhân lực thì có được cộng điểm không?",2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_txt_s009,Thí sinh có thư giới thiệu của địa phương có nhu cầu nhân lực về ngành nghề được cộng điểm ưu tiên khuyến khích theo Tiêu chí 5 phương thức Xét tuyển kết hợp 2026.,"Chào bạn! Có nha bạn ☺️
+Theo Tiêu chí 5 của phương thức Xét tuyển kết hợp 2026, thí sinh có thư giới thiệu của các địa phương có nhu cầu nhân lực về ngành nghề sẽ đủ điều kiện được cộng điểm ưu tiên khuyến khích nhé.
+Bạn tra cứu cách nộp minh chứng tại: https://ts26.uth.edu.vn
+Hotline: 0832 488 288"
+307,year_control,Hỏi điểm chuẩn 2025 Kỹ thuật điện (Điện công nghiệp),Cho em xin điểm chuẩn năm 2025 chuyên ngành Điện công nghiệp với ạ.,2025.0,answer,2025_diem-chuan_dai-hoc-chinh-quy_t001_r005,"Năm 2025, chuyên ngành Điện công nghiệp (thuộc ngành Kỹ thuật điện) lấy điểm chuẩn xét kết hợp là 936 điểm.","Chào bạn! Mình là trợ lý tuyển sinh UTH. ☺️
+Năm 2025, chuyên ngành Điện công nghiệp (thuộc ngành Kỹ thuật điện, mã 7520201) có điểm trúng tuyển phương thức xét kết hợp là 936 điểm.
+Cần tư vấn thêm về ngành điện, bạn gọi Hotline 0835.68.68.98 nhé.
+Tra cứu tại: https://tuyensinh.ut.edu.vn"
+310,year_control,Hỏi điểm chuẩn 2023 Quản lý xây dựng,Hồi năm 2023 thì Quản lý xây dựng lấy mấy điểm thi tốt nghiệp ạ?,2023.0,answer,2023_diem-chuan_dai-hoc-chinh-quy_t000_r030,"Năm 2023, ngành Quản lý xây dựng (Mã 7580302) lấy điểm chuẩn thi tốt nghiệp THPT là 23.50 điểm (chương trình chuẩn) và 21.00 điểm (chất lượng cao, mã 7580302H).","Chào bạn! Mình gửi thông tin điểm năm 2023 để bạn tham khảo nhé. ☺️
+Năm 2023, ngành Quản lý xây dựng (Mã 7580302) lấy điểm chuẩn thi tốt nghiệp THPT là 23.50 điểm (đối với chương trình chuẩn) và 21.00 điểm (đối với chương trình chất lượng cao, mã 7580302H).
+Hotline tư vấn (Zalo): 0942 882 324"
+312,year_control,Hỏi điểm chuẩn 2022 Kinh tế xây dựng (Học bạ),Xét học bạ ngành Kinh tế xây dựng năm 2022 điểm đỗ là bao nhiêu ad?,2022.0,answer,2022_diem-chuan_dai-hoc-chinh-quy_t003_r001,"Mã 758030101: Điểm chuẩn học bạ 22.3 (Đại trà), 19.4 (Chất lượng cao)","Chào bạn! ☺️
+
+Năm 2022, chuyên ngành Kinh tế xây dựng (Mã 758030101) lấy điểm chuẩn phương thức xét học bạ là 22.3 điểm đối với chương trình đại trà và 19.4 điểm đối với chương trình chất lượng cao.
+
+Hotline: 028 3512 8986
+
+☺️"
+323,year_control,Hỏi điểm chuẩn 2026 ngành Kỹ thuật điện,Mình muốn biết điểm chuẩn năm 2026 của Kỹ thuật điện.,2026.0,answer,2026_diem-chuan_dai-hoc-chinh-quy_t000_r031,UTHKTD01A: 868 điểm (Tiên tiến),"Chào bạn! ☺️
+
+Điểm chuẩn trúng tuyển năm 2026 của ngành Kỹ thuật điện (chuyên ngành Điện công nghiệp; Hệ thống điện giao thông; Năng lượng tái tạo - chương trình tiên tiến, mã xét tuyển UTHKTD01A) là 868 điểm theo phương thức xét tuyển kết hợp.
+
+Tra cứu chi tiết tại: https://tuyensinh.ut.edu.vn
+
+☺️"
+325,year_control,Hỏi điểm chuẩn Thiết kế nội thất (Không năm),Ngành Thiết kế nội thất của trường lấy bao nhiêu điểm chuẩn?,2026.0,fallback_warning,2026_diem-chuan_dai-hoc-chinh-quy_t000_r043,UTHKXD02A: 720 điểm (Tiên tiến),"Chào bạn! ☺️ Vì bạn chưa nêu rõ năm tuyển sinh, mình xin cung cấp điểm chuẩn chuyên ngành Thiết kế nội thất (chương trình tiên tiến, mã UTHKXD02A) của UTH qua các năm để bạn tham khảo:
+- Năm 2026: Xét kết hợp lấy 720 điểm.
+- Năm 2025: Xét kết hợp lấy 720 điểm (Tiên tiến).
+- Năm 2024: Thi THPT lấy 19.0 điểm (Đại trà).
+- Năm 2023: Thi THPT lấy 24.25 điểm (Chuẩn).
+*(Cách tính điểm từ năm 2025 đã thay đổi so với các năm trước)*.
+Tra cứu tại: https://tuyensinh.ut.edu.vn
+
+☺️"
+331,out_of_scope,Dự đoán điểm chuẩn tăng giảm,Ad dự đoán điểm chuẩn Điện công nghiệp năm 2026 có tăng mạnh không?,2026.0,refuse,,Hệ thống không thực hiện việc dự đoán điểm chuẩn tăng hay giảm.,"Chào bạn! Mình là trợ lý tuyển sinh UTH. ☺️
+
+Mình không thực hiện việc dự đoán điểm chuẩn tăng hay giảm cho kỳ tuyển sinh 2026 nhé. Điểm chuẩn thực tế sẽ biến động dựa trên phổ điểm thi và lượng hồ sơ đăng ký vào từng ngành.
+
+Bạn cứ nỗ lực hết mình nha.
+Theo dõi kết quả tại: https://tuyensinh.ut.edu.vn
+
+☺️"
+332,out_of_scope,Tư vấn ngành cho người hướng nội,Em là người hướng nội ít nói thì nên học CNTT hay Hàng hải sẽ phù hợp hơn ạ?,,refuse,,Hệ thống không thực hiện tư vấn định hướng nghề nghiệp mang tính cá nhân hóa.,"Chào bạn! ☺️
+
+Mỗi ngành học đều có cơ hội phát triển năng lực riêng bất kể bạn hướng nội hay hướng ngoại. Mình là chatbot nên không thể tư vấn định hướng nghề nghiệp mang tính cá nhân hóa cho bạn được. Bạn hãy dành thời gian đọc khung đào tạo từng ngành trên website để xem mình hợp với lĩnh vực nào hơn nhé.
+
+Website tra cứu ngành: https://tuyensinh.ut.edu.vn
+
+☺️"
+340,out_of_scope,Đánh giá đề thi môn Lý,Theo đánh giá của trường thì đề thi THPT quốc gia môn Vật lý năm nay có khó không?,2026.0,refuse,,"Hệ thống không đưa ra bình luận, nhận xét hay đánh giá về độ khó của bất kỳ đề thi tốt nghiệp THPT nào.","Chào bạn! ☺️
+
+Đề thi tốt nghiệp THPT do Bộ Giáo dục và Đào tạo ra đề, mình không đưa ra bình luận, nhận xét hay đánh giá về độ khó của bất kỳ đề thi nào nhé. Bạn hãy giữ tinh thần thoải mái để ôn thi nha.
+
+Hotline hỗ trợ quy chế tuyển sinh: 0832 488 288
+
+☺️"
+348,in_scope,Hỏi mã ngành Kỹ thuật ô tô đại trà,Mã ngành Kỹ thuật ô tô hệ đại trà (chuẩn) năm 2026 là gì ạ?,2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_t001_r001,"Năm 2026, UTH chỉ tuyển sinh ngành Kỹ thuật ô tô và Công nghệ kỹ thuật ô tô theo chương trình tiên tiến (mã UTHKOT01A và UTHCOT01A), không tuyển sinh hệ chuẩn (đại trà).","Chào bạn! ☺️
+
+Rất tiếc, theo danh mục các ngành đào tạo đại học chính quy công bố năm 2026, UTH chỉ tuyển sinh ngành Kỹ thuật ô tô và Công nghệ kỹ thuật ô tô theo chương trình tiên tiến (Mã UTHKOT01A và UTHCOT01A), không có hệ chuẩn (đại trà) nhé.
+
+Website tra cứu tuyển sinh: https://ts26.uth.edu.vn"
+350,in_scope,Hỏi nơi cấp bằng Thạc sĩ song bằng,Cho em hỏi lại bằng thạc sĩ song bằng là do Việt Nam hay Hàn Quốc cấp?,2026.0,answer,2026_thong-tin-tuyen-sinh-thac-si-song-bang_lien-ket-quoc-te_txt_s002,"Với chương trình Thạc sĩ song bằng Quản lý Cảng và Logistics, học viên nhận bằng do cả UTH (Việt Nam) và Đại học Tongmyong (Hàn Quốc) cùng cấp.","Chào bạn! ☺️ 
+
+Với chương trình Thạc sĩ song bằng Quản lý Cảng và Logistics, bạn sẽ nhận được Văn bằng thạc sĩ do 2 trường đại học cùng cấp, bao gồm Trường Đại học GTVT Thành phố Hồ Chí Minh (Việt Nam) và Đại học Tongmyong (Hàn Quốc).
+
+Đăng ký tư vấn ngay tại: 
+Hotline: 0906 681 588 ☺️"
+356,in_scope,Hỏi khối A01 ngành Quản trị kinh doanh,"Ngành Quản trị kinh doanh xét tổ hợp A01 (Toán, Lý, Tiếng Anh) được không ad?",2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_t000_r013,"Ngành Quản trị kinh doanh xét tổ hợp gồm Toán bắt buộc và 2 môn tự chọn thuộc nhóm NTC1 (bao gồm Vật lý và Tiếng Anh), nên tổ hợp Toán - Lý - Anh (khối A01) hoàn toàn hợp lệ.","Chào bạn! Được nhé! ☺️
+
+Năm 2026, ngành Quản trị kinh doanh (Mã UTHQTD01A) yêu cầu tổ hợp xét tuyển gồm môn bắt buộc là Toán và 02 môn tự chọn thuộc nhóm NTC1. Vì nhóm NTC1 có bao gồm cả môn Vật lý và Tiếng Anh, nên tổ hợp Toán, Lý, Tiếng Anh (tương đương khối A01) hoàn toàn hợp lệ nha.
+
+Hotline: 0832 488 288 ☺️"
+359,in_scope,Hỏi học phí hệ Vừa học vừa làm đợt T8,If đầu tháng 8/2026 em mới đậu hệ vừa học vừa làm thì 1 tín chỉ bao nhiêu tiền?,2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-thuong-xuyen_s036,Thí sinh trúng tuyển hệ Vừa học vừa làm từ ngày 01/08/2026 đóng học phí mức 770.000 đồng/tín chỉ (trước đó trúng tuyển từ ngày 31/07/2026 trở về trước đóng mức 700.000 đồng/tín chỉ).,"Chào bạn! Mình gửi thông tin học phí hệ Vừa học vừa làm nhé. ☺️
+
+Nếu bạn trúng tuyển hệ Vừa học vừa làm (Đào tạo thường xuyên) từ ngày 01/08/2026 trở đi, mức học phí áp dụng sẽ là 770.000 đồng/tín chỉ nhé. (Những bạn trúng tuyển trước 31/07 thì mức phí là 700.000đ/tín chỉ).
+
+Bạn tranh thủ nộp hồ sơ sớm tại: 
+Hotline: 0835.68.68.98 ☺️"
+368,in_scope,Hỏi số tài khoản đóng lệ phí tuyển sinh tiến sĩ,Cho mình xin số tài khoản ngân hàng để đóng lệ phí thi Tiến sĩ 2025.,2025.0,answer,2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_txt_s012,"Chuyển khoản lệ phí xét tuyển tiến sĩ 2025 qua số tài khoản Vietinbank: 1100 0012 6050, chủ tài khoản: Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh. Lệ phí: 1.500.000 đồng/người.","Chào bạn! Bạn có thể chuyển khoản lệ phí xét tuyển tiến sĩ năm 2025 (lệ phí là 1.500.000 đồng/người) theo thông tin sau nhé: - Tên tài khoản: Trường Đại học Giao thông vận tải Thành phố Hồ Chí Minh - Ngân hàng: Vietinbank (Ngân hàng Thương mại cổ phần Công Thương Việt Nam) - Số tài khoản: 1100 0012 6050 - Nội dung chuyển khoản: ""du tuyen tien si 2025 - HO VA TEN - Nganh dao tao"" Chúc bạn đăng ký dự tuyển thuận lợi! ☺️"
+373,in_scope,Hỏi chỉ tiêu tuyển sinh thạc sĩ ngành Khoa học hàng hải,Ngành Khoa học hàng hải đào tạo Thạc sĩ tuyển bao nhiêu chỉ tiêu năm 2026?,2026.0,answer,2026_thong-tin-tuyen-sinh-thac-si_sau-dai-hoc_t000_r010,"Chỉ tiêu tuyển sinh dự kiến trình độ thạc sĩ ngành Khoa học hàng hải (chuyên ngành Quản lý hàng hải, mã ngành 8840106) năm 2026 là 119 chỉ tiêu.","Chào bạn! Đối với trình độ thạc sĩ năm 2026, ngành Khoa học hàng hải (chuyên ngành Quản lý hàng hải, mã ngành 8840106) có chỉ tiêu tuyển sinh dự kiến là 119 chỉ tiêu bạn nhé. Nếu cần biết thêm về điều kiện nộp hồ sơ, bạn có thể tham khảo website của Viện Đào tạo Sau đại học UTH. Chúc bạn ôn thi tốt! ☺️"
+378,in_scope,Hỏi điều kiện ngoại ngữ tuyển sinh thạc sĩ,Bằng B1 tiếng Đức Goethe-Zertifikat có đủ điều kiện nộp thạc sĩ không ad?,2026.0,answer,2026_thong-tin-tuyen-sinh-thac-si_sau-dai-hoc_t001_r008,Bằng Goethe-Zertifikat B1 tiếng Đức được chấp nhận làm minh chứng đạt trình độ ngoại ngữ (tiếng Đức) khi dự tuyển trình độ thạc sĩ tại UTH.,Chào bạn! Chứng chỉ tiếng Đức Goethe-Zertifikat B1 được nhà trường chấp nhận làm minh chứng đáp ứng yêu cầu ngoại ngữ khi nộp hồ sơ dự tuyển đào tạo trình độ thạc sĩ bạn nhé. Chúc bạn nộp hồ sơ xét tuyển thuận lợi và đạt kết quả tốt! ☺️
+388,out_of_scope,Dự đoán điểm chuẩn,Năm 2026 dự kiến điểm ngành Kỹ thuật tàu thủy tăng nhiều không ạ?,2026.0,refuse,,Chatbot UTH không thực hiện dự đoán hoặc dự báo xu hướng điểm chuẩn tăng hay giảm.,"Chào bạn! Rất tiếc, mình là chatbot tư vấn tuyển sinh UTH nên không thể đưa ra dự đoán về xu hướng điểm chuẩn hay liệu điểm chuẩn ngành Kỹ thuật tàu thủy có tăng hay không. Sự thay đổi điểm chuẩn phụ thuộc vào số lượng đăng ký thực tế và kết quả thi của thí sinh trong năm. Bạn có thể tham khảo điểm chuẩn các năm trước để có sự chuẩn bị tốt nhất nhé! ☺️"
+396,out_of_scope,Đánh giá học tập cá nhân,Em giỏi vẽ thì học Thiết kế nội thất UTH có dễ ra trường xuất sắc không ad?,2026.0,refuse,,Chatbot không dự đoán hay đánh giá quá trình học tập cá nhân hóa.,Chào bạn! Mình là trợ lý tuyển sinh UTH. ☺️ Việc tốt nghiệp xuất sắc phụ thuộc vào sự nỗ lực học tập suốt 4 năm đại học của bạn. Mình là chatbot nên không dự đoán hay đánh giá quá trình học tập cá nhân hóa được. Giỏi vẽ là một lợi thế cực lớn cho ngành Thiết kế nội thất rồi đó. Tra cứu ngành Thiết kế nội thất tại: ☺️
+399,out_of_scope,Xin tài liệu nội bộ ôn thi,Cho em xin bộ tài liệu ôn thi thạc sĩ nội bộ lưu hành trong trường với.,2026.0,refuse,,Chatbot không lưu trữ và không được phép chia sẻ các tài liệu ôn thi nội bộ hoặc tài liệu chưa được phát hành công khai.,"Chào bạn! ☺️ Xin lỗi bạn, mình không có chức năng lưu trữ và không được phép chia sẻ các tài liệu ôn thi nội bộ hoặc tài liệu chưa được nhà trường phát hành công khai. Bạn có thể theo dõi thông tin mở lớp ôn thi Thạc sĩ chính thức tại: Hotline: 028 3512 8986"
+402,in_scope,Hỏi mã xét tuyển Logistics và Môi trường phân hiệu Vũng Tàu,Em ở Vũng Tàu muốn đăng ký học chương trình tiên tiến Hướng liên ngành Logistics và Quản lý chuỗi cung ứng với Hướng liên ngành Logistics và Môi trường thì mã xét tuyển là gì ạ?,2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_t002_r002,Mã xét tuyển UTHLOG01V (Logistics & chuỗi cung ứng) và UTHKMT02V (Logistics & Môi trường) phân hiệu Vũng Tàu 2026.,"Chào bạn! Tại phân hiệu Bà Rịa - Vũng Tàu năm 2026, mã Logistics và QL chuỗi cung ứng là UTHLOG01V, và Logistics và Môi trường là UTHKMT02V..."
+403,in_scope,Hỏi thông tin liên hệ Viện IEC,Cho em xin thông tin liên hệ như số điện thoại và email của Viện Viện Đào tạo và Hợp tác Quốc tế IEC với ạ?,2026.0,answer,2026_thong-tin-tuyen-sinh-cu-nhan-logistics-tich-hop-FIATA_lien-ket-quoc-te_txt_s009,"Thông tin liên hệ Viện IEC: Hotline 0906681588, Email","Chào bạn! Bạn có thể liên hệ Viện Đào tạo và Hợp tác Quốc tế (IEC) qua Hotline/Zalo: 0906681588 hoặc Email: 
+iec@ut.edu.vn
+..."
+404,in_scope,Hỏi địa chỉ Viện IEC,Địa chỉ của Văn phòng Viện Đào tạo và Hợp tác Quốc tế IEC ở đâu thế ad?,2026.0,answer,2026_thong-tin-tuyen-sinh-cu-nhan-logistics-tich-hop-FIATA_lien-ket-quoc-te_txt_s009,"Văn phòng Viện IEC tại Phòng F102, số 2 đường Võ Oanh, Phường 25, Quận Bình Thạnh, TP.HCM.","Chào bạn! Văn phòng Viện Đào tạo và Hợp tác Quốc tế (IEC) nằm tại Phòng F102, số 2 đường Võ Oanh, Phường 25, Quận Bình Thạnh..."
+406,in_scope,Hỏi điều kiện miễn ngoại ngữ đầu vào tuyển sinh Thạc sĩ 2026,Điều kiện tiếng Anh đầu vào để miễn đánh giá năng lực ngoại ngữ khi xét Thạc sĩ 2026 là gì ạ?,2026.0,answer,2026_thong-tin-tuyen-sinh-thac-si_sau-dai-hoc_txt_s007,"Miễn ngoại ngữ đầu vào Thạc sĩ nếu tốt nghiệp ĐH ngành ngôn ngữ, tốt nghiệp chương trình tiếng Anh, hoặc có chứng chỉ bậc 3 trở lên.","Chào bạn! Để được miễn đánh giá năng lực ngoại ngữ đầu vào thạc sĩ năm 2026, bạn cần có bằng tốt nghiệp đại học trở lên ngành ngôn ngữ..."
+414,in_scope,Hỏi thời gian nhận hồ sơ xét Tiến sĩ năm 2025,Trường nhận hồ sơ dự tuyển Tiến sĩ năm 2025 vào thời gian nào vậy ạ?,2025.0,answer,2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_txt_s010,Thời gian nhận hồ sơ dự tuyển Tiến sĩ năm 2025 từ ngày 01/01/2025 đến ngày 31/12/2025.,Chào bạn! Thời gian nhận hồ sơ dự tuyển Tiến sĩ năm 2025 của UTH là từ ngày 01/01/2025 đến ngày 31/12/2025 bạn nhé...
+415,in_scope,Hỏi thời gian công bộ kết quả tuyển sinh Tiến sĩ 2025,Sau khi nộp đề cương và được hội đồng đánh giá thì sau bao lâu có kết quả trúng tuyển Tiến sĩ?,2025.0,answer,2025_thong-tin-tuyen-sinh-tien-si_sau-dai-hoc_txt_s010,Công bố kết quả trúng tuyển Tiến sĩ trong vòng 5 ngày làm việc sau khi hoàn thiện đề cương.,Chào bạn! Kết quả trúng tuyển và nhập học trình độ Tiến sĩ sẽ được công bố trong vòng 05 ngày làm việc kể từ ngày hoàn thiện đề cương...
+417,in_scope,Hỏi thời gian học bổ sung kiến thức Thạc sĩ năm 2026,Học bổ sung kiến thức để thi Thạc sĩ học vào các ngày nào trong tuần vậy trường?,2026.0,answer,2026_thong-tin-tuyen-sinh-thac-si_sau-dai-hoc_txt_s011,"Thời gian học bổ sung kiến thức từ thứ 2 đến thứ 7 trong tuần, tổ chức linh hoạt.",Chào bạn! Thời gian học bổ sung kiến thức Thạc sĩ năm 2026 tại UTH sẽ được tổ chức linh hoạt trong ngày và từ thứ 2 đến thứ 7 bạn nhé.
+418,in_scope,Hỏi lệ phí học bổ sung kiến thức Thạc sĩ 2026,Cho em hỏi học phí/lệ phí học bổ sung kiến thức tính theo tín chỉ là bao nhiêu ạ?,2026.0,answer,2026_thong-tin-tuyen-sinh-thac-si_sau-dai-hoc_txt_s018,Lệ phí học và thi bổ sung kiến thức Thạc sĩ tạm tính là 690.000 đồng/tín chỉ.,Chào bạn! Lệ phí học bổ sung kiến thức và thi kết thúc học phần bổ sung trình độ Thạc sĩ năm 2026 của UTH tạm tính là 690.000 đồng/tín chỉ...
+425,in_scope,Hỏi hạn nộp hồ sơ hệ Đại học thường xuyên 2026,Hạn chót nộp hồ sơ đăng ký học hệ Vừa học vừa làm năm 2026 là ngày nào vậy ad?,2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-thuong-xuyen_s035,Nhận hồ sơ hệ Đại học thường xuyên đến khi đủ số lượng tối thiểu để mở lớp.,"Chào bạn! Đối với hệ Đại học thường xuyên năm 2026, trường nhận hồ sơ từ ngày ra thông báo đến khi đủ số lượng tối thiểu để mở lớp..."
+441,out_of_scope,Tra cứu điểm thi cá nhân của người khác,Ad tra cứu giùm em xem bạn Nguyễn Văn A số báo danh 123456 điểm thi thế nào với.,,refuse,2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_txt_s000,Bảo mật thông tin cá nhân. Chatbot không hỗ trợ tra cứu điểm thi cá nhân của người khác.,"Chào bạn! ☺️\n\nVì lý do bảo mật thông tin cá nhân, mình không hỗ trợ tra cứu điểm thi..."
+444,out_of_scope,Hỏi tỷ lệ chọi tuyển sinh,Tỷ lệ chọi của ngành Quản trị kinh doanh năm nay thế nào ad? Có cao lắm không?,2026.0,refuse,,Chatbot không cung cấp thông tin về tỷ lệ chọi tuyển sinh; khuyên thí sinh tập trung ôn tập tốt.,Chào bạn! ☺️\n\nNhà trường không công bố số liệu về tỷ lệ chọi...
+445,out_of_scope,Cam kết tỷ lệ đạt visa,Em muốn đăng ký chương trình liên kết thì nhà trường có cam kết 100% xin được visa sang Hàn Quốc không?,,refuse,2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_txt_s000,Việc cấp visa do Đại sứ quán/Lãnh sự quán quyết định. Nhà trường không cam kết 100% xin được visa.,Chào bạn! ☺️\n\nViệc cấp visa du học hoàn toàn do Cơ quan lãnh sự...
+447,in_scope,Hỏi học phí Thạc sĩ song bằng,Chương trình Thạc sĩ song bằng quản lý cảng đóng 165 triệu là học phí cả khóa hay 1 năm?,2026.0,answer,2026_thong-tin-tuyen-sinh-thac-si-song-bang_lien-ket-quoc-te_txt_s006,Mức học phí 165 triệu đồng đối với chương trình Thạc sĩ song bằng Quản lý Cảng và Logistics là học phí toàn khóa.,Chào bạn! ☺️\n\nMức học phí 165 triệu đồng...
+449,in_scope,Hỏi thời gian đào tạo Văn bằng 2,Thời gian đào tạo Văn bằng 2 có thể ngắn hơn 2 năm được không ad?,2026.0,answer,2026_thong-tin-tuyen-sinh-van-bang-2_dai-hoc-thuong-xuyen_s023,Thời gian đào tạo Văn bằng 2 có thể ngắn hơn 2 năm đối với người học liên thông đã được miễn trừ khối lượng tín chỉ tích lũy.,Chào bạn! ☺️\n\nThời gian đào tạo Văn bằng 2 của trường có thể ngắn hơn 2 năm...
+451,year_control,Hỏi điểm chuẩn ngành KTXD công trình thủy 2024,Năm 2024 ngành Kỹ thuật xây dựng công trình thủy lấy điểm chuẩn thi tốt nghiệp là bao nhiêu?,2024.0,answer,2024_diem-chuan_dai-hoc-chinh-quy_t000_r027,Điểm chuẩn năm 2024 sử dụng điểm thi tốt nghiệp THPT ngành Kỹ thuật xây dựng công trình thủy là 17.0 điểm.,Chào bạn! ☺️\n\nĐiểm chuẩn trúng tuyển sử dụng kết quả thi tốt nghiệp THPT năm 2024...
+465,in_scope,Hỏi lịch thi ngoại ngữ Thạc sĩ 2026,Lịch thi đánh giá năng lực ngoại ngữ đầu vào Thạc sĩ năm 2026 diễn ra vào ngày nào?,2026.0,answer,2026_thong-tin-tuyen-sinh-thac-si_sau-dai-hoc_txt_s005,Ngày thi đánh giá năng lực ngoại ngữ đầu vào trình độ thạc sĩ được tổ chức bởi UTH theo thông báo chi tiết khi ứng viên nộp hồ sơ.,Chào bạn! ☺️\n\nLịch thi đánh giá năng lực ngoại ngữ đầu vào trình độ Thạc sĩ năm 2026...
+471,year_control,Hỏi điểm chuẩn Kinh tế vận tải biển (Không năm),Ngành Kinh tế vận tải biển lấy chuẩn cao không ạ?,2026.0,refuse,2025_diem-chuan_dai-hoc-chinh-quy_t000_r018,Chưa có điểm chuẩn 2026. Tham khảo 2025 xét kết hợp: 800; 2024: 22.0; 2023: 25.0.,"Chào bạn! ☺️ Vì bạn chưa cung cấp năm tuyển sinh, mình xin báo là hiện tại chưa có điểm chuẩn năm 2026 nhé. Bạn xem điểm tham khảo của ngành này (Tiên tiến):- 2025: Xét kết hợp lấy 800 điểm.- 2024: Thi THPT lấy 22.0 điểm.- 2023: Thi THPT lấy 25.0 điểm (Chuẩn).*(Cách tính điểm từ năm 2025 đã thay đổi)*.Tra cứu tại: "
+474,year_control,Hỏi điểm chuẩn 2006,Ad cho xin bảng điểm thi tốt nghiệp năm 2006 của trường.,2006.0,refuse,,Corpus không có dữ liệu 2006 (chỉ từ 2022).,Chào bạn! Mình là trợ lý tuyển sinh UTH. ☺️Hệ thống tư vấn của mình hiện không lưu trữ dữ liệu điểm chuẩn của các năm trước 2022 (như năm 2006) nên không thể cung cấp cho bạn được. Mong bạn thông cảm nhé!Bạn hãy tham khảo các mức điểm mới nhất từ 2022-2025 trên website: Hotline: 028 3512 8986 ☺️
+476,out_of_scope,Hỏi điểm đỗ Logistics 2026,Cần khoảng bao nhiêu điểm để đỗ ngành Logistics năm 2026?,2026.0,refuse,,Chatbot không dự đoán điểm. Tham khảo 2025: 963; 2024: 24.0.,"Chào bạn! ☺️Vì hiện tại chưa có điểm chuẩn năm 2026 và mình cũng không đưa ra dự đoán điểm được, bạn hãy tham khảo điểm của Logistics (Tiên tiến) năm 2025 là 963 điểm (xét kết hợp) và 2024 là 24.0 điểm (thi THPT). Từ 2025 cách tính đã đổi rồi nha.Theo dõi thông tin tại: Chúc bạn may mắn! ☺️"
+483,out_of_scope,Hỏi lương ngành Ngôn ngữ Anh,Lương cử nhân Ngôn ngữ Anh trường mình khi ra trường trung bình được 15 triệu không?,2026.0,refuse,,Chatbot không cung cấp số liệu lương thực tế hay dự đoán thu nhập.,"Chào bạn! ☺️Mình không cung cấp các dữ liệu về dự báo mức lương sau tốt nghiệp. Mức thu nhập phụ thuộc vào rất nhiều yếu tố thực tế như vị trí ứng tuyển, năng lực chuyên môn và quy mô doanh nghiệp bạn làm việc.Cần tư vấn về tuyển sinh, gọi Hotline: 0835.68.68.98 nhé! ☺️"
+490,out_of_scope,Khuyên chọn khối thi A00 hay D01,"Em thấy Toán khó quá, ad khuyên em chọn khối A00 hay D01 để thi vào trường dễ thở hơn?",2026.0,refuse,,Chatbot không khuyên chọn khối thi nào dễ thở hơn.,"Chào bạn! ☺️Mình không tư vấn hay dự đoán về việc chọn khối thi nào sẽ ""dễ thở"" hoặc dễ đậu hơn. Việc chọn tổ hợp môn hoàn toàn phụ thuộc vào năng lực học tập môn học của cá nhân bạn. Hãy chọn khối thi mà bạn tự tin nhất nhé!Tra cứu các tổ hợp môn tại: Chúc bạn có quyết định sáng suốt! ☺️"
+492,in_scope,Hỏi mã ngành ĐHCQ Kỹ thuật điều khiển tự động hóa,Ngành Kỹ thuật điều khiển và tự động hóa hệ tiên tiến điền mã nguyện vọng là gì?,2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_t001_r004,Công nghệ kỹ thuật điều khiển và tự động hóa (tiên tiến): UTHCDK01A. Kỹ thuật điều khiển và tự động hóa (tiên tiến): UTHKDK01A.,"Chào bạn! Mình gửi mã ngành nhé ☺️Năm 2026, ngành Công nghệ kỹ thuật điều khiển và tự động hóa (chương trình tiên tiến) có mã xét tuyển là UTHCDK01A. Còn ngành Kỹ thuật điều khiển và tự động hóa (tiên tiến) có mã là UTHKDK01A. Cả 2 đều bắt buộc môn Toán và 2 môn NTC1.Nộp hồ sơ trực tuyến tại: "
+496,in_scope,Hỏi tổ hợp Kỹ thuật cơ khí hàng không,Chuyên ngành Kỹ thuật cơ khí hàng không xét môn gì vậy ad?,2026.0,answer,2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_t000_r030,Ngành Kỹ thuật cơ khí hàng không (UTHKCK03A): Toán + 2 môn NTC1.,"Chào bạn! ☺️Năm 2026, ngành Kỹ thuật cơ khí chuyên ngành Kỹ thuật cơ khí hàng không (chương trình tiên tiến, mã UTHKCK03A) yêu cầu tổ hợp xét tuyển gồm: môn bắt buộc là Toán và 02 môn tự chọn thuộc nhóm NTC1.Bạn có thể tính thử điểm tại: Hotline: 0832 488 288 ☺️"
+499,in_scope,Hỏi học bổng Tài năng IELTS 2 LKQT đợt 7/2026,Đạt IELTS mức cao thứ 2 thì đợt liên kết quốc tế tháng 7/2026 được thưởng bao nhiêu?,2026.0,answer,2026_thong-tin-tuyen-sinh-cu-nhan-logistics-tich-hop-FIATA_lien-ket-quoc-te_t002_r005,Học bổng Tài năng IELTS 2 (cao nhì): 10 triệu đồng.,"Chào bạn! Mình là trợ lý tuyển sinh UTH. ☺️Trong đợt tuyển sinh Liên kết quốc tế tháng 7-8/2026, thí sinh có điểm IELTS cao nhì (yêu cầu từ 6.0 trở lên) sẽ được nhận Học bổng Tài năng IELTS 2, trị giá 10 triệu đồng (số lượng 1 suất).Cần hỗ trợ, bạn gọi ngay Zalo: 0906 681 588Website: ☺️"
