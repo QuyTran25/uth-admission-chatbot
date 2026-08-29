@@ -12,10 +12,6 @@ Dưới đây là sơ đồ luồng hoạt động (Offline và Online) của h�
 
 ![Sơ đồ kiến trúc hệ thống](architecture.png)
 
-
-
-
-
 ### 1.2. Giải thích Luồng hoạt động
 
 Hệ thống vận hành theo 3 giai đoạn chính:
@@ -25,30 +21,30 @@ Hệ thống vận hành theo 3 giai đoạn chính:
 * **Mô tả:** Spot-check kiểm tra thủ công được thực hiện sau khi tạo câu tự chứa (KV-Chunking) để rà soát chất lượng các chunks đã sinh ra và đối chiếu với tài liệu gốc (gán `verified = true`, ghi nhận tên người và thời gian kiểm định trên metadata của chunk) trước khi nạp vào chỉ mục FAISS & BM25.
 * **Ghi chú quan trọng:** Bắt buộc rebuild toàn bộ index mỗi khi `corpus.json` thay đổi (không hỗ trợ cập nhật tăng dần).
 
-#### Giai đoạn 2: Tiếp nhận câu hỏi và Tìm kiếm (Online Retrieval - Trân phụ trách)
-* **Luồng:** `Câu hỏi` -> `year_filter.py (Trích xuất & Lọc)` -> `Tìm kiếm Hybrid` -> `Retrieval Gate (Đánh giá & Lọc)` -> `GenAPI`. (Tất cả trạng thái trung gian, lỗi hoặc hỏi lại từ Retrieval Stage đều trả về `GenAPI` xử lý, không gửi trực tiếp về WebUI).
-* **Cơ chế Phân loại Loại tài liệu (CheckDocType):** `year_filter.py` thực hiện phân loại sơ bộ `document_type` từ câu hỏi thô bằng phương pháp so khớp từ khóa dựa trên luật (rule-based keyword matching) - ví dụ: câu hỏi chứa các cụm từ như 'điểm chuẩn', 'bao nhiêu điểm', 'trúng tuyển' sẽ được phân loại là `cutoff_score`; các loại câu hỏi khác được ánh xạ theo bộ từ khóa cố định cho 13 loại tài liệu còn lại. Phân loại sơ bộ này diễn ra trước khi Hybrid Retrieval chạy và chỉ nhằm mục đích định hướng luồng xử lý lọc năm tuyển sinh.
-* **Quy tắc lọc theo năm (kết hợp `document_type`):**
+#### Giai đoạn 2: Tiếp nhận câu hỏi và Tìm kiếm (Online Retrieval & OOS Filtering)
+* **Luồng:** `Câu hỏi` -> `Lớp 1: year_filter.py (Lọc năm & chủ đề)` -> `Lớp 2: oos_filter.py (Lọc ý định ngoài phạm vi - Hướng C)` -> `Tìm kiếm Hybrid (dynamic routing)` -> `Lớp 3: Retrieval Gate (Điểm số chunk)` -> `Generator`.
+* **Cơ chế Phân loại Loại tài liệu (CheckDocType):** `year_filter.py` thực hiện phân loại sơ bộ `document_type` từ câu hỏi thô bằng phương pháp so khớp từ khóa dựa trên luật (rule-based keyword matching) - ví dụ: câu hỏi chứa các cụm từ như 'điểm chuẩn', 'bao nhiêu điểm', 'trúng tuyển' sẽ được phân loại là `cutoff_score`; các loại câu hỏi khác được ánh xạ theo bộ từ khóa cố định cho 13 loại tài liệu còn lại. Phân loại sơ bộ này diễn ra trước khi Hybrid Retrieval chạy nhằm định hướng luồng xử lý lọc năm tuyển sinh.
+* **Quy tắc lọc theo năm (Admission Year Routing):**
   - **Năm ngoài khoảng (năm < 2022 hoặc năm > 2026):** Từ chối trực tiếp với mã lỗi `YEAR_NOT_SUPPORTED`.
-  - **Nếu là Điểm chuẩn (`cutoff_score`):** Hỗ trợ dữ liệu từ 2022–2026. Nếu câu hỏi nêu năm cụ thể trong khoảng này, thực hiện tìm kiếm Hybrid. Nếu không nêu rõ năm, trả về status `"clarification_needed"` để yêu cầu người dùng chọn năm trên UI.
-  - **Nếu là tài liệu khác (học phí, chỉ tiêu...):** Chỉ hỗ trợ thông tin năm mới nhất (2026). Nếu câu hỏi nêu năm cụ thể khác 2026 (2022–2025), từ chối trực tiếp với lỗi `YEAR_NOT_SUPPORTED` (thông báo tài liệu này chỉ có thông tin năm 2026). Nếu không nêu rõ năm, tự động mặc định `filter_year = 2026` để truy xuất.
-* **Retrieval Gate:** Lọc chunks dựa trên 4 chỉ số điểm phù hợp. Nếu không đạt ngưỡng, từ chối trả lời (`refused` với mã `OUT_OF_SCOPE`).
-* **Xử lý lỗi:** Trả về lỗi hệ thống (SYSTEM_ERROR 500) về GenAPI nếu có lỗi kết nối hoặc chỉ mục bị lỗi.
+  - **Nếu là Điểm chuẩn (`cutoff_score`):** Hỗ trợ dữ liệu từ 2022–2026. Nếu câu hỏi nêu năm cụ thể trong khoảng này, thực hiện tìm kiếm Hybrid. Nếu không nêu rõ năm, trả về status `"clarification_needed"` (gợi ý các năm trên UI).
+  - **Nếu là tài liệu khác (học phí, chỉ tiêu...):**
+    - Nếu câu hỏi nêu năm cụ thể khác 2026 (2022–2025), từ chối trực tiếp với lỗi `YEAR_NOT_SUPPORTED` (thông báo tài liệu này chỉ có thông tin năm 2026).
+    - Nếu không nêu rõ năm, hệ thống chạy ở chế độ **No-Filter Mode + 20% Boost điểm** cho các chunk thuộc năm học hiện tại (**2026**). Điều này giúp ưu tiên thông tin mới nhất nhưng vẫn giữ được khả năng truy cập thông tin các năm cũ của tài liệu đó.
+* **Luồng lọc Out-of-Scope (OOS) 3 lớp thực tế:**
+  1. **Lớp 1 (year_filter.py):** Lọc theo năm không hỗ trợ hoặc từ khóa chủ đề OOS cơ bản. (Recall đạt `29.2%`, FPR `0.67%`).
+  2. **Lớp 2 (oos_filter.py):** Lọc theo ý định Hướng C (dự đoán điểm chuẩn, tư vấn chọn ngành, cơ hội việc làm, so sánh trường...) bằng Regex tối ưu. (Recall đạt `60.7%`, FPR `1.67%`).
+     * *Đánh giá*: Kết hợp Lớp 1 + Lớp 2 cho hiệu năng lọc OOS xuất sắc: **Recall đạt 73.0%** với **FPR cực thấp (2.01%)**.
+  3. **Lớp 3 (Retrieval Gate - retrieval_gate.py):** Lọc theo điểm số chunk và consensus. 
+     * *Ghi chú cấu hình thực tế*: Kết quả Grid Search cho thấy việc bật Retrieval Gate điểm số làm tăng FPR lên vượt mức 20% (ngân sách yêu cầu ≤ 10%). Do đó, **Lớp 3 tạm thời được tắt hoàn toàn (ngưỡng = 0.0)** để bảo vệ trải nghiệm người dùng, tránh chặn nhầm câu hỏi hợp lệ. Nhiệm vụ lọc OOS còn sót lại được chuyển cho **Attribution Gate** ở tầng sinh.
 
-#### Giai đoạn 3: Sinh câu trả lời và Đối chiếu (Online Generation - Khoa phụ trách)
-* **Luồng:** Chuyển tiếp lỗi/hỏi lại từ Retrieval hoặc nhận chunks hợp lệ + History -> `Prompt Builder` -> `Gemini API` -> `Attribution Gate` -> `Web UI`.
-* **Kiểm soát chất lượng (Attribution Gate):** Đối chiếu trực tiếp con số trong câu trả lời với dữ liệu gốc (headers/values). Nếu khớp 100% thì hiển thị kèm trích dẫn, ngược lại từ chối (`Hallucination Refusal`).
+#### Giai đoạn 3: Sinh câu trả lời và Đối chiếu (Online Generation)
+* **Luồng:** Nhận chunks hợp lệ hoặc thông tin lỗi -> `Prompt Builder` -> `Gemini API` -> `Attribution Gate` -> `Web UI`.
+* **Kiểm soát chất lượng (Attribution Gate):** Đối chiếu trực tiếp con số và thông tin trong câu trả lời với các chunks dữ liệu được truy xuất. Nếu tỷ lệ trích dẫn đạt yêu cầu (Citation Precision ≥ 90%) thì hiển thị câu trả lời kèm nguồn trích dẫn, ngược lại từ chối (`Attribution Gate Failed` - Hallucination Refusal).
 * **Logic Fallback Điểm chuẩn 2026:**
-  - Nếu người dùng hỏi điểm chuẩn năm 2026 nhưng cơ sở dữ liệu chưa có (chưa công bố chính thức), tầng Retrieval (`year_filter.py`) tự động sinh chuỗi cảnh báo cố định (`warning`) một cách deterministic và trả về.
-  - `Prompt Builder` chèn chuỗi `warning` này vào làm chỉ thị hệ thống (system instruction).
-  - Gemini API sinh câu trả lời diễn đạt tự nhiên dựa trên chỉ thị đó: thông báo chưa có điểm chuẩn 2026 -> cung cấp dữ liệu điểm chuẩn tham khảo từ 2023-2025 -> đưa ra cảnh báo đổi cách tính điểm chuẩn từ năm 2025 -> gợi ý nhập điểm quy đổi.
+  - Nếu người dùng hỏi điểm chuẩn năm 2026 nhưng cơ sở dữ liệu chưa có (chưa công bố chính thức), tầng Retrieval (`year_filter.py`) tự động sinh chuỗi cảnh báo cố định (`warning`) và trả về.
+  - `Prompt Builder` chèn chuỗi `warning` này làm system instruction.
+  - Gemini API sinh câu trả lời tự nhiên dựa trên chỉ thị đó: thông báo chưa có điểm chuẩn 2026 -> cung cấp dữ liệu điểm chuẩn tham khảo từ 2023-2025 -> đưa ra cảnh báo đổi cách tính điểm chuẩn từ năm 2025 -> gợi ý nhập điểm quy đổi.
 * **Xử lý lỗi:** Trả về lỗi hệ thống (HTTP 500) nếu Gemini bị timeout hoặc crash.
-
----
-
-### 1.3. Ghi chú Thiết kế Quan trọng
-* **Conversation Memory:** Lịch sử trò chuyện (`history`) được chuyển vào Prompt để LLM trả lời tiếp ngữ cảnh, không dùng để chạy truy xuất lại cơ sở dữ liệu.
-* **Attribution Gate:** Thực hiện kiểm chứng 1 chiều (đối chiếu trực tiếp và từ chối nếu phát hiện sai lệch), không chạy vòng lặp sửa lỗi tự động (retry prompt) để tối ưu thời gian phản hồi.
 
 ---
 
@@ -73,129 +69,154 @@ Quy định rõ ràng về phạm vi các nội dung được chatbot hỗ trợ
 
 ---
 
-## 3. API Contract (Khóa cứng giữa hai thành phần)
+## 3. API Contract (Khóa cứng giữa các thành phần)
 
 ### 3.1. API 1: Truy xuất dữ liệu (`POST /api/v1/retrieve`)
-*(Khoa gọi - Trân cung cấp endpoint)*
+Dành cho mục đích kiểm thử, admin và debug chất lượng tìm kiếm.
 
-#### Tham số Yêu cầu (Request)
-| Tham số | Kiểu dữ liệu | Bắt buộc | Mô tả |
-| :--- | :--- | :--- | :--- |
-| `query` | String | Có | Câu hỏi của người dùng (tối thiểu 1 ký tự) |
-| `top_k` | Integer | Không | Số lượng chunks cần lấy (mặc định: 5, tối đa: 20) |
-| `filter_year` | Integer | Không | Năm tuyển sinh đã xác định |
+#### Tham số Yêu cầu (Request Body)
+```json
+{
+  "query": "Điểm chuẩn ngành Công nghệ thông tin",
+  "top_k": 5,
+  "filters": {
+    "admission_year": 2025,
+    "program_type": "dai_hoc_chinh_quy"
+  },
+  "mode": "hybrid",
+  "fusion_method": "weighted",
+  "alpha": 0.4
+}
+```
 
-#### Cấu trúc Kết quả (Response)
-| Trường | Kiểu dữ liệu | Mô tả |
-| :--- | :--- | :--- |
-| `status` | String | Trạng thái nghiệp vụ: `"success"`, `"clarification_needed"`, `"refused"`, `"error"` |
-| `code` | String | Mã lỗi chi tiết: `"OUT_OF_SCOPE"`, `"YEAR_NOT_SUPPORTED"`, `"YEAR_CLARIFICATION_REQUIRED"`, `"SYSTEM_ERROR"` |
-| `message` | String | Nội dung thông báo lỗi hoặc yêu cầu làm rõ |
-| `options` | Array[Int] | Các năm tuyển sinh gợi ý (dùng khi status là clarification_needed và document_type là cutoff_score) |
-| `warning` | String | Cảnh báo năm tuyển sinh |
-| `chunks` | Array[Object] | Danh sách chunks dữ liệu tìm thấy kèm metadata chi tiết |
-| `debug` | Object | Tín hiệu điểm số của Retrieval Gate phục vụ gỡ lỗi |
+#### Cấu trúc Kết quả (Response Body)
+```json
+{
+  "query": "Điểm chuẩn ngành Công nghệ thông tin",
+  "results": [
+    {
+      "chunk_id": "diemchuan_2025_sec2_row_12",
+      "score": 0.892,
+      "text": "Công nghệ thông tin. Điểm chuẩn: 23.5",
+      "metadata": {
+        "admission_year": 2025,
+        "program_type": "dai_hoc_chinh_quy",
+        "section_name": "II. Điểm chuẩn các ngành",
+        "source_file": "Quyet_dinh_diem_chuan_2025.pdf",
+        "source_urls": ["https://tuyensinh.ut.edu.vn/..."],
+        "extra_urls": []
+      }
+    }
+  ],
+  "retrieval_mode": "hybrid",
+  "fusion_method": "weighted",
+  "total_results": 1,
+  "latency_ms": 12.5,
+  "response_meta": {}
+}
+```
 
 ---
 
 ### 3.2. API 2: Hội thoại với người dùng (`POST /api/v1/chat`)
-*(Giao diện React gọi - Backend Generation xử lý)*
+Endpoint chính giao tiếp giữa Frontend (React/WebUI) và Backend.
 
-#### Tham số Yêu cầu (Request)
-| Tham số | Kiểu dữ liệu | Bắt buộc | Mô tả |
-| :--- | :--- | :--- | :--- |
-| `message` | String | Có | Câu hỏi hiện tại của người dùng |
-| `history` | Array[Object]| Không | Mảng lịch sử trò chuyện `[{"role": "user"\|"assistant", "message": "..."}]` |
-| `filter_year` | Integer | Không | Năm tuyển sinh người dùng đã chọn từ nút gợi ý trên UI |
-
-#### Cấu trúc Kết quả (Response)
-| Trường | Kiểu dữ liệu | Mô tả |
-| :--- | :--- | :--- |
-| `status` | String | Trạng thái nghiệp vụ: `"success"`, `"clarification_needed"`, `"refused"`, `"error"` |
-| `answer` | String | Câu trả lời sinh ra hoặc thông báo yêu cầu chọn năm/từ chối |
-| `warning` | String | Cảnh báo năm tuyển sinh hiển thị trên giao diện |
-| `options` | Array[Int] | Các nút chọn năm gợi ý hiển thị trên giao diện (chỉ áp dụng khi hỏi về điểm chuẩn) |
-| `citations` | Array[Object] | Danh sách nguồn trích dẫn (Tên tài liệu, trang, chương mục, năm) |
-
----
-
-### 3.3. Chi tiết 5 Kịch bản Phản hồi của Hệ thống
-
-Dưới đây là các định dạng JSON thực tế trả về từ `/api/v1/chat` tương ứng với từng kịch bản:
-
-#### Kịch bản 1: Success (Thành công - HTTP 200)
+#### Tham số Yêu cầu (Request Body)
 ```json
 {
-  "status": "success",
-  "answer": "Theo Quyết định điểm chuẩn UTH năm 2025 (Trang 2, Mục II), điểm chuẩn ngành Công nghệ thông tin là 23.5 điểm.",
-  "warning": null,
+  "query": "Học bổng năm 2026 của UTH thế nào?",
+  "top_k": 5
+}
+```
+
+#### Cấu trúc Kết quả (Response Body)
+```json
+{
+  "behavior": "answer", // "answer" | "fallback_warning" | "refused" | "clarify"
+  "answer": "Theo chính sách học bổng UTH năm 2026, quỹ học bổng là 60 tỷ đồng...",
   "citations": [
     {
-      "chunk_id": "diemchuan_2025_sec2_row_12",
-      "document_name": "Quyet_dinh_diem_chuan_2025.pdf",
-      "page": 2,
-      "section": "II. Điểm chuẩn các ngành",
-      "admission_year": 2025,
-      "text": "Công nghệ thông tin. Điểm chuẩn: 23.5"
+      "chunk_id": "hocbong_2026_sec1_row_2",
+      "source_file": "Quyet_dinh_hoc_bong_2026.pdf",
+      "section_name": "I. Học bổng khuyến tài",
+      "admission_year": 2026,
+      "source_urls": ["https://xettuyen.uth.edu.vn"]
     }
-  ]
+  ],
+  "citation_precision": 1.0,
+  "refused_reason": null,
+  "oos_categories": [],
+  "latency_ms": 320.15,
+  "year_used": 2026
 }
 ```
 
-#### Kịch bản 2: Clarification Needed (Hỏi lại năm tuyển sinh - HTTP 200)
-*(Chỉ xảy ra khi document_type = cutoff_score)*
-```json
-{
-  "status": "clarification_needed",
-  "answer": "Vui lòng chọn năm tuyển sinh bạn muốn tra cứu điểm chuẩn:",
-  "warning": null,
-  "options": [2026, 2025, 2024, 2023, 2022],
-  "citations": []
-}
-```
+#### Chi tiết 4 Kịch bản Phản hồi của Hệ thống (Trường `behavior`)
 
-#### Kịch bản 3: Refused (Từ chối nghiệp vụ - HTTP 200)
-```json
-{
-  "status": "refused",
-  "answer": "Xin lỗi, câu hỏi nằm ngoài phạm vi hỗ trợ tư vấn tuyển sinh hoặc năm tra cứu không hỗ trợ.",
-  "warning": null,
-  "citations": []
-}
-```
+* **Kịch bản 1: `answer` (Thành công - Trả lời kèm trích dẫn)**
+  ```json
+  {
+    "behavior": "answer",
+    "answer": "Theo Quyết định điểm chuẩn UTH năm 2025, điểm chuẩn ngành CNTT là 23.5 điểm.",
+    "citations": [
+      {
+        "chunk_id": "diemchuan_2025_sec2_row_12",
+        "source_file": "Quyet_dinh_diem_chuan_2025.pdf",
+        "section_name": "II. Điểm chuẩn",
+        "admission_year": 2025,
+        "source_urls": ["https://tuyensinh.ut.edu.vn/..."]
+      }
+    ],
+    "citation_precision": 1.0,
+    "refused_reason": null,
+    "oos_categories": [],
+    "latency_ms": 250.0,
+    "year_used": 2025
+  }
+  ```
 
-#### Kịch bản 4: System Error (Lỗi hệ thống kỹ thuật - HTTP 500)
-```json
-{
-  "status": "error",
-  "answer": "Hệ thống đang gặp sự cố kết nối. Vui lòng thử lại sau.",
-  "warning": null,
-  "citations": []
-}
-```
+* **Kịch bản 2: `clarify` (Yêu cầu làm rõ năm tuyển sinh)**
+  *(Xảy ra khi hỏi điểm chuẩn nhưng không nêu năm)*
+  ```json
+  {
+    "behavior": "clarify",
+    "answer": "Vui lòng chọn năm tuyển sinh bạn muốn tra cứu điểm chuẩn:",
+    "citations": [],
+    "citation_precision": 1.0,
+    "refused_reason": null,
+    "oos_categories": [],
+    "latency_ms": 5.2,
+    "year_used": null
+  }
+  ```
 
-#### Kịch bản 5: Validation Error (Lỗi xác thực định dạng đầu vào - HTTP 422)
-```json
-{
-  "detail": [
-    {
-      "loc": ["body", "message"],
-      "msg": "field required",
-      "type": "value_error.missing"
-    }
-  ]
-}
-```
+* **Kịch bản 3: `refused` (Từ chối do OOS hoặc không đủ trích dẫn tin cậy)**
+  ```json
+  {
+    "behavior": "refused",
+    "answer": "Câu hỏi này nằm ngoài phạm vi tư vấn tuyển sinh UTH...",
+    "citations": [],
+    "citation_precision": 1.0,
+    "refused_reason": "oos_intent: du_doan_diem_chuan",
+    "oos_categories": ["du_doan_diem_chuan"],
+    "latency_ms": 3.8,
+    "year_used": 2026
+  }
+  ```
 
----
-
-### 3.4. Đặc tả Giả lập của Mock API (`mock_retriever.py`)
-Để Khoa phát triển Frontend/Generation độc lập ở Tuần 1, Mock API nhận Header `"X-Mock-Scenario"` (hoặc tham số truy vấn `mock_scenario`) để trả về dữ liệu tương ứng:
-* `"success"`: Trả về HTTP 200 với danh sách chunks mẫu năm 2025/2026.
-* `"fallback"`: Trả về HTTP 200 kèm warning cảnh báo năm.
-* `"clarification"`: Trả về HTTP 200 với danh sách nút bấm năm gợi ý.
-* `"refused"`: Trả về HTTP 200 với chunks rỗng và mã `OUT_OF_SCOPE`.
-* `"error"`: Ném lỗi HTTP 500 để giả lập sập mạng/crash hệ thống.
+* **Kịch bản 4: `fallback_warning` (Câu hỏi về năm tương lai chưa công bố)**
+  ```json
+  {
+    "behavior": "fallback_warning",
+    "answer": "Lưu ý: Thông tin tuyển sinh năm 2027 chưa được công bố. Dưới đây là thông tin tham khảo năm 2026...",
+    "citations": [...],
+    "citation_precision": 0.95,
+    "refused_reason": null,
+    "oos_categories": [],
+    "latency_ms": 380.0,
+    "year_used": 2026
+  }
+  ```
 
 ---
 
@@ -229,11 +250,7 @@ Mỗi chunk lưu trữ trong hệ thống bắt buộc bao gồm các thông tin
 > * Các loại tài liệu khác còn lại: Chỉ lưu trữ và hỗ trợ tra cứu cho năm mới nhất (**2026**).
 
 #### 13 Phân loại tài liệu tuyển sinh (`document_type`)
-`admission_method` (phương thức xét tuyển), `admission_condition` (điều kiện xét tuyển), `quota` (chỉ tiêu), `major` (ngành đào tạo), `cutoff_score` (điểm chuẩn), `tuition_fee` (học phí), `scholarship` (học bổng), `training_program` (chương trình đào tạo), `application_profile` (hồ sơ nhập học), `timeline` (thời gian tuyển sinh), `enrollment_regulation` (quy chế/quy định nhập học), `contact_info` (địa chỉ, **cơ sở học tập**, thông tin liên hệ), `general_info` (giới thiệu chung).
-
-### 4.2. Cơ chế Ánh xạ Chỉ mục vật lý
-Khi chạy script tiền xử lý offline, các chunk sau khi làm sạch sẽ được xuất ra file JSON tổng hợp tại `data/processed/corpus.json` dưới dạng một mảng danh sách. 
-Chỉ mục FAISS và BM25 được dựng theo đúng thứ tự mảng này. Khi tìm kiếm trả về chỉ số vật lý, Retrieval API chỉ cần truy cập phần tử tại index tương ứng của `corpus.json` để lấy đầy đủ Metadata phục vụ đối chiếu chéo.
+`admission_method` (phương thức xét tuyển), `admission_condition` (điều kiện xét tuyển), `quota` (chỉ tiêu), `major` (ngành đào tạo), `cutoff_score` (điểm chuẩn), `tuition_fee` (học phí), `scholarship` (học bổng), `training_program` (chương trình đào tạo), `application_profile` (hồ sơ nhập học), `timeline` (thời gian tuyển sinh), `enrollment_regulation` (quy chế/quy định nhập học), `contact_info` (địa chỉ, cơ sở học tập, thông tin liên hệ), `general_info` (giới thiệu chung).
 
 ---
 
@@ -248,35 +265,41 @@ uth-admission-chatbot/
 │   ├── app/
 │   │   ├── main.py                 # Khởi tạo server FastAPI
 │   │   ├── core/
-│   │   │   └── config.py           # Quản lý cấu hình bảo mật (.env) qua pydantic-settings
-│   │   ├── app_shared/             # Thư mục dùng chung (chứa định nghĩa schemas chung)
+│   │   │   ├── config.py           # Quản lý cấu hình bảo mật (.env)
+│   │   │   ├── index_store.py      # Quản lý vòng đời load index FAISS/BM25
+│   │   │   └── gate_config.json    # Cấu hình ngưỡng chặn của Retrieval Gate
 │   │   ├── api/
 │   │   │   ├── endpoints/
-│   │   │   │   ├── retrieval.py    # API truy xuất thật (Trân)
-│   │   │   │   ├── mock_retriever.py # Mock API hỗ trợ 5 kịch bản (Khoa)
-│   │   │   │   └── generation.py   # API sinh & kiểm chứng (Khoa)
+│   │   │   │   ├── retrieve.py     # API truy xuất phục vụ debug (Trân)
+│   │   │   │   ├── mock_retriever.py # Mock API phục vụ giao diện
+│   │   │   │   └── chat.py         # API chat tuyển sinh end-to-end (Khoa)
 │   │   │   └── router.py
 │   │   └── services/
-│   │       ├── year_filter.py      # Bộ lọc & phân tích năm tuyển sinh (Trân)
-│   │       ├── retriever.py        # Tìm kiếm Hybrid + Retrieval Gate (Trân)
-│   │       └── generator.py        # Gọi Gemini + Attribution Gate (Khoa)
+│   │       ├── year_filter.py      # Lớp 1: Phân loại năm tuyển sinh và chủ đề
+│   │       ├── oos_filter.py       # Lớp 2: Lọc ý định ngoài phạm vi Hướng C (Regex)
+│   │       ├── retrieval_service.py # Tìm kiếm Hybrid (BM25 + Dense) & Routing
+│   │       ├── retrieval_gate.py   # Lớp 3: Lọc score-gate (hiện tại set 0.0)
+│   │       ├── generator.py        # Prompt Builder & Gemini Client
+│   │       └── attribution_gate.py # Kiểm chứng trích dẫn nguồn hậu LLM
 │   ├── pipeline/                   # Scripts chạy offline (parser/indexing)
-│   │   ├── parser.py               # Chạy offline trích xuất Docling & 6 bước bảng
-│   │   └── build_index.py          # Xây dựng vector FAISS và index BM25
-│   ├── data/                       # Quản lý dữ liệu phân tầng rõ ràng
-│   │   ├── raw/                    # Chứa PDF/Web gốc chưa xử lý
-│   │   ├── processed/              # Chứa các chunk dạng JSON sau 6 bước xử lý (corpus.json)
-│   │   └── index/                  # Chứa file chỉ mục FAISS index & BM25 index
-│   ├── tests/                      # Thư mục chứa Unit Tests độc lập
+│   │   ├── parser.py               # Trích xuất PDF sang corpus.json (Docling)
+│   │   └── build_index.py          # Xây dựng chỉ mục vector FAISS & BM25
+│   ├── data/                       # Quản lý dữ liệu phân tầng
+│   │   ├── raw/                    # Chứa PDF gốc
+│   │   ├── processed/              # Chứa corpus.json đã làm sạch
+│   │   └── index/                  # Chứa file index vật lý (FAISS & BM25)
+│   ├── tests/                      # Unit Tests độc lập
 │   │   ├── test_year_filter.py
 │   │   ├── test_retriever.py
 │   │   └── test_generator.py
-│   ├── eval/                       # Thư mục thực nghiệm và đánh giá chất lượng
+│   ├── eval/                       # Thực nghiệm và đo lường hệ thống
 │   │   ├── test_questions.jsonl    # Bộ câu hỏi kiểm thử gán nhãn
-│   │   ├── run_eval.py             # Script tự động chạy tính metrics
-│   │   └── results/                # Lưu báo cáo kết quả chạy thực nghiệm
+│   │   ├── run_retrieval_eval.py   # Script đánh giá chỉ số Retrieval (Recall/MRR)
+│   │   ├── pipeline_union_eval.py  # Script đánh giá liên hợp các lớp lọc OOS
+│   │   ├── gate_budget_grid_search.py # Grid search tìm ngưỡng tối ưu cho gate
+│   │   └── results/                # Lưu báo cáo kết quả thực nghiệm
 │   ├── requirements.txt
-│   └── .env                        # Chứa Gemini API Key (Không đẩy lên git)
+│   └── .env                        # Chứa GEMINI_API_KEY
 ├── frontend/                       # React Frontend (Vite)
 │   ├── src/
 │   └── package.json
@@ -285,6 +308,6 @@ uth-admission-chatbot/
 
 ### 5.2. Danh sách thư viện cốt lõi
 * **Backend (`requirements.txt`):**
-  `fastapi`, `uvicorn`, `docling`, `sentence-transformers`, `faiss-cpu`, `rank-bm25`, `google-generativeai`, `pydantic-settings`, `pandas`, `pytest`.
+  `fastapi`, `uvicorn`, `docling`, `sentence-transformers`, `faiss-cpu`, `rank-bm25`, `google-genai`, `pydantic-settings`, `pandas`, `pytest`.
 * **Frontend (`package.json`):**
   `react`, `vite`, `axios`, `lucide-react`.
