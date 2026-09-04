@@ -37,6 +37,24 @@ class AttributionResult:
     method: str = "chunk_id"      # Hiện tại chỉ dùng chunk_id check
 
 
+def _fuzzy_match_id(failed_cid: str, retrieved_ids: set[str]) -> str | None:
+    """
+    Thử fuzzy match một chunk_id không khớp hoàn toàn với retrieved_ids.
+    So sánh qua chuẩn hóa (bỏ khoảng trắng, gạch dưới, gạch ngang, chữ hoa/thường)
+    hoặc quan hệ substring/prefix/suffix.
+    """
+    import re
+    norm_failed = re.sub(r'[\s_\-]+', '', failed_cid.lower())
+    for rid in retrieved_ids:
+        norm_rid = re.sub(r'[\s_\-]+', '', rid.lower())
+        if norm_failed == norm_rid:
+            return rid
+        if len(norm_failed) > 5 and len(norm_rid) > 5:
+            if norm_failed in norm_rid or norm_rid in norm_failed:
+                return rid
+    return None
+
+
 # ---------------------------------------------------------------------------
 # Gate logic
 # ---------------------------------------------------------------------------
@@ -74,9 +92,9 @@ def check_attribution(
 
     total = len(cited_ids)
 
-    # Không trích dẫn gì → không thể kiểm chứng → fail
+    # Không trích dẫn gì → Gemini không follow [[chunk_id]] format → Gate kích hoạt FAIL
     if total == 0:
-        logger.warning("attribution_gate: không có citation nào để kiểm chứng")
+        logger.warning("attribution_gate: cited_ids rỗng — Gemini không trích dẫn [[chunk_id]]. Gate FAIL.")
         return AttributionResult(
             passed=False,
             citation_precision=0.0,
@@ -86,9 +104,21 @@ def check_attribution(
             method="chunk_id",
         )
 
-    # Phân loại valid / invalid citations
-    valid = [cid for cid in cited_ids if cid in retrieved_ids]
-    failed = [cid for cid in cited_ids if cid not in retrieved_ids]
+    # Phân loại valid / invalid citations & kiểm tra fuzzy match cho logging
+    valid = []
+    failed = []
+    for cid in cited_ids:
+        if cid in retrieved_ids:
+            valid.append(cid)
+        else:
+            failed.append(cid)
+            matched_id = _fuzzy_match_id(cid, retrieved_ids)
+            if matched_id:
+                logger.warning(
+                    f"[HALLUCINATED_ID_WARNING] Fuzzy match detected for hallucinated chunk_id '{cid}' "
+                    f"(matched retrieved_id '{matched_id}'). "
+                    "Fuzzy matches count as INVALID (0.0 precision) to maintain strict admission accuracy."
+                )
 
     precision = len(valid) / total
     passed = precision >= CITATION_PRECISION_THRESHOLD
