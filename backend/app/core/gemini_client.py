@@ -38,21 +38,37 @@ class GeminiClient:
         logger.info(f"Gemini client khởi tạo thành công (model={settings.GEMINI_MODEL})")
 
     def generate(self, prompt: str) -> str:
-        """Gọi Gemini API và trả về text response."""
+        """Gọi Gemini API và trả về text response (có auto-retry khi gặp lỗi 503 / 429 / ServerError)."""
+        import time
         self._ensure_initialized()
-        try:
-            response = self._client.models.generate_content(
-                model=settings.GEMINI_MODEL,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    temperature=settings.GEMINI_TEMPERATURE,
-                    max_output_tokens=settings.GEMINI_MAX_TOKENS,
-                ),
-            )
-            return response.text
-        except Exception as e:
-            logger.error(f"Gemini API error: {e}")
-            raise
+        
+        max_retries = 3
+        backoff_sec = 2.0
+
+        for attempt in range(1, max_retries + 1):
+            try:
+                response = self._client.models.generate_content(
+                    model=settings.GEMINI_MODEL,
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        temperature=settings.GEMINI_TEMPERATURE,
+                        max_output_tokens=settings.GEMINI_MAX_TOKENS,
+                    ),
+                )
+                return response.text
+            except Exception as e:
+                err_str = str(e)
+                # Nếu là lỗi quá tải máy chủ 503 hoặc rate limit 429 và chưa hết số lần thử
+                if ("503" in err_str or "429" in err_str or "UNAVAILABLE" in err_str) and attempt < max_retries:
+                    wait_time = backoff_sec * (2 ** (attempt - 1))
+                    logger.warning(
+                        f"Gemini API 503/429 (Lần {attempt}/{max_retries}): Máy chủ Google đang quá tải. "
+                        f"Tự động thử lại sau {wait_time}s..."
+                    )
+                    time.sleep(wait_time)
+                else:
+                    logger.error(f"Gemini API error (Lần {attempt}/{max_retries}): {e}")
+                    raise
 
 
 # Singleton instance toàn cục

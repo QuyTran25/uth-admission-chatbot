@@ -44,19 +44,31 @@ def _build_prompt(
     filter_year: int | None,
     is_fallback: bool,
 ) -> str:
-    """Xây dựng prompt gửi cho Gemini."""
+    """Xây dựng prompt gửi cho Gemini.
 
-    # Xây dựng context từ các chunks
+    Chiến lược prompt (A1 — Tuần 6):
+      - Quy tắc trích dẫn đặt ĐẦU TIÊN, in hoa để tăng compliance
+      - Few-shot examples dùng chunk_id format thật từ corpus
+      - Liệt kê danh sách chunk_id hợp lệ để Gemini copy-paste
+      - Context block dùng [[chunk_id]] nhất quán với format yêu cầu
+    """
+
+    # --- Liệt kê danh sách chunk_id hợp lệ ---
+    valid_ids = [chunk.chunk_id for chunk in chunks[:5]]
+    valid_ids_str = ", ".join(valid_ids)
+
+    # --- Xây dựng context từ các chunks ---
     context_blocks = []
-    for i, chunk in enumerate(chunks[:5]):  # Dùng tối đa top-5
+    for chunk in chunks[:5]:  # Dùng tối đa top-5
         context_blocks.append(
-            f"[{chunk.chunk_id}]\n"
-            f"Nguồn: {chunk.source_file} | Năm: {chunk.admission_year or 'chung'}\n"
+            f"[[{chunk.chunk_id}]]\n"
+            f"Nguồn: {chunk.source_file} | Mục: {chunk.section_name} | "
+            f"Năm: {chunk.admission_year or 'chung'}\n"
             f"{chunk.text.strip()}"
         )
     context_str = "\n\n---\n\n".join(context_blocks)
 
-    # Cảnh báo năm nếu cần
+    # --- Cảnh báo năm nếu cần ---
     year_note = ""
     if is_fallback:
         year_note = (
@@ -65,18 +77,31 @@ def _build_prompt(
             "dữ liệu chính thức chưa được công bố.\n"
         )
 
-    prompt = f"""Bạn là trợ lý tư vấn tuyển sinh của Trường Đại học Công nghệ TP.HCM (UTH).
-Nhiệm vụ của bạn là trả lời câu hỏi của thí sinh dựa HOÀN TOÀN vào thông tin trong phần [CONTEXT] bên dưới.
-{year_note}
-QUY TẮC BẮT BUỘC:
-1. Sau mỗi thông tin cụ thể (điểm số, học phí, chỉ tiêu, ngày tháng...), PHẢI ghi nguồn dưới dạng [[chunk_id]].
-   Ví dụ: "Điểm chuẩn ngành Logistics năm 2024 là 18.5 điểm [[dk_2024_001]]."
-2. Nếu thông tin không có trong [CONTEXT], hãy nói thẳng: "Hiện tại tôi chưa có thông tin về vấn đề này."
-   TUYỆT ĐỐI KHÔNG bịa đặt số liệu.
-3. Trả lời bằng tiếng Việt, thân thiện, ngắn gọn (tối đa 300 từ).
-4. Nếu câu hỏi hoàn toàn ngoài phạm vi tuyển sinh UTH, hãy trả lời bằng chính xác cụm từ: "NGOAI_PHAM_VI"
+    prompt = f"""BẮT BUỘC — QUY TẮC TRÍCH DẪN NGUỒN (PHẢI TUÂN THỦ 100%):
+- Sau MỖI thông tin cụ thể (điểm chuẩn, học phí, chỉ tiêu, mã ngành, ngày tháng...), BẠN PHẢI ghi nguồn bằng cú pháp [[chunk_id]] ngay sau thông tin đó.
+- chunk_id PHẢI là một trong các ID hợp lệ sau: {valid_ids_str}
+- KHÔNG ĐƯỢC tự bịa chunk_id. CHỈ dùng chunk_id có trong danh sách trên.
+- Nếu một câu trả lời dùng thông tin từ nhiều chunk, PHẢI trích dẫn TỪNG chunk tương ứng.
 
-[CONTEXT]
+VÍ DỤ ĐÚNG CÁCH TRÍCH DẪN:
+- "Điểm chuẩn ngành Công nghệ thông tin năm 2025 theo phương thức xét tuyển kết hợp là 24.5 điểm [[2025_diem-chuan_dai-hoc-chinh-quy_t000_r005]]."
+- "Học phí ngành Logistics năm 2026 là 24.000.000 đồng/năm [[2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_t003_r012]]."
+
+VÍ DỤ SAI (KHÔNG LÀM THẾ NÀY):
+- "Điểm chuẩn ngành CNTT là 24.5 điểm." ← SAI vì thiếu [[chunk_id]]
+- "Điểm chuẩn là 24.5 [[chunk_001]]." ← SAI vì chunk_001 không có trong danh sách ID hợp lệ
+
+---
+
+Bạn là trợ lý tư vấn tuyển sinh của Trường Đại học Giao thông Vận tải TP.HCM (UTH).
+Nhiệm vụ: Trả lời câu hỏi của thí sinh dựa HOÀN TOÀN vào thông tin trong phần [DỮ LIỆU THAM KHẢO] bên dưới.
+{year_note}
+QUY TẮC TRẢ LỜI:
+1. Trả lời bằng tiếng Việt, thân thiện, ngắn gọn (tối đa 300 từ).
+2. Nếu thông tin không có trong [DỮ LIỆU THAM KHẢO], hãy nói thẳng: "Hiện tại tôi chưa có thông tin về vấn đề này." TUYỆT ĐỐI KHÔNG bịa đặt số liệu.
+3. Nếu câu hỏi hoàn toàn ngoài phạm vi tuyển sinh UTH, hãy trả lời bằng chính xác cụm từ: "NGOAI_PHAM_VI"
+
+[DỮ LIỆU THAM KHẢO — Danh sách chunk_id hợp lệ: {valid_ids_str}]
 {context_str}
 
 [CÂU HỎI]
