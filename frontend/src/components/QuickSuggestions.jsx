@@ -6,10 +6,10 @@ const QuickSuggestions = () => {
   const navigate = useNavigate();
 
   const suggestions = [
-    { icon: 'fas fa-calendar-alt', text: 'Thông tin Open Day UTH 2026', path: '/chat/detail' },
-    { icon: 'fas fa-lightbulb', text: 'Tôi muốn biết về học bổng của trường', path: '/chat/detail' },
-    { icon: 'fas fa-graduation-cap', text: 'Có nên học ở UTH không?', path: '/chat/detail' },
-    { icon: 'fas fa-chart-line', text: 'Điểm chuẩn các ngành năm 2024', path: '/chat/detail' }
+    { icon: 'fas fa-calendar-alt', text: 'Thông tin Open Day UTH 2026' },
+    { icon: 'fas fa-lightbulb', text: 'Tôi muốn biết về học bổng của trường' },
+    { icon: 'fas fa-graduation-cap', text: 'Có nên học ở UTH không?' },
+    { icon: 'fas fa-chart-line', text: 'Điểm chuẩn các ngành năm 2024' }
   ];
 
   return (
@@ -19,7 +19,10 @@ const QuickSuggestions = () => {
           <button 
             key={i} 
             className="quick-suggestion-btn"
-            onClick={() => navigate(s.path)}
+            onClick={() => {
+              sessionStorage.setItem('uth_initial_query', s.text);
+              navigate('/chat/detail', { state: { initialQuery: s.text } });
+            }}
           >
             <div className="quick-suggestion-btn__icon">
               <i className={s.icon}></i>

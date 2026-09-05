@@ -10,8 +10,8 @@ const BotMessage = ({
   oos_categories, 
   year_used 
 }) => {
-  // Strip [[chunk_id]] tags from displayed text
-  const cleanContent = content ? content.replace(/\[\[chunk_id:\d+\]\]/g, '').trim() : '';
+  // Strip citation IDs such as [[2023_diem-chuan_...]] from displayed text.
+  const cleanContent = content ? content.replace(/\[\[[^\]]+\]\]/g, '').replace(/\s{2,}/g, ' ').trim() : '';
   
   // B5: Render behavior-specific banners
   const renderBehaviorBanner = () => {

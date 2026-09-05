@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Header from './Header';
 import axios from 'axios';
 import BotMessage from './components/BotMessage';
@@ -9,6 +9,8 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000
 
 const ChatDetail = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const initialQueryHandled = useRef(false);
   
   // Chat state
   const [messages, setMessages] = useState([]);
@@ -33,6 +35,17 @@ const ChatDetail = () => {
       }
     }
   }, []);
+
+  // Auto-send query received from homepage. sessionStorage protects against lost router state.
+  useEffect(() => {
+    const q = location.state?.initialQuery || sessionStorage.getItem('uth_initial_query');
+    if (!initialQueryHandled.current && q) {
+      initialQueryHandled.current = true;
+      sessionStorage.removeItem('uth_initial_query');
+      window.history.replaceState({}, '');
+      sendMessage(q);
+    }
+  }, [location.state]);
   
   // B3: Save chat history to localStorage whenever messages change
   useEffect(() => {
