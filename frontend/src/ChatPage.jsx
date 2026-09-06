@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import ChatHero from './components/ChatHero';
@@ -27,6 +27,7 @@ const ChatPage = () => {
 
   const openConversation = (conversation) => {
     localStorage.setItem('uth_chat_history', JSON.stringify(conversation.messages));
+    localStorage.setItem('uth_active_conversation_id', String(conversation.id));
     navigate('/chat/detail');
   };
 
@@ -34,6 +35,9 @@ const ChatPage = () => {
     event.stopPropagation();
     const nextConversations = savedConversations.filter((conversation) => conversation.id !== id);
     localStorage.setItem('uth_saved_conversations', JSON.stringify(nextConversations));
+    if (String(id) === localStorage.getItem('uth_active_conversation_id')) {
+      localStorage.removeItem('uth_active_conversation_id');
+    }
     setSavedConversations(nextConversations);
   };
 

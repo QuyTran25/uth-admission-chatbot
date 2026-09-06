@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './CSS/Header.css';
 
@@ -26,16 +26,23 @@ const Header = () => {
       const messages = JSON.parse(raw);
       if (!messages.length) return;
       const existing = JSON.parse(localStorage.getItem('uth_saved_conversations') || '[]');
+      const activeId = localStorage.getItem('uth_active_conversation_id');
+      const conversationId = Number(activeId) || Date.now();
       const firstUser = messages.find((m) => m.role === 'user');
       const title = firstUser ? firstUser.content.slice(0, 60) : 'Cuộc trò chuyện UTH';
       const saved = {
-        id: Date.now(),
+        id: conversationId,
         title,
         savedAt: new Date().toISOString(),
         messages,
       };
+      const existingIndex = existing.findIndex((item) => item.id === conversationId);
+      if (existingIndex >= 0) {
+        existing.splice(existingIndex, 1);
+      }
       existing.unshift(saved);
       localStorage.setItem('uth_saved_conversations', JSON.stringify(existing));
+      localStorage.setItem('uth_active_conversation_id', String(conversationId));
     } catch (e) {
       console.error('Lưu lịch sử thất bại:', e);
     }

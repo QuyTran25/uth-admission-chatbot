@@ -14,6 +14,7 @@ const ChatDetail = () => {
 
   // Chat state
   const [messages, setMessages] = useState([]);
+  const [activeConversationId, setActiveConversationId] = useState(() => localStorage.getItem('uth_active_conversation_id'));
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [showRatingModal, setShowRatingModal] = useState(false);
@@ -24,15 +25,20 @@ const ChatDetail = () => {
   const [inputValue, setInputValue] = useState('');
   const [showSaveDialog, setShowSaveDialog] = useState(false);
 
-  // B3: Load chat history from localStorage on mount
+  // B3: Load active chat and its saved-conversation identity on mount
   useEffect(() => {
     const savedChat = localStorage.getItem('uth_chat_history');
+    const activeId = localStorage.getItem('uth_active_conversation_id');
+    setActiveConversationId(activeId);
+
     if (savedChat) {
       try {
         setMessages(JSON.parse(savedChat));
       } catch (e) {
         console.error('Error loading chat history:', e);
         localStorage.removeItem('uth_chat_history');
+        localStorage.removeItem('uth_active_conversation_id');
+        setActiveConversationId(null);
       }
     }
   }, []);
@@ -125,11 +131,13 @@ const ChatDetail = () => {
     sendMessage(chipText);
   };
 
-  // Handle new chat - B3: reset
+  // Handle new chat: clear active identity so the next saved chat becomes new.
   const handleNewChat = () => {
     if (window.confirm('Bạn có chắc chắn muốn bắt đầu cuộc trò chuyện mới? Toàn bộ lịch sử chat sẽ bị xóa.')) {
       setMessages([]);
+      setActiveConversationId(null);
       localStorage.removeItem('uth_chat_history');
+      localStorage.removeItem('uth_active_conversation_id');
     }
   };
 
@@ -154,15 +162,25 @@ const ChatDetail = () => {
 
   const saveCurrentConversation = () => {
     if (!messages.length) return;
+
     const savedConversations = JSON.parse(localStorage.getItem('uth_saved_conversations') || '[]');
     const firstUserMessage = messages.find((message) => message.role === 'user');
+    const conversationId = Number(activeConversationId) || Date.now();
     const conversation = {
-      id: Date.now(),
+      id: conversationId,
       title: firstUserMessage?.content?.slice(0, 60) || 'Cuộc trò chuyện UTH',
       savedAt: new Date().toISOString(),
       messages,
     };
+    const existingIndex = savedConversations.findIndex((item) => item.id === conversationId);
+
+    if (existingIndex >= 0) {
+      savedConversations.splice(existingIndex, 1);
+    }
+
     localStorage.setItem('uth_saved_conversations', JSON.stringify([conversation, ...savedConversations]));
+    localStorage.setItem('uth_active_conversation_id', String(conversationId));
+    setActiveConversationId(conversationId);
   };
 
   const handleReturnHome = (saveConversation) => {
