@@ -17,6 +17,16 @@ const TrangGioiThieu = () => {
     document.querySelector('.contact-section')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  // Scroll to anchor from route state (e.g. from Header Liên hệ click)
+  React.useEffect(() => {
+    const target = window.history.state?.usr?.scrollTo;
+    if (target) {
+      setTimeout(() => {
+        document.getElementById(target)?.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    }
+  }, []);
+
   const playVideo = () => {
     const video = document.getElementById('campusVideo');
     if (video) {
@@ -124,7 +134,7 @@ const TrangGioiThieu = () => {
                 </div>
               </article>
             </a>
-            <a href="#contact" className="discovery-card-link">
+            <a href="https://uth.edu.vn/" target="_blank" rel="noopener noreferrer" className="discovery-card-link">
               <article className="discovery-card">
                 <img className="discovery-image" src="/icons/discovery-web.png" alt="Website UTH" />
                 <div className="discovery-overlay">
