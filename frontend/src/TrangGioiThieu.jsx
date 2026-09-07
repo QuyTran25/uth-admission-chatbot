@@ -10,16 +10,50 @@ import './CSS/ContactSection.css';
 import './CSS/CTASection.css';
 import './CSS/Footer.css';
 import './CSS/LottieBot.css';
+import './CSS/ScrollReveal.css';
 import LottieBot from './components/LottieBot.jsx';
+
+// Animated Counter Component
+const AnimatedCounter = ({ end, suffix = "", duration = 2000 }) => {
+  const [count, setCount] = React.useState(0);
+  const ref = React.useRef(null);
+  const started = React.useRef(false);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started.current) {
+          started.current = true;
+          let startTime = null;
+          const animate = (currentTime) => {
+            if (!startTime) startTime = currentTime;
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            const easeOutExpo = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+            setCount(Math.floor(easeOutExpo * end));
+            if (progress < 1) requestAnimationFrame(animate);
+            else setCount(end);
+          };
+          requestAnimationFrame(animate);
+        }
+      },
+      { threshold: 0.3 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [end, duration]);
+
+  return <span ref={ref}>{count}{suffix}</span>;
+};
 
 const TrangGioiThieu = () => {
   const navigate = useNavigate();
-  
+  const [scrolled, setScrolled] = React.useState(false);
+  const [scrollProgress, setScrollProgress] = React.useState(0);
+
   const scrollToContact = () => {
     document.querySelector('.contact-section')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // Scroll to anchor from route state (e.g. from Header Liên hệ click)
   React.useEffect(() => {
     const target = window.history.state?.usr?.scrollTo;
     if (target) {
@@ -29,45 +63,77 @@ const TrangGioiThieu = () => {
     }
   }, []);
 
+  React.useEffect(() => {
+    const onScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      setScrolled(scrollTop > 50);
+      setScrollProgress(docHeight > 0 ? (scrollTop / docHeight) * 100 : 0);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('is-revealed');
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+    );
+    const els = document.querySelectorAll('.reveal-init');
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   const playVideo = () => {
     const video = document.getElementById('campusVideo');
-    if (video) {
-      if (video.paused) {
-        video.play().catch(() => {
-          window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
-        });
-      }
+    if (video && video.paused) {
+      video.play().catch(() => {
+        window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+      });
     }
   };
-  
-  const goToChat = () => {
-    navigate('/chat');
-  };
+
+  const goToChat = () => navigate('/chat');
 
   return (
     <div className="page-wrapper">
-      <Header />
+      <div className="scroll-progress-container">
+        <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }} />
+      </div>
+
+      <Header scrolled={scrolled} />
       <LottieBot />
-      {/* Hero Section */}
-      <section className="hero-section" aria-labelledby="hero-title">
-        <div className="container">
+
+      <section className="hero-section aurora-bg-mesh" aria-labelledby="hero-title">
+        <div className="aurora-blob aurora-blob-1" />
+        <div className="aurora-blob aurora-blob-2" />
+        <div className="cyber-grid-overlay" />
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="futuristic-badge reveal-init reveal-up">
+            <span className="futuristic-badge-dot" /> <span>CHATBOT UTH XIN CHÀO! </span>
+          </div>
           <img
             src="/images/hero-illustration.png"
             alt="Minh họa AI Assistant của UTH"
-            className="hero-illustration"
+            className="hero-illustration reveal-init reveal-scale"
           />
           <div className="hero-content">
-            <h1 id="hero-title" className="hero-title">
+            <h1 id="hero-title" className="hero-title reveal-init reveal-up delay-100">
               <span className="title-dark">Trợ lý</span>
               <span className="title-primary">tuyển sinh</span>
             </h1>
 
-            <p className="hero-subtitle">
+            <p className="hero-subtitle reveal-init reveal-up delay-200">
               Trường Đại học Giao thông vận tải TP. Hồ Chí Minh
             </p>
 
-            <div className="hero-actions">
-              <button className="btn btn-primary" onClick={goToChat}>
+            <div className="hero-actions reveal-init reveal-up delay-300">
+              <button className="btn btn-primary btn-shimmer" onClick={goToChat}>
                 Trò chuyện với trợ lý
               </button>
 
@@ -76,16 +142,18 @@ const TrangGioiThieu = () => {
               </p>
             </div>
 
-            <div className="welcome-container">
+            <div className="welcome-container reveal-init reveal-up delay-400">
               <h2 className="welcome-title">WELCOME TO UTH</h2>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Video Introduction Section */}
-      <section id="video-section" className="video-section" aria-labelledby="video-title">
-        <div className="video-container">
+      <div className="section-divider"><div className="section-divider-line" /></div>
+
+      <section id="video-section" className="video-section aurora-bg-mesh" aria-labelledby="video-title">
+        <div className="aurora-blob aurora-blob-2" />
+        <div className="video-container video-theater-glow reveal-init reveal-scale" style={{ position: 'relative', zIndex: 1 }}>
           <iframe
             className="video-poster"
             src="https://www.youtube.com/embed/g-g5l-4iaYU"
@@ -97,63 +165,73 @@ const TrangGioiThieu = () => {
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <section className="statistics-section" aria-labelledby="stats-title">
-        <div className="container">
-          <h2 id="stats-title" className="section-title">Số liệu ấn tượng</h2>
+      <div className="section-divider"><div className="section-divider-line" /></div>
+
+      <section className="statistics-section aurora-bg-mesh" aria-labelledby="stats-title">
+        <div className="aurora-blob aurora-blob-1" />
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <h2 id="stats-title" className="section-title reveal-init reveal-up">
+            Số liệu <span>ấn tượng</span>
+          </h2>
           <div className="stats-grid">
-            <article className="stat-card">
-              <div className="stat-number">35+</div>
+            <article className="stat-card glass-cyber-card reveal-init reveal-up delay-100">
+              <span className="stat-watermark">01</span>
+              <div className="stat-number stat-number-animated"><AnimatedCounter end={35} suffix="+" /></div>
               <div className="stat-title">Năm hình thành & Phát triển</div>
-              <p className="stat-description">Hành trình hơn ba thập kỷ đào tạo nhân lực chất lượng cao cho ngành giao thông vận tải.</p>
+              <p className="stat-description">Hành trình hơn ba thập kỷ đào tạo nhân lực chất lượng cao cho ngành giao thông vận tải</p>
             </article>
-            <article className="stat-card">
-              <div className="stat-number">50+</div>
+            <article className="stat-card glass-cyber-card reveal-init reveal-up delay-200">
+              <span className="stat-watermark">02</span>
+              <div className="stat-number stat-number-animated"><AnimatedCounter end={50} suffix="+" /></div>
               <div className="stat-title">Câu lạc bộ sinh viên</div>
-              <p className="stat-description">Môi trường năng động giúp sinh viên phát triển kỹ năng mềm, nghệ thuật và thể thao.</p>
+              <p className="stat-description">Môi trường năng động giúp sinh viên phát triển kỹ năng mềm, nghệ thuật và thể thao</p>
             </article>
-            <article className="stat-card">
-              <div className="stat-number">6</div>
+            <article className="stat-card glass-cyber-card reveal-init reveal-up delay-300">
+              <span className="stat-watermark">03</span>
+              <div className="stat-number stat-number-animated"><AnimatedCounter end={6} /></div>
               <div className="stat-title">Cơ sở đào tạo chính quy hiện đại</div>
-              <p className="stat-description">Hệ thống cơ sở trải dài từ TP.HCM, Vũng Tàu đến Đồng Nai với trang thiết bị tiên tiến.</p>
+              <p className="stat-description">Hệ thống cơ sở trải dài từ TP.HCM, Vũng Tàu đến Đồng Nai với trang thiết bị tiên tiến</p>
             </article>
           </div>
         </div>
       </section>
 
-      {/* Discovery Grid Section */}
+      <div className="section-divider"><div className="section-divider-line" /></div>
+
       <section className="discovery-section" aria-labelledby="discovery-title">
         <div className="container">
-          <h2 id="discovery-title" className="section-title">Khám phá <span>UTH</span></h2>
+          <h2 id="discovery-title" className="section-title reveal-init reveal-up">
+            Khám phá <span>UTH</span>
+          </h2>
           <div className="discovery-grid">
-            <a href="#contact" className="discovery-card-link">
-              <article className="discovery-card">
+            <a href="#contact" className="discovery-card-link reveal-init reveal-up delay-100">
+              <article className="discovery-card glass-cyber-card">
                 <img className="discovery-image" src="/icons/discovery-contact.png" alt="Thông tin liên hệ UTH" />
                 <div className="discovery-overlay">
                   <div className="discovery-content">
-                    <i className="fa-solid fa-phone discovery-icon"></i>
+                    <i className="fa-solid fa-phone discovery-icon" />
                     <h3 className="discovery-title">Thông tin liên hệ</h3>
                   </div>
                 </div>
               </article>
             </a>
-            <a href="https://uth.edu.vn/" target="_blank" rel="noopener noreferrer" className="discovery-card-link">
-              <article className="discovery-card">
+            <a href="https://uth.edu.vn/" target="_blank" rel="noopener noreferrer" className="discovery-card-link reveal-init reveal-up delay-200">
+              <article className="discovery-card glass-cyber-card">
                 <img className="discovery-image" src="/icons/discovery-web.png" alt="Website UTH" />
                 <div className="discovery-overlay">
                   <div className="discovery-content">
-                    <i className="fa-solid fa-globe discovery-icon"></i>
+                    <i className="fa-solid fa-globe discovery-icon" />
                     <h3 className="discovery-title">Website UTH</h3>
                   </div>
                 </div>
               </article>
             </a>
-            <a href="#video-section" className="discovery-card-link">
-              <article className="discovery-card">
+            <a href="#video-section" className="discovery-card-link reveal-init reveal-up delay-300">
+              <article className="discovery-card glass-cyber-card">
                 <img className="discovery-image" src="/icons/discovery-video.png" alt="Video giới thiệu UTH" />
                 <div className="discovery-overlay">
                   <div className="discovery-content">
-                    <i className="fa-solid fa-video discovery-icon"></i>
+                    <i className="fa-solid fa-video discovery-icon" />
                     <h3 className="discovery-title">Video giới thiệu</h3>
                   </div>
                 </div>
@@ -163,7 +241,6 @@ const TrangGioiThieu = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="contact-section" aria-labelledby="contact-title">
         <div className="container">
           <h2 id="contact-title" className="section-title">Liên hệ <span>UTH</span></h2>
@@ -184,7 +261,7 @@ const TrangGioiThieu = () => {
               <div className="contact-info-grid">
                 <div className="contact-info-item">
                   <div className="contact-icon-wrapper">
-                    <i className="fa-solid fa-location-dot"></i>
+                    <i className="fa-solid fa-location-dot" />
                   </div>
                   <div className="contact-info-content">
                     <span className="contact-info-label">Cơ sở đào tạo</span>
@@ -196,7 +273,6 @@ const TrangGioiThieu = () => {
                       <div className="contact-info-value"><span className="contact-info-key">Cơ sở 4:</span><span className="contact-info-text">Số 17A đường 3 Tháng 2, phường 11, TP. Vũng Tàu, tỉnh Bà Rịa – Vũng Tàu</span></div>
                       <div className="contact-info-value"><span className="contact-info-key">Cơ sở 5:</span><span className="contact-info-text">Xã Bình An, tỉnh Đồng Nai</span></div>
                       <div className="contact-info-value"><span className="contact-info-key">Cơ sở 6 (mới 2026):</span><span className="contact-info-text">Số 33 Đào Trí, phường Phú Thuận, TP.HCM</span></div>
-
                       <div style={{ fontWeight: '700', marginTop: '16px', marginBottom: '8px' }}>HỆ ĐÀO TẠO THƯỜNG XUYÊN</div>
                       <div className="contact-info-value"><span className="contact-info-key">VP Bình Tân:</span><span className="contact-info-text">Số 234–236 Đường số 1, phường An Lạc, Q. Bình Tân, TP.HCM</span></div>
                       <div className="contact-info-value"><span className="contact-info-key">VP Bình Thạnh:</span><span className="contact-info-text">Số 37/5 Ngô Tất Tố, phường Thạnh Mỹ Tây, TP.HCM</span></div>
@@ -206,23 +282,19 @@ const TrangGioiThieu = () => {
                 </div>
                 <div className="contact-info-item">
                   <div className="contact-icon-wrapper">
-                    <i className="fa-regular fa-envelope"></i>
+                    <i className="fa-regular fa-envelope" />
                   </div>
                   <div className="contact-info-content">
                     <span className="contact-info-label">Tuyển sinh</span>
                     <div className="contact-info-list">
-                      <div className="contact-info-value">
-                        <span className="contact-info-text">Hotline: 028 3899 6199</span>
-                      </div>
-                      <div className="contact-info-value">
-                        <span className="contact-info-text">Email: tuyensinh@uth.edu.vn</span>
-                      </div>
+                      <div className="contact-info-value"><span className="contact-info-text">Hotline: 028 3899 6199</span></div>
+                      <div className="contact-info-value"><span className="contact-info-text">Email: tuyensinh@uth.edu.vn</span></div>
                     </div>
                   </div>
                 </div>
                 <div className="contact-info-item">
                   <div className="contact-icon-wrapper">
-                    <i className="fa-solid fa-globe"></i>
+                    <i className="fa-solid fa-globe" />
                   </div>
                   <div className="contact-info-content">
                     <span className="contact-info-label">Website</span>
@@ -242,7 +314,7 @@ const TrangGioiThieu = () => {
           <div className="cta-content">
             <div className="cta-left">
               <button className="cta-icon-box" aria-label="Trò chuyện với trợ lý">
-                <i className="fa-regular fa-comment"></i>
+                <i className="fa-regular fa-comment" />
               </button>
               <div className="cta-text">
                 <h2 id="cta-title" className="cta-title">
@@ -256,7 +328,6 @@ const TrangGioiThieu = () => {
         </div>
       </section>
 
-      {/* Footer Section */}
       <footer className="footer">
         <div className="footer-container">
           <div className="footer-main">
@@ -299,11 +370,11 @@ const TrangGioiThieu = () => {
               <h4 className="footer-title">Mạng xã hội</h4>
               <div className="social-links">
                 <a href="https://www.facebook.com/TruongDHGiaothongvantaiTPHCM" target="_blank" rel="noopener noreferrer" className="social-link facebook" aria-label="Fanpage UTH">
-                  <i className="fa-brands fa-square-facebook"></i>
+                  <i className="fa-brands fa-square-facebook" />
                   <span>Fanpage</span>
                 </a>
                 <a href="https://www.youtube.com/TruongDHGiaothongvantaiTPHCM" target="_blank" rel="noopener noreferrer" className="social-link youtube" aria-label="Youtube UTH">
-                  <i className="fa-brands fa-square-youtube"></i>
+                  <i className="fa-brands fa-square-youtube" />
                   <span>Youtube</span>
                 </a>
               </div>

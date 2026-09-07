@@ -1,0 +1,255 @@
+/* =========================================================
+   ScrollReveal.css — Hệ thống chuyển động cuộn & hiệu ứng trực quan
+   ========================================================= */
+
+/* --- 1. Top Scroll Progress Bar --- */
+.scroll-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #14b8a6 0%, #06b6d4 50%, #38bdf8 100%);
+  width: 0%;
+  box-shadow: 0 0 10px rgba(20, 184, 166, 0.8), 0 0 20px rgba(6, 182, 212, 0.4);
+  transition: width 0.08s ease-out;
+}
+
+/* --- 2. Scroll Reveal Utilities --- */
+.reveal-init {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-up {
+  transform: translateY(45px);
+}
+
+.reveal-down {
+  transform: translateY(-40px);
+}
+
+.reveal-left {
+  transform: translateX(-50px);
+}
+
+.reveal-right {
+  transform: translateX(50px);
+}
+
+.reveal-scale {
+  transform: scale(0.92);
+}
+
+.is-revealed {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) !important;
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.32s; }
+.delay-400 { transition-delay: 0.44s; }
+.delay-500 { transition-delay: 0.56s; }
+
+/* --- 3. Aurora & Tech Background Accents --- */
+.aurora-bg-mesh {
+  position: relative;
+  overflow: hidden;
+}
+
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.45;
+  animation: floatBlob 12s ease-in-out infinite alternate;
+}
+
+.aurora-blob-1 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.35) 0%, rgba(13, 148, 136, 0.05) 70%);
+  top: -100px;
+  left: 10%;
+}
+
+.aurora-blob-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, rgba(30, 58, 138, 0.05) 70%);
+  bottom: 0;
+  right: 5%;
+  animation-duration: 16s;
+  animation-delay: -4s;
+}
+
+@keyframes floatBlob {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -25px) scale(1.08); }
+  100% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+/* Cyber Tech Grid Layer */
+.cyber-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(20, 184, 166, 0.08) 1px, transparent 0);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- 4. Glow Badge & Futuristic Text Gradients --- */
+.futuristic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #0d9488;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.15);
+}
+
+.futuristic-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #14b8a6;
+  box-shadow: 0 0 8px #14b8a6;
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+/* --- 5. Glassmorphism Card Upgrades --- */
+.glass-cyber-card {
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(20, 184, 166, 0.22) !important;
+  box-shadow: 0 20px 40px -15px rgba(6, 26, 45, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.glass-cyber-card:hover {
+  transform: translateY(-8px) scale(1.015) !important;
+  border-color: rgba(20, 184, 166, 0.5) !important;
+  box-shadow: 0 25px 50px -12px rgba(20, 184, 166, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Background digit watermark in stats */
+.stat-watermark {
+  position: absolute;
+  top: -15px;
+  right: 15px;
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(20, 184, 166, 0.06);
+  pointer-events: none;
+  font-family: monospace, sans-serif;
+  user-select: none;
+}
+
+/* Gradient animated text for numbers */
+.stat-number-animated {
+  background: linear-gradient(135deg, #0d9488 0%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+/* --- 6. Video Frame Cinematic Theater --- */
+.video-theater-glow {
+  position: relative;
+}
+
+.video-theater-glow::before {
+  content: '';
+  position: absolute;
+  inset: -15px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.35) 0%, rgba(6, 182, 212, 0.1) 50%, transparent 75%);
+  border-radius: 40px;
+  z-index: -1;
+  filter: blur(25px);
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* --- 7. Shimmer Sweep on CTA Button --- */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  transform: rotate(25deg);
+  animation: shimmerSweep 3.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmerSweep {
+  0% { left: -60%; }
+  35%, 100% { left: 140%; }
+}
+
+/* --- 8. Section Divider Wave --- */
+.section-divider {
+  width: 100%;
+  height: 48px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  pointer-events: none;
+}
+
+.section-divider-line {
+  width: 140px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #14b8a6, transparent);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(20, 184, 166, 0.5);
+}

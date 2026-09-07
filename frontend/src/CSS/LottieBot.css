@@ -1,11 +1,63 @@
-﻿.lottie-bot-fixed {
+/* Container for both speech bubble and bot */
+.lottie-bot-container {
   position: fixed;
-  right: 16px;
-  bottom: 16px;
-  z-index: 90;
-  width: 210px;
-  height: 210px;
-  pointer-events: none;
+  right: 32px;
+  bottom: 24px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.lottie-bot-container:hover {
+  transform: scale(1.06) translateY(-8px);
+}
+
+.lottie-bot-container:hover .lottie-speech-bubble {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(13, 148, 136, 0.4);
+}
+
+/* Speech Bubble styling */
+.lottie-speech-bubble {
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 0 8px 16px rgba(13, 148, 136, 0.3);
+  margin-bottom: -25px; /* Pull bot closer */
+  position: relative;
+  z-index: 2;
+  animation: floatBubble 3s ease-in-out infinite, pulseBubble 2s infinite;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Triangle pointer for speech bubble */
+.lottie-speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px 8px 0;
+  border-style: solid;
+  border-color: #0d9488 transparent transparent transparent;
+  display: block;
+  width: 0;
+}
+
+/* Bot dimensions and float animation */
+.lottie-bot-fixed {
+  width: 280px;
+  height: 280px;
+  pointer-events: none; /* Let clicks pass to container */
+  animation: floatBot 4s ease-in-out infinite;
+  filter: drop-shadow(0 20px 25px rgba(20, 184, 166, 0.25));
 }
 
 .lottie-bot-fixed svg {
@@ -13,12 +65,38 @@
   height: 100% !important;
 }
 
-@media (max-width: 640px) {
+/* Keyframes */
+@keyframes floatBot {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes floatBubble {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulseBubble {
+  0% { box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.6); }
+  70% { box-shadow: 0 0 0 12px rgba(20, 184, 166, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(20, 184, 166, 0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .lottie-bot-container {
+    right: 12px;
+    bottom: 16px;
+  }
   .lottie-bot-fixed {
-    right: 6px;
-    bottom: 10px;
-    width: 130px;
-    height: 130px;
-    opacity: 0.92;
+    width: 180px;
+    height: 180px;
+  }
+  .lottie-speech-bubble {
+    font-size: 13px;
+    padding: 8px 16px;
+    margin-bottom: -15px;
   }
 }
