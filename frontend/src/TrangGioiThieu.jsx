@@ -9,6 +9,8 @@ import './CSS/DiscoverySection.css';
 import './CSS/ContactSection.css';
 import './CSS/CTASection.css';
 import './CSS/Footer.css';
+import './CSS/LottieBot.css';
+import LottieBot from './components/LottieBot.jsx';
 
 const TrangGioiThieu = () => {
   const navigate = useNavigate();
@@ -45,6 +47,7 @@ const TrangGioiThieu = () => {
   return (
     <div className="page-wrapper">
       <Header />
+      <LottieBot />
       {/* Hero Section */}
       <section className="hero-section" aria-labelledby="hero-title">
         <div className="container">

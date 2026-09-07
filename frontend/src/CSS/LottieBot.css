@@ -1,0 +1,24 @@
+﻿.lottie-bot-fixed {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 90;
+  width: 210px;
+  height: 210px;
+  pointer-events: none;
+}
+
+.lottie-bot-fixed svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 640px) {
+  .lottie-bot-fixed {
+    right: 6px;
+    bottom: 10px;
+    width: 130px;
+    height: 130px;
+    opacity: 0.92;
+  }
+}
