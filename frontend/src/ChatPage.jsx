@@ -26,19 +26,21 @@ const ChatPage = () => {
   }, []);
 
   const openConversation = (conversation) => {
-    localStorage.setItem('uth_chat_history', JSON.stringify(conversation.messages));
-    localStorage.setItem('uth_active_conversation_id', String(conversation.id));
-    navigate('/chat/detail');
+    navigate(`/chat/detail?conversationId=${conversation.id}`);
   };
 
   const deleteConversation = (event, id) => {
     event.stopPropagation();
-    const nextConversations = savedConversations.filter((conversation) => conversation.id !== id);
+    const nextConversations = savedConversations.filter(
+      (conversation) => String(conversation.id) !== String(id)
+    );
     localStorage.setItem('uth_saved_conversations', JSON.stringify(nextConversations));
-    if (String(id) === localStorage.getItem('uth_active_conversation_id')) {
-      localStorage.removeItem('uth_active_conversation_id');
-    }
     setSavedConversations(nextConversations);
+
+    if (String(localStorage.getItem('uth_viewing_conversation_id')) === String(id)) {
+      localStorage.removeItem('uth_viewing_conversation_id');
+      localStorage.removeItem('uth_chat_history');
+    }
   };
 
   return (

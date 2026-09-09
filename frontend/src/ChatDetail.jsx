@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
 import Header from './Header';
 import axios from 'axios';
 import BotMessage from './components/BotMessage';
@@ -10,11 +10,13 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000
 const ChatDetail = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [searchParams] = useSearchParams();
   const initialQueryHandled = useRef(false);
 
   // Chat state
   const [messages, setMessages] = useState([]);
-  const [activeConversationId, setActiveConversationId] = useState(() => localStorage.getItem('uth_active_conversation_id'));
+  const [viewingConversationId, setViewingConversationId] = useState(null);
+  const [isInitialized, setIsInitialized] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [showRatingModal, setShowRatingModal] = useState(false);
@@ -25,41 +27,46 @@ const ChatDetail = () => {
   const [inputValue, setInputValue] = useState('');
   const [showSaveDialog, setShowSaveDialog] = useState(false);
 
-  // B3: Load active chat and its saved-conversation identity on mount
+  // B3.1: Initialization effect — URL (searchParams conversationId) là nguồn sự thật
   useEffect(() => {
-    const savedChat = localStorage.getItem('uth_chat_history');
-    const activeId = localStorage.getItem('uth_active_conversation_id');
-    setActiveConversationId(activeId);
+    const conversationId = searchParams.get('conversationId');
 
-    if (savedChat) {
-      try {
-        setMessages(JSON.parse(savedChat));
-      } catch (e) {
-        console.error('Error loading chat history:', e);
-        localStorage.removeItem('uth_chat_history');
-        localStorage.removeItem('uth_active_conversation_id');
-        setActiveConversationId(null);
+    if (conversationId) {
+      // Trường hợp B: xem lại một cuộc trò chuyện từ trang Lịch sử
+      const savedConversations = JSON.parse(localStorage.getItem('uth_saved_conversations') || '[]');
+      const conversation = savedConversations.find((item) => String(item.id) === String(conversationId));
+
+      if (conversation) {
+        setMessages(conversation.messages);
+        setViewingConversationId(conversation.id);
+        localStorage.setItem('uth_chat_history', JSON.stringify(conversation.messages));
+        localStorage.setItem('uth_viewing_conversation_id', String(conversation.id));
+      }
+    } else {
+      // Trường hợp A: chat mới hoàn toàn — KHÔNG nạp lại uth_chat_history cũ
+      setMessages([]);
+      setViewingConversationId(null);
+      localStorage.removeItem('uth_chat_history');
+      localStorage.removeItem('uth_viewing_conversation_id');
+
+      // Auto-send query received from homepage
+      const q = location.state?.initialQuery || sessionStorage.getItem('uth_initial_query');
+      if (!initialQueryHandled.current && q) {
+        initialQueryHandled.current = true;
+        sessionStorage.removeItem('uth_initial_query');
+        window.history.replaceState({}, '');
+        sendMessage(q);
       }
     }
-  }, []);
 
-  // Auto-send query received from homepage. sessionStorage protects against lost router state.
-  useEffect(() => {
-    const q = location.state?.initialQuery || sessionStorage.getItem('uth_initial_query');
-    if (!initialQueryHandled.current && q) {
-      initialQueryHandled.current = true;
-      sessionStorage.removeItem('uth_initial_query');
-      window.history.replaceState({}, '');
-      sendMessage(q);
-    }
-  }, [location.state]);
+    setIsInitialized(true);
+  }, [searchParams.get('conversationId')]);
 
-  // B3: Save chat history to localStorage whenever messages change
+  // B3.2: Auto-sync effect — chỉ chạy khi đã khởi tạo xong
   useEffect(() => {
-    if (messages.length > 0) {
-      localStorage.setItem('uth_chat_history', JSON.stringify(messages));
-    }
-  }, [messages]);
+    if (!isInitialized) return;
+    localStorage.setItem('uth_chat_history', JSON.stringify(messages));
+  }, [messages, isInitialized]);
 
   // B1: Send message to API
   const sendMessage = async (messageText) => {
@@ -131,14 +138,16 @@ const ChatDetail = () => {
     sendMessage(chipText);
   };
 
-  // Handle new chat: clear active identity so the next saved chat becomes new.
+  // B3.3: Handle new chat: reset storage, reset state và điều hướng về /chat/detail (không kèm query param)
   const handleNewChat = () => {
-    if (window.confirm('Bạn có chắc chắn muốn bắt đầu cuộc trò chuyện mới? Toàn bộ lịch sử chat sẽ bị xóa.')) {
-      setMessages([]);
-      setActiveConversationId(null);
-      localStorage.removeItem('uth_chat_history');
-      localStorage.removeItem('uth_active_conversation_id');
+    if (messages.length > 0 && !window.confirm('Bắt đầu cuộc trò chuyện mới?')) {
+      return;
     }
+    localStorage.removeItem('uth_chat_history');
+    localStorage.removeItem('uth_viewing_conversation_id');
+    setMessages([]);
+    setViewingConversationId(null);
+    navigate('/chat/detail');
   };
 
   // Handle rating submission
@@ -160,31 +169,50 @@ const ChatDetail = () => {
     return () => window.removeEventListener('beforeunload', warnBeforeUnload);
   }, [messages.length]);
 
+  // B3.4: Lưu cuộc trò chuyện và reset draft
   const saveCurrentConversation = () => {
     if (!messages.length) return;
 
     const savedConversations = JSON.parse(localStorage.getItem('uth_saved_conversations') || '[]');
+    const viewingId = localStorage.getItem('uth_viewing_conversation_id');
+    const conversationId = viewingId || Date.now();
     const firstUserMessage = messages.find((message) => message.role === 'user');
-    const conversationId = Number(activeConversationId) || Date.now();
-    const conversation = {
+    const title = firstUserMessage?.content?.slice(0, 60) || 'Cuộc trò chuyện UTH';
+
+    const record = {
       id: conversationId,
-      title: firstUserMessage?.content?.slice(0, 60) || 'Cuộc trò chuyện UTH',
+      title,
       savedAt: new Date().toISOString(),
       messages,
     };
-    const existingIndex = savedConversations.findIndex((item) => item.id === conversationId);
 
-    if (existingIndex >= 0) {
-      savedConversations.splice(existingIndex, 1);
-    }
+    const existingIndex = savedConversations.findIndex((c) => String(c.id) === String(conversationId));
+    const updated = existingIndex >= 0
+      ? savedConversations.map((c, i) => (i === existingIndex ? record : c))
+      : [record, ...savedConversations];
 
-    localStorage.setItem('uth_saved_conversations', JSON.stringify([conversation, ...savedConversations]));
-    localStorage.setItem('uth_active_conversation_id', String(conversationId));
-    setActiveConversationId(conversationId);
+    localStorage.setItem('uth_saved_conversations', JSON.stringify(updated));
+
+    // Reset draft — không để lần mở chat tiếp theo tự động tiếp tục phiên này
+    localStorage.removeItem('uth_chat_history');
+    localStorage.removeItem('uth_viewing_conversation_id');
+    setMessages([]);
+    setViewingConversationId(null);
+  };
+
+  const discardCurrentConversation = () => {
+    localStorage.removeItem('uth_chat_history');
+    localStorage.removeItem('uth_viewing_conversation_id');
+    setMessages([]);
+    setViewingConversationId(null);
   };
 
   const handleReturnHome = (saveConversation) => {
-    if (saveConversation) saveCurrentConversation();
+    if (saveConversation) {
+      saveCurrentConversation();
+    } else {
+      discardCurrentConversation();
+    }
     setShowSaveDialog(false);
     navigate('/');
   };

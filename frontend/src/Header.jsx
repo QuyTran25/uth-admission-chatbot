@@ -26,23 +26,24 @@ const Header = () => {
       const messages = JSON.parse(raw);
       if (!messages.length) return;
       const existing = JSON.parse(localStorage.getItem('uth_saved_conversations') || '[]');
-      const activeId = localStorage.getItem('uth_active_conversation_id');
-      const conversationId = Number(activeId) || Date.now();
+      const viewingId = localStorage.getItem('uth_viewing_conversation_id');
+      const conversationId = viewingId || Date.now();
       const firstUser = messages.find((m) => m.role === 'user');
       const title = firstUser ? firstUser.content.slice(0, 60) : 'Cuộc trò chuyện UTH';
-      const saved = {
+      const record = {
         id: conversationId,
         title,
         savedAt: new Date().toISOString(),
         messages,
       };
-      const existingIndex = existing.findIndex((item) => item.id === conversationId);
-      if (existingIndex >= 0) {
-        existing.splice(existingIndex, 1);
-      }
-      existing.unshift(saved);
-      localStorage.setItem('uth_saved_conversations', JSON.stringify(existing));
-      localStorage.setItem('uth_active_conversation_id', String(conversationId));
+      const existingIndex = existing.findIndex((item) => String(item.id) === String(conversationId));
+      const updated = existingIndex >= 0
+        ? existing.map((c, i) => (i === existingIndex ? record : c))
+        : [record, ...existing];
+
+      localStorage.setItem('uth_saved_conversations', JSON.stringify(updated));
+      localStorage.removeItem('uth_chat_history');
+      localStorage.removeItem('uth_viewing_conversation_id');
     } catch (e) {
       console.error('Lưu lịch sử thất bại:', e);
     }
