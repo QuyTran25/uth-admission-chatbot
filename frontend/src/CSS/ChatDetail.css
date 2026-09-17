@@ -646,6 +646,18 @@
   color: #92400e;
 }
 
+.behavior-banner.info {
+  background: #f0fdfa;
+  border: 1px solid #99f6e4;
+  color: #0f766e;
+}
+
+.behavior-banner.error {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  color: #9a3412;
+}
+
 .behavior-banner.refused {
   background: #fff1f2;
   border: 1px solid #fecdd3;
@@ -657,6 +669,38 @@
   border: 1px solid #bfdbfe;
   color: #1d4ed8;
   flex-wrap: wrap;
+}
+
+.portal-reference-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 8px 14px;
+  background: rgba(240, 253, 250, 0.85);
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.portal-ref-icon {
+  font-size: 15px;
+}
+
+.portal-ref-text {
+  color: #334155;
+  font-weight: 500;
+}
+
+.portal-ref-link {
+  color: var(--primary-dark);
+  font-weight: 700;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.portal-ref-link:hover {
+  color: var(--primary-color);
 }
 
 .behavior-icon {

@@ -101,6 +101,7 @@ const ChatDetail = () => {
         oos_categories: response.data.oos_categories,
         latency_ms: response.data.latency_ms,
         year_used: response.data.year_used,
+        fallback_warning_text: response.data.fallback_warning_text,
         timestamp: new Date().toISOString()
       };
 
@@ -111,28 +112,35 @@ const ChatDetail = () => {
       const detail = err.response?.data?.detail;
       let message;
       let reason;
+      let behavior = 'refused';
 
       if (!err.response) {
         message = 'Chưa kết nối được máy chủ tư vấn. Hệ thống đang khởi động hoặc backend chưa chạy. Vui lòng chờ ít phút rồi thử lại.';
         reason = 'backend_unreachable';
+        behavior = 'error';
       } else if (status === 429) {
-        message = 'Hạn mức Gemini API đang hết hoặc bị giới hạn. Vui lòng chờ ít phút theo thông báo quota, kiểm tra đúng Google Cloud project của API key, hoặc bật billing.';
+        message = 'Dịch vụ AI đang tạm thời vượt quá giới hạn lượt dùng hoặc hạn mức. Vui lòng chờ ít phút rồi thử lại.';
         reason = 'gemini_quota_exceeded';
+        behavior = 'error';
       } else if (status === 503) {
         message = 'Dịch vụ AI đang quá tải tạm thời. Vui lòng thử lại sau ít phút.';
         reason = 'gemini_unavailable';
+        behavior = 'error';
       } else {
         message = detail || 'Dịch vụ tư vấn gặp lỗi tạm thời. Vui lòng thử lại sau.';
         reason = 'system_error';
       }
 
       console.error('Chat request failed', { status, apiBaseUrl: API_BASE_URL });
-      setError(message);
+      // Không hiện toast đỏ khó chịu đối với lỗi quá tải AI 429/503
+      if (status !== 429 && status !== 503) {
+        setError(message);
+      }
       setMessages(prev => [...prev, {
         id: Date.now() + 2,
         role: 'bot',
         content: message,
-        behavior: 'refused',
+        behavior: behavior,
         citations: [],
         citation_precision: 0.0,
         refused_reason: reason,
@@ -290,6 +298,7 @@ const ChatDetail = () => {
                         refused_reason={message.refused_reason}
                         oos_categories={message.oos_categories}
                         year_used={message.year_used}
+                        fallback_warning_text={message.fallback_warning_text}
                       />
                     </div>
                   )}

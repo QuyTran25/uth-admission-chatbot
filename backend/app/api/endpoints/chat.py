@@ -24,7 +24,11 @@ from typing import Optional
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
-from app.services.year_filter import analyze as year_filter_analyze
+from app.services.year_filter import (
+    analyze as year_filter_analyze,
+    OUT_OF_SCOPE_MESSAGE,
+    YEAR_NOT_SUPPORTED_MESSAGE,
+)
 from app.services.oos_filter import check_oos
 from app.services.retrieval_service import retrieve_with_dynamic_routing
 from app.services.generator import generate_answer
@@ -62,6 +66,7 @@ class ChatResponse(BaseModel):
     oos_categories: list[str] = []         # Nhóm OOS bị vi phạm (nếu có)
     latency_ms: float
     year_used: Optional[int] = None        # Năm đã dùng để lọc
+    fallback_warning_text: Optional[str] = None  # Text cảnh báo năm nếu is_fallback
 
 
 # ---------------------------------------------------------------------------
@@ -87,13 +92,10 @@ async def chat(request: ChatRequest) -> ChatResponse:
         latency = (time.perf_counter() - t_start) * 1000
         return ChatResponse(
             behavior="refused",
-            answer=(
-                "Câu hỏi này liên quan đến năm không có trong cơ sở dữ liệu tuyển sinh của UTH. "
-                "Hiện tại mình chỉ có thể hỗ trợ thông tin từ năm 2022 đến 2026."
-            ),
+            answer=yr.message or YEAR_NOT_SUPPORTED_MESSAGE,
             citations=[],
             citation_precision=1.0,
-            refused_reason=f"year_out_of_range: {yr.filter_year}",
+            refused_reason="year_not_supported",
             latency_ms=round(latency, 2),
             year_used=yr.filter_year,
         )
@@ -114,14 +116,10 @@ async def chat(request: ChatRequest) -> ChatResponse:
         latency = (time.perf_counter() - t_start) * 1000
         return ChatResponse(
             behavior="refused",
-            answer=(
-                "Câu hỏi này nằm ngoài phạm vi tư vấn tuyển sinh UTH. "
-                "Mình chỉ có thể hỗ trợ thông tin về tuyển sinh, chương trình đào tạo, "
-                "học phí, và các thủ tục nhập học của trường."
-            ),
+            answer=OUT_OF_SCOPE_MESSAGE,
             citations=[],
             citation_precision=1.0,
-            refused_reason=f"oos_intent: {', '.join(oos_categories)}",
+            refused_reason="out_of_scope",
             oos_categories=oos_categories,
             latency_ms=round(latency, 2),
             year_used=yr.filter_year,
@@ -231,4 +229,5 @@ async def chat(request: ChatRequest) -> ChatResponse:
         citation_precision=attr_result.citation_precision,
         latency_ms=round(latency, 2),
         year_used=yr.filter_year,
+        fallback_warning_text=yr.warning if is_fallback else None,
     )
