@@ -1,6 +1,0 @@
-INFO:     127.0.0.1:41835 - "GET /api/v1/health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:43584 - "OPTIONS /api/v1/chat HTTP/1.1" 200 OK
-INFO:     127.0.0.1:43584 - "POST /api/v1/chat HTTP/1.1" 200 OK
-INFO:     127.0.0.1:17739 - "POST /api/v1/chat HTTP/1.1" 200 OK
-INFO:     127.0.0.1:64287 - "OPTIONS /api/v1/chat HTTP/1.1" 200 OK
-INFO:     127.0.0.1:64287 - "POST /api/v1/chat HTTP/1.1" 200 OK

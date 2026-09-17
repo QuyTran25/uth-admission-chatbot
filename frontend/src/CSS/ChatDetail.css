@@ -677,6 +677,32 @@
   white-space: normal;
 }
 
+/* ── Bot Prose: Markdown typography ── */
+.bot-prose p { margin: 0 0 12px; line-height: 1.7; }
+.bot-prose p:last-child { margin-bottom: 0; }
+.bot-prose strong { font-weight: 700; color: var(--text-dark); }
+.bot-prose ul, .bot-prose ol { margin: 8px 0 12px 20px; padding: 0; }
+.bot-prose li { margin-bottom: 6px; line-height: 1.6; }
+.bot-prose li::marker { color: var(--primary-dark); }
+.bot-prose h1, .bot-prose h2, .bot-prose h3, .bot-prose h4 {
+  margin: 16px 0 8px; font-weight: 700; color: var(--text-dark);
+}
+.bot-prose h3 { font-size: 15px; }
+.bot-prose h4 { font-size: 14px; }
+.bot-prose table {
+  width: 100%; border-collapse: collapse; margin: 12px 0;
+  font-size: 14px;
+}
+.bot-prose th, .bot-prose td {
+  padding: 8px 12px; border: 1px solid #e2e8f0; text-align: left;
+}
+.bot-prose th {
+  background: #f8fafc; font-weight: 700; color: var(--text-dark);
+}
+.bot-prose code {
+  background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 13px;
+}
+
 .bot-meta {
   margin-top: 14px;
   font-size: 12px;

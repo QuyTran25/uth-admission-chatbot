@@ -38,6 +38,7 @@ class Settings(BaseSettings):
     # k cho RRF: final_score = 1 / (k + rank)
     RRF_K: int = 60
 
+
     GEMINI_API_KEY: str = "your_gemini_api_key_here"
     GEMINI_MODEL: str = "models/gemini-3.6-flash"
     GEMINI_FALLBACK_MODELS: str = "models/gemini-3.5-flash,models/gemini-3.5-flash-lite"
@@ -48,7 +49,15 @@ class Settings(BaseSettings):
 
     @property
     def index_dir_path(self) -> Path:
-        return Path(self.INDEX_DIR)
+        p = Path(self.INDEX_DIR)
+        if p.is_absolute() and p.exists():
+            return p
+        root_path = _PROJECT_ROOT / self.INDEX_DIR
+        if root_path.exists():
+            return root_path
+        if p.exists():
+            return p
+        return root_path
 
 
 settings = Settings()

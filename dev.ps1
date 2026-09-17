@@ -60,7 +60,7 @@ for ($attempt = 1; $attempt -le 45; $attempt++) {
     throw "Backend exited during startup. Last log lines:`n$log"
   }
   try {
-    $health = Invoke-WebRequest -Uri $healthUrl -Method Get -TimeoutSec 2 -ErrorAction Stop
+    $health = Invoke-WebRequest -Uri $healthUrl -Method Get -TimeoutSec 2 -UseBasicParsing -ErrorAction Stop
     if ($health.StatusCode -eq 200) { $ready = $true; break }
   } catch { }
   Start-Sleep -Seconds 2

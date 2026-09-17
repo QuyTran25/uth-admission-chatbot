@@ -135,10 +135,15 @@ PATTERNS = {
         r'\bdiem san\b.*(nam nay|2026|bao nhieu)',
         r'\blay diem san\b',
     ],
-    'nam_tuong_lai': [
-        r'\bnam\s*202[7-9]\b',
-        r'\bnam\s*20[3-9]\d\b',
-    ],
+}
+
+# Danh sách document_type thuộc phạm vi tuyển sinh — khi year_filter đã xác nhận
+# proceed/fallback, OOS filter không nên chặn nhóm du_doan_diem_chuan / du_doan_diem_san
+_IN_SCOPE_DOC_TYPES = {
+    'cutoff_score', 'admission_method', 'admission_condition', 'quota',
+    'major', 'tuition_fee', 'scholarship', 'training_program',
+    'application_profile', 'timeline', 'enrollment_regulation',
+    'contact_info', 'general_info',
 }
 
 def normalize(s: str) -> str:
@@ -149,19 +154,40 @@ def normalize(s: str) -> str:
     s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
     return s
 
-def check_oos(query: str) -> tuple[bool, list[str]]:
+def check_oos(
+    query: str,
+    year_filter_status: str | None = None,
+    year_filter_doc_type: str | None = None,
+) -> tuple[bool, list[str]]:
     """
     Kiểm tra câu hỏi có nằm ngoài phạm vi tuyển sinh (OOS) hay không.
+
+    Args:
+        query:                Câu hỏi gốc của người dùng
+        year_filter_status:   status từ year_filter ("proceed" / "refused" / "clarification_needed")
+        year_filter_doc_type: document_type từ year_filter ("cutoff_score", "tuition_fee", ...)
+
     Trả về: (is_oos, matched_categories)
     """
     q = normalize(query)
-    
+
+    # --- Context-aware skip ---
+    # Nếu year_filter đã xác nhận proceed + doc_type thuộc phạm vi tuyển sinh
+    # → bỏ qua du_doan_diem_chuan và du_doan_diem_san (tránh chặn nhầm câu hỏi thuần dữ liệu)
+    skip_categories = set()
+    if year_filter_status == 'proceed' and year_filter_doc_type in _IN_SCOPE_DOC_TYPES:
+        skip_categories.add('du_doan_diem_chuan')
+        skip_categories.add('du_doan_diem_san')
+
     # --- XỬ LÝ NGOẠI LỆ (Exceptions) ---
     # 1. Nếu câu hỏi liên quan đến Thạc sĩ / Tiến sĩ / Sau đại học -> không chặn "tỷ lệ chọi" hay "số tài khoản đóng lệ phí"
     is_postgrad = any(x in q for x in ["thac si", "tien si", "sau dai hoc"])
-    
+
     matched_categories = []
     for category, patterns in PATTERNS.items():
+        # Context-aware skip
+        if category in skip_categories:
+            continue
         # Bỏ qua check tỷ lệ chọi cho thạc sĩ/tiến sĩ
         if category == 'ty_le_choi' and is_postgrad:
             continue

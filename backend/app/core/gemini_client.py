@@ -27,6 +27,8 @@ class GeminiQuotaExceeded(RuntimeError):
 
 _TRANSIENT_MARKERS = ("503", "500", "502", "504", "UNAVAILABLE", "INTERNAL")
 _QUOTA_MARKERS = ("429", "RESOURCE_EXHAUSTED", "QUOTA EXCEEDED", "RATE LIMIT")
+_MODEL_UNAVAILABLE_MARKERS = ("404", "NOT_FOUND", "NOT FOUND", "NO LONGER AVAILABLE", "NOT AVAILABLE", "UNSUPPORTED")
+
 
 
 class GeminiClient:
@@ -61,6 +63,8 @@ class GeminiClient:
             return "quota"
         if any(marker in message for marker in _TRANSIENT_MARKERS):
             return "transient"
+        if any(marker in message for marker in _MODEL_UNAVAILABLE_MARKERS):
+            return "model_unavailable"
         return None
 
     @staticmethod
@@ -111,7 +115,7 @@ class GeminiClient:
                         time.sleep(delay)
                         continue
 
-                    if category in {"quota", "transient"}:
+                    if category in {"quota", "transient", "model_unavailable"}:
                         logger.warning(
                             "Gemini model %s unavailable (%s); trying next configured model",
                             model,

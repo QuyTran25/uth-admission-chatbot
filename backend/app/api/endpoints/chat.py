@@ -98,12 +98,16 @@ async def chat(request: ChatRequest) -> ChatResponse:
             year_used=yr.filter_year,
         )
 
-    is_fallback = (yr.status == "fallback_warning")
+    is_fallback = yr.warning is not None
 
     # -------------------------------------------------------------------
     # Lớp 2: OOS Filter (Hướng C — Regex Intent Filter)
     # -------------------------------------------------------------------
-    is_oos, oos_categories = check_oos(query)
+    is_oos, oos_categories = check_oos(
+        query,
+        year_filter_status=yr.status,
+        year_filter_doc_type=yr.document_type,
+    )
     logger.info(f"[chat] oos_filter: is_oos={is_oos}, cats={oos_categories}")
 
     if is_oos:
