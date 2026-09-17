@@ -29,6 +29,7 @@ from app.services.oos_filter import check_oos
 from app.services.retrieval_service import retrieve_with_dynamic_routing
 from app.services.generator import generate_answer
 from app.services.attribution_gate import check_attribution, build_citation_list
+from app.core.gemini_client import GeminiQuotaExceeded, GeminiTemporarilyUnavailable
 
 logger = logging.getLogger("chat_endpoint")
 
@@ -147,9 +148,24 @@ async def chat(request: ChatRequest) -> ChatResponse:
             filter_year=yr.filter_year,
             is_fallback=is_fallback,
         )
-    except Exception as e:
-        logger.error(f"[chat] Generation failed: {e}", exc_info=True)
-        raise HTTPException(status_code=500, detail=f"Generation failed: {str(e)}")
+    except GeminiQuotaExceeded:
+        logger.warning("[chat] Gemini quota/rate limit exhausted")
+        raise HTTPException(
+            status_code=429,
+            detail="Hạn mức Gemini API đã hết hoặc đang bị giới hạn. Vui lòng thử lại sau ít phút, kiểm tra quota của đúng Google Cloud project, hoặc bật billing.",
+        )
+    except GeminiTemporarilyUnavailable:
+        logger.warning("[chat] Gemini temporarily unavailable")
+        raise HTTPException(
+            status_code=503,
+            detail="Dịch vụ AI đang quá tải tạm thời. Vui lòng thử lại sau ít phút.",
+        )
+    except Exception:
+        logger.exception("[chat] Generation failed")
+        raise HTTPException(
+            status_code=500,
+            detail="Dịch vụ tạo câu trả lời gặp lỗi nội bộ. Vui lòng thử lại sau.",
+        )
 
     # Nếu Gemini tự phát hiện câu hỏi ngoài phạm vi
     if gen_result.is_refused:

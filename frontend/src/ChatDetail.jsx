@@ -107,21 +107,37 @@ const ChatDetail = () => {
       setMessages(prev => [...prev, botResponse]);
 
     } catch (err) {
-      console.error('Error sending message:', err);
-      setError(err.response?.data?.detail || 'Có lỗi xảy ra. Vui lòng thử lại sau.');
+      const status = err.response?.status;
+      const detail = err.response?.data?.detail;
+      let message;
+      let reason;
 
-      const errorMessage = {
+      if (!err.response) {
+        message = 'Chưa kết nối được máy chủ tư vấn. Hệ thống đang khởi động hoặc backend chưa chạy. Vui lòng chờ ít phút rồi thử lại.';
+        reason = 'backend_unreachable';
+      } else if (status === 429) {
+        message = 'Hạn mức Gemini API đang hết hoặc bị giới hạn. Vui lòng chờ ít phút theo thông báo quota, kiểm tra đúng Google Cloud project của API key, hoặc bật billing.';
+        reason = 'gemini_quota_exceeded';
+      } else if (status === 503) {
+        message = 'Dịch vụ AI đang quá tải tạm thời. Vui lòng thử lại sau ít phút.';
+        reason = 'gemini_unavailable';
+      } else {
+        message = detail || 'Dịch vụ tư vấn gặp lỗi tạm thời. Vui lòng thử lại sau.';
+        reason = 'system_error';
+      }
+
+      console.error('Chat request failed', { status, apiBaseUrl: API_BASE_URL });
+      setError(message);
+      setMessages(prev => [...prev, {
         id: Date.now() + 2,
         role: 'bot',
-        content: 'Xin lỗi, tôi gặp sự cố. Vui lòng thử lại sau.',
+        content: message,
         behavior: 'refused',
         citations: [],
         citation_precision: 0.0,
-        refused_reason: 'system_error',
+        refused_reason: reason,
         timestamp: new Date().toISOString()
-      };
-
-      setMessages(prev => [...prev, errorMessage]);
+      }]);
     } finally {
       setIsLoading(false);
     }

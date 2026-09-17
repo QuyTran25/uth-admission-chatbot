@@ -1,53 +1,99 @@
-﻿# dev.ps1 — chay dong thoi backend + frontend, tat he thong khi nhan Ctrl+C
-$ErrorActionPreference = "Stop"
+# dev.ps1 - start backend then frontend after verified health
+$ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
-Write-Host "==> Thu muc goc: $root" -ForegroundColor Cyan
+$backend = Join-Path $root 'backend'
+$frontend = Join-Path $root 'frontend'
+$python = Join-Path $root '.venv\Scripts\python.exe'
+$healthUrl = 'http://127.0.0.1:8000/api/v1/health'
+$logDir = Join-Path $root 'logs'
+$backendLog = Join-Path $logDir 'backend-dev.log'
+$backendErrorLog = Join-Path $logDir 'backend-dev-error.log'
+$frontendLog = Join-Path $logDir 'frontend-dev.log'
+$frontendErrorLog = Join-Path $logDir 'frontend-dev-error.log'
 
-# Tat server cu neu con
-foreach ($p in 5173, 8000) {
-  $proc = Get-NetTCPConnection -LocalPort $p -State Listen -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess -Unique
-  if ($proc) {
-    Write-Host "==> Tat tien trinh cu o port $p (PID: $($proc -join ', '))" -ForegroundColor Yellow
-    $proc | ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue }
+function Stop-PortProcessTree {
+  param([int]$Port)
+
+  $owners = @(
+    Get-NetTCPConnection -LocalPort $Port -State Listen -ErrorAction SilentlyContinue |
+      Select-Object -ExpandProperty OwningProcess -Unique
+  )
+
+  foreach ($owner in $owners) {
+    Write-Host "Stopping process on port $Port (PID: $owner)" -ForegroundColor Yellow
+    Stop-Process -Id $owner -Force -ErrorAction SilentlyContinue
   }
+
+  for ($attempt = 1; $attempt -le 20; $attempt++) {
+    $listener = Get-NetTCPConnection -LocalPort $Port -State Listen -ErrorAction SilentlyContinue
+    if (-not $listener) { return }
+    Start-Sleep -Milliseconds 300
+  }
+
+  throw "Port $Port is still occupied. Close the process using this port, then run .\dev.ps1 again."
 }
 
-# Kiem tra .env goc
-$envFile = Join-Path $root ".env"
-if (-not (Test-Path $envFile)) {
-  Write-Host "[!] Khong tim thay $envFile. Tao moi va them GEMINI_API_KEY." -ForegroundColor Red
-  exit 1
+Write-Host "Project root: $root" -ForegroundColor Cyan
+if (-not (Test-Path $python)) { throw "Python virtual environment missing: $python" }
+if (-not (Test-Path (Join-Path $root '.env'))) { throw 'Missing .env with GEMINI_API_KEY.' }
+if (-not (Test-Path $logDir)) { New-Item -ItemType Directory -Path $logDir | Out-Null }
+
+$frontendEnv = Join-Path $frontend '.env'
+if (-not (Test-Path $frontendEnv)) {
+  Set-Content -Path $frontendEnv -Value 'VITE_API_BASE_URL=http://localhost:8000' -Encoding utf8
 }
 
-# Kiem tra frontend/.env
-$feEnv = Join-Path $root "frontend\.env"
-if (-not (Test-Path $feEnv)) {
-  Set-Content -Path $feEnv -Value "VITE_API_BASE_URL=http://localhost:8000"
+Stop-PortProcessTree -Port 5173
+Stop-PortProcessTree -Port 8000
+Start-Sleep -Milliseconds 600
+
+Write-Host 'Starting backend on port 8000...' -ForegroundColor Green
+$backendProc = Start-Process -FilePath $python `
+  -ArgumentList '-m', 'uvicorn', 'app.main:app', '--host', '127.0.0.1', '--port', '8000' `
+  -WorkingDirectory $backend -PassThru -WindowStyle Hidden `
+  -RedirectStandardOutput $backendLog -RedirectStandardError $backendErrorLog
+
+$ready = $false
+for ($attempt = 1; $attempt -le 45; $attempt++) {
+  if ($backendProc.HasExited) {
+    $log = if (Test-Path $backendLog) { Get-Content $backendLog -Tail 30 | Out-String } else { 'No backend log was created.' }
+    throw "Backend exited during startup. Last log lines:`n$log"
+  }
+  try {
+    $health = Invoke-WebRequest -Uri $healthUrl -Method Get -TimeoutSec 2 -ErrorAction Stop
+    if ($health.StatusCode -eq 200) { $ready = $true; break }
+  } catch { }
+  Start-Sleep -Seconds 2
+}
+if (-not $ready) {
+  & taskkill.exe /PID $backendProc.Id /T /F | Out-Null
+  throw "Backend did not become healthy in 90 seconds. See $backendLog"
 }
 
-$backend = Join-Path $root "backend"
-$frontend = Join-Path $root "frontend"
-$venvPy = Join-Path $root ".venv\Scripts\python.exe"
+Write-Host 'Backend health check passed.' -ForegroundColor Green
+Write-Host 'Starting frontend on port 5173...' -ForegroundColor Green
+$frontendProc = Start-Process -FilePath 'npm.cmd' -ArgumentList 'run', 'dev' `
+  -WorkingDirectory $frontend -PassThru -WindowStyle Hidden `
+  -RedirectStandardOutput $frontendLog -RedirectStandardError $frontendErrorLog
 
-Write-Host "==> Khoi dong backend (uvicorn :8000)..." -ForegroundColor Green
-$backendProc = Start-Process -FilePath $venvPy -ArgumentList "-m","uvicorn","app.main:app","--reload","--port","8000" -WorkingDirectory $backend -PassThru -WindowStyle Hidden
-
-Write-Host "==> Khoi dong frontend (vite :5173)..." -ForegroundColor Green
-$frontendProc = Start-Process -FilePath "npm.cmd" -ArgumentList "run","dev" -WorkingDirectory $frontend -PassThru -WindowStyle Hidden
-
-Write-Host ""
-Write-Host "Backend  -> http://localhost:8000" -ForegroundColor Green
-Write-Host "Frontend -> http://localhost:5173" -ForegroundColor Green
-Write-Host "Nhan Ctrl+C de dung ca hai." -ForegroundColor Yellow
+Write-Host 'Backend:  http://localhost:8000' -ForegroundColor Green
+Write-Host 'Frontend: http://localhost:5173' -ForegroundColor Green
+Write-Host 'Press Ctrl+C to stop both services.' -ForegroundColor Yellow
 
 try {
   while ($true) {
     Start-Sleep -Seconds 1
-    if ($backendProc.HasExited) { Write-Host "[backend] Da tat." -ForegroundColor Red; break }
-    if ($frontendProc.HasExited) { Write-Host "[frontend] Da tat." -ForegroundColor Red; break }
+    if ($backendProc.HasExited) {
+      throw "Backend stopped unexpectedly. See $backendLog and $backendErrorLog"
+    }
+    if ($frontendProc.HasExited) {
+      throw "Frontend stopped unexpectedly. See $frontendLog and $frontendErrorLog"
+    }
   }
 } finally {
-  foreach ($p in @($backendProc, $frontendProc)) {
-    if ($p -and -not $p.HasExited) { Stop-Process -Id $p.Id -Force -ErrorAction SilentlyContinue }
+  foreach ($child in @($backendProc, $frontendProc)) {
+    if ($child -and -not $child.HasExited) {
+      Stop-Process -Id $child.Id -Force -ErrorAction SilentlyContinue
+    }
   }
 }

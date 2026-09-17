@@ -39,9 +39,12 @@ class Settings(BaseSettings):
     RRF_K: int = 60
 
     GEMINI_API_KEY: str = "your_gemini_api_key_here"
-    GEMINI_MODEL: str = "models/gemini-3.7-flash"
+    GEMINI_MODEL: str = "models/gemini-3.6-flash"
+    GEMINI_FALLBACK_MODELS: str = "models/gemini-3.5-flash,models/gemini-3.5-flash-lite"
     GEMINI_TEMPERATURE: float = 0.1
     GEMINI_MAX_TOKENS: int = 2048
+    GEMINI_MAX_RETRIES: int = 5
+    GEMINI_RETRY_BASE_DELAY_SECONDS: float = 2.0
 
     @property
     def index_dir_path(self) -> Path:
