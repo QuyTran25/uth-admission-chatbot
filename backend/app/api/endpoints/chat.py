@@ -183,11 +183,12 @@ async def chat(request: ChatRequest) -> ChatResponse:
         )
 
     # -------------------------------------------------------------------
-    # Attribution Gate — Kiểm chứng chunk_id
+    # Attribution Gate — Kiểm chứng trích dẫn & Factual Grounding
     # -------------------------------------------------------------------
     attr_result = check_attribution(
         cited_ids=gen_result.cited_ids,
         retrieved_chunks=chunks,
+        response_text=gen_result.answer_text,
         is_refused=gen_result.is_refused,
     )
 

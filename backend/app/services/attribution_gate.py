@@ -1,26 +1,30 @@
 """
-attribution_gate.py — Lớp 2 kiểm chứng sau LLM (Post-generation Gate)
+attribution_gate.py — Lớp kiểm chứng trích dẫn sau LLM (Post-generation Attribution Gate)
 
-Kiểm tra tính xác thực của câu trả lời bằng 2 phương pháp:
+Cơ chế kiểm chứng 2 mức độ:
+1. Citation Integrity Check (Set Membership):
+   - Mỗi [[chunk_id]] mà Gemini trích dẫn bắt buộc phải thuộc tập chunks đã được truy xuất.
+   - Tránh việc model hallucinate ra chunk_id không hề có trong ngữ cảnh.
+   - Ngưỡng Citation Precision: 0.90 (theo quy chuẩn hệ thống).
 
-1. Chunk ID check (áp dụng cho tất cả):
-   - Mỗi [[chunk_id]] Gemini trích dẫn phải tồn tại trong tập chunks đã truy xuất
-   - Không phụ thuộc LLM thêm — đối chiếu trực tiếp
+2. Lexical Support Check (Factual grounding proxy):
+   - Đo độ phủ từ vựng/thực thể quan trọng giữa câu trả lời sinh ra và nội dung các chunk được trích dẫn.
+   - Phát hiện các trường hợp câu trả lời bịa đặt nhưng chèn bừa chunk_id hợp lệ.
 
-2. Phương pháp phân loại kết quả:
-   - passed=True:  Tất cả chunk_id hợp lệ VÀ citation_precision >= ngưỡng
-   - passed=False: Có ít nhất 1 chunk_id không tồn tại HOẶC không trích dẫn gì cả
-                   → Hệ thống trả về "không tìm thấy thông tin đủ tin cậy"
-
-Ngưỡng Citation Precision: 0.90 (theo đề cương mục (2))
+3. Refusal Bypass Protocol:
+   - Các truy vấn từ chối (refused) không sinh thông tin tuyển sinh nên bỏ qua kiểm tra trích dẫn
+     và được đánh dấu rõ ràng là `bypassed_refusal`.
 """
 
 import logging
+import re
 from dataclasses import dataclass, field
+from typing import Optional
 
 logger = logging.getLogger("attribution_gate")
 
 CITATION_PRECISION_THRESHOLD = 0.90
+MIN_LEXICAL_SUPPORT_THRESHOLD = 0.15  # Tối thiểu 15% từ khóa quan trọng của câu trả lời phải nằm trong chunk trích dẫn
 
 
 # ---------------------------------------------------------------------------
@@ -34,16 +38,16 @@ class AttributionResult:
     total_citations: int
     valid_citations: int
     failed_citations: list[str]   # chunk_id không tồn tại trong retrieved chunks
-    method: str = "chunk_id"      # Hiện tại chỉ dùng chunk_id check
+    method: str = "citation_integrity_and_lexical"
+    lexical_support_score: Optional[float] = None
+    is_refusal_bypassed: bool = False
 
 
 def _fuzzy_match_id(failed_cid: str, retrieved_ids: set[str]) -> str | None:
     """
     Thử fuzzy match một chunk_id không khớp hoàn toàn với retrieved_ids.
-    So sánh qua chuẩn hóa (bỏ khoảng trắng, gạch dưới, gạch ngang, chữ hoa/thường)
-    hoặc quan hệ substring/prefix/suffix.
+    So sánh qua chuẩn hóa hoặc substring/prefix/suffix.
     """
-    import re
     norm_failed = re.sub(r'[\s_\-]+', '', failed_cid.lower())
     for rid in retrieved_ids:
         norm_rid = re.sub(r'[\s_\-]+', '', rid.lower())
@@ -55,6 +59,27 @@ def _fuzzy_match_id(failed_cid: str, retrieved_ids: set[str]) -> str | None:
     return None
 
 
+def compute_lexical_support(response_text: str, cited_chunks: list) -> float:
+    """
+    Tính tỷ lệ từ khóa quan trọng trong câu trả lời xuất hiện trong văn bản các chunk được trích dẫn.
+    """
+    if not response_text or not cited_chunks:
+        return 0.0
+
+    # Lấy các token có nghĩa (độ dài >= 2 ký tự, không tính ký tự đặc biệt)
+    tokens = set(re.findall(r'\b[a-zA-Z0-9_\u00C0-\u1EF9]{2,}\b', response_text.lower()))
+    stopwords = {"của", "cho", "các", "những", "được", "trong", "theo", "với", "hoặc", "này", "khi", "tại", "một", "có", "là", "và", "để"}
+    content_tokens = {t for t in tokens if t not in stopwords}
+
+    if not content_tokens:
+        return 1.0
+
+    chunk_corpus = " ".join([getattr(c, "text", "") for c in cited_chunks]).lower()
+
+    supported_count = sum(1 for t in content_tokens if t in chunk_corpus)
+    return round(supported_count / len(content_tokens), 4)
+
+
 # ---------------------------------------------------------------------------
 # Gate logic
 # ---------------------------------------------------------------------------
@@ -62,21 +87,14 @@ def _fuzzy_match_id(failed_cid: str, retrieved_ids: set[str]) -> str | None:
 def check_attribution(
     cited_ids: list[str],
     retrieved_chunks: list,       # list[ScoredChunk] từ retrieval_service
+    response_text: str = "",
     is_refused: bool = False,
 ) -> AttributionResult:
     """
     Kiểm tra các chunk_id mà Gemini trích dẫn có thực sự tồn tại
-    trong danh sách chunks đã được truy xuất hay không.
-
-    Args:
-        cited_ids:        Danh sách chunk_id từ GenerationResult.cited_ids
-        retrieved_chunks: Các ScoredChunk trả về từ retrieval_service
-        is_refused:       Nếu True (Gemini tự từ chối), Gate luôn passed=True
-
-    Returns:
-        AttributionResult
+    trong danh sách chunks đã được truy xuất và có nâng đỡ nội dung câu trả lời hay không.
     """
-    # Nếu Gemini đã từ chối → không cần kiểm tra attribution
+    # Nếu Gemini đã từ chối hoặc câu hỏi bị từ chối → đánh dấu bypass rõ ràng
     if is_refused:
         return AttributionResult(
             passed=True,
@@ -84,11 +102,14 @@ def check_attribution(
             total_citations=0,
             valid_citations=0,
             failed_citations=[],
-            method="skipped_refused",
+            method="bypassed_refusal",
+            lexical_support_score=None,
+            is_refusal_bypassed=True,
         )
 
     # Tập hợp chunk_id đã truy xuất
-    retrieved_ids: set[str] = {c.chunk_id for c in retrieved_chunks}
+    retrieved_map = {c.chunk_id: c for c in retrieved_chunks}
+    retrieved_ids = set(retrieved_map.keys())
 
     total = len(cited_ids)
 
@@ -101,44 +122,55 @@ def check_attribution(
             total_citations=0,
             valid_citations=0,
             failed_citations=[],
-            method="chunk_id",
+            method="citation_integrity",
+            lexical_support_score=0.0,
+            is_refusal_bypassed=False,
         )
 
-    # Phân loại valid / invalid citations & kiểm tra fuzzy match cho logging
+    # Phân loại valid / invalid citations
     valid = []
     failed = []
+    valid_chunk_objs = []
     for cid in cited_ids:
         if cid in retrieved_ids:
             valid.append(cid)
+            valid_chunk_objs.append(retrieved_map[cid])
         else:
             failed.append(cid)
             matched_id = _fuzzy_match_id(cid, retrieved_ids)
             if matched_id:
                 logger.warning(
                     f"[HALLUCINATED_ID_WARNING] Fuzzy match detected for hallucinated chunk_id '{cid}' "
-                    f"(matched retrieved_id '{matched_id}'). "
-                    "Fuzzy matches count as INVALID (0.0 precision) to maintain strict admission accuracy."
+                    f"(matched retrieved_id '{matched_id}'). Marked INVALID."
                 )
 
     precision = len(valid) / total
-    passed = precision >= CITATION_PRECISION_THRESHOLD
+    passed_precision = precision >= CITATION_PRECISION_THRESHOLD
 
-    if failed:
+    # Kiểm tra Lexical Factual Support
+    lexical_score = compute_lexical_support(response_text, valid_chunk_objs) if response_text else 1.0
+    passed_lexical = lexical_score >= MIN_LEXICAL_SUPPORT_THRESHOLD if response_text else True
+
+    overall_passed = passed_precision and passed_lexical
+
+    if failed or not passed_lexical:
         logger.warning(
-            f"attribution_gate: {len(failed)}/{total} citations không hợp lệ: {failed}"
+            f"attribution_gate: FAIL (precision={precision:.2f}, lexical_support={lexical_score:.2f}, failed_cids={failed})"
         )
     else:
         logger.info(
-            f"attribution_gate: passed ({len(valid)}/{total} valid, precision={precision:.2f})"
+            f"attribution_gate: passed ({len(valid)}/{total} valid, precision={precision:.2f}, lexical_support={lexical_score:.2f})"
         )
 
     return AttributionResult(
-        passed=passed,
+        passed=overall_passed,
         citation_precision=round(precision, 4),
         total_citations=total,
         valid_citations=len(valid),
         failed_citations=failed,
-        method="chunk_id",
+        method="citation_integrity_and_lexical",
+        lexical_support_score=lexical_score,
+        is_refusal_bypassed=False,
     )
 
 
