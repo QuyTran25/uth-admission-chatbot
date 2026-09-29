@@ -36,8 +36,14 @@ backend/data/processed/merged/
 backend/data/processed/pastedown/
 backend/data/processed/section/
 !backend/data/processed/.gitkeep
+# Index and vector database binaries
 backend/data/index/*
 !backend/data/index/.gitkeep
+backend/backend/
+*.index
+*.pkl
+backend/**/data/index/*
+!backend/**/data/index/.gitkeep
 backend/data/processed/chunks/
 
 

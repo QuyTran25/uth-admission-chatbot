@@ -38,19 +38,31 @@ class IndexStore:
     # Load
     # ------------------------------------------------------------------
 
-    def load(self) -> None:
+    def load(self, index_dir: Optional[Path] = None) -> None:
         """Load FAISS, BM25 và embedding model vào memory."""
         if self._loaded:
             logger.info("IndexStore: đã load rồi, bỏ qua.")
             return
 
-        index_dir = settings.index_dir_path
-        self._load_faiss(index_dir)
-        self._load_bm25(index_dir)
+        target_dir = index_dir or settings.index_dir_path
+        self._load_faiss(target_dir)
+        self._load_bm25(target_dir)
         self._load_embed_model()
         self._load_segmenter()
+        self._validate_dimensions()
         self._loaded = True
         logger.info("IndexStore: load hoàn tất.")
+
+    def _validate_dimensions(self) -> None:
+        """Kiểm tra tính tương thích giữa FAISS index và Embedding model."""
+        if self._embed_model is not None and self._faiss_index is not None:
+            model_dim = self._embed_model.get_sentence_embedding_dimension()
+            index_dim = self._faiss_index.d
+            if model_dim != index_dim:
+                raise ValueError(
+                    f"FATAL: Embedding model dimension ({model_dim}) mismatch với FAISS index dimension ({index_dim})! "
+                    f"Vui lòng rebuild index bằng `backend/pipeline/embed_and_index.py` hoặc đổi `EMBED_MODEL` trong config."
+                )
 
     def _load_faiss(self, index_dir: Path) -> None:
         try:

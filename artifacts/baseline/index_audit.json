@@ -1,0 +1,95 @@
+{
+  "audit_timestamp_utc": "2026-09-28T09:15:00Z",
+  "summary": {
+    "conclusion": "Discrepancy confirmed: The instructor evaluated the repository using backend/backend/data/index (679 chunks, tracked in git), which missed 22 chunk IDs across 35 questions. The student report was evaluated against backend/data/index (725 chunks, untracked in git), which only missed 4 chunk IDs across 9 questions. This explains why the instructor found 35/393 missing chunks while the report only documented 4/9 missing chunks.",
+    "root_index_path": "backend/data/index",
+    "nested_index_path": "backend/backend/data/index",
+    "backup_location": "artifacts/baseline/backup_indexes"
+  },
+  "indexes": {
+    "root_index": {
+      "path": "backend/data/index",
+      "git_tracked": false,
+      "faiss_dimension": 768,
+      "faiss_vectors": 725,
+      "bm25_documents": 725,
+      "missing_gold_chunk_ids_count": 4,
+      "affected_test_questions_count": 9,
+      "missing_gold_chunk_ids": [
+        "thong_tin_chung_2026_co-so_chunks",
+        "2023_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+        "2024_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+        "2025_diem-chuan_dai-hoc-chinh-quy_t000_r000"
+      ],
+      "files": {
+        "bm25_corpus.pkl": {
+          "size": 467468,
+          "sha256": "6928cd1d33d4a3a9101a235d9b6741c8b055d83a0bfde3ede4bdbf24ca418834"
+        },
+        "bm25_meta.jsonl": {
+          "size": 652575,
+          "sha256": "55347934ff47f0762d1c14e7725572835468980f38f3d78ae1f197d2446297d3"
+        },
+        "faiss.index": {
+          "size": 2227245,
+          "sha256": "bf1fc26d19e553dba5c5d681356b1ce9cef0a9d82e7273ef05f0d99f655c0a4a"
+        },
+        "faiss_meta.jsonl": {
+          "size": 653300,
+          "sha256": "50ea2525f6db34728fa37a9379343ebe8ed15a9c3fe3feeaf29db0f2a69167fc"
+        }
+      }
+    },
+    "nested_index": {
+      "path": "backend/backend/data/index",
+      "git_tracked": true,
+      "faiss_dimension": 768,
+      "faiss_vectors": 679,
+      "bm25_documents": 679,
+      "missing_gold_chunk_ids_count": 22,
+      "affected_test_questions_count": 35,
+      "missing_gold_chunk_ids": [
+        "thong_tin_chung_2026_co-so_chunks",
+        "2023_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+        "2024_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+        "2025_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_t000_r001",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_t000_r002",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_t000_r003",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_t001_r001",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_t001_r002",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_t001_r003",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_t002_r002",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_t003_r000",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_t004_r003",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_t004_r005",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_t005_r003",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_txt_s001",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_txt_s003",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_txt_s004",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_txt_s005",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_txt_s006",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_txt_s010",
+        "2026_thong-tin-tuyen-sinh-chuong-trinh-lien-ket-quoc-te-2+2_lien-ket-quoc-te_txt_s011"
+      ],
+      "files": {
+        "bm25_corpus.pkl": {
+          "size": 445325,
+          "sha256": "a7ea7662a43049fd17ee4ae712e441c32dda8a36ec6924d40059f64fbd71502e"
+        },
+        "bm25_meta.jsonl": {
+          "size": 615323,
+          "sha256": "a55cb6f0dbeaa42596ef1685dd84d430c47eb2d23c3ec2248b85568233b39460"
+        },
+        "faiss.index": {
+          "size": 2085933,
+          "sha256": "9e36e24587525c3e89526d547804850fc17e941ecaf2b67418aaaf572b9af4ff"
+        },
+        "faiss_meta.jsonl": {
+          "size": 616002,
+          "sha256": "7cc0e23bac47422e42ac51c9416ba5f45015e5622c3cc32b92f693780b47e36c"
+        }
+      }
+    }
+  }
+}
