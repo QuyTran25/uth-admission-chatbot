@@ -149,8 +149,8 @@ def main():
     index_store.load()
     print("Xong.\n")
 
-    # Load dev set
-    df = pd.read_csv(r"d:\uth-admission-chatbot\backend\data\test\dev_questions.csv")
+    project_root = Path(__file__).resolve().parent.parent.parent
+    df = pd.read_csv(project_root / "backend" / "data" / "test" / "dev_questions.csv")
     print(f"Dev set: {len(df)} câu")
     print(f"Phân bố: {df['expected_behavior'].value_counts().to_dict()}")
 
@@ -278,7 +278,7 @@ def main():
         'add_recall': [(residual_refuse['gate_score'] < th).sum() / n_refuse for th in thresholds],
         'gate_fpr': [(residual_in_scope['gate_score'] < th).sum() / len(residual_in_scope) for th in thresholds],
     })
-    out_csv = r"d:\uth-admission-chatbot\backend\eval\results\gate_budget_grid_search.csv"
+    out_csv = Path(__file__).resolve().parent / "results" / "gate_budget_grid_search.csv"
     result_df.to_csv(out_csv, index=False, encoding='utf-8-sig')
     print(f"\nĐã lưu chi tiết → {out_csv}")
 

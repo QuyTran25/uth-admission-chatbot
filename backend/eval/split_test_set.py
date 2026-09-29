@@ -3,11 +3,14 @@ import sys
 import pandas as pd
 import numpy as np
 
+from pathlib import Path
+
 # Đường dẫn file
-DATA_DIR = r"d:\uth-admission-chatbot\backend\data\test"
-INPUT_CSV = os.path.join(DATA_DIR, "test_questions.csv")
-DEV_CSV = os.path.join(DATA_DIR, "dev_questions.csv")
-TEST_LOCKED_CSV = os.path.join(DATA_DIR, "test_questions_locked.csv")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+DATA_DIR = PROJECT_ROOT / "backend" / "data" / "test"
+INPUT_CSV = DATA_DIR / "test_questions.csv"
+DEV_CSV = DATA_DIR / "dev_questions.csv"
+TEST_LOCKED_CSV = DATA_DIR / "test_questions_locked.csv"
 
 # 9 câu hỏi có gap ID để theo dõi
 GAP_IDS = {10, 13, 14, 15, 16, 17, 18, 19, 20}

@@ -15,9 +15,10 @@ from chunking import classify_code, load_whitelist
 
 # Đảo ngược mapping để lấy tên thư mục tiếng Việt từ program_type
 REV_FOLDER_MAPPING = {v: k for k, v in FOLDER_MAPPING.items()}
-CHUNKS_DIR = Path(r"d:\uth-admission-chatbot\backend\data\processed\chunks")
-RAW_DIR = Path(r"d:\uth-admission-chatbot\backend\data\raw")
-SOURCE_URLS_PATH = Path(r"d:\uth-admission-chatbot\backend\data\source_urls.json")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+CHUNKS_DIR = PROJECT_ROOT / "backend" / "data" / "processed" / "chunks"
+RAW_DIR = PROJECT_ROOT / "backend" / "data" / "raw"
+SOURCE_URLS_PATH = PROJECT_ROOT / "backend" / "data" / "source_urls.json"
 
 def get_docx_urls(docx_path: Path) -> list:
     """Đọc text và trích xuất tất cả URLs có trong file docx."""

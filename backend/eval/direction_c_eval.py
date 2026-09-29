@@ -14,8 +14,9 @@ import unicodedata
 import pandas as pd
 from pathlib import Path
 
-DATA_CSV = r"d:\uth-admission-chatbot\backend\data\test\test_questions.csv"
-OUT_CSV  = r"d:\uth-admission-chatbot\backend\eval\results\direction_c_eval.csv"
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+DATA_CSV = PROJECT_ROOT / "backend" / "data" / "test" / "test_questions.csv"
+OUT_CSV  = Path(__file__).resolve().parent / "results" / "direction_c_eval.csv"
 
 # ---------------------------------------------------------------------------
 # 1. Normalize helper

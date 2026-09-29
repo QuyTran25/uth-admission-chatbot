@@ -13,8 +13,9 @@ from app.core.index_store import index_store
 from app.services.year_filter import analyze
 from app.services.retrieval_service import retrieve_with_dynamic_routing
 
-DATA_DIR = r"d:\uth-admission-chatbot\backend\data\test"
-DEV_CSV = f"{DATA_DIR}\\dev_questions.csv"
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+DATA_DIR = PROJECT_ROOT / "backend" / "data" / "test"
+DEV_CSV = str(DATA_DIR / "dev_questions.csv")
 
 def main():
     print("Nạp index...")
@@ -60,7 +61,7 @@ def main():
         })
 
     out_df = pd.DataFrame(rows)
-    out_path = r"d:\uth-admission-chatbot\backend\eval\results\gate_score_diagnosis.csv"
+    out_path = Path(__file__).resolve().parent / "results" / "gate_score_diagnosis.csv"
     out_df.to_csv(out_path, index=False, encoding='utf-8-sig')
     print(f"Đã lưu bảng điểm ra: {out_path}\n")
 
