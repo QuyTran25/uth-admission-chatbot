@@ -1,0 +1,163 @@
+{
+  "dataset": "backend/data/test/dev_questions.csv",
+  "tag": "dev",
+  "protocol": "canonical_mapped",
+  "total_in_scope_evaluated": 301,
+  "ssot_alpha": 0.6,
+  "summary_metrics": [
+    {
+      "Mode": "No-Filter",
+      "Method": "BM25",
+      "N": 301,
+      "MRR": 0.3699,
+      "MRR_CI95": "[0.3261, 0.4173]",
+      "Recall@1": 0.2658,
+      "Recall@1_CI95": "[0.2193, 0.3156]",
+      "Recall@3": 0.4352,
+      "Recall@5": 0.4983,
+      "Recall@5_CI95": "[0.4452, 0.5548]",
+      "Recall@10": 0.6346
+    },
+    {
+      "Mode": "No-Filter",
+      "Method": "Dense",
+      "N": 301,
+      "MRR": 0.2747,
+      "MRR_CI95": "[0.2327, 0.3153]",
+      "Recall@1": 0.1794,
+      "Recall@1_CI95": "[0.1362, 0.2226]",
+      "Recall@3": 0.3289,
+      "Recall@5": 0.392,
+      "Recall@5_CI95": "[0.3389, 0.4453]",
+      "Recall@10": 0.505
+    },
+    {
+      "Mode": "No-Filter",
+      "Method": "Hybrid_RRF",
+      "N": 301,
+      "MRR": 0.38,
+      "MRR_CI95": "[0.3366, 0.4273]",
+      "Recall@1": 0.2824,
+      "Recall@1_CI95": "[0.2326, 0.3355]",
+      "Recall@3": 0.4319,
+      "Recall@5": 0.515,
+      "Recall@5_CI95": "[0.4618, 0.5681]",
+      "Recall@10": 0.6246
+    },
+    {
+      "Mode": "No-Filter",
+      "Method": "Hybrid_Weighted",
+      "N": 301,
+      "MRR": 0.3611,
+      "MRR_CI95": "[0.3172, 0.4075]",
+      "Recall@1": 0.2625,
+      "Recall@1_CI95": "[0.2159, 0.3123]",
+      "Recall@3": 0.4153,
+      "Recall@5": 0.505,
+      "Recall@5_CI95": "[0.4518, 0.5615]",
+      "Recall@10": 0.6113
+    },
+    {
+      "Mode": "Filter",
+      "Method": "BM25",
+      "N": 301,
+      "MRR": 0.4008,
+      "MRR_CI95": "[0.3550, 0.4504]",
+      "Recall@1": 0.2957,
+      "Recall@1_CI95": "[0.2425, 0.3488]",
+      "Recall@3": 0.4618,
+      "Recall@5": 0.5449,
+      "Recall@5_CI95": "[0.4884, 0.6013]",
+      "Recall@10": 0.6545
+    },
+    {
+      "Mode": "Filter",
+      "Method": "Dense",
+      "N": 301,
+      "MRR": 0.3258,
+      "MRR_CI95": "[0.2806, 0.3718]",
+      "Recall@1": 0.2359,
+      "Recall@1_CI95": "[0.1860, 0.2857]",
+      "Recall@3": 0.3821,
+      "Recall@5": 0.4385,
+      "Recall@5_CI95": "[0.3821, 0.4917]",
+      "Recall@10": 0.5349
+    },
+    {
+      "Mode": "Filter",
+      "Method": "Hybrid_RRF",
+      "N": 301,
+      "MRR": 0.426,
+      "MRR_CI95": "[0.3787, 0.4753]",
+      "Recall@1": 0.3422,
+      "Recall@1_CI95": "[0.2890, 0.3953]",
+      "Recall@3": 0.4551,
+      "Recall@5": 0.5349,
+      "Recall@5_CI95": "[0.4784, 0.5914]",
+      "Recall@10": 0.6478
+    },
+    {
+      "Mode": "Filter",
+      "Method": "Hybrid_Weighted",
+      "N": 301,
+      "MRR": 0.414,
+      "MRR_CI95": "[0.3688, 0.4644]",
+      "Recall@1": 0.3156,
+      "Recall@1_CI95": "[0.2625, 0.3688]",
+      "Recall@3": 0.4618,
+      "Recall@5": 0.5581,
+      "Recall@5_CI95": "[0.5017, 0.6146]",
+      "Recall@10": 0.6545
+    }
+  ],
+  "paired_tests": [
+    {
+      "Mode": "No-Filter",
+      "Comparison": "Hybrid_Weighted vs Hybrid_RRF",
+      "Delta_MRR": -0.0189,
+      "p_value_ttest": "0.0418",
+      "p_value_wilcoxon": "0.0597",
+      "Statistically_Significant_p05": "Có (p < 0.05)"
+    },
+    {
+      "Mode": "No-Filter",
+      "Comparison": "Hybrid_Weighted vs Dense",
+      "Delta_MRR": 0.0864,
+      "p_value_ttest": "7.4409e-11",
+      "p_value_wilcoxon": "4.5783e-12",
+      "Statistically_Significant_p05": "Có (p < 0.05)"
+    },
+    {
+      "Mode": "No-Filter",
+      "Comparison": "Hybrid_Weighted vs BM25",
+      "Delta_MRR": -0.0088,
+      "p_value_ttest": "0.6160",
+      "p_value_wilcoxon": "0.5379",
+      "Statistically_Significant_p05": "Không (p >= 0.05)"
+    },
+    {
+      "Mode": "Filter",
+      "Comparison": "Hybrid_Weighted vs Hybrid_RRF",
+      "Delta_MRR": -0.012,
+      "p_value_ttest": "0.2483",
+      "p_value_wilcoxon": "0.2682",
+      "Statistically_Significant_p05": "Không (p >= 0.05)"
+    },
+    {
+      "Mode": "Filter",
+      "Comparison": "Hybrid_Weighted vs Dense",
+      "Delta_MRR": 0.0882,
+      "p_value_ttest": "7.0579e-10",
+      "p_value_wilcoxon": "5.1527e-11",
+      "Statistically_Significant_p05": "Có (p < 0.05)"
+    },
+    {
+      "Mode": "Filter",
+      "Comparison": "Hybrid_Weighted vs BM25",
+      "Delta_MRR": 0.0132,
+      "p_value_ttest": "0.4647",
+      "p_value_wilcoxon": "0.4878",
+      "Statistically_Significant_p05": "Không (p >= 0.05)"
+    }
+  ]
+}

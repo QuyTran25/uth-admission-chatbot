@@ -67,3 +67,4 @@ yarn-debug.log*
 yarn-error.log*
 
 logs/
+artifacts/baseline/backup_indexes/
