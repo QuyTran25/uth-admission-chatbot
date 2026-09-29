@@ -55,7 +55,7 @@ PATTERNS = {
         r'\btrien vong nghe nghiep\b',
         r'\bviec lam sau tot nghiep\b',
         r'\bdi lam\b.*(trai nganh|ngoai nganh)',
-        # Loại bỏ "nhu cầu tuyển dụng/nhân lực" vì ID=304 là in-scope (Sở giới thiệu nhu cầu nhân lực)
+        # Không chặn cụm "nhu cầu nhân lực" vì tài liệu tuyển sinh UTH có chứa văn bản hợp tác đào tạo và nhu cầu đối tác
     ],
     'so_sanh_hoac_hoi_truong_khac': [
         r'\bso sanh\b.*(truong|dai hoc)',

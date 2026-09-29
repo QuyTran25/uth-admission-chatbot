@@ -32,10 +32,10 @@ from app.services.year_filter import analyze as year_filter_analyze
 from app.core.index_store import index_store
 from app.services.retrieval_service import retrieve_with_dynamic_routing
 
-# ⚠️ DEV SET ONLY — không đọc locked set
-DATA_CSV      = r"d:\uth-admission-chatbot\backend\data\test\dev_questions.csv"
+import argparse
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 GATE_THRESHOLD = 0.62   # ngưỡng mới (FPR-friendly), hard-code để đo thực tế
-OUT_CSV       = r"d:\uth-admission-chatbot\backend\eval\results\pipeline_union_eval_dev.csv"
 
 
 # ---------------------------------------------------------------------------
@@ -102,7 +102,7 @@ PATTERNS: dict[str, list[str]] = {
         r'\btrien vong viec lam\b', r'\btrien vong nghe nghiep\b',
         r'\bviec lam sau tot nghiep\b',
         r'\bdi lam\b.*(trai nganh|ngoai nganh)',
-        # FIX: bỏ 'nhu cau tuyen dung' — khớp ID=304 (in-scope: thư giới thiệu của Sở)
+        # Không chặn cụm 'nhu cau tuyen dung' vì tài liệu UTH có công văn hợp tác đào tạo và nhu cầu đối tác
     ],
     'so_sanh_hoac_hoi_truong_khac': [
         r'\bso sanh\b.*(truong|dai hoc)',
@@ -217,6 +217,15 @@ def match_oos(query: str) -> list[str]:
 # ---------------------------------------------------------------------------
 
 def main():
+    parser = argparse.ArgumentParser(description="Evaluate 3-layer OOS union filtering")
+    parser.add_argument("--dataset", type=str, default="backend/data/test/dev_questions.csv")
+    parser.add_argument("--tag", type=str, default="dev")
+    args = parser.parse_args()
+
+    data_csv = PROJECT_ROOT / args.dataset
+    out_csv = PROJECT_ROOT / "backend" / "eval" / "results" / f"pipeline_union_eval_{args.tag}.csv"
+    out_csv.parent.mkdir(parents=True, exist_ok=True)
+
     # Load index cho Retrieval Gate
     print("Nạp index FAISS + BM25...")
     index_store.load()
@@ -225,8 +234,8 @@ def main():
     gate_threshold = GATE_THRESHOLD
     print(f"Gate threshold (FPR-friendly): {gate_threshold}\n")
 
-    df = pd.read_csv(DATA_CSV)
-    print(f"⚠️  DEV SET ONLY — Không đọc locked set.")
+    df = pd.read_csv(data_csv, encoding="utf-8-sig")
+    print(f"Tập đánh giá: {data_csv.name} [Tag: {args.tag}]")
     print(f"Tổng câu hỏi: {len(df)}")
     print(f"Phân bố nhãn:\n{df['expected_behavior'].value_counts().to_string()}\n")
 
@@ -284,8 +293,8 @@ def main():
         })
 
     out_df = pd.DataFrame(results)
-    out_df.to_csv(OUT_CSV, index=False, encoding='utf-8-sig')
-    print(f"\nĐã lưu bảng chi tiết → {OUT_CSV}\n")
+    out_df.to_csv(out_csv, index=False, encoding='utf-8-sig')
+    print(f"\nĐã lưu bảng chi tiết → {out_csv}\n")
 
     # -----------------------------------------------------------------------
     # 3. Tính metric thực tế

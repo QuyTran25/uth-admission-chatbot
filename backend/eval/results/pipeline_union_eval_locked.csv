@@ -1,0 +1,102 @@
+﻿id,user_query,expected_behavior,category,intent,flagged_year_filter,yf_status,flagged_direction_c,oos_matched,flagged_gate,top1_score_raw,caught_union
+1,Mã tuyển sinh của trường trong năm nay là gì ạ?,answer,year_control,Hỏi mã trường,False,proceed,False,[],True,0.61257,True
+2,Hiện tại trường đang áp dụng những phương thức xét tuyển nào?,answer,in_scope,Hỏi phương thức xét tuyển,False,proceed,False,[],True,0.6,True
+3,Điểm xét tuyển theo phương thức kết hợp được tính như thế nào?,answer,in_scope,Hỏi công thức tính điểm,False,proceed,False,[],False,0.75806,False
+4,Học phí hiện nay của trường là bao nhiêu một năm?,answer,in_scope,Hỏi học phí,False,proceed,False,[],True,0.6,True
+5,Sinh viên cần hoàn thành tối thiểu bao nhiêu tín chỉ để đủ điều kiện tốt nghiệp?,answer,in_scope,Hỏi tổng số tín chỉ,False,proceed,False,[],False,0.69568,False
+6,Chương trình đào tạo đại học tại trường kéo dài trong bao lâu?,answer,in_scope,Hỏi thời gian đào tạo,False,proceed,False,[],False,0.63245,False
+7,Khi nào thí sinh bắt đầu nộp lệ phí xét tuyển?,answer,in_scope,Hỏi lệ phí xét tuyển,False,proceed,False,[],False,0.9717,False
+8,Thí sinh cần đạt IELTS bao nhiêu để được cộng điểm xét tuyển?,answer,in_scope,Hỏi điều kiện ưu tiên IELTS,False,proceed,False,[],False,0.82851,False
+9,Tổ hợp môn NTC1 bao gồm những môn học nào?,answer,in_scope,Hỏi tổ hợp NTC1,False,proceed,False,[],True,0.61724,True
+10,Trường có cơ sở đào tạo tại Vũng Tàu không ạ? Nếu có thì địa chỉ cụ thể ở đâu?,answer,in_scope,Hỏi thông tin cơ sở Vũng Tàu,False,proceed,False,[],True,0.60213,True
+11,Ngành Logistics và Quản lý chuỗi cung ứng năm nay có điểm chuẩn là bao nhiêu?,answer,in_scope,Hỏi điểm chuẩn ngành Logistics,False,proceed,True,['du_doan_diem_chuan'],False,,True
+12,"Năm 2026, ngành Công nghệ thông tin chuyên ngành Công nghệ thông tin lấy bao nhi",answer,in_scope,Hỏi điểm chuẩn ngành CNTT,False,proceed,False,[],False,0.9791,False
+13,Điểm trúng tuyển ngành Ngôn ngữ Anh của trường năm 2025 là bao nhiêu ạ?,answer,year_control,Hỏi điểm chuẩn 2025 Ngôn ngữ Anh,False,proceed,False,[],False,0.97205,False
+14,"Năm 2025, chương trình Công nghệ thông tin tiên tiến có mức điểm chuẩn bao nhiêu",answer,year_control,Hỏi điểm chuẩn 2025 CNTT,False,proceed,False,[],False,0.99075,False
+15,Ngành Kỹ thuật điều khiển và tự động hóa năm 2025 có điểm trúng tuyển là bao nhi,answer,year_control,Hỏi điểm chuẩn 2025 Kỹ thuật điều khiển,False,proceed,False,[],False,0.98382,False
+16,Cho em hỏi mức điểm chuẩn của ngành Quản trị kinh doanh năm 2025 là bao nhiêu ạ?,answer,year_control,Hỏi điểm chuẩn 2025 Quản trị kinh doanh,False,proceed,False,[],False,1.0,False
+17,"Năm 2024, ngành Mạng máy tính lấy bao nhiêu điểm theo phương thức xét điểm thi t",answer,year_control,Hỏi điểm chuẩn 2024 THPT Mạng máy tính,False,proceed,False,[],False,0.76328,False
+18,Điểm chuẩn xét tuyển bằng kết quả thi THPT của ngành Kỹ thuật ô tô năm 2024 là b,answer,year_control,Hỏi điểm chuẩn 2024 THPT Kỹ thuật ô tô,False,proceed,False,[],False,0.75997,False
+19,Ngành Kinh tế vận tải chuyên ngành Hàng không có điểm chuẩn năm 2024 là bao nhiê,answer,year_control,Hỏi điểm chuẩn 2024 THPT Kinh tế vận tải,False,proceed,False,[],False,0.85016,False
+20,"Năm 2023, ngành Logistics chương trình Chất lượng cao có điểm chuẩn là bao nhiêu",answer,year_control,Hỏi điểm chuẩn 2023 THPT Logistics CLC,False,proceed,True,['luong_thu_nhap'],False,,True
+21,Điểm trúng tuyển ngành Kỹ thuật tàu thủy của UTH năm 2023 là bao nhiêu?,answer,year_control,Hỏi điểm chuẩn 2023 THPT Kỹ thuật tàu thủy,False,proceed,False,[],False,0.86972,False
+22,"Năm 2022, ngành Hệ thống thông tin quản lý lấy bao nhiêu điểm theo phương thức x",answer,year_control,Hỏi điểm chuẩn 2022 Học bạ,False,proceed,False,[],False,0.63655,False
+23,Mã đăng ký xét tuyển ngành Logistics chương trình tiên tiến năm 2026 là gì?,answer,in_scope,Hỏi mã ngành 2026 Logistics CLC/Tiên tiến,False,proceed,False,[],True,0.6,True
+24,Sinh viên có sức khỏe yếu có đủ điều kiện theo học tại UTH không ạ?,answer,in_scope,Hỏi quy định sức khỏe,False,proceed,False,[],False,0.70199,False
+25,Trường có kênh Zalo chính thức để tư vấn tuyển sinh không ạ? Cho em xin đường dẫ,answer,in_scope,Hỏi Zalo tuyển sinh,False,proceed,False,[],False,0.71453,False
+26,Điểm chuẩn ngành Kỹ thuật môi trường năm 2026 là bao nhiêu?,answer,year_control,Hỏi điểm chuẩn 2026 Kỹ thuật môi trường,False,proceed,False,[],False,1.0,False
+27,Cho em hỏi mức điểm trúng tuyển ngành Công nghệ thông tin là bao nhiêu?,answer,year_control,Hỏi điểm chuẩn ngành (không có năm),False,proceed,False,[],False,0.85425,False
+28,Em có thể xem bảng điểm chuẩn các ngành của trường năm 2020 ở đâu?,fallback_warning,year_control,Hỏi điểm chuẩn 2020,False,proceed,False,[],True,0.6,True
+29,Khi nào trường công bố điểm chuẩn ngành Khoa học dữ liệu năm 2026 và mức điểm dự,fallback_warning,year_control,Hỏi điểm chuẩn ngành Khoa học dữ liệu 2026,False,proceed,True,['du_doan_diem_chuan'],False,,True
+30,"Với 25,5 điểm tổ hợp A00, em có khả năng trúng tuyển ngành Logistics của trường ",refuse,out_of_scope,Dự đoán điểm chuẩn cá nhân,False,proceed,False,[],True,0.6,True
+31,"Nếu không thích các môn tính toán, em nên lựa chọn ngành Quản trị kinh doanh hay",refuse,out_of_scope,Tư vấn định hướng ngành,False,proceed,True,['tu_van_chon_nganh_khoi'],False,,True
+32,Sinh viên tốt nghiệp ngành Kỹ thuật tàu thủy thường có mức lương khoảng bao nhiê,refuse,out_of_scope,Hỏi về lương sau tốt nghiệp,True,refused,True,['luong_thu_nhap'],False,,True
+33,Cơ hội làm việc tại các tập đoàn đa quốc gia sau khi tốt nghiệp ngành Ngôn ngữ A,refuse,out_of_scope,Hỏi cơ hội việc làm,False,proceed,False,[],False,0.89522,False
+34,"So với HUTECH, chương trình Công nghệ thông tin tại UTH có chú trọng thực hành n",refuse,out_of_scope,So sánh trường,False,proceed,True,['so_sanh_hoac_hoi_truong_khac'],False,,True
+35,Tỷ lệ cạnh tranh khi đăng ký xét tuyển ngành Quản lý hàng hải năm nay như thế nà,refuse,out_of_scope,Hỏi tỷ lệ chọi,False,proceed,False,[],False,0.67253,False
+36,Trường có công bố danh sách thí sinh đăng ký xét tuyển theo phương thức kết hợp ,refuse,out_of_scope,Hỏi thông tin bảo mật,False,proceed,True,['thong_tin_ca_nhan_bao_mat'],False,,True
+37,"Giữa tổ hợp D01 và A01, tổ hợp nào có lợi thế hơn khi xét tuyển vào ngành Kinh t",refuse,out_of_scope,Tư vấn khối thi,False,proceed,False,[],True,0.6,True
+38,Học phí ngành Cơ khí tại Trường Đại học Tôn Đức Thắng hiện nay là bao nhiêu?,refuse,out_of_scope,Hỏi về trường khác,False,proceed,True,['so_sanh_hoac_hoi_truong_khac'],False,,True
+39,Em có thể xin số điện thoại cá nhân của Trưởng khoa Công nghệ thông tin để được ,refuse,out_of_scope,Xin số điện thoại nội bộ,False,proceed,True,['thong_tin_ca_nhan_bao_mat'],False,,True
+40,Trường có dự kiến tăng học phí lên gấp đôi vào năm 2027 không ạ?,refuse,out_of_scope,Hỏi dự đoán chính sách,False,proceed,True,['nam_tuong_lai'],False,,True
+41,Mã xét tuyển ngành Quản trị kinh doanh của trường năm 2026 là gì?,answer,in_scope,Hỏi ngành Quản trị kinh doanh (ĐHCQ),False,proceed,False,[],False,1.0,False
+42,Em có thể đăng ký xét tuyển hệ vừa học vừa làm của trường qua website nào?,answer,in_scope,Hỏi link đăng ký Vừa học vừa làm,False,proceed,False,[],False,0.76321,False
+43,Trường có những chính sách học bổng nào dành cho sinh viên năm nhất?,answer,in_scope,Hỏi chính sách học bổng,False,proceed,False,[],False,0.81626,False
+44,Sinh viên tốt nghiệp cao đẳng muốn học liên thông lên đại học tại UTH có cần tha,answer,in_scope,Hỏi điều kiện xét liên thông,False,proceed,False,[],True,0.6,True
+45,Thời gian đào tạo liên thông từ trung cấp lên đại học tại trường là bao nhiêu nă,answer,in_scope,Hỏi thời gian liên thông,False,proceed,False,[],False,1.0,False
+46,Mức học phí chương trình đào tạo Thạc sĩ năm 2026 được tính theo hình thức nào?,answer,in_scope,Hỏi học phí Thạc sĩ 2026,False,proceed,False,[],False,1.0,False
+47,Lệ phí đăng ký xét tuyển chương trình Thạc sĩ tại trường là bao nhiêu?,answer,in_scope,Hỏi lệ phí thi Thạc sĩ,False,proceed,False,[],False,0.72969,False
+48,Em chưa có chứng chỉ tiếng Anh Bậc 3 thì có đủ điều kiện dự tuyển Thạc sĩ không?,answer,in_scope,Hỏi điều kiện tiếng Anh Thạc sĩ,False,proceed,False,[],False,0.84498,False
+49,Điều kiện để đăng ký xét tuyển chương trình đào tạo Tiến sĩ tại UTH năm 2025 là ,answer,in_scope,Hỏi đối tượng tuyển sinh Tiến sĩ,False,proceed,False,[],False,1.0,False
+50,Chương trình liên kết quốc tế 2+2 được tổ chức đào tạo theo hình thức nào?,answer,in_scope,Hỏi liên kết quốc tế 2+2,False,proceed,False,[],False,0.89822,False
+51,Nếu trường giữ nguyên học phí trong 3 năm đầu thì mức học phí năm thứ 4 sẽ được ,answer,in_scope,Hỏi học phí,False,proceed,False,[],False,0.87538,False
+52,"Nếu đăng ký học vượt và tham gia các học kỳ hè, em có thể rút ngắn thời gian tốt",answer,in_scope,Hỏi thời gian đào tạo,False,proceed,False,[],False,0.80135,False
+53,Chứng chỉ IELTS 7.0 có được sử dụng để cộng điểm khi xét tuyển theo phương thức ,answer,in_scope,Hỏi điều kiện ưu tiên IELTS,False,proceed,False,[],True,0.6,True
+54,Thí sinh cần đáp ứng những điều kiện gì để được cộng điểm xét tuyển thông qua th,answer,in_scope,Hỏi điều kiện ưu tiên thư giới thiệu,False,proceed,False,[],False,0.6359,False
+55,Mã đăng ký nguyện vọng của ngành Công nghệ thông tin chương trình tiên tiến là g,answer,in_scope,Hỏi mã xét tuyển CNTT tiên tiến,False,proceed,False,[],True,0.6,True
+56,Ngành Kỹ thuật xây dựng sử dụng những tổ hợp môn nào để xét tuyển?,answer,in_scope,Hỏi môn xét tuyển Kỹ thuật xây dựng,False,proceed,False,[],False,0.86708,False
+57,Chương trình Cử nhân Logistics tích hợp FIATA có yêu cầu đóng lệ phí ghi danh kh,answer,in_scope,Hỏi phí ghi danh LKQT,False,proceed,False,[],False,0.95781,False
+58,Lệ phí ghi danh đợt tháng 7 của chương trình đại học liên kết với Đại học Pukyon,answer,in_scope,Hỏi phí ghi danh LKQT,False,proceed,False,[],True,0.6,True
+59,Điều kiện để nhận học bổng Đặc biệt miễn 100% học phí năm đầu tiên của chương tr,answer,in_scope,Hỏi học bổng đặc biệt LKQT,False,proceed,False,[],False,0.86147,False
+60,"Trong kỳ xét tuyển liên kết quốc tế tháng 7 năm 2026, người có điểm
+tốt nghiệp T",answer,in_scope,Hỏi học bổng cao nhì LKQT,False,proceed,False,[],False,0.62665,False
+61,Chương trình liên kết quốc tế đợt tuyển sinh tháng 7/2026 yêu cầu thí sinh đạt t,fallback_warning,in_scope,Hỏi điều kiện trúng tuyển LKQT,False,proceed,False,[],False,0.83111,False
+62,Trường có học bổng hoặc chính sách hỗ trợ nào dành cho sinh viên đến từ vùng miề,answer,in_scope,Hỏi học bổng vùng núi,False,proceed,False,[],False,0.94485,False
+63,UTH hiện có những mức học bổng xét theo từng học kỳ nào?,answer,in_scope,Hỏi mức học bổng theo học kỳ,False,proceed,False,[],False,0.91994,False
+64,"Nếu đã tốt nghiệp đại học, em cần học thêm bao lâu để lấy văn bằng 2 ngành Logis",answer,in_scope,Hỏi thời gian đào tạo Vb2,False,proceed,False,[],True,0.6,True
+65,Đăng ký học văn bằng 2 tại UTH có bắt buộc phải tham gia kỳ thi tuyển sinh đầu v,answer,in_scope,Hỏi phương thức xét tuyển Vb2,False,proceed,False,[],False,0.73032,False
+66,Học phí hệ liên thông đại học năm 2026 của trường được quy định bao nhiêu tiền c,answer,in_scope,Hỏi học phí liên thông,False,proceed,False,[],False,0.969,False
+67,Thí sinh dự tuyển Thạc sĩ trái ngành cần học bổ sung tối đa bao nhiêu học phần?,answer,in_scope,Hỏi học bổ sung Thạc sĩ khác ngành,False,proceed,False,[],False,1.0,False
+68,Chương trình đào tạo Thạc sĩ tại UTH có tổ chức lớp học vào buổi tối không?,answer,in_scope,Hỏi hình thức đào tạo Thạc sĩ,False,proceed,False,[],False,0.82716,False
+69,Chỉ tiêu tuyển sinh Tiến sĩ ngành Tổ chức và quản lý vận tải năm 2025 là bao nhi,answer,in_scope,Hỏi chỉ tiêu Tiến sĩ 2025,False,proceed,False,[],False,0.93632,False
+70,Học viên đang theo học Thạc sĩ tại UTH có được miễn một số học phần khi đăng ký ,answer,in_scope,Hỏi miễn tín chỉ song bằng Thạc sĩ,False,proceed,False,[],False,0.87919,False
+71,Điểm trúng tuyển ngành Hệ thống thông tin quản lý chương trình tiên tiến năm 202,answer,in_scope,Hỏi điểm chuẩn Hệ thống thông tin quản lý 2024,False,proceed,False,[],False,0.67657,False
+72,"Năm 2024, ngành Luật chuyên ngành Luật và chính sách hàng hải lấy bao nhiêu điểm",answer,in_scope,Hỏi điểm chuẩn ngành Luật 2024,False,proceed,False,[],False,0.76609,False
+73,Ngành Ngôn ngữ Anh có mức điểm chuẩn xét tuyển bằng điểm thi THPT năm 2023 là ba,answer,year_control,Hỏi điểm chuẩn Ngôn ngữ Anh 2023,False,proceed,False,[],False,1.0,False
+74,Điểm trúng tuyển ngành Khai thác máy tàu thủy và quản lý kỹ thuật năm 2023 là ba,fallback_warning,year_control,Hỏi điểm chuẩn Khai thác máy tàu thủy 2023,False,proceed,False,[],False,1.0,False
+75,"Năm 2025, ngành Mạng máy tính và truyền thông dữ liệu chương trình tiên tiến lấy",answer,year_control,Hỏi điểm chuẩn Mạng máy tính 2025,False,proceed,False,[],False,0.88225,False
+76,Điểm chuẩn ngành Quản lý xây dựng chương trình tiên tiến trong đợt tuyển sinh nă,answer,year_control,Hỏi điểm chuẩn Quản lý xây dựng 2025,False,proceed,False,[],False,1.0,False
+77,"Năm 2022, ngành Kỹ thuật môi trường có điểm chuẩn xét học bạ và điểm thi tốt ngh",answer,year_control,Hỏi điểm chuẩn Kỹ thuật môi trường 2022,False,proceed,False,[],True,0.6,True
+78,Nhóm môn NTC3 dùng trong xét tuyển ngành Luật bao gồm những môn học nào?,answer,in_scope,Hỏi tổ hợp NTC3 ngành Luật,False,proceed,False,[],False,1.0,False
+79,Thí sinh có thư giới thiệu từ doanh nghiệp đối tác của trường có được hưởng chín,answer,in_scope,Hỏi tiêu chí ưu tiên doanh nghiệp hợp tác,False,proceed,False,[],False,0.73102,False
+80,Chương trình đào tạo từ xa ngành Ngôn ngữ Anh của trường tuyển sinh những đối tư,answer,in_scope,Hỏi điều kiện xét tuyển hệ từ xa,False,proceed,False,[],False,0.82166,False
+81,Ngành Kinh tế xây dựng có mức điểm chuẩn bao nhiêu để em chuẩn bị đăng ký xét tu,answer,year_control,Hỏi điểm chuẩn Kinh tế xây dựng không nêu năm,False,proceed,False,[],False,0.7203,False
+82,Điểm chuẩn xét tuyển vào ngành Quản lý hàng hải của trường là bao nhiêu?,answer,year_control,Hỏi điểm chuẩn Quản lý hàng hải không nêu năm,False,proceed,False,[],False,0.72975,False
+83,"Năm 2026, ngành Kỹ thuật cơ khí có điểm trúng tuyển chính thức là bao nhiêu?",answer,in_scope,Hỏi điểm chuẩn Kỹ thuật cơ khí 2026,False,proceed,False,[],False,0.74561,False
+84,Điểm chuẩn xét tuyển bằng kết quả thi THPT ngành Điện tử viễn thông năm 2019 là ,refuse,out_of_scope,Hỏi điểm chuẩn 2019,False,proceed,False,[],False,0.94705,False
+85,"Năm 2023, chuyên ngành Khoa học dữ liệu có mức điểm trúng tuyển là bao nhiêu?",answer,year_control,Hỏi điểm chuẩn CNTT năm 2023 (Hỏi chéo),False,proceed,False,[],True,0.6,True
+86,Sinh viên ngành Công nghệ thông tin tại UTH nên lựa chọn laptop của hãng nào để ,refuse,out_of_scope,Hỏi cấu hình máy tính,False,proceed,False,[],True,0.6,True
+87,"Với độ khó của đề thi tiếng Anh năm nay, liệu điểm chuẩn ngành Ngôn ngữ Anh năm ",refuse,out_of_scope,Dự đoán điểm khối D01,False,proceed,False,[],False,0.6434,False
+88,Mức lương khởi điểm của sinh viên tốt nghiệp ngành Xây dựng cầu đường khi làm kỹ,refuse,out_of_scope,Hỏi lương ngành Cầu đường,True,refused,True,['luong_thu_nhap'],False,,True
+89,"So với Đại học Giao thông Vận tải tại Hà Nội, trang thiết bị phục vụ học tập của",refuse,out_of_scope,So sánh trường,False,proceed,False,[],True,0.6,True
+90,"Năm 2024, ngành Cơ khí của Đại học Bách khoa TP.HCM lấy bao nhiêu điểm?",refuse,out_of_scope,Hỏi điểm trường khác,False,proceed,True,['so_sanh_hoac_hoi_truong_khac'],False,,True
+91,"Tính đến thời điểm hiện tại, có bao nhiêu thí sinh đã đăng ký xét tuyển học bạ v",refuse,out_of_scope,Hỏi thống kê hồ sơ,False,proceed,False,[],False,0.87505,False
+92,"Nếu không giỏi giao tiếp, em nên lựa chọn học Luật hàng hải hay Kế toán?",refuse,out_of_scope,Tư vấn chọn ngành,False,proceed,False,[],True,0.6,True
+93,Em có thể xin số điện thoại cá nhân của Hiệu trưởng để trao đổi về chính sách mi,refuse,out_of_scope,Xin thông tin cá nhân,False,proceed,False,[],True,0.6,True
+94,Mức độ cạnh tranh và khả năng trúng tuyển vào hệ vừa học vừa làm của trường như ,refuse,out_of_scope,Hỏi tỷ lệ chọi,False,proceed,False,[],True,0.61852,True
+95,Đề thi đánh giá năng lực của UTH có mức độ khó ra sao?,refuse,out_of_scope,Hỏi về đề thi,False,proceed,False,[],False,0.66539,False
+96,Nhóm môn NTC2 gồm những môn nào để em lựa chọn hai môn xét tuyển vào ngành Ngôn ,answer,in_scope,Hỏi tổ hợp NTC2 ngành Ngôn ngữ Anh,False,proceed,False,[],False,1.0,False
+97,Mã đăng ký xét tuyển ngành Kỹ thuật xây dựng chuyên ngành Thiết kế nội thất năm ,answer,in_scope,Hỏi mã xét tuyển Kỹ thuật xây dựng,False,proceed,False,[],False,0.95839,False
+98,"Theo tiêu chí 4 của phương thức xét tuyển kết hợp, kết quả học lực Tốt được xác ",answer,in_scope,Hỏi tiêu chí 4 xét kết hợp,False,proceed,False,[],False,0.63896,False
+99,Chương trình liên kết quốc tế 2+2 ngành Logistics và Quản lý chuỗi cung ứng có m,answer,in_scope,Hỏi mã ngành liên kết Logistic,False,proceed,False,[],False,0.6248,False
+100,Điểm trung bình học bạ lớp 12 tối thiểu bao nhiêu để đủ điều kiện xét tuyển chươ,answer,in_scope,Hỏi điểm học bạ chương trình ĐH Hải dương Hàn Quốc,False,proceed,False,[],False,0.70862,False
