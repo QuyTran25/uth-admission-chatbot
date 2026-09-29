@@ -1,0 +1,17 @@
+{
+  "locked_file": "backend/data/test/test_questions_locked.csv",
+  "source_xlsx": "data_test-lock.xlsx",
+  "total_questions": 100,
+  "sha256_content": "cb59aee3ad8b8690b94194d2c53ca4c5dc5e594983d11cd3ae2be63ded219e15",
+  "categories": {
+    "in_scope": 55,
+    "out_of_scope": 22,
+    "year_control": 23
+  },
+  "behaviors": {
+    "answer": 74,
+    "fallback_warning": 4,
+    "refuse": 22
+  },
+  "audit_note": "Locked dataset strictly quarantined for final unadjusted evaluation only. Zero overlap with dev_questions.csv."
+}
