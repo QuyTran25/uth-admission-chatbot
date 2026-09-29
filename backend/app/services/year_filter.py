@@ -322,42 +322,50 @@ def analyze(query: str) -> FilterResult:
 
     # 2. Nhận diện năm và các từ khóa tương lai
     detected_year = _detect_year(text_norm, text_no_accent)
-    is_future = _detect_future_request(text_no_accent) or (detected_year is not None and detected_year > CURRENT_YEAR)
 
-    # 3. Phân loại document_type trước để phục vụ routing
+    # 3. Năm không có dữ liệu trong corpus -> dùng dữ liệu năm 2026 và cảnh báo.
+    # Nhánh OOS đã được xử lý ở trên nên chỉ các câu hỏi còn trong phạm vi mới đi tới đây.
+    if detected_year is not None and (
+        detected_year < MIN_SUPPORTED_YEAR or detected_year > MAX_SUPPORTED_YEAR
+    ):
+        logger.info(
+            "Year outside supported range [2022, 2026]: %s → fallback to %s",
+            detected_year,
+            CURRENT_YEAR,
+        )
+        return FilterResult(
+            status="proceed",
+            filter_year=CURRENT_YEAR,
+            document_type=_detect_document_type(text_no_accent),
+            warning=(
+                f"Lưu ý: Hệ thống chưa có dữ liệu tuyển sinh chính thức cho năm {detected_year}. "
+                f"Dưới đây là thông tin tuyển sinh năm {CURRENT_YEAR} để bạn tham khảo."
+            ),
+        )
+
+    is_future = _detect_future_request(text_no_accent)
+
+    # 4. Phân loại document_type trước để phục vụ routing
     doc_type = _detect_document_type(text_no_accent)
 
-    # 4. Xử lý câu hỏi tương lai chưa công bố -> luồng fallback_warning
+    # 5. Xử lý câu hỏi tương lai chưa công bố (ví dụ: 'khi nào có điểm chuẩn', 'năm tới') -> luồng fallback_warning (2026)
     if is_future:
-        future_year_str = str(detected_year) if (detected_year is not None and detected_year > CURRENT_YEAR) else "tới"
-        logger.info(f"Future request detected (year={detected_year}) → fallback_warning (2026)")
+        logger.info(f"Future keyword request detected → fallback_warning ({CURRENT_YEAR})")
         return FilterResult(
             status="proceed",
             filter_year=CURRENT_YEAR,
             document_type=doc_type,
             warning=(
-                f"Lưu ý: Thông tin tuyển sinh năm {future_year_str} chưa được công bố. "
-                f"Dưới đây là thông tin năm {CURRENT_YEAR} để bạn tham khảo."
+                f"Lưu ý: Một số thông tin tuyển sinh năm {CURRENT_YEAR} có thể chưa được công bố chính thức. "
+                f"Dưới đây là thông tin hiện có để bạn tham khảo."
             ),
-        )
-
-    # 5. Xử lý năm quá khứ ngoài tầm hỗ trợ (< 2022)
-    if detected_year is not None and detected_year < MIN_SUPPORTED_YEAR:
-        logger.info(f"Year not supported: {detected_year}")
-        return FilterResult(
-            status="refused",
-            code="YEAR_NOT_SUPPORTED",
-            message=YEAR_NOT_SUPPORTED_MESSAGE,
-            refusal_source="year_not_supported",
         )
 
     # 6. Routing theo document_type + năm (2022-2026)
     if doc_type == "cutoff_score":
-        # User chủ động hỏi so sánh nhiều năm — ưu tiên kiểm tra TRƯỚC, bất kể
-        # có phát hiện được 1 năm cụ thể hay không. Lý do: _detect_year chỉ lấy
-        # năm đầu tiên tìm thấy, nên câu như "so sánh điểm chuẩn 2024 và 2025"
-        # vẫn có detected_year=2024 — nếu chặn theo "detected_year is None" sẽ
-        # lặng lẽ trả lời chỉ 1 năm, bỏ sót ý so sánh của user.
+        # User chủ động hỏi so sánh nhiều năm -> yêu cầu làm rõ năm.
+        # Câu hỏi một năm cụ thể trong [2022, 2026] dùng đúng dữ liệu năm đó
+        # ở nhánh chuẩn bên dưới.
         if _is_multi_year_request(text_no_accent):
             logger.info("cutoff_score: multi-year request → clarification_needed")
             return FilterResult(
