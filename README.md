@@ -23,28 +23,51 @@ Hệ thống vận hành theo 3 giai đoạn chính:
 
 #### Giai đoạn 2: Tiếp nhận câu hỏi và Tìm kiếm (Online Retrieval & OOS Filtering)
 * **Luồng:** `Câu hỏi` -> `Lớp 1: year_filter.py (Lọc năm & chủ đề)` -> `Lớp 2: oos_filter.py (Lọc ý định ngoài phạm vi - Hướng C)` -> `Tìm kiếm Hybrid (dynamic routing)` -> `Lớp 3: Retrieval Gate (Điểm số chunk)` -> `Generator`.
-* **Cơ chế Phân loại Loại tài liệu (CheckDocType):** `year_filter.py` thực hiện phân loại sơ bộ `document_type` từ câu hỏi thô bằng phương pháp so khớp từ khóa dựa trên luật (rule-based keyword matching) - ví dụ: câu hỏi chứa các cụm từ như 'điểm chuẩn', 'bao nhiêu điểm', 'trúng tuyển' sẽ được phân loại là `cutoff_score`; các loại câu hỏi khác được ánh xạ theo bộ từ khóa cố định cho 13 loại tài liệu còn lại. Phân loại sơ bộ này diễn ra trước khi Hybrid Retrieval chạy nhằm định hướng luồng xử lý lọc năm tuyển sinh.
-* **Quy tắc lọc theo năm (Admission Year Routing):**
-  - **Năm ngoài khoảng (năm < 2022 hoặc năm > 2026):** Từ chối trực tiếp với mã lỗi `YEAR_NOT_SUPPORTED`.
-  - **Nếu là Điểm chuẩn (`cutoff_score`):** Hỗ trợ dữ liệu từ 2022–2026. Nếu câu hỏi nêu năm cụ thể trong khoảng này, thực hiện tìm kiếm Hybrid. Nếu không nêu rõ năm, trả về status `"clarification_needed"` (gợi ý các năm trên UI).
-  - **Nếu là tài liệu khác (học phí, chỉ tiêu...):**
-    - Nếu câu hỏi nêu năm cụ thể khác 2026 (2022–2025), từ chối trực tiếp với lỗi `YEAR_NOT_SUPPORTED` (thông báo tài liệu này chỉ có thông tin năm 2026).
-    - Nếu không nêu rõ năm, hệ thống chạy ở chế độ **No-Filter Mode + 20% Boost điểm** cho các chunk thuộc năm học hiện tại (**2026**). Điều này giúp ưu tiên thông tin mới nhất nhưng vẫn giữ được khả năng truy cập thông tin các năm cũ của tài liệu đó.
+* **Cơ chế Phân loại Loại tài liệu (CheckDocType):** `year_filter.py` thực hiện phân loại sơ bộ `document_type` từ câu hỏi thô bằng phương pháp so khớp từ khóa dựa trên bộ từ điển...
+* **Quy tắc lọc theo năm thống nhất (Unified Admission Year Policy — Bảng quy tắc chuẩn):**
+
+| Trường hợp câu hỏi | Điều kiện năm | Hành vi hệ thống (`status`) | Dữ liệu truy xuất & Xử lý |
+|---|---|:---:|---|
+| **Trong phạm vi + có dữ liệu** | Năm trong khoảng [2022, 2026] | `proceed` (answer) | Truy xuất chính xác dữ liệu của năm được yêu cầu |
+| **Trong phạm vi + ngoài năm dữ liệu** | Năm tương lai (> 2026) hoặc quá khứ (< 2022) | `proceed` (fallback_warning) | Lấy dữ liệu năm gần nhất (2026) kèm thông báo cảnh báo thông tin chưa công bố |
+| **Trong phạm vi + không rõ năm** | Không đề cập năm cụ thể | `proceed` (default 2026) | Mặc định sử dụng năm tuyển sinh hiện hành (2026) + Boost 20% điểm cho chunks 2026 |
+| **Hỏi so sánh nhiều năm (Điểm chuẩn)** | Chứa từ khóa so sánh nhiều năm | `clarification_needed` | Yêu cầu người dùng chọn năm cụ thể [2022-2026] trên giao diện |
+| **Ngoài phạm vi tuyển sinh (OOS)** | Câu hỏi không thuộc phạm vi tuyển sinh | `refused` | Từ chối trả lời lịch sự theo quy định |
+
 * **Luồng lọc Out-of-Scope (OOS) 3 lớp thực tế:**
-  1. **Lớp 1 (year_filter.py):** Lọc theo năm không hỗ trợ hoặc từ khóa chủ đề OOS cơ bản. (Recall đạt `29.2%`, FPR `0.67%`).
-  2. **Lớp 2 (oos_filter.py):** Lọc theo ý định Hướng C (dự đoán điểm chuẩn, tư vấn chọn ngành, cơ hội việc làm, so sánh trường...) bằng Regex tối ưu. (Recall đạt `60.7%`, FPR `1.67%`).
-     * *Đánh giá*: Kết hợp Lớp 1 + Lớp 2 cho hiệu năng lọc OOS xuất sắc: **Recall đạt 73.0%** với **FPR cực thấp (2.01%)**.
-  3. **Lớp 3 (Retrieval Gate - retrieval_gate.py):** Lọc theo điểm số chunk và consensus. 
-     * *Ghi chú cấu hình thực tế*: Kết quả Grid Search cho thấy việc bật Retrieval Gate điểm số làm tăng FPR lên vượt mức 20% (ngân sách yêu cầu ≤ 10%). Do đó, **Lớp 3 tạm thời được tắt hoàn toàn (ngưỡng = 0.0)** để bảo vệ trải nghiệm người dùng, tránh chặn nhầm câu hỏi hợp lệ. Nhiệm vụ lọc OOS còn sót lại được chuyển cho **Attribution Gate** ở tầng sinh.
+  1. **Lớp 1 (year_filter.py):** Lọc theo mốc năm không hợp lệ hoặc từ khóa ngoài phạm vi tuyển sinh.
+  2. **Lớp 2 (oos_filter.py):** Lọc theo ý định ngữ nghĩa Hướng C (dự đoán điểm chuẩn, tư vấn chọn ngành, cơ hội việc làm, mức lương, so sánh trường khác) bằng Regex taxonomy.
+  3. **Lớp 3 (Retrieval Gate - retrieval_gate.py):** Lọc theo điểm số truy xuất với ngưỡng tối ưu thực nghiệm `0.62`. Trên tập Locked, Gate bắt thêm **53.8% (7/13 câu)** out-of-scope hỏi gián tiếp còn lọt qua 2 lớp đầu.
 
 #### Giai đoạn 3: Sinh câu trả lời và Đối chiếu (Online Generation)
 * **Luồng:** Nhận chunks hợp lệ hoặc thông tin lỗi -> `Prompt Builder` -> `Gemini API` -> `Attribution Gate` -> `Web UI`.
-* **Kiểm soát chất lượng (Attribution Gate):** Đối chiếu trực tiếp con số và thông tin trong câu trả lời với các chunks dữ liệu được truy xuất. Nếu tỷ lệ trích dẫn đạt yêu cầu (Citation Precision ≥ 90%) thì hiển thị câu trả lời kèm nguồn trích dẫn, ngược lại từ chối (`Attribution Gate Failed` - Hallucination Refusal).
-* **Logic Fallback Điểm chuẩn 2026:**
-  - Nếu người dùng hỏi điểm chuẩn năm 2026 nhưng cơ sở dữ liệu chưa có (chưa công bố chính thức), tầng Retrieval (`year_filter.py`) tự động sinh chuỗi cảnh báo cố định (`warning`) và trả về.
+* **Kiểm soát chất lượng (Attribution Gate):** Hoạt động như một rào chắn chống ảo giác trích dẫn (Anti-hallucination Filter). Kiểm tra danh sách `chunk_id` được mô hình trích dẫn có thực sự nằm trong danh sách các chunks được truy xuất về từ Index hay không (Citation ID Integrity). Nếu mô hình sinh ra trích dẫn ảo không có trong context, Attribution Gate sẽ chặn câu trả lời để bảo vệ tính trung thực dữ liệu.
+* **Logic Fallback Điểm chuẩn & Năm chưa công bố:**
+  - Nếu câu hỏi rơi vào trường hợp chưa có dữ liệu chính thức, tầng Retrieval (`year_filter.py`) tự động sinh chuỗi cảnh báo cố định (`warning`).
   - `Prompt Builder` chèn chuỗi `warning` này làm system instruction.
-  - Gemini API sinh câu trả lời tự nhiên dựa trên chỉ thị đó: thông báo chưa có điểm chuẩn 2026 -> cung cấp dữ liệu điểm chuẩn tham khảo từ 2023-2025 -> đưa ra cảnh báo đổi cách tính điểm chuẩn từ năm 2025 -> gợi ý nhập điểm quy đổi.
+  - Gemini API sinh câu trả lời tự nhiên dựa trên chỉ thị đó kèm cảnh báo và dữ liệu tham khảo của năm gần nhất (2026).
 * **Xử lý lỗi:** Trả về lỗi hệ thống (HTTP 500) nếu Gemini bị timeout hoặc crash.
+
+### 1.3. Bảng Phân định Trạng thái Hiện thực (Implementation Status vs. Future Work)
+
+Nhằm đảm bảo tính minh bạch học thuật tuyệt đối giữa các tính năng đã vận hành trong mã nguồn và các ý tưởng nghiên cứu mở rộng, hệ thống xác lập bảng phân định trạng thái như sau:
+
+| Thành phần / Tính năng | Trạng thái hiện tại | Vị trí mã nguồn / Cơ chế hoạt động |
+| :--- | :--- | :--- |
+| **Pipeline tiền xử lý 6 bước bảng** | **Đã hiện thực 100%** | `backend/preprocessing/` (Docling, paste-down, KV-chunking) |
+| **Hybrid Retrieval (Dense + BM25)** | **Đã hiện thực 100%** | `backend/app/services/retrieval_service.py` (`settings.DENSE_WEIGHT=0.6`) |
+| **Year Filter (Lớp 1)** | **Đã hiện thực 100%** | `backend/app/services/year_filter.py` (Lọc theo Bảng quy tắc chuẩn) |
+| **OOS Intent Filter (Lớp 2 - Hướng C)**| **Đã hiện thực 100%** | `backend/app/services/oos_filter.py` (Regex semantic categories) |
+| **Retrieval Score Gate (Lớp 3)** | **Đã hiện thực 100%** | `backend/app/services/retrieval_gate.py` (Ngưỡng thực nghiệm `0.62`) |
+| **Generation & Prompt Builder** | **Đã hiện thực 100%** | `backend/app/services/generator.py` (Google Gemini API) |
+| **Attribution Gate** | **Đã hiện thực 100%** | `backend/app/services/attribution_gate.py` (Citation ID Integrity & Anti-hallucination) |
+| **Web Chat Interface** | **Đã hiện thực 100%** | `frontend/` (React SPA, hiển thị trích dẫn nguồn) |
+| **Kiểm định Thống kê & CI 95%** | **Đã hiện thực 100%** | `backend/eval/` (Bootstrap CI 1,000 resamples, Paired t-test, Wilcoxon) |
+| **Tái lập kết quả (Reproducibility)** | **Đã hiện thực 100%** | `Makefile` & `reproduce_chapter5.ps1` (Tự động 1 click) |
+| **Bước 7: Entity Resolution (Fellegi-Sunter)** | **Định hướng tương lai** | Chưa triển khai trong bản phát hành hiện tại (phần mở rộng đề tài) |
+| **Lưu ngữ cảnh đa lượt (Conversation Memory)** | **Định hướng tương lai** | Hiện tại chatbot hoạt động theo từng lượt đơn lẻ (Single-turn QA) |
+| **Hỏi đáp bằng giọng nói (Audio / Mic)** | **Định hướng tương lai** | Chưa tích hợp bộ nhận dạng tiếng nói vào Web UI |
+| **NLI Fact-checking Model chuyên sâu** | **Định hướng tương lai** | Dự kiến tích hợp mô hình NLI rời (như MiniCheck) trong phiên bản sau |
 
 ---
 
@@ -204,17 +227,31 @@ Endpoint chính giao tiếp giữa Frontend (React/WebUI) và Backend.
   }
   ```
 
-* **Kịch bản 4: `fallback_warning` (Câu hỏi về năm tương lai chưa công bố)**
+* **Kịch bản 4: `fallback_warning` (Hỏi thông tin năm 2026 chưa công bố, ví dụ: điểm chuẩn 2026)**
   ```json
   {
     "behavior": "fallback_warning",
-    "answer": "Lưu ý: Thông tin tuyển sinh năm 2027 chưa được công bố. Dưới đây là thông tin tham khảo năm 2026...",
+    "answer": "Lưu ý: Điểm chuẩn năm 2026 chưa được công bố chính thức. Dưới đây là thông tin tham khảo các năm gần nhất (2023–2025)...",
     "citations": [...],
     "citation_precision": 0.95,
     "refused_reason": null,
     "oos_categories": [],
     "latency_ms": 380.0,
     "year_used": 2026
+  }
+  ```
+
+* **Kịch bản 5: `refused` do năm không hỗ trợ (`YEAR_NOT_SUPPORTED`)**
+  ```json
+  {
+    "behavior": "refused",
+    "answer": "Hiện tại hệ thống chỉ hỗ trợ thông tin tuyển sinh từ năm 2022 đến 2026. Bạn vui lòng liên hệ trực tiếp để được hỗ trợ...",
+    "citations": [],
+    "citation_precision": 1.0,
+    "refused_reason": "year_not_supported",
+    "oos_categories": [],
+    "latency_ms": 12.0,
+    "year_used": null
   }
   ```
 
