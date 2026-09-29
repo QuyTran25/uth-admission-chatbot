@@ -89,9 +89,16 @@ def apply_filters(
     if year:
         try:
             year_val = int(year)
-            filtered = [m for m in filtered if m.get("admission_year") == year_val]
+            # Giữ lại các chunk khớp năm HOẶC các chunk thông tin chung (evergreen: None, "all", "evergreen")
+            filtered = [
+                m for m in filtered 
+                if m.get("admission_year") == year_val or m.get("admission_year") in (None, "all", "evergreen")
+            ]
         except (ValueError, TypeError):
-            filtered = [m for m in filtered if m.get("admission_year") == year]
+            filtered = [
+                m for m in filtered 
+                if m.get("admission_year") == year or m.get("admission_year") in (None, "all", "evergreen")
+            ]
 
     prog = filters.get("program_type")
     if prog:
@@ -293,6 +300,16 @@ def _fuse_rrf(
     return results
 
 
+def _min_max_normalize(scores: List[float]) -> List[float]:
+    """Min-max normalize danh sách điểm số về [0.0, 1.0]."""
+    if not scores:
+        return scores
+    mn, mx = min(scores), max(scores)
+    if mx == mn:
+        return [1.0] * len(scores)
+    return [(s - mn) / (mx - mn) for s in scores]
+
+
 def _fuse_weighted(
     bm25_results: List[ScoredChunk],
     dense_results: List[ScoredChunk],
@@ -300,20 +317,12 @@ def _fuse_weighted(
 ) -> List[ScoredChunk]:
     """
     Weighted Sum: alpha * dense_score + (1-alpha) * bm25_norm_score.
-    BM25 scores được min-max normalize trước khi cộng.
+    BM25 và Dense scores được min-max normalize trước khi cộng.
     """
-    def normalize(scores: List[float]) -> List[float]:
-        if not scores:
-            return scores
-        mn, mx = min(scores), max(scores)
-        if mx == mn:
-            return [1.0] * len(scores)
-        return [(s - mn) / (mx - mn) for s in scores]
-
     bm25_scores_raw = [c.score for c in bm25_results]
     dense_scores_raw = [c.score for c in dense_results]
-    bm25_norm = normalize(bm25_scores_raw)
-    dense_norm = normalize(dense_scores_raw)
+    bm25_norm = _min_max_normalize(bm25_scores_raw)
+    dense_norm = _min_max_normalize(dense_scores_raw)
 
     scores: Dict[str, float] = {}
     chunk_map: Dict[str, ScoredChunk] = {}
@@ -349,6 +358,7 @@ def retrieve_with_dynamic_routing(
     filter_year: Optional[int] = None,
     program_type: Optional[str] = None,
     top_k: int = 5,
+    alpha: Optional[float] = None,
 ) -> Tuple[List[ScoredChunk], dict]:
     """
     Truy xuất tài liệu với cơ chế định tuyến động & Boost 20% cho năm 2026.
@@ -360,18 +370,19 @@ def retrieve_with_dynamic_routing(
       - Lưu score chuẩn hóa gốc chưa boost vào score_raw.
       - Sắp xếp lại theo score giảm dần và lấy top_k.
     """
+    effective_alpha = alpha if alpha is not None else settings.DENSE_WEIGHT
+
     if filter_year is not None:
         filters = {
             "admission_year": filter_year,
             "program_type": program_type
         }
-        # Gọi search_hybrid sử dụng alpha=0.4 (Weighted Hybrid tối ưu theo báo cáo)
         chunks, resp_meta = search_hybrid(
             query,
             top_k=top_k,
             filters=filters,
             fusion_method="weighted",
-            alpha=0.4
+            alpha=effective_alpha
         )
         # Đảm bảo trường score_raw được gán bằng score trong Filter Mode
         for chunk in chunks:
@@ -390,7 +401,7 @@ def retrieve_with_dynamic_routing(
             top_k=fetch_k,
             filters=filters,
             fusion_method="weighted",
-            alpha=0.4
+            alpha=effective_alpha
         )
 
         # Áp dụng boost 20% cho chunk năm 2026

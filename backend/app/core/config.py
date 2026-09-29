@@ -33,8 +33,8 @@ class Settings(BaseSettings):
     DEFAULT_ADMISSION_YEAR: int = 2026
 
     # --- Hybrid fusion weights (dùng cho Weighted Sum mode) ---
-    BM25_WEIGHT: float = 0.4
-    DENSE_WEIGHT: float = 0.6
+    BM25_WEIGHT: float = 0.6
+    DENSE_WEIGHT: float = 0.4
     # k cho RRF: final_score = 1 / (k + rank)
     RRF_K: int = 60
 
@@ -50,14 +50,9 @@ class Settings(BaseSettings):
     @property
     def index_dir_path(self) -> Path:
         p = Path(self.INDEX_DIR)
-        if p.is_absolute() and p.exists():
-            return p
-        root_path = _PROJECT_ROOT / self.INDEX_DIR
-        if root_path.exists():
-            return root_path
-        if p.exists():
-            return p
-        return root_path
+        if p.is_absolute():
+            return p.resolve()
+        return (_PROJECT_ROOT / p).resolve()
 
 
 settings = Settings()
