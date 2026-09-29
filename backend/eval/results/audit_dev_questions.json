@@ -1,0 +1,115 @@
+{
+  "dataset_name": "dev_questions.csv",
+  "total_questions": 390,
+  "in_scope_questions": 301,
+  "out_of_scope_questions": 89,
+  "valid_gold_count": 291,
+  "missing_gold_count": 10,
+  "missing_gold_percentage": 3.32,
+  "unique_missing_chunk_ids": [
+    "2023_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+    "2024_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+    "2025_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+    "<EMPTY>",
+    "thong_tin_chung_2026_co-so_chunks"
+  ],
+  "unique_missing_chunk_count": 5,
+  "mapped_corrections_count": 1,
+  "missing_details": [
+    {
+      "id": 10,
+      "category": "in_scope",
+      "query": "Trường có học ở Vũng Tàu không ad? Nằm ở đâu vậy?",
+      "chunk_id": "thong_tin_chung_2026_co-so_chunks",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": "2026_diem-chuan_dai-hoc-chinh-quy_s065",
+      "core_fact": ""
+    },
+    {
+      "id": 15,
+      "category": "year_control",
+      "query": "Cho em xin điểm chuẩn ngành Kỹ thuật điều khiển và tự động hóa năm 2025.",
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": null,
+      "core_fact": ""
+    },
+    {
+      "id": 16,
+      "category": "year_control",
+      "query": "Mình xin điểm ngành Quản trị kinh doanh năm 2025.",
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": null,
+      "core_fact": ""
+    },
+    {
+      "id": 17,
+      "category": "year_control",
+      "query": "Năm 2024 ngành Mạng máy tính thi THPT lấy điểm có cao không?",
+      "chunk_id": "2024_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": null,
+      "core_fact": ""
+    },
+    {
+      "id": 18,
+      "category": "year_control",
+      "query": "Điểm thi đại học 2024 ngành Kỹ thuật ô tô là bao nhiêu vậy ad?",
+      "chunk_id": "2024_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": null,
+      "core_fact": ""
+    },
+    {
+      "id": 19,
+      "category": "year_control",
+      "query": "Cho mình hỏi điểm chuẩn năm 2024 ngành Kinh tế vận tải (Hàng không).",
+      "chunk_id": "2024_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": null,
+      "core_fact": ""
+    },
+    {
+      "id": 20,
+      "category": "year_control",
+      "query": "Hồi 2023 thì Logistics hệ Chất lượng cao lấy mấy điểm ạ?",
+      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": null,
+      "core_fact": ""
+    },
+    {
+      "id": 28,
+      "category": "year_control",
+      "query": "Trường có bảng điểm chuẩn năm 2020 không, cho em xin với.",
+      "chunk_id": "<EMPTY>",
+      "reason": "Missing chunk_id in in-scope question",
+      "core_fact": ""
+    },
+    {
+      "id": 135,
+      "category": "in_scope",
+      "query": "Khối D07 gồm những môn gì vậy ạ?",
+      "chunk_id": "<EMPTY>",
+      "reason": "Missing chunk_id in in-scope question",
+      "core_fact": ""
+    },
+    {
+      "id": 150,
+      "category": "year_control",
+      "query": "Em muốn xin lại thông tin điểm chuẩn thi đại học năm 2018 của trường mình.",
+      "chunk_id": "<EMPTY>",
+      "reason": "Missing chunk_id in in-scope question",
+      "core_fact": ""
+    }
+  ],
+  "mapped_details": [
+    {
+      "id": 10,
+      "query": "Trường có học ở Vũng Tàu không ad? Nằm ở đâu vậy?",
+      "old_chunk_id": "thong_tin_chung_2026_co-so_chunks",
+      "mapped_chunk_id": "2026_diem-chuan_dai-hoc-chinh-quy_s065"
+    }
+  ]
+}

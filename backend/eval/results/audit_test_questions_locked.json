@@ -1,0 +1,156 @@
+{
+  "dataset_name": "test_questions_locked.csv",
+  "total_questions": 100,
+  "in_scope_questions": 78,
+  "out_of_scope_questions": 22,
+  "valid_gold_count": 69,
+  "missing_gold_count": 9,
+  "missing_gold_percentage": 11.54,
+  "unique_missing_chunk_ids": [
+    "2023_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+    "2024_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+    "2025_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+    "thong_tin_chung_2026_co-so_chunks"
+  ],
+  "unique_missing_chunk_count": 4,
+  "mapped_corrections_count": 9,
+  "missing_details": [
+    {
+      "id": 10,
+      "category": "in_scope",
+      "query": "Trường có cơ sở đào tạo tại Vũng Tàu không ạ? Nếu có thì địa chỉ cụ thể ở đâu?",
+      "chunk_id": "thong_tin_chung_2026_co-so_chunks",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": "2026_diem-chuan_dai-hoc-chinh-quy_s065",
+      "core_fact": "Mã xét tuyển kết thúc bằng V: Chương trình học tại Giảng đường Nguyễn Văn Thư (Vũng Tàu) - Số 17, Đường 3 Tháng 2, Phường Phước Thắng, TP. Vũng Tàu"
+    },
+    {
+      "id": 13,
+      "category": "year_control",
+      "query": "Điểm trúng tuyển ngành Ngôn ngữ Anh của trường năm 2025 là bao nhiêu ạ?",
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r002",
+      "core_fact": "Mã 7220201A (Tiên tiến): 800 điểm · Mã 7220201E (100% TA): 775 điểm (xét kết hợp 2025)"
+    },
+    {
+      "id": 14,
+      "category": "year_control",
+      "query": "Năm 2025, chương trình Công nghệ thông tin tiên tiến có mức điểm chuẩn bao nhiêu?",
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r013",
+      "core_fact": "CNTT tiên tiến (mã 748020101A): 800 điểm (xét kết hợp 2025)"
+    },
+    {
+      "id": 15,
+      "category": "year_control",
+      "query": "Ngành Kỹ thuật điều khiển và tự động hóa năm 2025 có điểm trúng tuyển là bao nhiêu?",
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r007",
+      "core_fact": "CN KT ĐK TĐH tiên tiến (mã 7510303A): 931 điểm · KT ĐK TĐH tiên tiến (mã 7520216A): 800 điểm (xét kết hợp 2025)"
+    },
+    {
+      "id": 16,
+      "category": "year_control",
+      "query": "Cho em hỏi mức điểm chuẩn của ngành Quản trị kinh doanh năm 2025 là bao nhiêu ạ?",
+      "chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r005",
+      "core_fact": "Quản trị kinh doanh (tiên tiến, mã 7340101A): 800 điểm (xét kết hợp 2025)"
+    },
+    {
+      "id": 17,
+      "category": "year_control",
+      "query": "Năm 2024, ngành Mạng máy tính lấy bao nhiêu điểm theo phương thức xét điểm thi tốt nghiệp THPT?",
+      "chunk_id": "2024_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": "2024_diem-chuan_dai-hoc-chinh-quy_t000_r006",
+      "core_fact": "Mạng máy tính và truyền thông dữ liệu (tiên tiến, mã 7480102A): 20.0 điểm (THPT 2024)"
+    },
+    {
+      "id": 18,
+      "category": "year_control",
+      "query": "Điểm chuẩn xét tuyển bằng kết quả thi THPT của ngành Kỹ thuật ô tô năm 2024 là bao nhiêu?",
+      "chunk_id": "2024_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": "2024_diem-chuan_dai-hoc-chinh-quy_t000_r014",
+      "core_fact": "CN KT ô tô (tiên tiến, mã 7510205A): 24.0 điểm · KT ô tô (tiên tiến, mã 7520130A): 22.0 điểm (THPT 2024)"
+    },
+    {
+      "id": 19,
+      "category": "year_control",
+      "query": "Ngành Kinh tế vận tải chuyên ngành Hàng không có điểm chuẩn năm 2024 là bao nhiêu?",
+      "chunk_id": "2024_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": "2024_diem-chuan_dai-hoc-chinh-quy_t000_r034",
+      "core_fact": "Kinh tế vận tải – hàng không (tiên tiến, mã 784010402A): 22.0 điểm (THPT 2024)"
+    },
+    {
+      "id": 20,
+      "category": "year_control",
+      "query": "Năm 2023, ngành Logistics chương trình Chất lượng cao có điểm chuẩn là bao nhiêu?",
+      "chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "reason": "Chunk ID not found in canonical index",
+      "suggested_canonical_chunk": "2023_diem-chuan_dai-hoc-chinh-quy_txt_s001",
+      "core_fact": "Logistics và QLCCƯ (CLC, mã 751060502H): 25.65 điểm · hệ đại trà: 25.65 điểm (THPT 2023)"
+    }
+  ],
+  "mapped_details": [
+    {
+      "id": 10,
+      "query": "Trường có cơ sở đào tạo tại Vũng Tàu không ạ? Nếu có thì địa chỉ cụ thể ở đâu?",
+      "old_chunk_id": "thong_tin_chung_2026_co-so_chunks",
+      "mapped_chunk_id": "2026_diem-chuan_dai-hoc-chinh-quy_s065"
+    },
+    {
+      "id": 13,
+      "query": "Điểm trúng tuyển ngành Ngôn ngữ Anh của trường năm 2025 là bao nhiêu ạ?",
+      "old_chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "mapped_chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r002"
+    },
+    {
+      "id": 14,
+      "query": "Năm 2025, chương trình Công nghệ thông tin tiên tiến có mức điểm chuẩn bao nhiêu?",
+      "old_chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "mapped_chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r013"
+    },
+    {
+      "id": 15,
+      "query": "Ngành Kỹ thuật điều khiển và tự động hóa năm 2025 có điểm trúng tuyển là bao nhiêu?",
+      "old_chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "mapped_chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t001_r007"
+    },
+    {
+      "id": 16,
+      "query": "Cho em hỏi mức điểm chuẩn của ngành Quản trị kinh doanh năm 2025 là bao nhiêu ạ?",
+      "old_chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "mapped_chunk_id": "2025_diem-chuan_dai-hoc-chinh-quy_t000_r005"
+    },
+    {
+      "id": 17,
+      "query": "Năm 2024, ngành Mạng máy tính lấy bao nhiêu điểm theo phương thức xét điểm thi tốt nghiệp THPT?",
+      "old_chunk_id": "2024_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "mapped_chunk_id": "2024_diem-chuan_dai-hoc-chinh-quy_t000_r006"
+    },
+    {
+      "id": 18,
+      "query": "Điểm chuẩn xét tuyển bằng kết quả thi THPT của ngành Kỹ thuật ô tô năm 2024 là bao nhiêu?",
+      "old_chunk_id": "2024_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "mapped_chunk_id": "2024_diem-chuan_dai-hoc-chinh-quy_t000_r014"
+    },
+    {
+      "id": 19,
+      "query": "Ngành Kinh tế vận tải chuyên ngành Hàng không có điểm chuẩn năm 2024 là bao nhiêu?",
+      "old_chunk_id": "2024_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "mapped_chunk_id": "2024_diem-chuan_dai-hoc-chinh-quy_t000_r034"
+    },
+    {
+      "id": 20,
+      "query": "Năm 2023, ngành Logistics chương trình Chất lượng cao có điểm chuẩn là bao nhiêu?",
+      "old_chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_t000_r000",
+      "mapped_chunk_id": "2023_diem-chuan_dai-hoc-chinh-quy_txt_s001"
+    }
+  ]
+}
