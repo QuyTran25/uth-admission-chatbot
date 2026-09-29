@@ -1,0 +1,62 @@
+{
+  "dataset": "test_questions_locked.csv",
+  "tag": "locked",
+  "n_refuse": 22,
+  "n_in_scope": 78,
+  "ablation_results": [
+    {
+      "Configuration": "Full Pipeline",
+      "Description": "Đầy đủ 5 thành phần (YearFilter + OOSFilter + Boost2026 + Gate + Attribution)",
+      "OOS_Recall": 72.73,
+      "OOS_FPR": 21.79,
+      "Refusal_Precision": 48.48,
+      "Refusal_F1": 58.18,
+      "Attribution_Safety": "Hoạt động (Chặn ảo giác citation)"
+    },
+    {
+      "Configuration": "w/o Year Filter",
+      "Description": "Tắt Year Filter (toàn bộ truy vấn bypass lớp 1, không bắt buộc lọc năm)",
+      "OOS_Recall": 59.09,
+      "OOS_FPR": 8.97,
+      "Refusal_Precision": 65.0,
+      "Refusal_F1": 61.9,
+      "Attribution_Safety": "Hoạt động (Chặn ảo giác citation)"
+    },
+    {
+      "Configuration": "w/o OOS Filter",
+      "Description": "Tắt OOS Filter Hướng C (chỉ dựa vào Year Filter và Retrieval Gate)",
+      "OOS_Recall": 50.0,
+      "OOS_FPR": 17.95,
+      "Refusal_Precision": 44.0,
+      "Refusal_F1": 46.81,
+      "Attribution_Safety": "Hoạt động (Chặn ảo giác citation)"
+    },
+    {
+      "Configuration": "w/o Retrieval Gate",
+      "Description": "Tắt Retrieval Gate (chỉ dựa vào Year Filter và OOS Filter tiền xử lý)",
+      "OOS_Recall": 40.91,
+      "OOS_FPR": 3.85,
+      "Refusal_Precision": 75.0,
+      "Refusal_F1": 52.94,
+      "Attribution_Safety": "Hoạt động (Chặn ảo giác citation)"
+    },
+    {
+      "Configuration": "w/o Boost 2026",
+      "Description": "Tắt hệ số tăng cường 1.2x cho tài liệu năm 2026 khi không chỉ định năm",
+      "OOS_Recall": 72.73,
+      "OOS_FPR": 21.79,
+      "Refusal_Precision": 48.48,
+      "Refusal_F1": 58.18,
+      "Attribution_Safety": "Hoạt động (Chặn ảo giác citation)"
+    },
+    {
+      "Configuration": "w/o Attribution Gate",
+      "Description": "Tắt kiểm định citation chunk_id (chấp nhận rủi ro ảo giác citation)",
+      "OOS_Recall": 72.73,
+      "OOS_FPR": 21.79,
+      "Refusal_Precision": 48.48,
+      "Refusal_F1": 58.18,
+      "Attribution_Safety": "Bị tắt (0% bảo vệ citation)"
+    }
+  ]
+}

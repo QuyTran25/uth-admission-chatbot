@@ -32,10 +32,11 @@ from app.services.year_filter import analyze
 from app.services.retrieval_service import retrieve_with_dynamic_routing
 from app.services.retrieval_gate import check_retrieval_quality
 
-DATA_DIR = r"d:\uth-admission-chatbot\backend\data\test"
-DEV_CSV = os.path.join(DATA_DIR, "dev_questions.csv")
-TEST_LOCKED_CSV = os.path.join(DATA_DIR, "test_questions_locked.csv")
-CONFIG_OUT_PATH = r"d:\uth-admission-chatbot\backend\app\core\gate_config.json"
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+DATA_DIR = PROJECT_ROOT / "backend" / "data" / "test"
+DEV_CSV = str(DATA_DIR / "dev_questions.csv")
+TEST_LOCKED_CSV = str(DATA_DIR / "test_questions_locked.csv")
+CONFIG_OUT_PATH = str(PROJECT_ROOT / "backend" / "app" / "core" / "gate_config.json")
 
 
 def precompute_retrieval(csv_path: str) -> list:
