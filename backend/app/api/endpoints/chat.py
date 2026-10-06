@@ -148,9 +148,9 @@ async def chat(request: ChatRequest) -> ChatResponse:
             filter_year=yr.filter_year,
             top_k=request.top_k,
         )
-    except Exception as e:
-        logger.error(f"[chat] Retrieval failed: {e}", exc_info=True)
-        raise HTTPException(status_code=500, detail=f"Retrieval failed: {str(e)}")
+    except Exception:
+        logger.exception("[chat] Retrieval failed")
+        raise HTTPException(status_code=500, detail="Hệ thống truy xuất dữ liệu gặp lỗi nội bộ. Vui lòng thử lại sau.")
 
     logger.info(f"[chat] Retrieved {len(chunks)} chunks (year={yr.filter_year})")
 

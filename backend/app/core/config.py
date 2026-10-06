@@ -47,6 +47,16 @@ class Settings(BaseSettings):
     GEMINI_MAX_RETRIES: int = 5
     GEMINI_RETRY_BASE_DELAY_SECONDS: float = 2.0
 
+    # --- Environment, Security & Rate Limiting (CD10) ---
+    ENVIRONMENT: str = "development"
+    ENABLE_MOCK_ROUTER: bool = False
+    CORS_ORIGINS: str = "http://localhost:3000,http://localhost:5173"
+    RATE_LIMIT_PER_MINUTE: int = 60
+
+    @property
+    def cors_origins_list(self) -> list[str]:
+        return [origin.strip() for origin in self.CORS_ORIGINS.split(",") if origin.strip()]
+
     @property
     def index_dir_path(self) -> Path:
         p = Path(self.INDEX_DIR)
