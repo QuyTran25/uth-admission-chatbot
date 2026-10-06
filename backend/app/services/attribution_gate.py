@@ -80,6 +80,66 @@ def compute_lexical_support(response_text: str, cited_chunks: list) -> float:
     return round(supported_count / len(content_tokens), 4)
 
 
+def extract_factual_numbers(text: str) -> set[str]:
+    """
+    Trích xuất các số liệu cụ thể cần kiểm chứng sự thật:
+    - Điểm chuẩn / số thập phân: ví dụ 24.5, 18.25
+    - Học phí / tiền tệ: 24.000.000, 99.000.000, 24000000
+    - Chỉ tiêu / số lượng lớn: >= 10
+    - Mã ngành: ví dụ 7480201 (7 chữ số)
+    Bỏ qua số thứ tự nhỏ (1..9) thường dùng cho list Markdown và năm tuyển sinh cơ sở (2022-2026).
+    """
+    if not text:
+        return set()
+
+    raw_tokens = re.findall(r'\b\d+(?:[\.,]\d+)*\b', text)
+    factual = set()
+    common_years = {"2022", "2023", "2024", "2025", "2026"}
+
+    for token in raw_tokens:
+        # Số thập phân (điểm chuẩn)
+        if re.match(r'^\d+[\.,]\d{1,2}$', token):
+            norm_dec = token.replace(',', '.')
+            factual.add(norm_dec)
+            continue
+
+        digits_only = re.sub(r'[\.,]', '', token)
+        if not digits_only.isdigit():
+            continue
+
+        val = int(digits_only)
+        if val < 10 or digits_only in common_years:
+            continue
+
+        factual.add(digits_only)
+
+    return factual
+
+
+def verify_factual_numbers(response_text: str, context_chunks: list) -> tuple[bool, list[str]]:
+    """
+    Kiểm tra xem mọi số liệu thực tế trong response_text có xuất hiện trong context_chunks hay không.
+    Trả về (passed, ungrounded_numbers).
+    """
+    if not response_text or not context_chunks:
+        return True, []
+
+    resp_numbers = extract_factual_numbers(response_text)
+    if not resp_numbers:
+        return True, []
+
+    context_text = " ".join([getattr(c, "text", "") for c in context_chunks])
+    context_numbers = extract_factual_numbers(context_text)
+
+    ungrounded = []
+    for num in resp_numbers:
+        if num in context_numbers or num in context_text:
+            continue
+        ungrounded.append(num)
+
+    return len(ungrounded) == 0, ungrounded
+
+
 # ---------------------------------------------------------------------------
 # Gate logic
 # ---------------------------------------------------------------------------
@@ -92,7 +152,7 @@ def check_attribution(
 ) -> AttributionResult:
     """
     Kiểm tra các chunk_id mà Gemini trích dẫn có thực sự tồn tại
-    trong danh sách chunks đã được truy xuất và có nâng đỡ nội dung câu trả lời hay không.
+    trong danh sách 5 chunks đưa vào prompt và có nâng đỡ nội dung câu trả lời hay không.
     """
     # Nếu Gemini đã từ chối hoặc câu hỏi bị từ chối → đánh dấu bypass rõ ràng
     if is_refused:
@@ -107,25 +167,45 @@ def check_attribution(
             is_refusal_bypassed=True,
         )
 
-    # Tập hợp chunk_id đã truy xuất
-    retrieved_map = {c.chunk_id: c for c in retrieved_chunks}
+    # CD5: Chỉ kiểm đúng 5 chunks đưa vào prompt
+    prompt_chunks = retrieved_chunks[:5]
+    retrieved_map = {c.chunk_id: c for c in prompt_chunks}
     retrieved_ids = set(retrieved_map.keys())
 
     total = len(cited_ids)
 
-    # Không trích dẫn gì → Gemini không follow [[chunk_id]] format → Gate kích hoạt FAIL
+    # CD5: Không trích dẫn gì nhưng nội dung đúng thực tế -> không fail hình thức
     if total == 0:
-        logger.warning("attribution_gate: cited_ids rỗng — Gemini không trích dẫn [[chunk_id]]. Gate FAIL.")
-        return AttributionResult(
-            passed=False,
-            citation_precision=0.0,
-            total_citations=0,
-            valid_citations=0,
-            failed_citations=[],
-            method="citation_integrity",
-            lexical_support_score=0.0,
-            is_refusal_bypassed=False,
-        )
+        num_passed, ungrounded_nums = verify_factual_numbers(response_text, prompt_chunks)
+        lexical_score = compute_lexical_support(response_text, prompt_chunks) if response_text else 1.0
+        content_passed = num_passed and (lexical_score >= MIN_LEXICAL_SUPPORT_THRESHOLD if response_text else True)
+
+        if content_passed:
+            logger.info("attribution_gate: missing citation tags but content is factually grounded in prompt chunks. Passed.")
+            return AttributionResult(
+                passed=True,
+                citation_precision=0.0,
+                total_citations=0,
+                valid_citations=0,
+                failed_citations=[],
+                method="content_grounded_missing_tags",
+                lexical_support_score=lexical_score,
+                is_refusal_bypassed=False,
+            )
+        else:
+            logger.warning(
+                f"attribution_gate: missing citation tags and ungrounded content (ungrounded_nums={ungrounded_nums}, lexical={lexical_score}). Gate FAIL."
+            )
+            return AttributionResult(
+                passed=False,
+                citation_precision=0.0,
+                total_citations=0,
+                valid_citations=0,
+                failed_citations=[],
+                method="citation_integrity",
+                lexical_support_score=lexical_score,
+                is_refusal_bypassed=False,
+            )
 
     # Phân loại valid / invalid citations
     valid = []
@@ -151,11 +231,15 @@ def check_attribution(
     lexical_score = compute_lexical_support(response_text, valid_chunk_objs) if response_text else 1.0
     passed_lexical = lexical_score >= MIN_LEXICAL_SUPPORT_THRESHOLD if response_text else True
 
-    overall_passed = passed_precision and passed_lexical
+    # CD5: So khớp số liệu thực tế với 5 chunks trong prompt
+    num_passed, ungrounded_nums = verify_factual_numbers(response_text, prompt_chunks)
 
-    if failed or not passed_lexical:
+    overall_passed = passed_precision and passed_lexical and num_passed
+
+    if failed or not passed_lexical or not num_passed:
         logger.warning(
-            f"attribution_gate: FAIL (precision={precision:.2f}, lexical_support={lexical_score:.2f}, failed_cids={failed})"
+            f"attribution_gate: FAIL (precision={precision:.2f}, lexical_support={lexical_score:.2f}, "
+            f"failed_cids={failed}, ungrounded_nums={ungrounded_nums})"
         )
     else:
         logger.info(
