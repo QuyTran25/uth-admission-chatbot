@@ -255,26 +255,28 @@ def _detect_future_request(text_no_accent: str) -> bool:
     return False
 
 
-def _detect_year(text_norm: str, text_no_accent: str) -> Optional[int]:
+def _detect_years_all(text_norm: str, text_no_accent: str) -> List[int]:
     """
-    Nhận diện năm tuyển sinh trong câu hỏi.
-    Từ khóa tương đối ("năm ngoái", "năm nay"...) so khớp accent-insensitive
-    + word boundary để nhất quán với các hàm detect khác (tránh miss khi user
-    gõ không dấu, và tránh match sai substring).
-    Số năm tuyệt đối (20xx) không bị ảnh hưởng bởi dấu nên giữ nguyên regex trên text_norm.
+    Tìm tất cả các năm được đề cập trong câu hỏi (cả tương đối và tuyệt đối).
     """
+    years = []
     for phrase, year in _RELATIVE_YEAR_MAP.items():
         if _match_keyword(phrase, text_no_accent):
-            logger.debug(f"Relative year detected: '{phrase}' → {year}")
-            return year
+            years.append(year)
 
     matches = _YEAR_REGEX.findall(text_norm)
-    if matches:
-        year = int(matches[0])
-        logger.debug(f"Absolute year detected: {year}")
-        return year
+    for m in matches:
+        years.append(int(m))
 
-    return None
+    return list(dict.fromkeys(years))
+
+
+def _detect_year(text_norm: str, text_no_accent: str) -> Optional[int]:
+    """
+    Nhận diện năm tuyển sinh trong câu hỏi (nếu có 1 năm duy nhất).
+    """
+    years = _detect_years_all(text_norm, text_no_accent)
+    return years[0] if years else None
 
 
 def _detect_document_type(text_no_accent: str) -> str:
@@ -292,8 +294,7 @@ def _detect_document_type(text_no_accent: str) -> str:
 
 def _is_multi_year_request(text_no_accent: str) -> bool:
     """
-    Kiểm tra user có chủ động so sánh/hỏi nhiều năm không.
-    Dùng accent-insensitive + word boundary để nhất quán với các hàm detect khác.
+    Kiểm tra user có chủ động so sánh/hỏi nhiều năm không qua từ khóa.
     """
     return any(_match_keyword(kw, text_no_accent) for kw in _MULTI_YEAR_KEYWORDS)
 
@@ -304,6 +305,10 @@ def _is_multi_year_request(text_no_accent: str) -> bool:
 def analyze(query: str) -> FilterResult:
     """
     Phân tích câu hỏi và trả về FilterResult.
+    Hỗ trợ 3 trường hợp chính (CD8):
+      1. Năm hợp lệ trong [2022, 2026] -> proceed
+      2. Năm ngoài phạm vi (< 2022 hoặc > 2026) -> refused
+      3. Đa năm (nhiều năm cụ thể hoặc từ khóa so sánh) / thiếu năm (với cutoff_score) -> clarification_needed
     """
     text_norm = _normalize(query)
     text_no_accent = remove_accents(text_norm)
@@ -320,36 +325,48 @@ def analyze(query: str) -> FilterResult:
             refusal_source="year_filter_keyword",
         )
 
-    # 2. Nhận diện năm và các từ khóa tương lai
-    detected_year = _detect_year(text_norm, text_no_accent)
-
-    # 3. Năm không có dữ liệu trong corpus -> dùng dữ liệu năm 2026 và cảnh báo.
-    # Nhánh OOS đã được xử lý ở trên nên chỉ các câu hỏi còn trong phạm vi mới đi tới đây.
-    if detected_year is not None and (
-        detected_year < MIN_SUPPORTED_YEAR or detected_year > MAX_SUPPORTED_YEAR
-    ):
-        logger.info(
-            "Year outside supported range [2022, 2026]: %s → fallback to %s",
-            detected_year,
-            CURRENT_YEAR,
-        )
-        return FilterResult(
-            status="proceed",
-            filter_year=CURRENT_YEAR,
-            document_type=_detect_document_type(text_no_accent),
-            warning=(
-                f"Lưu ý: Hệ thống chưa có dữ liệu tuyển sinh chính thức cho năm {detected_year}. "
-                f"Dưới đây là thông tin tuyển sinh năm {CURRENT_YEAR} để bạn tham khảo."
-            ),
-        )
-
-    is_future = _detect_future_request(text_no_accent)
-
-    # 4. Phân loại document_type trước để phục vụ routing
+    # 2. Phân loại document_type
     doc_type = _detect_document_type(text_no_accent)
 
-    # 5. Xử lý câu hỏi tương lai chưa công bố (ví dụ: 'khi nào có điểm chuẩn', 'năm tới') -> luồng fallback_warning (2026)
-    if is_future:
+    # 3. Nhận diện các năm có trong câu hỏi
+    all_years = _detect_years_all(text_norm, text_no_accent)
+
+    # CD8: Hỗ trợ nhiều năm không cần từ "so sánh"
+    if len(all_years) > 1 or _is_multi_year_request(text_no_accent):
+        logger.info(f"Multi-year request detected (years={all_years}) → clarification_needed")
+        valid_options = [y for y in all_years if MIN_SUPPORTED_YEAR <= y <= MAX_SUPPORTED_YEAR]
+        return FilterResult(
+            status="clarification_needed",
+            code="YEAR_CLARIFICATION_REQUIRED",
+            document_type=doc_type,
+            options=valid_options or [2026, 2025, 2024, 2023, 2022],
+            message="Hệ thống hỗ trợ tra cứu tuyển sinh chi tiết từng năm [2022-2026]. Bạn vui lòng chọn một năm cụ thể để tra cứu:",
+        )
+
+    # 4. Kiểm tra năm đơn lẻ
+    if len(all_years) == 1:
+        single_year = all_years[0]
+        # CD8: Từ chối năm ngoài phạm vi thay vì lùi về 2026
+        if single_year < MIN_SUPPORTED_YEAR or single_year > MAX_SUPPORTED_YEAR:
+            logger.info(f"Year outside supported range [2022, 2026]: {single_year} → refused")
+            return FilterResult(
+                status="refused",
+                code="YEAR_NOT_SUPPORTED",
+                filter_year=single_year,
+                document_type=doc_type,
+                message=YEAR_NOT_SUPPORTED_MESSAGE,
+                refusal_source="year_not_supported",
+            )
+        # Năm nằm trong [2022, 2026]
+        logger.info(f"Proceed with supported year {single_year} for doc_type {doc_type}")
+        return FilterResult(
+            status="proceed",
+            filter_year=single_year,
+            document_type=doc_type,
+        )
+
+    # 5. Câu hỏi tương lai chưa công bố (ví dụ: 'khi nào có điểm chuẩn', 'năm tới')
+    if _detect_future_request(text_no_accent):
         logger.info(f"Future keyword request detected → fallback_warning ({CURRENT_YEAR})")
         return FilterResult(
             status="proceed",
@@ -361,31 +378,18 @@ def analyze(query: str) -> FilterResult:
             ),
         )
 
-    # 6. Routing theo document_type + năm (2022-2026)
+    # 6. CD8: Hỏi lại khi thiếu năm (Missing year) đối với câu hỏi điểm chuẩn
     if doc_type == "cutoff_score":
-        # User chủ động hỏi so sánh nhiều năm -> yêu cầu làm rõ năm.
-        # Câu hỏi một năm cụ thể trong [2022, 2026] dùng đúng dữ liệu năm đó
-        # ở nhánh chuẩn bên dưới.
-        if _is_multi_year_request(text_no_accent):
-            logger.info("cutoff_score: multi-year request → clarification_needed")
-            return FilterResult(
-                status="clarification_needed",
-                code="YEAR_CLARIFICATION_REQUIRED",
-                document_type=doc_type,
-                options=[2026, 2025, 2024, 2023, 2022],
-                message="Vui lòng chọn năm tuyển sinh bạn muốn tra cứu điểm chuẩn:",
-            )
-
-    # Nếu có năm cụ thể (trong khoảng [2022, 2026]) -> Cho phép proceed cho MỌI document_type
-    if detected_year is not None:
-        logger.info(f"Proceed with detected year {detected_year} for doc_type {doc_type}")
+        logger.info("cutoff_score: missing year → clarification_needed")
         return FilterResult(
-            status="proceed",
-            filter_year=detected_year,
+            status="clarification_needed",
+            code="YEAR_CLARIFICATION_REQUIRED",
             document_type=doc_type,
+            options=[2026, 2025, 2024, 2023, 2022],
+            message="Bạn muốn tra cứu điểm chuẩn năm nào? Vui lòng chọn năm tuyển sinh từ 2022 đến 2026:",
         )
 
-    # Không rõ năm -> Mặc định CURRENT_YEAR (2026)
+    # 7. Các câu hỏi thông tin chung không ghi rõ năm -> Dùng CURRENT_YEAR (2026)
     logger.info(f"No year specified, doc_type={doc_type} → default {CURRENT_YEAR}")
     return FilterResult(
         status="proceed",

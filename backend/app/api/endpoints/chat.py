@@ -101,6 +101,18 @@ async def chat(request: ChatRequest) -> ChatResponse:
             year_used=yr.filter_year,
         )
 
+    if yr.status == "clarification_needed":
+        latency = (time.perf_counter() - t_start) * 1000
+        return ChatResponse(
+            behavior="clarify",
+            answer=yr.message or "Bạn vui lòng chọn hoặc cho biết rõ năm tuyển sinh bạn muốn tra cứu (2022-2026):",
+            citations=[],
+            citation_precision=None,
+            refused_reason=None,
+            latency_ms=round(latency, 2),
+            year_used=None,
+        )
+
     is_fallback = yr.warning is not None
 
     # -------------------------------------------------------------------
