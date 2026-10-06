@@ -34,10 +34,10 @@ MIN_LEXICAL_SUPPORT_THRESHOLD = 0.15  # Tối thiểu 15% từ khóa quan trọn
 @dataclass
 class AttributionResult:
     passed: bool
-    citation_precision: float     # valid_citations / total_citations (0.0 nếu không có trích dẫn)
-    total_citations: int
-    valid_citations: int
-    failed_citations: list[str]   # chunk_id không tồn tại trong retrieved chunks
+    citation_precision: Optional[float] = None     # None nếu refusal/bypassed, float nếu answer
+    total_citations: int = 0
+    valid_citations: int = 0
+    failed_citations: list[str] = field(default_factory=list)   # chunk_id không tồn tại trong retrieved chunks
     method: str = "citation_integrity_and_lexical"
     lexical_support_score: Optional[float] = None
     is_refusal_bypassed: bool = False
@@ -98,7 +98,7 @@ def check_attribution(
     if is_refused:
         return AttributionResult(
             passed=True,
-            citation_precision=1.0,
+            citation_precision=None,
             total_citations=0,
             valid_citations=0,
             failed_citations=[],

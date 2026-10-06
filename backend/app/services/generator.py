@@ -68,7 +68,6 @@ def _build_prompt(
         )
     context_str = "\n\n---\n\n".join(context_blocks)
 
-    # --- Cảnh báo năm nếu cần ---
     year_note = ""
     if is_fallback:
         year_note = (
@@ -84,12 +83,12 @@ def _build_prompt(
 - Nếu một câu trả lời dùng thông tin từ nhiều chunk, PHẢI trích dẫn TỪNG chunk tương ứng.
 
 VÍ DỤ ĐÚNG CÁCH TRÍCH DẪN:
-- "Điểm chuẩn ngành Công nghệ thông tin năm 2025 theo phương thức xét tuyển kết hợp là 24.5 điểm [[2025_diem-chuan_dai-hoc-chinh-quy_t000_r005]]."
-- "Học phí ngành Logistics năm 2026 là 24.000.000 đồng/năm [[2026_thong-tin-tuyen-sinh_dai-hoc-chinh-quy_t003_r012]]."
+- "[Thông tin tuyển sinh cụ thể] [[<chunk_id_hợp_lệ>]]"
+- "[Chỉ tiêu hoặc học phí của ngành] [[<chunk_id_trong_danh_sách>]]"
 
 VÍ DỤ SAI (KHÔNG LÀM THẾ NÀY):
-- "Điểm chuẩn ngành CNTT là 24.5 điểm." ← SAI vì thiếu [[chunk_id]]
-- "Điểm chuẩn là 24.5 [[chunk_001]]." ← SAI vì chunk_001 không có trong danh sách ID hợp lệ
+- "[Thông tin tuyển sinh]" ← SAI vì thiếu [[chunk_id]]
+- "[Thông tin tuyển sinh] [[id_không_tồn_tại]]" ← SAI vì ID không có trong danh sách hợp lệ
 
 ---
 
@@ -102,8 +101,9 @@ QUY TẮC TRẢ LỜI:
    - Sử dụng các đoạn văn ngắn và phân tách bằng dòng trống.
    - Khi liệt kê các ngành, điểm chuẩn, tiêu chí hoặc mã xét tuyển, BẮT BUỘC dùng danh sách gạch đầu dòng (-) hoặc đánh số (1., 2.), mỗi mục nằm trên một dòng riêng biệt.
    - Sử dụng in đậm (**tên ngành**, **mã xét tuyển**, **điểm số**) để làm nổi bật thông tin quan trọng.
-3. Nếu thông tin không có trong [DỮ LIỆU THAM KHẢO], hãy nói thẳng: "Hiện tại tôi chưa có thông tin về vấn đề này." TUYỆT ĐỐI KHÔNG bịa đặt số liệu.
-4. Nếu câu hỏi hoàn toàn ngoài phạm vi tuyển sinh UTH, hãy trả lời bằng chính xác cụm từ: "NGOAI_PHAM_VI"
+3. Nếu thông tin không có trong [DỮ LIỆU THAM KHẢO] hoặc câu hỏi ngoài phạm vi tuyển sinh UTH, BẮT BUỘC bắt đầu bằng trường cấu trúc:
+[STATUS: REFUSED]
+Sau đó nêu rõ lý do từ chối và hướng dẫn thí sinh liên hệ kênh chính thức. TUYỆT ĐỐI KHÔNG bịa đặt số liệu hay nguồn trích dẫn.
 
 [DỮ LIỆU THAM KHẢO — Danh sách chunk_id hợp lệ: {valid_ids_str}]
 {context_str}
@@ -151,7 +151,7 @@ def generate_answer(
     if not chunks:
         logger.warning(f"generate_answer: không có chunk nào cho query='{query[:50]}'")
         return GenerationResult(
-            answer_text="Hiện tại tôi chưa tìm thấy thông tin liên quan trong cơ sở dữ liệu của trường.",
+            answer_text="Hiện tại mình chưa tìm thấy thông tin liên quan trong cơ sở dữ liệu tuyển sinh của trường.",
             cited_ids=[],
             is_refused=True,
             raw_response="",
@@ -166,20 +166,23 @@ def generate_answer(
         logger.error(f"Gemini generation failed: {e}")
         raise
 
-    # Kiểm tra nếu Gemini tự nhận diện câu hỏi ngoài phạm vi
-    is_refused = "NGOAI_PHAM_VI" in raw
+    # Nhận diện từ chối bằng field cấu trúc [STATUS: REFUSED]
+    is_refused = bool(
+        re.search(r'\[STATUS:\s*REFUSED\]', raw, re.IGNORECASE)
+        or "NGOAI_PHAM_VI" in raw
+    )
 
-    cited_ids = _extract_cited_ids(raw)
+    # Loại bỏ token cấu trúc khỏi nội dung văn bản hiển thị
+    cleaned_text = re.sub(r'\[STATUS:\s*REFUSED\]\s*', '', raw, flags=re.IGNORECASE)
+    cleaned_text = cleaned_text.replace("NGOAI_PHAM_VI", "").strip()
 
-    # Nếu không có trích dẫn và chứa cụm từ từ chối/không có thông tin
-    refusal_keywords = ["chưa có thông tin", "không có thông tin", "chưa tìm thấy", "không tìm thấy", "chưa được công bố", "chưa công bố", "chưa hỗ trợ", "không hỗ trợ"]
-    if not cited_ids and any(kw in raw.lower() for kw in refusal_keywords):
-        is_refused = True
+    cited_ids = _extract_cited_ids(cleaned_text)
+    if is_refused:
+        cited_ids = []
 
-    # Làm sạch câu trả lời
-    answer_text = raw.replace("NGOAI_PHAM_VI", "").strip()
-    if is_refused and "NGOAI_PHAM_VI" in raw:
-        answer_text = "Câu hỏi này nằm ngoài phạm vi tư vấn tuyển sinh của UTH. Mình chỉ có thể hỗ trợ các thông tin liên quan đến tuyển sinh của trường."
+    answer_text = cleaned_text
+    if is_refused and not answer_text:
+        answer_text = "Hiện tại mình chưa có thông tin về câu hỏi này trong cơ sở dữ liệu tuyển sinh UTH."
 
     logger.info(
         f"Generated answer: {len(answer_text)} chars, "

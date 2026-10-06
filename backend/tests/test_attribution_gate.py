@@ -75,6 +75,7 @@ def test_attribution_refusal_bypass():
     assert res.passed is True
     assert res.is_refusal_bypassed is True
     assert res.method == "bypassed_refusal"
+    assert res.citation_precision is None
 
 def test_build_citation_list_filters_invalid():
     """Chỉ xuất ra trích dẫn hợp lệ."""

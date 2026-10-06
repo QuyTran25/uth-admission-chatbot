@@ -62,7 +62,7 @@ class ChatResponse(BaseModel):
     behavior: str           # "answer" | "fallback_warning" | "refused" | "clarify"
     answer: str             # Câu trả lời văn bản
     citations: list[CitationItem]
-    citation_precision: float
+    citation_precision: Optional[float] = None
     refused_reason: Optional[str] = None   # Lý do từ chối nếu behavior="refused"
     oos_categories: list[str] = []         # Nhóm OOS bị vi phạm (nếu có)
     latency_ms: float
@@ -95,7 +95,7 @@ async def chat(request: ChatRequest) -> ChatResponse:
             behavior="refused",
             answer=yr.message or YEAR_NOT_SUPPORTED_MESSAGE,
             citations=[],
-            citation_precision=1.0,
+            citation_precision=None,
             refused_reason="year_not_supported",
             latency_ms=round(latency, 2),
             year_used=yr.filter_year,
@@ -119,7 +119,7 @@ async def chat(request: ChatRequest) -> ChatResponse:
             behavior="refused",
             answer=OUT_OF_SCOPE_MESSAGE,
             citations=[],
-            citation_precision=1.0,
+            citation_precision=None,
             refused_reason="out_of_scope",
             oos_categories=oos_categories,
             latency_ms=round(latency, 2),
@@ -179,7 +179,7 @@ async def chat(request: ChatRequest) -> ChatResponse:
             behavior="refused",
             answer=gen_result.answer_text,
             citations=[],
-            citation_precision=1.0,
+            citation_precision=None,
             refused_reason="llm_refused",
             latency_ms=round(latency, 2),
             year_used=yr.filter_year,
@@ -211,7 +211,7 @@ async def chat(request: ChatRequest) -> ChatResponse:
                 "Bạn có thể liên hệ trực tiếp phòng tuyển sinh UTH để được hỗ trợ chính xác hơn."
             ),
             citations=[],
-            citation_precision=attr_result.citation_precision,
+            citation_precision=None,
             refused_reason="attribution_gate_failed",
             latency_ms=round(latency, 2),
             year_used=yr.filter_year,
