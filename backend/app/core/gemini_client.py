@@ -102,7 +102,14 @@ class GeminiClient:
                 except Exception as error:
                     category = self._classify_error(error)
                     last_category = category
-                    if category in {"quota", "transient"} and attempt < max_retries:
+                    if category == "quota":
+                        logger.warning(
+                            "Gemini model %s quota exceeded (429); switching immediately to next model without retry delay",
+                            model,
+                        )
+                        break
+
+                    if category == "transient" and attempt < max_retries:
                         delay = base_delay * (2 ** (attempt - 1)) + random.uniform(0, 0.75)
                         logger.warning(
                             "Gemini model %s %s; retry %s/%s in %.1fs",
@@ -115,7 +122,7 @@ class GeminiClient:
                         time.sleep(delay)
                         continue
 
-                    if category in {"quota", "transient", "model_unavailable"}:
+                    if category in {"transient", "model_unavailable"}:
                         logger.warning(
                             "Gemini model %s unavailable (%s); trying next configured model",
                             model,

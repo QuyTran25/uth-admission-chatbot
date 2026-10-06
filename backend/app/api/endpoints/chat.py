@@ -17,6 +17,7 @@ Response behaviors:
   - "clarify"           → yêu cầu người dùng chỉ rõ năm
 """
 
+import asyncio
 import time
 import logging
 from typing import Optional
@@ -129,7 +130,8 @@ async def chat(request: ChatRequest) -> ChatResponse:
     # Retrieval — Hybrid (BM25 + Dense)
     # -------------------------------------------------------------------
     try:
-        chunks, _ = retrieve_with_dynamic_routing(
+        chunks, _ = await asyncio.to_thread(
+            retrieve_with_dynamic_routing,
             query=query,
             filter_year=yr.filter_year,
             top_k=request.top_k,
@@ -144,7 +146,8 @@ async def chat(request: ChatRequest) -> ChatResponse:
     # Generation — Gọi Gemini API
     # -------------------------------------------------------------------
     try:
-        gen_result = generate_answer(
+        gen_result = await asyncio.to_thread(
+            generate_answer,
             query=query,
             chunks=chunks,
             filter_year=yr.filter_year,
