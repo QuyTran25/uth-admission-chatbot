@@ -91,12 +91,13 @@ async def chat(request: ChatRequest) -> ChatResponse:
 
     if yr.status == "refused":
         latency = (time.perf_counter() - t_start) * 1000
+        reason = "out_of_scope" if yr.code == "OUT_OF_SCOPE" else "year_not_supported"
         return ChatResponse(
             behavior="refused",
             answer=yr.message or YEAR_NOT_SUPPORTED_MESSAGE,
             citations=[],
             citation_precision=None,
-            refused_reason="year_not_supported",
+            refused_reason=reason,
             latency_ms=round(latency, 2),
             year_used=yr.filter_year,
         )
