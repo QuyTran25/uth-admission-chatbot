@@ -2,7 +2,9 @@
 main.py — FastAPI application entry point cho Retrieval API
 
 Usage:
-    uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 8000
+    uvicorn app.main:app --app-dir backend --reload --host 0.0.0.0 --port 8000
+    # hoặc từ thư mục backend:
+    uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 """
 
 import logging
@@ -11,6 +13,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.core.config import settings
 from app.core.index_store import index_store
 from app.api.endpoints.retrieve import router as retrieve_router
 from app.api.endpoints.mock_retriever import router as mock_router
@@ -26,11 +29,11 @@ logger = logging.getLogger("main")
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Load FAISS + BM25 index và embedding model khi app khởi động."""
-    logger.info("🚀 Khởi động Retrieval API — đang load index...")
+    logger.info("Khởi động Retrieval API — đang nạp index...")
     index_store.load()
-    logger.info("✅ Index loaded. API sẵn sàng.")
+    logger.info("Nạp index thành công. API sẵn sàng.")
     yield
-    logger.info("🛑 Shutting down Retrieval API.")
+    logger.info("Đang tắt Retrieval API.")
 
 
 # ---------------------------------------------------------------------------
@@ -61,7 +64,10 @@ app.add_middleware(
 
 # Mount router
 app.include_router(retrieve_router, prefix="/api/v1", tags=["retrieval"])
-app.include_router(mock_router, prefix="/api/v1/mock", tags=["mock-retrieval"])
+if getattr(settings, "ENV", "development").lower() in ("dev", "development", "test"):
+    app.include_router(mock_router, prefix="/api/v1/mock", tags=["mock-retrieval"])
+else:
+    logger.info("Chế độ Production: Không kích hoạt mock router.")
 app.include_router(chat_router, prefix="/api/v1", tags=["chat"])
 
 
@@ -73,7 +79,7 @@ app.include_router(chat_router, prefix="/api/v1", tags=["chat"])
 async def root():
     return {
         "service": "UTH Admission Chatbot — Retrieval API",
-        "version": "1.0.0",
+        "version": "2.0.0",
         "docs": "/docs",
         "health": "/api/v1/health",
     }
