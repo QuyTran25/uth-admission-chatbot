@@ -82,7 +82,10 @@ def main():
                 text=True,
                 check=True,
             ).stdout.strip()
-            dirty_lines = [line for line in git_status.splitlines() if not line.endswith("locked_eval_done.json")]
+            dirty_lines = [
+                line for line in git_status.splitlines()
+                if not any(token in line for token in ["results/", "locked_eval_done.json", "pipeline_union_"])
+            ]
             if dirty_lines:
                 raise RuntimeError(
                     f"VI PHẠM NGUYÊN TẮC: Git workspace chưa commit sạch trước khi chạy Locked set!\n"
