@@ -1,0 +1,107 @@
+{
+    "dataset": "dev_questions.csv",
+    "tag": "dev",
+    "total_queries": 390,
+    "refuse_count": 89,
+    "in_scope_count": 301,
+    "gate_config_used": {
+        "enabled": false,
+        "consensus_type": "file",
+        "threshold_default": 0.0,
+        "threshold_consensus": 0.0,
+        "margin_threshold": null,
+        "note": "Gate disabled (threshold 0.0). Thực nghiệm Grid Search trên tập Dev chứng minh: Lớp 1 (Year Filter) và Lớp 2 (Hướng C) có FPR cực thấp (0.33% - 2.01%), nhưng nếu bật Retrieval Gate ở ngưỡng >= 0.60 thì FPR riêng của Gate lập tức vọt lên 15.1% - 17.7% (vượt ngưỡng cho phép <= 10%). Do đó, Gate được chủ động tắt ở tầng tiền sinh để bảo vệ trải nghiệm thí sinh, dồn toàn bộ kiểm soát trích dẫn cho Attribution Gate ở tầng hậu sinh."
+    },
+    "metrics": {
+        "layer1_year_filter": {
+            "caught": 16,
+            "total_refuse": 89,
+            "recall": 0.1798,
+            "recall_ci_95": [
+                0.1138,
+                0.2723
+            ],
+            "fp": 1,
+            "total_in_scope": 301,
+            "fpr": 0.0033,
+            "fpr_ci_95": [
+                0.0006,
+                0.0186
+            ]
+        },
+        "layer2_oos_intent": {
+            "caught": 33,
+            "total_refuse": 89,
+            "recall": 0.3708,
+            "recall_ci_95": [
+                0.2777,
+                0.4745
+            ],
+            "fp": 0,
+            "total_in_scope": 301,
+            "fpr": 0.0,
+            "fpr_ci_95": [
+                0.0,
+                0.0126
+            ]
+        },
+        "union_layer1_2": {
+            "caught": 49,
+            "total_refuse": 89,
+            "recall": 0.5506,
+            "recall_ci_95": [
+                0.4473,
+                0.6497
+            ],
+            "fp": 1,
+            "total_in_scope": 301,
+            "fpr": 0.0033,
+            "fpr_ci_95": [
+                0.0006,
+                0.0186
+            ]
+        },
+        "layer3_gate_on_residual": {
+            "residual_refuse": 40,
+            "caught": 0,
+            "recall": 0.0,
+            "recall_ci_95": [
+                0.0,
+                0.0876
+            ],
+            "residual_in_scope": 300,
+            "fp": 0,
+            "fpr": 0.0,
+            "fpr_ci_95": [
+                0.0,
+                0.0126
+            ]
+        },
+        "union_full_pipeline": {
+            "caught": 49,
+            "total_refuse": 89,
+            "recall": 0.5506,
+            "recall_ci_95": [
+                0.4473,
+                0.6497
+            ],
+            "fp": 1,
+            "total_in_scope": 301,
+            "fpr": 0.0033,
+            "fpr_ci_95": [
+                0.0006,
+                0.0186
+            ]
+        },
+        "exact_match_strict": {
+            "correct": 326,
+            "total": 389,
+            "accuracy": 0.838
+        },
+        "exact_match_merged": {
+            "correct": 347,
+            "total": 389,
+            "accuracy": 0.892
+        }
+    }
+}
