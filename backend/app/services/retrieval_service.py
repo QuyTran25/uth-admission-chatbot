@@ -256,6 +256,9 @@ def search_hybrid(
     # Đồng thời lưu source_file tương ứng để kiểm tra đồng thuận tài liệu nguồn
     resp_meta["bm25_top1_file"] = bm25_results[0].source_file if bm25_results else None
     resp_meta["dense_top1_file"] = dense_results[0].source_file if dense_results else None
+    # CD1: Lưu điểm dense top-1 và top-2 gốc để Retrieval Gate đánh giá độc lập với fused order
+    resp_meta["dense_top1_score"] = dense_results[0].score if dense_results else 0.0
+    resp_meta["dense_top2_score"] = dense_results[1].score if len(dense_results) > 1 else 0.0
 
     if fusion_method == "rrf":
         combined = _fuse_rrf(bm25_results, dense_results)
@@ -359,6 +362,7 @@ def retrieve_with_dynamic_routing(
     program_type: Optional[str] = None,
     top_k: int = 5,
     alpha: Optional[float] = None,
+    enable_boost: bool = True,
 ) -> Tuple[List[ScoredChunk], dict]:
     """
     Truy xuất tài liệu với cơ chế định tuyến động & Boost 20% cho năm 2026.
@@ -366,7 +370,7 @@ def retrieve_with_dynamic_routing(
     - Filter Mode (Có năm cụ thể): Chạy search_hybrid với filter cứng.
       Gán score_raw = score cho tất cả ScoredChunk để nhất quán.
     - No-Filter Mode + Boost (Không rõ năm): Chạy search_hybrid với filters={'admission_year': 'all'}.
-      - Nhân score của các chunk thuộc năm 2026 với 1.2 (Boost ranking).
+      - Nếu enable_boost=True: Nhân score của các chunk thuộc năm 2026 với 1.2 (Boost ranking).
       - Lưu score chuẩn hóa gốc chưa boost vào score_raw.
       - Sắp xếp lại theo score giảm dần và lấy top_k.
     """
@@ -404,14 +408,15 @@ def retrieve_with_dynamic_routing(
             alpha=effective_alpha
         )
 
-        # Áp dụng boost 20% cho chunk năm 2026
-        for chunk in chunks:
-            # chunk.score_raw đã được khởi tạo bằng chunk.score trong __post_init__
-            if chunk.admission_year == 2026:
-                chunk.score = chunk.score * 1.2
+        # Áp dụng boost 20% cho chunk năm 2026 (nếu enable_boost bật)
+        if enable_boost:
+            for chunk in chunks:
+                # chunk.score_raw đã được khởi tạo bằng chunk.score trong __post_init__
+                if chunk.admission_year == 2026:
+                    chunk.score = chunk.score * 1.2
 
-        # Sắp xếp lại danh sách chunks theo score đã boost giảm dần
-        chunks.sort(key=lambda x: x.score, reverse=True)
+            # Sắp xếp lại danh sách chunks theo score đã boost giảm dần
+            chunks.sort(key=lambda x: x.score, reverse=True)
 
         # Cắt lấy top_k
         final_chunks = chunks[:top_k]

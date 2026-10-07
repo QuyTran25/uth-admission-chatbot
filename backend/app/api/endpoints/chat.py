@@ -24,13 +24,7 @@ from typing import Optional
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
-from app.services.year_filter import (
-    analyze as year_filter_analyze,
-    OUT_OF_SCOPE_MESSAGE,
-    YEAR_NOT_SUPPORTED_MESSAGE,
-)
-from app.services.oos_filter import check_oos
-from app.services.retrieval_service import retrieve_with_dynamic_routing
+from app.services.pipeline_decision import decide_query
 from app.services.generator import generate_answer
 from app.services.attribution_gate import check_attribution, build_citation_list
 from app.core.gemini_client import GeminiQuotaExceeded, GeminiTemporarilyUnavailable
@@ -74,71 +68,48 @@ class ChatResponse(BaseModel):
 # ---------------------------------------------------------------------------
 
 @router.post("/chat", response_model=ChatResponse, summary="Chat tuyển sinh (end-to-end)")
-async def chat(request: ChatRequest) -> ChatResponse:
+def chat(request: ChatRequest) -> ChatResponse:
     """
     Endpoint trả lời câu hỏi tuyển sinh end-to-end:
-    year_filter → oos_filter → retrieve → generate (Gemini) → attribution_gate
+    decide_query (year_filter → oos_filter → retrieval + gate) → generate (Gemini) → attribution_gate
     """
     t_start = time.perf_counter()
     query = request.query.strip()
 
-    # -------------------------------------------------------------------
-    # Lớp 1: Year Filter
-    # -------------------------------------------------------------------
-    yr = year_filter_analyze(query)
-    logger.info(f"[chat] year_filter: status={yr.status}, year={yr.filter_year}")
-
-    if yr.status == "refused":
-        latency = (time.perf_counter() - t_start) * 1000
-        return ChatResponse(
-            behavior="refused",
-            answer=yr.message or YEAR_NOT_SUPPORTED_MESSAGE,
-            citations=[],
-            citation_precision=1.0,
-            refused_reason="year_not_supported",
-            latency_ms=round(latency, 2),
-            year_used=yr.filter_year,
-        )
-
-    is_fallback = yr.warning is not None
-
-    # -------------------------------------------------------------------
-    # Lớp 2: OOS Filter (Hướng C — Regex Intent Filter)
-    # -------------------------------------------------------------------
-    is_oos, oos_categories = check_oos(
-        query,
-        year_filter_status=yr.status,
-        year_filter_doc_type=yr.document_type,
-    )
-    logger.info(f"[chat] oos_filter: is_oos={is_oos}, cats={oos_categories}")
-
-    if is_oos:
-        latency = (time.perf_counter() - t_start) * 1000
-        return ChatResponse(
-            behavior="refused",
-            answer=OUT_OF_SCOPE_MESSAGE,
-            citations=[],
-            citation_precision=1.0,
-            refused_reason="out_of_scope",
-            oos_categories=oos_categories,
-            latency_ms=round(latency, 2),
-            year_used=yr.filter_year,
-        )
-
-    # -------------------------------------------------------------------
-    # Retrieval — Hybrid (BM25 + Dense)
-    # -------------------------------------------------------------------
+    # Phân định tiền sinh (Pre-generation 3-layer decision)
     try:
-        chunks, _ = retrieve_with_dynamic_routing(
-            query=query,
-            filter_year=yr.filter_year,
-            top_k=request.top_k,
-        )
+        decision = decide_query(query=query, top_k=request.top_k)
     except Exception as e:
-        logger.error(f"[chat] Retrieval failed: {e}", exc_info=True)
-        raise HTTPException(status_code=500, detail=f"Retrieval failed: {str(e)}")
+        logger.error(f"[chat] Pipeline decision failed: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail=f"Pipeline error: {str(e)}")
 
-    logger.info(f"[chat] Retrieved {len(chunks)} chunks (year={yr.filter_year})")
+    if decision.behavior == "refused":
+        latency = (time.perf_counter() - t_start) * 1000
+        return ChatResponse(
+            behavior="refused",
+            answer=decision.message or "Câu hỏi nằm ngoài phạm vi hỗ trợ của trợ lý tuyển sinh UTH.",
+            citations=[],
+            citation_precision=1.0,
+            refused_reason=decision.refused_reason,
+            oos_categories=decision.oos_categories,
+            latency_ms=round(latency, 2),
+            year_used=decision.filter_year,
+        )
+
+    if decision.behavior == "clarify":
+        latency = (time.perf_counter() - t_start) * 1000
+        return ChatResponse(
+            behavior="clarify",
+            answer=decision.message or "Bạn vui lòng nói rõ thêm thông tin nhé.",
+            citations=[],
+            citation_precision=1.0,
+            latency_ms=round(latency, 2),
+            year_used=decision.filter_year,
+        )
+
+    chunks = decision.chunks
+    logger.info(f"[chat] Retrieved {len(chunks)} chunks (year={decision.filter_year})")
+    is_fallback = decision.is_fallback
 
     # -------------------------------------------------------------------
     # Generation — Gọi Gemini API
@@ -147,7 +118,7 @@ async def chat(request: ChatRequest) -> ChatResponse:
         gen_result = generate_answer(
             query=query,
             chunks=chunks,
-            filter_year=yr.filter_year,
+            filter_year=decision.filter_year,
             is_fallback=is_fallback,
         )
     except GeminiQuotaExceeded:
@@ -179,7 +150,7 @@ async def chat(request: ChatRequest) -> ChatResponse:
             citation_precision=1.0,
             refused_reason="llm_refused",
             latency_ms=round(latency, 2),
-            year_used=yr.filter_year,
+            year_used=decision.filter_year,
         )
 
     # -------------------------------------------------------------------
@@ -211,7 +182,7 @@ async def chat(request: ChatRequest) -> ChatResponse:
             citation_precision=attr_result.citation_precision,
             refused_reason="attribution_gate_failed",
             latency_ms=round(latency, 2),
-            year_used=yr.filter_year,
+            year_used=decision.filter_year,
         )
 
     # -------------------------------------------------------------------
@@ -229,6 +200,6 @@ async def chat(request: ChatRequest) -> ChatResponse:
         citations=citations,
         citation_precision=attr_result.citation_precision,
         latency_ms=round(latency, 2),
-        year_used=yr.filter_year,
-        fallback_warning_text=yr.warning if is_fallback else None,
+        year_used=decision.filter_year,
+        fallback_warning_text=decision.message if is_fallback else None,
     )

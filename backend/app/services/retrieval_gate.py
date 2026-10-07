@@ -19,7 +19,7 @@ def check_retrieval_quality(
     response_meta: dict,
     threshold_default: float,
     threshold_consensus: float,
-    consensus_type: str = "exact",  # "exact" | "file"
+    consensus_type: str = "file",  # "file" | "exact"
     margin_threshold: Optional[float] = None,
 ) -> Tuple[str, Optional[dict]]:
     """
@@ -30,7 +30,7 @@ def check_retrieval_quality(
         response_meta: Siêu dữ liệu chứa thông tin top-1 của BM25 và Dense.
         threshold_default: Ngưỡng điểm mặc định khi không đồng thuận.
         threshold_consensus: Ngưỡng điểm thấp hơn khi có đồng thuận.
-        consensus_type: Loại đồng thuận ("exact" = trùng chunk_id, "file" = trùng source_file).
+        consensus_type: Loại đồng thuận ("file" = trùng source_file, "exact" = trùng chunk_id).
         margin_threshold: Ngưỡng margin tối thiểu (nếu sử dụng).
         
     Returns:
@@ -54,37 +54,38 @@ def check_retrieval_quality(
             }
         }
 
-    # Lấy thông tin chunk đầu tiên
-    top1_chunk = chunks[0]
-    top1_score_raw = top1_chunk.score_raw if top1_chunk.score_raw is not None else top1_chunk.score
+    # Ưu tiên lấy dense_top1_score và dense_top2_score từ response_meta
+    meta = response_meta if isinstance(response_meta, dict) else {}
+    if "dense_top1_score" in meta:
+        top1_score_raw = float(meta["dense_top1_score"])
+        top2_score_raw = float(meta.get("dense_top2_score", 0.0))
+        margin = top1_score_raw - top2_score_raw
+    else:
+        top1_chunk = chunks[0]
+        top1_score_raw = top1_chunk.score_raw if top1_chunk.score_raw is not None else top1_chunk.score
+        if len(chunks) >= 2:
+            top2_chunk = chunks[1]
+            top2_score_raw = top2_chunk.score_raw if top2_chunk.score_raw is not None else top2_chunk.score
+            margin = top1_score_raw - top2_score_raw
+        else:
+            margin = top1_score_raw
     
     # 2. Tính toán Consensus
-    bm25_top1_cid = response_meta.get("bm25_top1_cid")
-    dense_top1_cid = response_meta.get("dense_top1_cid")
-    bm25_top1_file = response_meta.get("bm25_top1_file")
-    dense_top1_file = response_meta.get("dense_top1_file")
+    bm25_top1_cid = meta.get("bm25_top1_cid")
+    dense_top1_cid = meta.get("dense_top1_cid")
+    bm25_top1_file = meta.get("bm25_top1_file")
+    dense_top1_file = meta.get("dense_top1_file")
 
     consensus = False
-    if bm25_top1_cid and dense_top1_cid:
-        if consensus_type == "exact":
-            consensus = (bm25_top1_cid == dense_top1_cid)
-        elif consensus_type == "file":
-            consensus = (bm25_top1_file and dense_top1_file and bm25_top1_file == dense_top1_file)
-        else:
-            # Fallback nếu truyền sai type
-            consensus = (bm25_top1_cid == dense_top1_cid)
+    if consensus_type == "file":
+        consensus = bool(bm25_top1_file and dense_top1_file and bm25_top1_file == dense_top1_file)
+    elif consensus_type == "exact":
+        consensus = bool(bm25_top1_cid and dense_top1_cid and bm25_top1_cid == dense_top1_cid)
+    else:
+        consensus = bool(bm25_top1_cid and dense_top1_cid and bm25_top1_cid == dense_top1_cid)
 
     # 3. Xác định ngưỡng động dựa trên Consensus
     threshold = threshold_consensus if consensus else threshold_default
-
-    # 4. Tính toán Margin (sử dụng score_raw)
-    margin = 0.0
-    if len(chunks) >= 2:
-        top2_chunk = chunks[1]
-        top2_score_raw = top2_chunk.score_raw if top2_chunk.score_raw is not None else top2_chunk.score
-        margin = top1_score_raw - top2_score_raw
-    else:
-        margin = top1_score_raw
 
     # 5. Phân loại từ chối hay đi tiếp
     is_refused = False

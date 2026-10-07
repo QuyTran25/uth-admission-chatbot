@@ -1,7 +1,8 @@
 {
+    "enabled": false,
     "consensus_type": "file",
     "threshold_default": 0.0,
     "threshold_consensus": 0.0,
     "margin_threshold": null,
-    "note": "Gate disabled — FPR budget exhausted by L1 (year_filter) + L2 (Hướng C). Any threshold >0.59 adds FPR >20% on residual. Attribution Gate handles remaining refusal."
+    "note": "Gate disabled (threshold 0.0). Thực nghiệm Grid Search trên tập Dev chứng minh: Lớp 1 (Year Filter) và Lớp 2 (Hướng C) có FPR cực thấp (0.33% - 2.01%), nhưng nếu bật Retrieval Gate ở ngưỡng >= 0.60 thì FPR riêng của Gate lập tức vọt lên 15.1% - 17.7% (vượt ngưỡng cho phép <= 10%). Do đó, Gate được chủ động tắt ở tầng tiền sinh để bảo vệ trải nghiệm thí sinh, dồn toàn bộ kiểm soát trích dẫn cho Attribution Gate ở tầng hậu sinh."
 }

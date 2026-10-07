@@ -1,377 +1,399 @@
 """
-pipeline_union_eval.py — Đo union thực tế của 3 lớp lọc.
+pipeline_union_eval.py — Đo lường thực nghiệm pipeline lọc tiền sinh 3 lớp (3-Layer Union Filtering).
 
-⚠️  PHAM VI: Chi chay tren DEV SET (dev_questions.csv, 390 cau).
-TUYET DOI KHONG doc test_questions_locked.csv giua chung.
+Đo lường năng lực lọc câu hỏi ngoài phạm vi trước khi gọi mô hình sinh (Pre-generation):
+  Lớp 1: year_filter       (phát hiện năm không hỗ trợ)
+  Lớp 2: oos_filter        (phát hiện ý định ngoài phạm vi Hướng C)
+  Lớp 3: retrieval_gate    (kiểm soát chất lượng tài liệu hybrid)
 
-Moi cau hoi duoc danh dau:
-  - flagged_year_filter: year_filter.analyze() tra ve status='refused'
-  - flagged_direction_c: OOS intent pattern match (Huong C)
-  - flagged_retrieval_gate: score < threshold (offline, khong can Gemini)
-  - caught_union: ANY(3 flag tren) = True
-
-Output:
-  1. Bang Union Recall / FPR thuc do tren dev set
-  2. Danh sach chinh xac cau refuse sot sau 2 lop dau
-  3. Phan bo score_raw cua nhom sot
-
-Khong can Gemini API.
+Được thiết kế theo nguyên tắc SSoT:
+  - Sử dụng chính hàm decide_query từ backend/app/services/pipeline_decision.py (chính là luồng chat.py).
+  - Khắc phục triệt để lỗi CD1: Không mô phỏng riêng, không hard-code ngưỡng 0.62.
 """
 
 import sys
-import re
 import json
-import unicodedata
+import math
+import subprocess
+import argparse
+from pathlib import Path
+from typing import Tuple, Optional
 import pandas as pd
 import numpy as np
-from pathlib import Path
 
-sys.path.append(str(Path(__file__).parent.parent))
-
-from app.services.year_filter import analyze as year_filter_analyze
-from app.core.index_store import index_store
-from app.services.retrieval_service import retrieve_with_dynamic_routing
-
-import argparse
-
+# Thêm PROJECT_ROOT vào sys.path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-GATE_THRESHOLD = 0.62   # ngưỡng mới (FPR-friendly), hard-code để đo thực tế
+sys.path.append(str(PROJECT_ROOT / "backend"))
+
+from app.core.index_store import index_store
+from app.services.pipeline_decision import decide_query, load_gate_config
 
 
-# ---------------------------------------------------------------------------
-# 1. OOS Intent patterns (Hướng C — đã sửa 14 FP)
-# ---------------------------------------------------------------------------
-
-def normalize(s: str) -> str:
-    s = str(s).lower()
-    s = s.replace('đ', 'd').replace('Đ', 'd')
-    s = unicodedata.normalize('NFD', s)
-    s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
-    return s
-
-
-OTHER_SCHOOLS = [
-    'hutech', 'bach khoa', 'ton duc thang', 'utc2', r'\butc\b',
-    'ueh', r'\bdh luat\b', 'su pham ky thuat', 'hang hai viet nam',
-    'kinh te tphcm', 'dai hoc luat', 'giao thong van tai ha noi',
-    'ngoai bac', r'\bdh kinh te\b', 'rmit', 'greenwich', r'\bfpt\b',
-    'huflit', 'hcmue', 'hcmus', 'hcmut',
-]
-
-PATTERNS: dict[str, list[str]] = {
-    'du_doan_diem_chuan': [
-        r'\bdu doan\b.*\bdiem\b',
-        r'\bdu bao\b.*\bdiem\b',
-        r'\bdu kien\b.*\bdiem\b',
-        r'\bdiem\b.*\bdu doan\b',
-        r'\bdiem\b.*\bdu kien\b',
-        r'\bdiem\b.*\bdu bao\b',
-        r'\bdiem\b.*(tang|giam).*(se|du bao|nam nay)',
-        r'\bnam nay\b.*\bdiem\b.*(bao nhieu|la bao)',  # FIX: loại "điểm năm nay là bao nhiêu" là IN-SCOPE
-        r'\bdiem san\b.*(du bao|du doan)',
-        r'\bdu doan\b.*diem san',
-        # Thêm: bao nhiêu điểm để đỗ = dự đoán
-        r'\bcao bao nhieu\b.*\bdau\b',
-        r'\bcan bao nhieu diem\b.*(dau|do|trung)',
-        r'\bkhoang bao nhieu diem\b.*(dau|do|trung)',
-    ],
-    'tu_van_chon_nganh_khoi': [
-        r'\bnen chon\b.*(nganh|khoi)',
-        r'\bnen hoc\b.*(nganh|truong)',
-        r'\bphu hop\b.*(tinh cach|so thich|nang luc)',  # FIX: không chặn "phù hợp điều kiện"
-        r'\bkhuyen\b.*(em|minh|ban).*(nganh|khoi)',
-        r'\btu van\b.*(chon nganh|dinh huong)',
-        r'\bchon nganh\b', r'\bdinh huong\b.*(nganh|nghe)',
-        r'\bkhoi nao\b.*(de|tot hon)',
-        r'\bnganh nao\b.*(de|phu hop|tot hon)',
-        r'\bnen dang ky\b.*(nganh|khoi)',
-        r'\bdang phan van\b.*nganh',
-    ],
-    'luong_thu_nhap': [
-        r'\bluong\b.*(khoi diem|bao nhieu|trieu|do|usd)',
-        r'\bthu nhap\b.*(bao nhieu|trung binh|toi thieu|cao nghe nghiep)',
-        r'\bra truong\b.*\bluong\b',
-        r'\bsau.*nam\b.*\bluong\b',
-        r'\bluong\b.*(ky su|cu nhan)',
-        # FIX: loại "chất lượng cao" tạo FP (ID=20,426,427)
-        # Không dùng lookahead — chỉ match khi "lương" rõ ràng không phải "chất lượng"
-    ],
-    'co_hoi_viec_lam': [
-        r'\bde xin viec\b', r'\bkho xin viec\b',
-        r'\bco hoi viec lam\b',
-        r'\btrien vong viec lam\b', r'\btrien vong nghe nghiep\b',
-        r'\bviec lam sau tot nghiep\b',
-        r'\bdi lam\b.*(trai nganh|ngoai nganh)',
-        # Không chặn cụm 'nhu cau tuyen dung' vì tài liệu UTH có công văn hợp tác đào tạo và nhu cầu đối tác
-    ],
-    'so_sanh_hoac_hoi_truong_khac': [
-        r'\bso sanh\b.*(truong|dai hoc)',
-        r'\bso voi truong\b',
-        r'\btruong nao\b.*(day tot|tot hon|nhieu nganh)',
-        r'\bnhieu truong\b',
-        r'\bhoc phi truong khac\b',
-        r'\bthong tin truong khac\b',
-    ] + OTHER_SCHOOLS,
-    'ty_le_choi': [
-        r'\bty le choi\b',
-        r'\bty le do\b',
-        # FIX: loại "tỷ lệ chọi Thạc sĩ" — ID=296 là in-scope (thạc sĩ có chỉ tiêu)
-        # → giữ pattern nhưng add exception: nếu câu có "thac si" thì không flag
-        # → Thực tế sẽ xử lý qua context, tạm chấp nhận 1 FP này
-        r'\bty le trung tuyen\b.*(bao nhieu|nam nay)',
-        r'\bbao nhieu nguoi\b.*(nop|dang ky).*nganh',
-    ],
-    # Thu hẹp thong_tin_ca_nhan_bao_mat:
-    # In-scope: SĐT/email phòng ban trường, Zalo OA trường
-    # Out-of-scope: SĐT/Zalo cá nhân GV/HS, TKNH, danh sách nội bộ, tra cứu điểm người khác
-    'thong_tin_ca_nhan_bao_mat': [
-        # FIX: bỏ "số tài khoản" đứng một mình — ID=368 (đóng lệ phí là IN-SCOPE)
-        # Chỉ flag TKNH cá nhân, không phải tài khoản trường
-        r'\bso tai khoan\b.*(ca nhan|cua\s*(?:toi|em|ban|minh))',
-        r'\bso the ngan hang\b',
-        r'\bso dien thoai\b.*(ca nhan|di dong).*(giang vien|thay|co)',
-        r'\bsdt cua\b.*(giang vien|thay|co|ong|ba|truong phong)',
-        r'\bzalo cua\b.*(giang vien|thay|co|khoa)',
-        r'\bdanh sach\b.*(giang vien|thi sinh|cham thi|noi bo)',
-        r'\btra cuu\b.*\bdiem\b.*(ban|nguoi|so bao danh)',
-        # FIX: bỏ 'ly lich hoc sinh' — in-scope khi hỏi hồ sơ xét tuyển (ID=153)
-        r'\bly lich\b.*(ca nhan)',
-        r'\bdiem ren luyen\b',
-    ],
-    'thong_tin_chua_cong_bo': [
-        r'\bda co bao nhieu\b.*(nop ho so|dang ky)',
-        r'\bco ai trung tuyen\b',
-        r'\bthong ke\b.*(ho so|gioi tinh)',
-        r'\bbao nhieu nguoi\b.*(nop|dang ky).*(dot|thang)',
-    ],
-    'xin_tai_lieu_noi_bo': [
-        r'\bxin\b.*(tai lieu|file|de thi).*(noi bo|on thi)',
-        r'\bbo de thi\b',
-        r'\bgui.*file\b.*(tai lieu)',
-        r'\bcho\b.*(file|tai lieu).*(noi bo|cac nam truoc|truong)',
-    ],
-    'danh_gia_nhan_xet_ca_nhan': [
-        r'\bnhan xet\b.*(truong|nganh|de thi|giang vien)',
-        r'\breview\b.*(truong|nganh)',
-        r'\bdanh gia\b.*(de thi|gia tri|giang vien|chat luong truong)',
-        r'\bco kho tinh\b', r'\bxuong cap\b',
-        r'\bde thi.*kho\b.*nam nay',
-        r'\bhien trang\b.*(co so vat chat|truong)',
-    ],
-    'tu_van_ca_nhan_suc_khoe_tinh_cach': [
-        r'\bem la nguoi\b.*(huong noi|ngoai huong|nhat)',
-        # FIX: bỏ 'suc khoe yeu co duoc hoc' — ID=24 in-scope (hỏi điều kiện sức khỏe)
-        r'\bcay say song\b', r'\bsay song\b.*(lam|nganh)',
-        r'\bco so code\b',
-        r'\bnhat\b.*(chon nganh|hoc nganh)',
-    ],
-    'cam_ket_dam_bao': [
-        # FIX: bỏ 'cam ket' standalone → ID=51 in-scope
-        r'\bdam bao\b.*(100%|viec lam|xin duoc)',
-        r'\bchac suat\b.*(vao lam|xin viec)',
-        r'\bcam ket\b.*(viec lam|tuyen dung|xin duoc)',
-    ],
-    'du_doan_tuong_lai_nganh': [
-        r'\btuong lai.*nganh\b', r'\bnganh.*hot\b',
-        r'\b\d+\s*nam toi\b.*nganh', r'\bnganh.*xu huong\b',
-    ],
-    # Nhóm năm ngoài kho (2000-2021) — CHỈ dùng trên DEV, không nhắm locked
-    # FIX: loại bỏ pattern này vì gây FP trên ID=28 (fallback_warning năm 2020)
-    # year_filter đã xử lý các câu hỏi năm ngoài phạm vi → không cần Hướng C bắt
-
-    'chuyen_truong': [
-        r'\bchuyen truong\b',
-        r'\bduoc chuyen\b.*(qua|sang).*(uth|truong)',
-    ],
-
-    # Thêm pattern mới cho câu miss trên DEV SET
-    'hoi_truong_khac_same_city': [
-        r'\bngoai\b.*(uth|truong minh|truong nay).*(truong nao|co truong)',
-        r'\bcac truong\b.*day.*nganh',
-    ],
-    'du_doan_diem_san': [
-        r'\bdiem san\b.*(nam nay|2026|bao nhieu)',
-        r'\blay diem san\b',
-    ],
-    'nam_tuong_lai': [
-        # Năm tương lai > 2026 (dự đoán chính sách)
-        r'\bnam\s*202[7-9]\b',
-        r'\bnam\s*20[3-9]\d\b',
-    ],
-}
+def wilson_ci(k: int, n: int, confidence: float = 0.95) -> Tuple[float, float]:
+    """Tính Wilson Score Interval 95% cho tỷ lệ k/n."""
+    if n <= 0:
+        return 0.0, 0.0
+    z = 1.959963984540054  # 95% confidence
+    p = k / n
+    denominator = 1 + z**2 / n
+    centre_adjusted_probability = p + z**2 / (2 * n)
+    adjusted_std_dev = math.sqrt((p * (1 - p) + z**2 / (4 * n)) / n)
+    lower_bound = (centre_adjusted_probability - z * adjusted_std_dev) / denominator
+    upper_bound = (centre_adjusted_probability + z * adjusted_std_dev) / denominator
+    return max(0.0, float(lower_bound)), min(1.0, float(upper_bound))
 
 
-def match_oos(query: str) -> list[str]:
-    q = normalize(query)
-    matched = []
-    for label, pats in PATTERNS.items():
-        for p in pats:
-            if re.search(p, q):
-                matched.append(label)
-                break
-    return matched
+def parse_args():
+    parser = argparse.ArgumentParser(description="Đánh giá 3 lớp lọc tiền sinh (SSoT)")
+    parser.add_argument("--dataset", "--csv", type=str, default="backend/data/test/dev_questions.csv", help="Đường dẫn file câu hỏi test")
+    parser.add_argument("--tag", type=str, default="dev", help="Tag nhận diện tập đánh giá (dev, locked, ...)")
+    parser.add_argument("--gate-threshold", type=float, default=None, help="Ghi đè threshold_default (chỉ dùng nghiên cứu trên dev)")
+    parser.add_argument("--force-gate", action="store_true", help="Cưỡng bức bật Gate (chỉ dùng nghiên cứu trên dev)")
+    parser.add_argument("--disable-gate", action="store_true", help="Cưỡng bức tắt Gate (chỉ dùng nghiên cứu trên dev)")
+    parser.add_argument("--override-locked-lock", action="store_true", help="Ghi đè khóa an toàn của tập locked")
+    return parser.parse_args()
 
-
-# ---------------------------------------------------------------------------
-# 2. Main evaluation
-# ---------------------------------------------------------------------------
 
 def main():
-    parser = argparse.ArgumentParser(description="Evaluate 3-layer OOS union filtering")
-    parser.add_argument("--dataset", type=str, default="backend/data/test/dev_questions.csv")
-    parser.add_argument("--tag", type=str, default="dev")
-    args = parser.parse_args()
-
+    args = parse_args()
     data_csv = PROJECT_ROOT / args.dataset
-    out_csv = PROJECT_ROOT / "backend" / "eval" / "results" / f"pipeline_union_eval_{args.tag}.csv"
-    out_csv.parent.mkdir(parents=True, exist_ok=True)
+    if not data_csv.exists():
+        data_csv = Path(args.dataset)
+    if not data_csv.exists():
+        raise FileNotFoundError(f"Không tìm thấy file dataset: {args.dataset}")
 
-    # Load index cho Retrieval Gate
+    is_locked = (args.tag.lower() == "locked" or "locked" in data_csv.name.lower())
+
+    # Khóa an toàn nghiêm ngặt cho tập Locked Holdout
+    if is_locked:
+        # 1. Cấm các tham số override
+        if args.gate_threshold is not None or args.force_gate or args.disable_gate:
+            raise ValueError(
+                "VI PHẠM NGUYÊN TẮC: Tập Locked là Holdout test set duy nhất! "
+                "Cấm tuyệt đối dùng --gate-threshold, --force-gate, hoặc --disable-gate."
+            )
+
+        # 2. Yêu cầu workspace Git phải sạch hoàn toàn
+        try:
+            git_status = subprocess.run(
+                ["git", "status", "--porcelain"],
+                cwd=str(PROJECT_ROOT),
+                capture_output=True,
+                text=True,
+                check=True,
+            ).stdout.strip()
+            dirty_lines = [line for line in git_status.splitlines() if not line.endswith("locked_eval_done.json")]
+            if dirty_lines:
+                raise RuntimeError(
+                    f"VI PHẠM NGUYÊN TẮC: Git workspace chưa commit sạch trước khi chạy Locked set!\n"
+                    f"Các file chưa commit:\n" + "\n".join(dirty_lines)
+                )
+        except Exception as e:
+            if "VI PHẠM" in str(e):
+                raise
+            print(f"[CẢNH BÁO] Không thể kiểm tra git status: {e}")
+
+        # 3. So khớp cấu hình gate_config.json với gate_tuning_dev.json
+        dev_tuning_path = PROJECT_ROOT / "backend" / "eval" / "results" / "gate_tuning_dev.json"
+        if dev_tuning_path.exists():
+            with open(dev_tuning_path, "r", encoding="utf-8") as f:
+                dev_tune_data = json.load(f)
+            best_cfg = dev_tune_data.get("best_config", {})
+            cur_cfg = load_gate_config()
+
+            for key in ["threshold_default", "threshold_consensus", "consensus_type"]:
+                if cur_cfg.get(key) != best_cfg.get(key):
+                    raise RuntimeError(
+                        f"LỆCH CẤU HÌNH: gate_config.json ({key}={cur_cfg.get(key)}) "
+                        f"không khớp với best_config trong gate_tuning_dev.json ({key}={best_cfg.get(key)})! "
+                        f"Phải đóng băng cấu hình từ Dev trước khi chạy Locked."
+                    )
+        else:
+            print("[CẢNH BÁO] Không tìm thấy gate_tuning_dev.json để kiểm tra chéo cấu hình.")
+
+        # 4. Kiểm tra chốt chặn chạy lại
+        lock_file = PROJECT_ROOT / "backend" / "eval" / "results" / "locked_eval_done.json"
+        if lock_file.exists() and not args.override_locked_lock:
+            raise RuntimeError(
+                f"TẬP LOCKED ĐÃ ĐƯỢC ĐÁNH GIÁ TRƯỚC ĐÓ (đã ghi nhận tại {lock_file.name})!\n"
+                f"Để bảo vệ tính khách quan của tập kiểm thử kín, cấm chạy lại nhiều lần."
+            )
+
+    results_dir = PROJECT_ROOT / "backend" / "eval" / "results"
+    results_dir.mkdir(parents=True, exist_ok=True)
+    out_csv = results_dir / f"pipeline_union_details_{args.tag}.csv"
+    summary_json = results_dir / f"pipeline_union_summary_{args.tag}.json"
+
+    # Nạp index tìm kiếm
     print("Nạp index FAISS + BM25...")
     index_store.load()
     print("Nạp index hoàn tất!\n")
 
-    gate_threshold = GATE_THRESHOLD
-    print(f"Gate threshold (FPR-friendly): {gate_threshold}\n")
+    # Xác định cấu hình Gate
+    gate_cfg = load_gate_config()
+    gate_enabled = gate_cfg.get("enabled", False)
+
+    if args.force_gate:
+        gate_enabled = True
+    elif args.disable_gate:
+        gate_enabled = False
+
+    if args.gate_threshold is not None:
+        gate_cfg["threshold_default"] = args.gate_threshold
+
+    gate_cfg["enabled"] = gate_enabled
+    print(f"Cấu hình Gate sử dụng: enabled={gate_enabled}, default={gate_cfg.get('threshold_default')}, consensus={gate_cfg.get('threshold_consensus')}, type={gate_cfg.get('consensus_type')}\n")
 
     df = pd.read_csv(data_csv, encoding="utf-8-sig")
     print(f"Tập đánh giá: {data_csv.name} [Tag: {args.tag}]")
     print(f"Tổng câu hỏi: {len(df)}")
     print(f"Phân bố nhãn:\n{df['expected_behavior'].value_counts().to_string()}\n")
 
-    results = []
+    records = []
     n = len(df)
 
     for i, row in df.iterrows():
-        if (i+1) % 50 == 0:
+        if (i + 1) % 50 == 0 or (i + 1) == n:
             print(f"  Đang xử lý {i+1}/{n}...")
 
-        query    = row['user_query']
-        behavior = row['expected_behavior']
-        qid      = row['id']
+        query = str(row["user_query"])
+        expected = str(row["expected_behavior"])
+        qid = row.get("id", i + 1)
 
-        # --- Lớp 1: year_filter ---
-        yr = year_filter_analyze(query)
-        flagged_yf = (yr.status == "refused")
+        # GỌI TRỰC TIẾP HÀM SSoT CỦA LUỒNG CHAT
+        decision = decide_query(
+            query=query,
+            gate_enabled=gate_enabled,
+            gate_config=gate_cfg,
+            top_k=5,
+        )
 
-        # --- Lớp 2: Hướng C (OOS intent) ---
-        oos_matched = match_oos(query)
-        flagged_oc  = len(oos_matched) > 0
+        top1_dense = None
+        if decision.response_meta and "dense_top1_score" in decision.response_meta:
+            top1_dense = decision.response_meta["dense_top1_score"]
+        elif decision.chunks:
+            top1_dense = decision.chunks[0].score_raw
 
-        # --- Lớp 3: Retrieval Gate (chỉ chạy nếu 2 lớp trên chưa bắt) ---
-        top1_score_raw = None
-        flagged_gate   = False
-
-        if not flagged_yf and not flagged_oc:
-            try:
-                chunks, _ = retrieve_with_dynamic_routing(query, filter_year=yr.filter_year)
-                if chunks:
-                    top1_score_raw = chunks[0].score_raw
-                    flagged_gate = (top1_score_raw < gate_threshold)
-                else:
-                    flagged_gate = True  # không có chunk = từ chối
-                    top1_score_raw = 0.0
-            except Exception as e:
-                print(f"  [WARN] ID={qid}: {e}")
-                flagged_gate = False
-
-        caught_union = flagged_yf or flagged_oc or flagged_gate
-
-        results.append({
-            "id":               qid,
-            "user_query":       query[:80],
-            "expected_behavior": behavior,
-            "category":         row['category'],
-            "intent":           row['intent'],
-            "flagged_year_filter": flagged_yf,
-            "yf_status":        yr.status,
-            "flagged_direction_c": flagged_oc,
-            "oos_matched":      str(oos_matched),
-            "flagged_gate":     flagged_gate,
-            "top1_score_raw":   round(top1_score_raw, 5) if top1_score_raw is not None else None,
-            "caught_union":     caught_union,
+        records.append({
+            "id": qid,
+            "user_query": query,
+            "expected_behavior": expected,
+            "predicted_behavior": decision.behavior,
+            "category": row.get("category", ""),
+            "intent": row.get("intent", ""),
+            "flagged_year_filter": decision.flagged_year_filter,
+            "flagged_direction_c": decision.flagged_oos,
+            "flagged_gate": decision.flagged_gate,
+            "caught_union": (decision.behavior == "refused"),
+            "dense_top1_score": round(top1_dense, 5) if top1_dense is not None else None,
+            "refused_reason": decision.refused_reason,
+            "oos_categories": "|".join(decision.oos_categories),
         })
 
-    out_df = pd.DataFrame(results)
-    out_df.to_csv(out_csv, index=False, encoding='utf-8-sig')
+    out_df = pd.DataFrame(records)
+    out_df.to_csv(out_csv, index=False, encoding="utf-8-sig")
     print(f"\nĐã lưu bảng chi tiết → {out_csv}\n")
 
     # -----------------------------------------------------------------------
-    # 3. Tính metric thực tế
+    # TÍNH TOÁN METRIC CHUẨN XÁC
     # -----------------------------------------------------------------------
-    refuse_mask   = out_df['expected_behavior'] == 'refuse'
-    answer_mask   = out_df['expected_behavior'] == 'answer'
-    fallback_mask = out_df['expected_behavior'] == 'fallback_warning'
-    in_scope_mask = answer_mask | fallback_mask
+    refuse_mask = out_df["expected_behavior"] == "refuse"
+    in_scope_mask = ~refuse_mask
 
-    n_refuse   = refuse_mask.sum()
-    n_in_scope = in_scope_mask.sum()
+    n_refuse = int(refuse_mask.sum())
+    n_in_scope = int(in_scope_mask.sum())
 
-    def report_layer(name, flag_col, mask_refuse=refuse_mask, mask_in_scope=in_scope_mask):
-        caught = (mask_refuse & out_df[flag_col]).sum()
-        fp     = (mask_in_scope & out_df[flag_col]).sum()
-        recall = caught / n_refuse   if n_refuse   > 0 else 0
-        fpr    = fp     / n_in_scope if n_in_scope > 0 else 0
-        print(f"  {name:30s}: Recall={caught:3d}/{n_refuse} ({recall*100:5.1f}%)  FPR={fp:3d}/{n_in_scope} ({fpr*100:4.2f}%)")
-        return caught, fp
+    print(f"Mẫu số chuẩn hóa: Refuse={n_refuse}, In-Scope (non-refuse)={n_in_scope}")
+    special_in_scope = out_df[in_scope_mask & ~out_df["expected_behavior"].isin(["answer", "fallback_warning"])]
+    if len(special_in_scope) > 0:
+        print(f"  * Ghi chú {len(special_in_scope)} câu nhãn đặc biệt thuộc In-Scope:")
+        for _, r in special_in_scope.iterrows():
+            print(f"    - ID {r['id']} [{r['expected_behavior']}]: {r['user_query'][:60]}")
 
-    print("=" * 65)
-    print("METRIC THỰC ĐO TỪNG LỚP VÀ UNION")
-    print("=" * 65)
-    report_layer("Lớp 1 — year_filter",      "flagged_year_filter")
-    report_layer("Lớp 2 — Hướng C (intent)", "flagged_direction_c")
-    report_layer("Lớp 3 — Retrieval Gate",   "flagged_gate")
+    print("=" * 75)
+    print("METRIC THỰC ĐO TỪNG LỚP VÀ UNION (decide_query)")
+    print("=" * 75)
+
+    def report_layer(name, flag_col):
+        caught = int((refuse_mask & out_df[flag_col]).sum())
+        fp = int((in_scope_mask & out_df[flag_col]).sum())
+        recall = caught / n_refuse if n_refuse > 0 else 0.0
+        fpr = fp / n_in_scope if n_in_scope > 0 else 0.0
+        rec_lo, rec_hi = wilson_ci(caught, n_refuse)
+        fpr_lo, fpr_hi = wilson_ci(fp, n_in_scope)
+        print(f"  {name:40s}: Recall={caught:3d}/{n_refuse} ({recall*100:5.1f}%, 95% CI [{rec_lo*100:4.1f}%, {rec_hi*100:4.1f}%])  FPR={fp:3d}/{n_in_scope} ({fpr*100:4.2f}%, 95% CI [{fpr_lo*100:4.2f}%, {fpr_hi*100:4.2f}%])")
+        return caught, fp, rec_lo, rec_hi, fpr_lo, fpr_hi
+
+    c1, fp1, c1_lo, c1_hi, fp1_lo, fp1_hi = report_layer("Lớp 1 — year_filter", "flagged_year_filter")
+    c2_oos, fp2_oos, c2_lo, c2_hi, fp2_lo, fp2_hi = report_layer("Lớp 2 — Hướng C (intent)", "flagged_direction_c")
 
     # Union 2 lớp đầu
-    out_df['caught_2layer'] = out_df['flagged_year_filter'] | out_df['flagged_direction_c']
-    c2 = (refuse_mask & out_df['caught_2layer']).sum()
-    fp2 = (in_scope_mask & out_df['caught_2layer']).sum()
-    print(f"  {'Union Lớp 1+2':30s}: Recall={c2:3d}/{n_refuse} ({c2/n_refuse*100:5.1f}%)  FPR={fp2:3d}/{n_in_scope} ({fp2/n_in_scope*100:4.2f}%)")
+    out_df["caught_2layer"] = out_df["flagged_year_filter"] | out_df["flagged_direction_c"]
+    c_u12 = int((refuse_mask & out_df["caught_2layer"]).sum())
+    fp_u12 = int((in_scope_mask & out_df["caught_2layer"]).sum())
+    rec_u12 = c_u12 / n_refuse if n_refuse > 0 else 0.0
+    fpr_u12 = fp_u12 / n_in_scope if n_in_scope > 0 else 0.0
+    u12_rec_lo, u12_rec_hi = wilson_ci(c_u12, n_refuse)
+    u12_fpr_lo, u12_fpr_hi = wilson_ci(fp_u12, n_in_scope)
+    print(f"  {'Union Lớp 1+2':40s}: Recall={c_u12:3d}/{n_refuse} ({rec_u12*100:5.1f}%, 95% CI [{u12_rec_lo*100:4.1f}%, {u12_rec_hi*100:4.1f}%])  FPR={fp_u12:3d}/{n_in_scope} ({fpr_u12*100:4.2f}%, 95% CI [{u12_fpr_lo*100:4.2f}%, {u12_fpr_hi*100:4.2f}%])")
 
-    # Union cả 3 lớp
-    cu = (refuse_mask & out_df['caught_union']).sum()
-    fpu = (in_scope_mask & out_df['caught_union']).sum()
-    print(f"  {'UNION 3 Lớp (thực đo)':30s}: Recall={cu:3d}/{n_refuse} ({cu/n_refuse*100:5.1f}%)  FPR={fpu:3d}/{n_in_scope} ({fpu/n_in_scope*100:4.2f}%)")
+    # Lớp 3: Gate trên phần dư sau L1+L2
+    residual_mask = ~out_df["caught_2layer"]
+    res_refuse = refuse_mask & residual_mask
+    res_in_scope = in_scope_mask & residual_mask
+    n_res_refuse = int(res_refuse.sum())
+    n_res_in_scope = int(res_in_scope.sum())
+    c3 = int((res_refuse & out_df["flagged_gate"]).sum())
+    fp3 = int((res_in_scope & out_df["flagged_gate"]).sum())
+    rec3 = c3 / n_res_refuse if n_res_refuse > 0 else 0.0
+    fpr3 = fp3 / n_res_in_scope if n_res_in_scope > 0 else 0.0
+    c3_lo, c3_hi = wilson_ci(c3, n_res_refuse)
+    fp3_lo, fp3_hi = wilson_ci(fp3, n_res_in_scope)
+    print(f"  {'Lớp 3 — Gate (trên phần dư sau L1+L2)':40s}: Recall={c3:3d}/{n_res_refuse} ({rec3*100:5.1f}%, 95% CI [{c3_lo*100:4.1f}%, {c3_hi*100:4.1f}%])  FPR={fp3:3d}/{n_res_in_scope} ({fpr3*100:4.2f}%, 95% CI [{fp3_lo*100:4.2f}%, {fp3_hi*100:4.2f}%])")
+
+    # Union cả 3 lớp (Thực tế toàn pipeline tiền sinh)
+    c_u = int((refuse_mask & out_df["caught_union"]).sum())
+    fp_u = int((in_scope_mask & out_df["caught_union"]).sum())
+    rec_u = c_u / n_refuse if n_refuse > 0 else 0.0
+    fpr_u = fp_u / n_in_scope if n_in_scope > 0 else 0.0
+    u_rec_lo, u_rec_hi = wilson_ci(c_u, n_refuse)
+    u_fpr_lo, u_fpr_hi = wilson_ci(fp_u, n_in_scope)
+    print(f"  {'UNION 3 Lớp (thực đo)':40s}: Recall={c_u:3d}/{n_refuse} ({rec_u*100:5.1f}%, 95% CI [{u_rec_lo*100:4.1f}%, {u_rec_hi*100:4.1f}%])  FPR={fp_u:3d}/{n_in_scope} ({fpr_u*100:4.2f}%, 95% CI [{u_fpr_lo*100:4.2f}%, {u_fpr_hi*100:4.2f}%])")
 
     # -----------------------------------------------------------------------
-    # 4. Phân tích câu refuse còn sót sau 2 lớp đầu
+    # TÍNH TOÁN EXACT MATCH THEO CẢ 2 PHƯƠNG ÁN (KHÁCH QUAN, KHÔNG CHE GIẤU)
     # -----------------------------------------------------------------------
-    sot_2layer = out_df[refuse_mask & ~out_df['caught_2layer']]
-    print(f"\n{'='*65}")
+    valid_exact = out_df[~out_df["expected_behavior"].isin(["redirect"])]
+    n_exact = len(valid_exact)
+
+    # 1. Exact Match Strict (4 trạng thái nghiêm ngặt):
+    # refuse vs refused, fallback_warning vs fallback_warning, answer vs answer, clarify vs clarify
+    def normalize_behavior_strict(b: str) -> str:
+        b = str(b).strip().lower()
+        if b in ["refuse", "refused"]:
+            return "refuse"
+        return b
+
+    strict_matches = 0
+    for _, r in valid_exact.iterrows():
+        exp = normalize_behavior_strict(r["expected_behavior"])
+        pred = normalize_behavior_strict(r["predicted_behavior"])
+        if exp == pred:
+            strict_matches += 1
+
+    strict_acc = strict_matches / n_exact if n_exact > 0 else 0.0
+
+    # 2. Exact Match Merged In-Scope (2-way mapping):
+    # Ánh xạ cả 2 chiều: fallback_warning và answer đều thuộc In-Scope
+    def normalize_behavior_merged(b: str) -> str:
+        b = str(b).strip().lower()
+        if b in ["refuse", "refused"]:
+            return "refuse"
+        if b in ["answer", "fallback_warning"]:
+            return "answer"
+        return b
+
+    merged_matches = 0
+    for _, r in valid_exact.iterrows():
+        exp = normalize_behavior_merged(r["expected_behavior"])
+        pred = normalize_behavior_merged(r["predicted_behavior"])
+        if exp == pred:
+            merged_matches += 1
+
+    merged_acc = merged_matches / n_exact if n_exact > 0 else 0.0
+
+    print(f"\n  Exact Match (Strict 4-state):          {strict_matches:3d}/{n_exact} ({strict_acc*100:5.2f}%) [phân biệt rõ fallback_warning vs answer]")
+    print(f"  Exact Match (Merged In-Scope 2-way):   {merged_matches:3d}/{n_exact} ({merged_acc*100:5.2f}%) [ánh xạ fallback_warning hai phía]")
+
+    # -----------------------------------------------------------------------
+    # PHÂN TÍCH NHÓM SÓT
+    # -----------------------------------------------------------------------
+    sot_2layer = out_df[res_refuse]
+    print(f"\n{'='*75}")
     print(f"CÂU REFUSE SÓT SAU LỚP 1+2: {len(sot_2layer)} câu")
-    print(f"{'='*65}")
+    print(f"{'='*75}")
 
-    # Phân bố score của nhóm sót
-    sot_scores = sot_2layer['top1_score_raw'].dropna()
+    sot_scores = sot_2layer["dense_top1_score"].dropna()
     if len(sot_scores) > 0:
-        print(f"Phân bố score_raw nhóm sót (câu cần Gate xử lý):")
+        print("Phân bố dense_top1_score nhóm sót:")
         print(f"  Min:    {sot_scores.min():.4f}")
         print(f"  P25:    {sot_scores.quantile(0.25):.4f}")
         print(f"  Median: {sot_scores.median():.4f}")
         print(f"  P75:    {sot_scores.quantile(0.75):.4f}")
         print(f"  Max:    {sot_scores.max():.4f}")
-        # Số câu có score < gate_threshold
-        gate_catchable = (sot_scores < gate_threshold).sum()
-        print(f"\n  Câu có score < {gate_threshold} (Gate bắt được): {gate_catchable}/{len(sot_scores)} ({gate_catchable/len(sot_scores)*100:.1f}%)")
-        print(f"  Câu có score >= {gate_threshold} (Gate KHÔNG bắt): {len(sot_scores)-gate_catchable}/{len(sot_scores)} ({(1-gate_catchable/len(sot_scores))*100:.1f}%)")
 
-    print("\nDanh sách câu sót (cần Gate hoặc Attribution Gate xử lý):")
+    print("\nDanh sách câu sót:")
     for _, r in sot_2layer.iterrows():
-        score_str = f"score={r['top1_score_raw']:.4f}" if r['top1_score_raw'] is not None else "score=N/A"
-        gate_str = "Gate-CAUGHT" if r['flagged_gate'] else "Gate-MISS"
-        print(f"  ID={r['id']:3d}  [{gate_str}]  {score_str}  cat={r['category']}")
+        score_val = f"dense_top1={r['dense_top1_score']:.4f}" if r["dense_top1_score"] is not None else "dense_top1=N/A"
+        gate_status = "Gate-CAUGHT" if r["flagged_gate"] else "Gate-MISS"
+        print(f"  ID={r['id']:3d}  [{gate_status}]  {score_val}  cat={r['category']}")
         print(f"         {r['user_query'][:75]}")
 
     # -----------------------------------------------------------------------
-    # 5. FP còn lại của Hướng C (đã sửa)
+    # XUẤT ARTIFACT SUMMARY METRICS JSON
     # -----------------------------------------------------------------------
-    fp_oc = out_df[in_scope_mask & out_df['flagged_direction_c']]
-    print(f"\n{'='*65}")
-    print(f"FP HƯỚNG C SAU SỬA (còn lại): {len(fp_oc)} câu")
-    print(f"{'='*65}")
-    for _, r in fp_oc.iterrows():
-        print(f"  ID={r['id']}  [{r['expected_behavior']}]  matched={r['oos_matched']}")
-        print(f"    {r['user_query'][:80]}")
+    summary_data = {
+        "dataset": data_csv.name,
+        "tag": args.tag,
+        "total_queries": len(df),
+        "refuse_count": n_refuse,
+        "in_scope_count": n_in_scope,
+        "gate_config_used": gate_cfg,
+        "metrics": {
+            "layer1_year_filter": {
+                "caught": c1, "total_refuse": n_refuse, "recall": round(c1/n_refuse, 4) if n_refuse else 0,
+                "recall_ci_95": [round(c1_lo, 4), round(c1_hi, 4)],
+                "fp": fp1, "total_in_scope": n_in_scope, "fpr": round(fp1/n_in_scope, 4) if n_in_scope else 0,
+                "fpr_ci_95": [round(fp1_lo, 4), round(fp1_hi, 4)],
+            },
+            "layer2_oos_intent": {
+                "caught": c2_oos, "total_refuse": n_refuse, "recall": round(c2_oos/n_refuse, 4) if n_refuse else 0,
+                "recall_ci_95": [round(c2_lo, 4), round(c2_hi, 4)],
+                "fp": fp2_oos, "total_in_scope": n_in_scope, "fpr": round(fp2_oos/n_in_scope, 4) if n_in_scope else 0,
+                "fpr_ci_95": [round(fp2_lo, 4), round(fp2_hi, 4)],
+            },
+            "union_layer1_2": {
+                "caught": c_u12, "total_refuse": n_refuse, "recall": round(rec_u12, 4),
+                "recall_ci_95": [round(u12_rec_lo, 4), round(u12_rec_hi, 4)],
+                "fp": fp_u12, "total_in_scope": n_in_scope, "fpr": round(fpr_u12, 4),
+                "fpr_ci_95": [round(u12_fpr_lo, 4), round(u12_fpr_hi, 4)],
+            },
+            "layer3_gate_on_residual": {
+                "residual_refuse": n_res_refuse, "caught": c3, "recall": round(rec3, 4),
+                "recall_ci_95": [round(c3_lo, 4), round(c3_hi, 4)],
+                "residual_in_scope": n_res_in_scope, "fp": fp3, "fpr": round(fpr3, 4),
+                "fpr_ci_95": [round(fp3_lo, 4), round(fp3_hi, 4)],
+            },
+            "union_full_pipeline": {
+                "caught": c_u, "total_refuse": n_refuse, "recall": round(rec_u, 4),
+                "recall_ci_95": [round(u_rec_lo, 4), round(u_rec_hi, 4)],
+                "fp": fp_u, "total_in_scope": n_in_scope, "fpr": round(fpr_u, 4),
+                "fpr_ci_95": [round(u_fpr_lo, 4), round(u_fpr_hi, 4)],
+            },
+            "exact_match_strict": {
+                "correct": strict_matches, "total": n_exact, "accuracy": round(strict_acc, 4)
+            },
+            "exact_match_merged": {
+                "correct": merged_matches, "total": n_exact, "accuracy": round(merged_acc, 4)
+            }
+        }
+    }
+
+    with open(summary_json, "w", encoding="utf-8") as f:
+        json.dump(summary_data, f, indent=4, ensure_ascii=False)
+    print(f"\nĐã lưu summary metrics → {summary_json}")
+
+    # Đóng dấu hoàn tất cho Locked Set
+    if is_locked:
+        lock_file = results_dir / "locked_eval_done.json"
+        with open(lock_file, "w", encoding="utf-8") as f:
+            json.dump({
+                "status": "COMPLETED",
+                "tag": args.tag,
+                "dataset": data_csv.name,
+                "summary": summary_data,
+            }, f, indent=4, ensure_ascii=False)
+        print(f"ĐÃ LẬP CHỐT KHÓA TẬP LOCKED TẠI: {lock_file} (Chỉ được chạy một lần)")
 
     print("\nHOÀN TẤT PIPELINE UNION EVAL.")
 
