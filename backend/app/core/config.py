@@ -33,8 +33,9 @@ class Settings(BaseSettings):
     DEFAULT_ADMISSION_YEAR: int = 2026
 
     # --- Hybrid fusion weights (dùng cho Weighted Sum mode) ---
-    BM25_WEIGHT: float = 0.6
-    DENSE_WEIGHT: float = 0.4
+    # CD6 SSoT: Đặt DENSE_WEIGHT=0.6 và BM25_WEIGHT=0.4 đồng nhất giữa runtime và evaluation
+    BM25_WEIGHT: float = 0.4
+    DENSE_WEIGHT: float = 0.6
     # k cho RRF: final_score = 1 / (k + rank)
     RRF_K: int = 60
 

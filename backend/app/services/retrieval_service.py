@@ -37,7 +37,8 @@ class ScoredChunk:
     source_file: str
     source_urls: List[str] = field(default_factory=list)
     extra_urls: List[str] = field(default_factory=list)
-    score_raw: Optional[float] = None
+    score_raw: Optional[float] = None   # CD6: luôn là cosine Dense (thang [0,1]) khi đi qua hybrid
+    bm25_raw: Optional[float] = None    # CD6: điểm BM25 thô, KHÔNG dùng cho Gate
 
     def __post_init__(self):
         if self.score_raw is None:
@@ -48,6 +49,7 @@ class ScoredChunk:
             "chunk_id": self.chunk_id,
             "score": round(self.score, 6),
             "score_raw": round(self.score_raw, 6) if self.score_raw is not None else round(self.score, 6),
+            "bm25_raw": round(self.bm25_raw, 6) if self.bm25_raw is not None else None,
             "text": self.text,
             "metadata": {
                 "admission_year": self.admission_year,
@@ -162,7 +164,9 @@ def search_bm25(
     results = []
     for corpus_idx, score in top:
         meta = meta_list[corpus_idx]
-        results.append(_meta_to_scored(meta, float(score)))
+        chunk = _meta_to_scored(meta, float(score))
+        chunk.score_raw = float(score)  # CD6: Lưu điểm BM25 thô
+        results.append(chunk)
 
     return results, resp_meta
 
@@ -175,10 +179,11 @@ def search_dense(
     query: str,
     top_k: int = 5,
     filters: Optional[dict] = None,
+    query_vec: Optional[np.ndarray] = None,
 ) -> Tuple[List[ScoredChunk], dict]:
     """
     Dense vector retrieval qua FAISS.
-    Post-filter: search top_k * EXPAND_FACTOR rồi filter theo metadata.
+    Post-filter: search top_k * EXPAND_FACTOR (hoặc ntotal nếu có filter) rồi filter theo metadata.
     """
     EXPAND_FACTOR = 5  # over-fetch để bù hao do post-filter
     filters = filters or {}
@@ -193,11 +198,18 @@ def search_dense(
         logger.warning("Dense: không có chunk nào sau khi filter.")
         return [], resp_meta
 
-    # Encode query
-    query_vec = index_store.encode_query(query)  # shape (1, D), normalized
+    # Encode query nếu chưa được truyền từ trước
+    if query_vec is None:
+        query_vec = index_store.encode_query(query)  # shape (1, D), normalized
 
-    # Over-fetch
-    search_k = min(top_k * EXPAND_FACTOR, faiss_index.ntotal)
+    # CD12: Khi lọc theo metadata (năm/ngành), quét trên toàn bộ ntotal vector của FAISS
+    # để đảm bảo các năm ít chunk (như năm 2022) không bị thiếu candidate trước khi lấy top-k.
+    has_filter = len(valid_ids) < len(meta_list)
+    if has_filter:
+        search_k = faiss_index.ntotal
+    else:
+        search_k = min(top_k * EXPAND_FACTOR, faiss_index.ntotal)
+
     scores, indices = faiss_index.search(query_vec, search_k)
 
     results = []
@@ -207,7 +219,9 @@ def search_dense(
         if idx not in valid_ids:
             continue
         meta = meta_list[idx]
-        results.append(_meta_to_scored(meta, float(score)))
+        chunk = _meta_to_scored(meta, float(score))
+        chunk.score_raw = float(score)  # CD6: Lưu điểm cosine/inner-product thô cho Gate
+        results.append(chunk)
         if len(results) >= top_k:
             break
 
@@ -222,6 +236,41 @@ def _rrf_score(rank: int, k: int = None) -> float:
     """Reciprocal Rank Fusion score."""
     k = k or settings.RRF_K
     return 1.0 / (k + rank)
+
+
+def _backfill_dense_raw(
+    chunks: List[ScoredChunk],
+    query: str,
+    query_vec: Optional[np.ndarray] = None,
+) -> None:
+    """
+    CD6: Chunk chỉ xuất hiện ở nhánh BM25 chưa có cosine Dense.
+    Tính cosine thật từ vector đã lưu trong FAISS (vector đã normalize -> dot = cosine)
+    để Retrieval Gate luôn so sánh trên cùng một thang điểm [0.0, 1.0].
+    Tái sử dụng query_vec (nếu có) để tránh encode lại tốn thêm hàng chục ms trên CPU.
+    """
+    missing = [c for c in chunks if c.score_raw is None]
+    if not missing:
+        return
+
+    faiss_index = index_store.faiss_index
+    cid2fid = {m["chunk_id"]: m["faiss_id"] for m in index_store.faiss_meta}
+    if query_vec is not None:
+        qvec = query_vec[0] if query_vec.ndim > 1 else query_vec
+    else:
+        qvec = index_store.encode_query(query)[0]
+
+    for c in missing:
+        fid = cid2fid.get(c.chunk_id)
+        if fid is None:
+            c.score_raw = 0.0
+            continue
+        try:
+            vec = faiss_index.reconstruct(int(fid))
+            c.score_raw = float(np.dot(qvec, vec))
+        except Exception as e:  # index không hỗ trợ reconstruct (vd IVF chưa có direct map)
+            logger.warning(f"Không bù được cosine cho {c.chunk_id}: {e}")
+            c.score_raw = 0.0
 
 
 def search_hybrid(
@@ -244,8 +293,15 @@ def search_hybrid(
     # Fetch nhiều hơn từ cả hai để RRF hoạt động tốt
     fetch_k = max(top_k * 3, 20)
 
+    # Encode query 1 lần duy nhất dùng chung cho cả search_dense và _backfill_dense_raw
+    query_vec = index_store.encode_query(query)
+
     bm25_results, resp_meta_b = search_bm25(query, top_k=fetch_k, filters=filters)
-    dense_results, resp_meta_d = search_dense(query, top_k=fetch_k, filters=filters)
+    try:
+        dense_results, resp_meta_d = search_dense(query, top_k=fetch_k, filters=filters, query_vec=query_vec)
+    except TypeError:
+        # Tương thích với các mock search_dense trong unit test không nhận query_vec
+        dense_results, resp_meta_d = search_dense(query, top_k=fetch_k, filters=filters)
 
     # Merge response_meta (ưu tiên bm25's vì cùng filter logic)
     resp_meta = {**resp_meta_d, **resp_meta_b}
@@ -265,7 +321,9 @@ def search_hybrid(
     else:
         combined = _fuse_weighted(bm25_results, dense_results, alpha)
 
-    return combined[:top_k], resp_meta
+    top = combined[:top_k]
+    _backfill_dense_raw(top, query, query_vec=query_vec)  # CD6: chỉ bù cosine thật cho top_k cuối, dùng query_vec có sẵn
+    return top, resp_meta
 
 
 def _fuse_rrf(
@@ -286,10 +344,12 @@ def _fuse_rrf(
 
     # Sort theo RRF score tổng hợp
     ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+    dense_raw_map = {c.chunk_id: (c.score_raw if c.score_raw is not None else c.score) for c in dense_results}
+    bm25_raw_map = {c.chunk_id: (c.score_raw if c.score_raw is not None else c.score) for c in bm25_results}
     results = []
     for cid, fused_score in ranked:
         c = chunk_map[cid]
-        results.append(ScoredChunk(
+        res = ScoredChunk(
             chunk_id=c.chunk_id,
             score=fused_score,
             text=c.text,
@@ -299,7 +359,12 @@ def _fuse_rrf(
             source_file=c.source_file,
             source_urls=c.source_urls,
             extra_urls=c.extra_urls,
-        ))
+        )
+        # CD6: score_raw chỉ nhận cosine Dense; chunk BM25-only để None, sẽ được bù ở search_hybrid.
+        # (gán sau khi tạo vì __post_init__ sẽ tự điền score_raw = score khi truyền None)
+        res.score_raw = dense_raw_map.get(cid)
+        res.bm25_raw = bm25_raw_map.get(cid)
+        results.append(res)
     return results
 
 
@@ -320,7 +385,8 @@ def _fuse_weighted(
 ) -> List[ScoredChunk]:
     """
     Weighted Sum: alpha * dense_score + (1-alpha) * bm25_norm_score.
-    BM25 và Dense scores được min-max normalize trước khi cộng.
+    BM25 và Dense scores được min-max normalize trước khi cộng để xếp hạng.
+    Điểm score_raw được giữ nguyên từ điểm cosine gốc của Dense cho Gate.
     """
     bm25_scores_raw = [c.score for c in bm25_results]
     dense_scores_raw = [c.score for c in dense_results]
@@ -339,10 +405,12 @@ def _fuse_weighted(
         chunk_map[chunk.chunk_id] = chunk
 
     ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+    dense_raw_map = {c.chunk_id: (c.score_raw if c.score_raw is not None else c.score) for c in dense_results}
+    bm25_raw_map = {c.chunk_id: (c.score_raw if c.score_raw is not None else c.score) for c in bm25_results}
     results = []
     for cid, fused_score in ranked:
         c = chunk_map[cid]
-        results.append(ScoredChunk(
+        res = ScoredChunk(
             chunk_id=c.chunk_id,
             score=fused_score,
             text=c.text,
@@ -352,7 +420,11 @@ def _fuse_weighted(
             source_file=c.source_file,
             source_urls=c.source_urls,
             extra_urls=c.extra_urls,
-        ))
+        )
+        # CD6: score_raw chỉ nhận cosine Dense; chunk BM25-only để None, sẽ được bù ở search_hybrid.
+        res.score_raw = dense_raw_map.get(cid)
+        res.bm25_raw = bm25_raw_map.get(cid)
+        results.append(res)
     return results
 
 
@@ -368,10 +440,10 @@ def retrieve_with_dynamic_routing(
     Truy xuất tài liệu với cơ chế định tuyến động & Boost 20% cho năm 2026.
 
     - Filter Mode (Có năm cụ thể): Chạy search_hybrid với filter cứng.
-      Gán score_raw = score cho tất cả ScoredChunk để nhất quán.
+      CD6: Giữ nguyên score_raw gốc (cosine thô từ dense / bm25) cho Retrieval Gate.
     - No-Filter Mode + Boost (Không rõ năm): Chạy search_hybrid với filters={'admission_year': 'all'}.
       - Nếu enable_boost=True: Nhân score của các chunk thuộc năm 2026 với 1.2 (Boost ranking).
-      - Lưu score chuẩn hóa gốc chưa boost vào score_raw.
+      - Bảo tồn score_raw gốc chưa boost.
       - Sắp xếp lại theo score giảm dần và lấy top_k.
     """
     effective_alpha = alpha if alpha is not None else settings.DENSE_WEIGHT
@@ -388,9 +460,10 @@ def retrieve_with_dynamic_routing(
             fusion_method="weighted",
             alpha=effective_alpha
         )
-        # Đảm bảo trường score_raw được gán bằng score trong Filter Mode
+        # CD6: Giữ nguyên chunk.score_raw gốc cho Retrieval Gate, không ghi đè bằng chunk.score
         for chunk in chunks:
-            chunk.score_raw = chunk.score
+            if chunk.score_raw is None:
+                chunk.score_raw = chunk.score
             
         return chunks, resp_meta
     else:
@@ -411,7 +484,9 @@ def retrieve_with_dynamic_routing(
         # Áp dụng boost 20% cho chunk năm 2026 (nếu enable_boost bật)
         if enable_boost:
             for chunk in chunks:
-                # chunk.score_raw đã được khởi tạo bằng chunk.score trong __post_init__
+                # Bảo tồn score_raw gốc trước khi boost
+                if chunk.score_raw is None:
+                    chunk.score_raw = chunk.score
                 if chunk.admission_year == 2026:
                     chunk.score = chunk.score * 1.2
 
