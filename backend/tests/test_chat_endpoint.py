@@ -25,6 +25,7 @@ def test_chat_refused_out_of_scope():
         assert data["behavior"] == "refused"
         assert data["refused_reason"] == "out_of_scope"
         assert len(data["citations"]) == 0
+        assert data["citation_precision"] is None
         mock_gen.assert_not_called()
 
 
@@ -38,6 +39,7 @@ def test_chat_clarify_multi_year():
         assert resp.status_code == 200
         data = resp.json()
         assert data["behavior"] == "clarify"
+        assert data["citation_precision"] is None
         mock_gen.assert_not_called()
 
 

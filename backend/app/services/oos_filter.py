@@ -3,11 +3,11 @@ import unicodedata
 
 # Danh sách các trường đại học khác để lọc các câu hỏi so sánh hoặc hỏi thông tin trường khác
 OTHER_SCHOOLS = [
-    'hutech', 'bach khoa', 'ton duc thang', 'utc2', r'\butc\b',
-    'ueh', r'\bdh luat\b', 'su pham ky thuat', 'hang hai viet nam',
-    'kinh te tphcm', 'dai hoc luat', 'giao thong van tai ha noi',
-    'ngoai bac', r'\bdh kinh te\b', 'rmit', 'greenwich', r'\bfpt\b',
-    'huflit', 'hcmue', 'hcmus', 'hcmut',
+    r'\bhutech\b', r'\bbach khoa\b', r'\bton duc thang\b', r'\butc2\b', r'\butc\b',
+    r'\bueh\b', r'\bdh luat\b', r'\bsu pham ky thuat\b', r'\bhang hai viet nam\b',
+    r'\bkinh te tphcm\b', r'\bdai hoc luat\b', r'\bgiao thong van tai ha noi\b',
+    r'\bngoai bac\b', r'\bdh kinh te\b', r'\brmit\b', r'\bgreenwich\b', r'\bfpt\b',
+    r'\bhuflit\b', r'\bhcmue\b', r'\bhcmus\b', r'\bhcmut\b',
 ]
 
 PATTERNS = {
@@ -169,6 +169,11 @@ def check_oos(
 
     Trả về: (is_oos, matched_categories)
     """
+    # CD4: Nếu câu hỏi đã được year_filter phân loại refused (ví dụ năm ngoài phạm vi),
+    # không xử lý đè bằng OOS filter
+    if year_filter_status == "refused":
+        return False, []
+
     q = normalize(query)
 
     # --- Context-aware skip ---

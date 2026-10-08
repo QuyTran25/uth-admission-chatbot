@@ -19,16 +19,26 @@ def test_decide_query_layer1_year_filter_refusal():
 
 
 def test_decide_query_layer1_year_filter_fallback():
-    """Lớp 1: Năm ngoài [2022, 2026] -> fallback_warning về 2026 kèm cảnh báo."""
+    """Lớp 1: Năm tương lai chưa công bố -> fallback_warning về 2026 kèm cảnh báo."""
     mock_retriever = MagicMock(return_value=([], {}))
     res = decide_query(
-        "Học phí ngành CNTT năm 2015 là bao nhiêu?",
+        "Khi nào có thông tin điểm chuẩn năm tới?",
         retriever_fn=mock_retriever,
     )
     assert res.behavior == "fallback_warning"
     assert res.is_fallback is True
     assert res.filter_year == 2026
-    assert "2015" in res.message
+
+
+def test_decide_query_layer1_year_filter_unsupported_refusal():
+    """Lớp 1: Năm ngoài [2022, 2026] (CD8) -> Từ chối thẳng thắn year_not_supported."""
+    mock_retriever = MagicMock(return_value=([], {}))
+    res = decide_query(
+        "Học phí ngành CNTT năm 2015 là bao nhiêu?",
+        retriever_fn=mock_retriever,
+    )
+    assert res.behavior == "refused"
+    assert res.refused_reason == "year_not_supported"
 
 
 def test_decide_query_layer1_year_filter_clarify():

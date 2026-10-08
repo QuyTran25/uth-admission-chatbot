@@ -130,9 +130,9 @@ async def retrieve(request: RetrieveRequest) -> RetrieveResponse:
                 alpha=request.alpha,
             )
             fm = request.fusion_method
-    except Exception as e:
-        logger.error(f"Retrieval error: {e}", exc_info=True)
-        raise HTTPException(status_code=500, detail=f"Retrieval failed: {str(e)}")
+    except Exception:
+        logger.exception("Retrieval error")
+        raise HTTPException(status_code=500, detail="Hệ thống truy xuất dữ liệu gặp lỗi nội bộ. Vui lòng thử lại sau.")
 
     latency_ms = (time.perf_counter() - t_start) * 1000
 

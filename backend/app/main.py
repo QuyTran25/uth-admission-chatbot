@@ -45,7 +45,7 @@ app = FastAPI(
     description=(
         "API chatbot tư vấn tuyển sinh UTH. "
         "Hỗ trợ câu hỏi tạo sinh (Gemini), trích dẫn nguồn, phát hiện ngoài phạm vi. "
-        "Retrieval: BM25 + Dense (FAISS) Hybrid Weighted 0.4/0.6. "
+        "Retrieval: BM25 + Dense (FAISS) Hybrid Weighted. "
         "Filters: year_filter + oos_filter (Hướng C). "
         "Post-generation: Attribution Gate (chunk_id check)."
     ),
@@ -53,22 +53,25 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS — cho phép frontend React (Tuần 6) gọi API
+# CORS — cấu hình động qua môi trường (CD10)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:5173"],
+    allow_origins=settings.cors_origins_list,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 # Mount router
-app.include_router(retrieve_router, prefix="/api/v1", tags=["retrieval"])
-if getattr(settings, "ENV", "development").lower() in ("dev", "development", "test"):
-    app.include_router(mock_router, prefix="/api/v1/mock", tags=["mock-retrieval"])
-else:
-    logger.info("Chế độ Production: Không kích hoạt mock router.")
 app.include_router(chat_router, prefix="/api/v1", tags=["chat"])
+
+# CD10: Chỉ mở mock_router ở development khi được bật cờ ENABLE_MOCK_ROUTER
+if settings.ENVIRONMENT != "production" and settings.ENABLE_MOCK_ROUTER:
+    app.include_router(mock_router, prefix="/api/v1/mock", tags=["mock-retrieval"])
+
+# Retrieve debug endpoint chỉ mount ngoài production
+if settings.ENVIRONMENT != "production":
+    app.include_router(retrieve_router, prefix="/api/v1", tags=["retrieval"])
 
 
 # ---------------------------------------------------------------------------
