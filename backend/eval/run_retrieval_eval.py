@@ -40,6 +40,7 @@ from app.services.retrieval_service import (
     ScoredChunk,
 )
 from eval.audit_gold_chunks import CANONICAL_REPLACEMENTS, load_valid_index_chunks, INDEX_META_PATH
+from app.services.year_filter import analyze as analyze_year
 
 
 def bootstrap_ci(
@@ -169,6 +170,7 @@ def main():
     parser.add_argument("--dataset", type=str, default="backend/data/test/dev_questions.csv")
     parser.add_argument("--tag", type=str, default="dev", help="Tag for output files: dev or locked")
     parser.add_argument("--protocol", type=str, default="canonical_mapped", choices=["canonical_mapped", "valid_only", "raw"])
+    parser.add_argument("--include-oracle", action="store_true", help="Bao gom che do Oracle-Filter de so sanh ablation")
     args = parser.parse_args()
 
     results_dir = PROJECT_ROOT / "backend" / "eval" / "results"
@@ -219,6 +221,72 @@ def main():
         eval_df = eval_df[eval_df["is_valid_gold"]].copy()
         logger.info(f"Protocol valid_only: giữ lại {len(eval_df)} câu có target chunk hợp lệ.")
 
+    # CD2: Đánh giá độ chính xác nhận diện năm qua year_filter.analyze()
+    logger.info("Đang đánh giá độ chính xác nhận diện năm (Year Detection Accuracy - CD2)...")
+    year_eval_records = []
+    query_year_map = {}
+
+    for _, row in eval_df.iterrows():
+        qid = row.get("id")
+        query = str(row["user_query"])
+        gt_raw = row.get("admission_year")
+        gt_year = int(float(gt_raw)) if pd.notna(gt_raw) and str(gt_raw).strip() != "" else None
+
+        yf_res = analyze_year(query)
+        pred_year = yf_res.filter_year
+        is_match = (pred_year == gt_year)
+
+        query_year_map[query] = yf_res
+        year_eval_records.append({
+            "id": int(qid) if pd.notna(qid) else None,
+            "query": query,
+            "ground_truth_year": gt_year,
+            "predicted_year": pred_year,
+            "status": yf_res.status,
+            "document_type": yf_res.document_type,
+            "is_match": is_match,
+        })
+
+    total_q = len(year_eval_records)
+    correct_q = sum(1 for r in year_eval_records if r["is_match"])
+    year_acc = (correct_q / total_q) if total_q > 0 else 0.0
+
+    labeled_records = [r for r in year_eval_records if r["ground_truth_year"] is not None]
+    labeled_total = len(labeled_records)
+    labeled_correct = sum(1 for r in labeled_records if r["is_match"])
+    labeled_acc = (labeled_correct / labeled_total) if labeled_total > 0 else 0.0
+
+    by_year_stats = {}
+    for y in [2022, 2023, 2024, 2025, 2026]:
+        sub = [r for r in year_eval_records if r["ground_truth_year"] == y]
+        if sub:
+            sub_corr = sum(1 for r in sub if r["predicted_year"] == y)
+            by_year_stats[str(y)] = {
+                "support": len(sub),
+                "correct": sub_corr,
+                "accuracy": round(sub_corr / len(sub), 4),
+            }
+
+    year_detection_metrics = {
+        "tag": args.tag,
+        "dataset": args.dataset,
+        "total_evaluated": total_q,
+        "correct_matches": correct_q,
+        "accuracy": round(year_acc, 4),
+        "labeled_total": labeled_total,
+        "labeled_correct": labeled_correct,
+        "labeled_accuracy": round(labeled_acc, 4),
+        "by_year_breakdown": by_year_stats,
+        "mismatches": [r for r in year_eval_records if not r["is_match"]],
+    }
+
+    year_acc_file = results_dir / f"year_detection_accuracy_{args.tag}.json"
+    year_acc_file.write_text(json.dumps(year_detection_metrics, ensure_ascii=False, indent=2), encoding="utf-8")
+    logger.info(
+        f"Hoàn tất Year Detection Eval: Toàn bộ={correct_q}/{total_q} ({year_acc:.2%}), "
+        f"Có nhãn={labeled_correct}/{labeled_total} ({labeled_acc:.2%}). Đã lưu: {year_acc_file.name}"
+    )
+
     # Cấu hình các phương pháp
     ssot_alpha = settings.DENSE_WEIGHT
     methods = [
@@ -229,6 +297,8 @@ def main():
     ]
 
     modes = ["No-Filter", "Filter"]
+    if args.include_oracle:
+        modes.append("Oracle-Filter")
     k_list = [1, 3, 5, 10]
 
     # Lưu kết quả per-query để tính bootstrap CI và paired test
@@ -255,7 +325,16 @@ def main():
             filters = {}
             if mode == "No-Filter":
                 filters["admission_year"] = "all"
-            else:
+            elif mode == "Filter":
+                # CD2: Sử dụng year_filter.analyze thay vì oracle admission_year từ nhãn CSV
+                yf_res = query_year_map.get(query)
+                if yf_res is None:
+                    yf_res = analyze_year(query)
+                if yf_res.filter_year is not None:
+                    filters["admission_year"] = yf_res.filter_year
+                else:
+                    filters["admission_year"] = "all"
+            elif mode == "Oracle-Filter":
                 q_year = row.get("admission_year")
                 if pd.notna(q_year) and str(q_year).strip() != "":
                     try:
@@ -344,6 +423,15 @@ def main():
         "protocol": args.protocol,
         "total_in_scope_evaluated": len(eval_df),
         "ssot_alpha": ssot_alpha,
+        "year_detection": {
+            "total_evaluated": total_q,
+            "correct_matches": correct_q,
+            "accuracy": round(year_acc, 4),
+            "labeled_total": labeled_total,
+            "labeled_correct": labeled_correct,
+            "labeled_accuracy": round(labeled_acc, 4),
+            "by_year_breakdown": by_year_stats,
+        },
         "summary_metrics": summary_rows,
         "paired_tests": paired_rows,
     }
@@ -359,6 +447,7 @@ def main():
         f"- **Quy chuẩn đối soát (Protocol):** `{args.protocol}`.",
         f"- **Cấu hình Alpha SSoT:** `settings.DENSE_WEIGHT = {ssot_alpha}` (Dense {ssot_alpha}, BM25 {1 - ssot_alpha:.1f}).",
         f"- **Bootstrap Resampling:** 1,000 lần (Khoảng tin cậy 95% hai phía).",
+        f"- **Chế độ lọc năm (CD2):** Sử dụng thời gian thực từ `year_filter.analyze(query)` thay cho nhãn Oracle.",
         "",
         "## 1. Bảng 5.1 Tái lập: Hiệu năng Retrieval kèm Bootstrap CI 95%",
         "",
@@ -380,7 +469,7 @@ def main():
         "Đánh giá xem chênh lệch giữa **Hybrid Weighted** và các phương pháp khác có ý nghĩa thống kê hay không:",
         "",
         "| Chế độ | Cặp so sánh | Δ MRR | p-value (Paired t-test) | p-value (Wilcoxon) | Ý nghĩa (α=0.05) |",
-        "|---|---|---:|---:|---:|:---:|"
+        "|---|---|---:|---:|---:|:---:|",
     ])
 
     for _, r in paired_df.iterrows():
@@ -389,9 +478,31 @@ def main():
             f"{r['p_value_ttest']} | {r['p_value_wilcoxon']} | {r['Statistically_Significant_p05']} |"
         )
 
+    # Bổ sung Bảng Báo cáo Độ chính xác Nhận diện Năm (CD2)
     md_lines.extend([
         "",
-        "## 3. Khảo sát Mô hình Embedding (Embedding Comparison Scope)",
+        "## 3. Báo cáo Độ chính xác Nhận diện Năm Tuyển sinh (CD2)",
+        "",
+        "> [!NOTE]",
+        "> Để loại bỏ hoàn toàn hiện tượng thổi phồng hiệu năng do lọc bằng nhãn Oracle (Feedback CD2), kịch bản đánh giá đã chuyển sang sử dụng trực tiếp kết quả phân tích thời gian thực từ `year_filter.analyze(query)`.",
+        "> Chế độ **Filter** phản ánh năng lực thực tế của toàn bộ pipeline khi nhận diện và lọc năm từ câu truy vấn.",
+        "",
+        f"- **Tổng số câu đánh giá:** {total_q}",
+        f"- **Độ chính xác nhận diện năm tổng thể:** {correct_q}/{total_q} (**{year_acc * 100:.2f}%**)",
+        f"- **Độ chính xác trên các câu có nhãn năm xác định:** {labeled_correct}/{labeled_total} (**{labeled_acc * 100:.2f}%**)",
+        "",
+        "| Năm (Ground Truth) | Số lượng câu (Support) | Nhận diện đúng | Độ chính xác |",
+        "|:---:|---:|---:|---:|",
+    ])
+
+    for y_str, y_info in by_year_stats.items():
+        md_lines.append(
+            f"| {y_str} | {y_info['support']} | {y_info['correct']} | {y_info['accuracy'] * 100:.2f}% |"
+        )
+
+    md_lines.extend([
+        "",
+        "## 4. Khảo sát Mô hình Embedding (Embedding Comparison Scope)",
         "",
         "> [!NOTE]",
         "**Minh bạch hóa phạm vi mô hình embedding:**",

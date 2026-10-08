@@ -1,0 +1,354 @@
+{
+  "tag": "dev",
+  "dataset": "backend/data/test/dev_questions.csv",
+  "total_evaluated": 301,
+  "correct_matches": 266,
+  "accuracy": 0.8837,
+  "labeled_total": 297,
+  "labeled_correct": 263,
+  "labeled_accuracy": 0.8855,
+  "by_year_breakdown": {
+    "2022": {
+      "support": 11,
+      "correct": 11,
+      "accuracy": 1.0
+    },
+    "2023": {
+      "support": 14,
+      "correct": 13,
+      "accuracy": 0.9286
+    },
+    "2024": {
+      "support": 14,
+      "correct": 13,
+      "accuracy": 0.9286
+    },
+    "2025": {
+      "support": 41,
+      "correct": 25,
+      "accuracy": 0.6098
+    },
+    "2026": {
+      "support": 215,
+      "correct": 199,
+      "accuracy": 0.9256
+    }
+  },
+  "mismatches": [
+    {
+      "id": 27,
+      "query": "Ngành Công nghệ thông tin lấy bao nhiêu điểm thế?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 81,
+      "query": "Em muốn biết ngành Kinh tế xây dựng lấy bao nhiêu điểm để chuẩn bị hồ sơ?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 82,
+      "query": "Điểm trúng tuyển ngành Quản lý hàng hải cao không trường?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 111,
+      "query": "Xét học bạ chương trình hợp tác ĐH Hàng hải Hàn Quốc yêu cầu bao nhiêu điểm?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 119,
+      "query": "Làm hồ sơ thi Tiến sĩ thì có bắt buộc phải nộp đề cương nghiên cứu không?",
+      "ground_truth_year": 2025,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "general_info",
+      "is_match": false
+    },
+    {
+      "id": 120,
+      "query": "Mỗi nghiên cứu sinh Tiến sĩ sẽ có bao nhiêu người hướng dẫn?",
+      "ground_truth_year": 2025,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "general_info",
+      "is_match": false
+    },
+    {
+      "id": 121,
+      "query": "Tổng thời gian tối đa để hoàn thành chương trình Tiến sĩ là bao nhiêu lâu?",
+      "ground_truth_year": 2025,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "general_info",
+      "is_match": false
+    },
+    {
+      "id": 123,
+      "query": "Lệ phí xét tuyển Tiến sĩ mình chuyển khoản vào tài khoản nào của trường?",
+      "ground_truth_year": 2025,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "tuition_fee",
+      "is_match": false
+    },
+    {
+      "id": 128,
+      "query": "Hệ Vừa học vừa làm có bắt phải thi lấy điểm đầu vào không?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 148,
+      "query": "Ngành Hệ thống thông tin quản lý lấy mấy điểm chuẩn ạ?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 175,
+      "query": "Muốn đăng ký học Tiến sĩ tại UTH thì cần có kinh nghiệm công tác bao nhiêu năm?",
+      "ground_truth_year": 2025,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "general_info",
+      "is_match": false
+    },
+    {
+      "id": 201,
+      "query": "Cho mình xin mã đăng ký ngành Khoa học hàng hải chuyên ngành Cơ điện tử năm 2026.",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "general_info",
+      "is_match": false
+    },
+    {
+      "id": 231,
+      "query": "Ngành Mạng máy tính và truyền thông dữ liệu của trường lấy điểm chuẩn bao nhiêu điểm?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 232,
+      "query": "Cho em xin điểm chuẩn của ngành Cơ điện tử ô tô với.",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 233,
+      "query": "Ngành Công nghệ kỹ thuật giao thông lấy điểm chuẩn bao nhiêu vậy ạ?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 238,
+      "query": "Ngành Quản lý xây dựng lấy điểm chuẩn bao nhiêu điểm ad?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 256,
+      "query": "Em tốt nghiệp đại học hạng giỏi ngành phù hợp thì có đủ điều kiện dự tuyển Tiến sĩ không ạ?",
+      "ground_truth_year": 2025,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "admission_condition",
+      "is_match": false
+    },
+    {
+      "id": 262,
+      "query": "Em học hệ liên thông của trường mình thì có được miễn phí hoàn toàn học phí không ạ?",
+      "ground_truth_year": 2024,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "tuition_fee",
+      "is_match": false
+    },
+    {
+      "id": 270,
+      "query": "Trường mình có chính sách gì khuyến khích hay ưu tiên cho cựu học sinh sinh viên UTH không ạ?",
+      "ground_truth_year": 2025,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "general_info",
+      "is_match": false
+    },
+    {
+      "id": 274,
+      "query": "Ngành Khai thác máy tàu thủy và quản lý kỹ thuật mã ngành 784010607 năm 2022 lấy điểm chuẩn thi tốt nghiệp là bao nhiêu ạ?",
+      "ground_truth_year": 2023,
+      "predicted_year": 2022,
+      "status": "proceed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 283,
+      "query": "Kỹ thuật điều khiển và tự động hóa điểm đỗ bao nhiêu?",
+      "ground_truth_year": null,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "general_info",
+      "is_match": false
+    },
+    {
+      "id": 296,
+      "query": "Em định nộp Thạc sĩ Quản lý xây dựng, tỷ lệ chọi năm nay có gắt không?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "refused",
+      "document_type": null,
+      "is_match": false
+    },
+    {
+      "id": 314,
+      "query": "Năm nay trường tuyển bao nhiêu Tiến sĩ ngành Kỹ thuật xây dựng công trình giao thông?",
+      "ground_truth_year": 2025,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "general_info",
+      "is_match": false
+    },
+    {
+      "id": 315,
+      "query": "Em dùng bằng tiếng Nhật để xét năng lực ngoại ngữ học Tiến sĩ thì cần bằng N mấy?",
+      "ground_truth_year": 2025,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "general_info",
+      "is_match": false
+    },
+    {
+      "id": 330,
+      "query": "Ngành Khai thác đường sắt tốc độ cao lấy bao nhiêu điểm vậy ad?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 365,
+      "query": "Đối tượng ưu tiên khi thi Thạc sĩ sẽ được cộng bao nhiêu điểm?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 367,
+      "query": "Em tốt nghiệp đại học loại giỏi xuất sắc thì học Tiến sĩ mất mấy năm?",
+      "ground_truth_year": 2025,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "general_info",
+      "is_match": false
+    },
+    {
+      "id": 382,
+      "query": "Điểm chuẩn ngành Kỹ thuật điện tử - viễn thông là bao nhiêu?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 384,
+      "query": "Mạng máy tính lấy bao nhiêu điểm đỗ ạ?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 411,
+      "query": "Người nước ngoài muốn đăng ký học Tiến sĩ bằng tiếng Việt thì cần chứng chỉ tiếng Việt cấp độ mấy?",
+      "ground_truth_year": 2025,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "general_info",
+      "is_match": false
+    },
+    {
+      "id": 412,
+      "query": "Công dân nước ngoài đăng ký Tiến sĩ ngoài chứng chỉ tiếng Việt thì có bắt buộc ngoại ngữ thứ hai không?",
+      "ground_truth_year": 2025,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "general_info",
+      "is_match": false
+    },
+    {
+      "id": 413,
+      "query": "Nộp hồ sơ xét Tiến sĩ thì em phải đến nộp trực tiếp tại trường hay đăng ký online?",
+      "ground_truth_year": 2025,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "application_profile",
+      "is_match": false
+    },
+    {
+      "id": 461,
+      "query": "Em cần link website để đăng ký xét duyệt hồ sơ Tiến sĩ.",
+      "ground_truth_year": 2025,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "general_info",
+      "is_match": false
+    },
+    {
+      "id": 462,
+      "query": "Em có bằng tiếng Pháp thì xét Tiến sĩ yêu cầu bằng loại nào?",
+      "ground_truth_year": 2025,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "general_info",
+      "is_match": false
+    },
+    {
+      "id": 463,
+      "query": "Em đã có bằng Thạc sĩ rồi thì thời gian học Tiến sĩ ở UTH là mấy năm?",
+      "ground_truth_year": 2025,
+      "predicted_year": 2026,
+      "status": "proceed",
+      "document_type": "general_info",
+      "is_match": false
+    }
+  ]
+}

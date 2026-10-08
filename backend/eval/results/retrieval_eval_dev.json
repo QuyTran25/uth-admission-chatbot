@@ -4,6 +4,41 @@
   "protocol": "canonical_mapped",
   "total_in_scope_evaluated": 301,
   "ssot_alpha": 0.6,
+  "year_detection": {
+    "total_evaluated": 301,
+    "correct_matches": 266,
+    "accuracy": 0.8837,
+    "labeled_total": 297,
+    "labeled_correct": 263,
+    "labeled_accuracy": 0.8855,
+    "by_year_breakdown": {
+      "2022": {
+        "support": 11,
+        "correct": 11,
+        "accuracy": 1.0
+      },
+      "2023": {
+        "support": 14,
+        "correct": 13,
+        "accuracy": 0.9286
+      },
+      "2024": {
+        "support": 14,
+        "correct": 13,
+        "accuracy": 0.9286
+      },
+      "2025": {
+        "support": 41,
+        "correct": 25,
+        "accuracy": 0.6098
+      },
+      "2026": {
+        "support": 215,
+        "correct": 199,
+        "accuracy": 0.9256
+      }
+    }
+  },
   "summary_metrics": [
     {
       "Mode": "No-Filter",
@@ -61,53 +96,53 @@
       "Mode": "Filter",
       "Method": "BM25",
       "N": 301,
-      "MRR": 0.4008,
-      "MRR_CI95": "[0.3550, 0.4504]",
-      "Recall@1": 0.2957,
-      "Recall@1_CI95": "[0.2425, 0.3488]",
-      "Recall@3": 0.4618,
+      "MRR": 0.401,
+      "MRR_CI95": "[0.3559, 0.4481]",
+      "Recall@1": 0.2924,
+      "Recall@1_CI95": "[0.2392, 0.3423]",
+      "Recall@3": 0.4684,
       "Recall@5": 0.5449,
-      "Recall@5_CI95": "[0.4884, 0.6013]",
+      "Recall@5_CI95": "[0.4917, 0.6013]",
       "Recall@10": 0.6545
     },
     {
       "Mode": "Filter",
       "Method": "Dense",
       "N": 301,
-      "MRR": 0.3258,
-      "MRR_CI95": "[0.2806, 0.3718]",
-      "Recall@1": 0.2359,
-      "Recall@1_CI95": "[0.1860, 0.2857]",
-      "Recall@3": 0.3821,
-      "Recall@5": 0.4385,
-      "Recall@5_CI95": "[0.3821, 0.4917]",
-      "Recall@10": 0.5349
+      "MRR": 0.3216,
+      "MRR_CI95": "[0.2769, 0.3666]",
+      "Recall@1": 0.2226,
+      "Recall@1_CI95": "[0.1728, 0.2691]",
+      "Recall@3": 0.3787,
+      "Recall@5": 0.4419,
+      "Recall@5_CI95": "[0.3887, 0.4950]",
+      "Recall@10": 0.5581
     },
     {
       "Mode": "Filter",
       "Method": "Hybrid_RRF",
       "N": 301,
-      "MRR": 0.426,
-      "MRR_CI95": "[0.3787, 0.4753]",
-      "Recall@1": 0.3422,
-      "Recall@1_CI95": "[0.2890, 0.3953]",
-      "Recall@3": 0.4551,
-      "Recall@5": 0.5349,
-      "Recall@5_CI95": "[0.4784, 0.5914]",
-      "Recall@10": 0.6478
+      "MRR": 0.4204,
+      "MRR_CI95": "[0.3731, 0.4685]",
+      "Recall@1": 0.3355,
+      "Recall@1_CI95": "[0.2857, 0.3887]",
+      "Recall@3": 0.4518,
+      "Recall@5": 0.5316,
+      "Recall@5_CI95": "[0.4750, 0.5880]",
+      "Recall@10": 0.6412
     },
     {
       "Mode": "Filter",
       "Method": "Hybrid_Weighted",
       "N": 301,
-      "MRR": 0.414,
-      "MRR_CI95": "[0.3688, 0.4644]",
-      "Recall@1": 0.3156,
-      "Recall@1_CI95": "[0.2625, 0.3688]",
-      "Recall@3": 0.4618,
-      "Recall@5": 0.5581,
-      "Recall@5_CI95": "[0.5017, 0.6146]",
-      "Recall@10": 0.6545
+      "MRR": 0.401,
+      "MRR_CI95": "[0.3538, 0.4493]",
+      "Recall@1": 0.299,
+      "Recall@1_CI95": "[0.2492, 0.3488]",
+      "Recall@3": 0.4551,
+      "Recall@5": 0.5449,
+      "Recall@5_CI95": "[0.4883, 0.6013]",
+      "Recall@10": 0.6445
     }
   ],
   "paired_tests": [
@@ -138,25 +173,25 @@
     {
       "Mode": "Filter",
       "Comparison": "Hybrid_Weighted vs Hybrid_RRF",
-      "Delta_MRR": -0.012,
-      "p_value_ttest": "0.2483",
-      "p_value_wilcoxon": "0.2682",
-      "Statistically_Significant_p05": "Không (p >= 0.05)"
+      "Delta_MRR": -0.0194,
+      "p_value_ttest": "0.0460",
+      "p_value_wilcoxon": "0.1117",
+      "Statistically_Significant_p05": "Có (p < 0.05)"
     },
     {
       "Mode": "Filter",
       "Comparison": "Hybrid_Weighted vs Dense",
-      "Delta_MRR": 0.0882,
-      "p_value_ttest": "7.0579e-10",
-      "p_value_wilcoxon": "5.1527e-11",
+      "Delta_MRR": 0.0794,
+      "p_value_ttest": "1.8272e-09",
+      "p_value_wilcoxon": "1.2171e-10",
       "Statistically_Significant_p05": "Có (p < 0.05)"
     },
     {
       "Mode": "Filter",
       "Comparison": "Hybrid_Weighted vs BM25",
-      "Delta_MRR": 0.0132,
-      "p_value_ttest": "0.4647",
-      "p_value_wilcoxon": "0.4878",
+      "Delta_MRR": -0.0001,
+      "p_value_ttest": "0.9961",
+      "p_value_wilcoxon": "0.9522",
       "Statistically_Significant_p05": "Không (p >= 0.05)"
     }
   ]

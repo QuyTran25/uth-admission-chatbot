@@ -6,6 +6,7 @@
 - **Quy chuẩn đối soát (Protocol):** `canonical_mapped`.
 - **Cấu hình Alpha SSoT:** `settings.DENSE_WEIGHT = 0.6` (Dense 0.6, BM25 0.4).
 - **Bootstrap Resampling:** 1,000 lần (Khoảng tin cậy 95% hai phía).
+- **Chế độ lọc năm (CD2):** Sử dụng thời gian thực từ `year_filter.analyze(query)` thay cho nhãn Oracle.
 
 ## 1. Bảng 5.1 Tái lập: Hiệu năng Retrieval kèm Bootstrap CI 95%
 
@@ -15,10 +16,10 @@
 | No-Filter | Dense | 0.2747 | [0.2327, 0.3153] | 0.1794 | [0.1362, 0.2226] | 0.3289 | 0.3920 | [0.3389, 0.4453] | 0.5050 |
 | No-Filter | Hybrid_RRF | 0.3800 | [0.3366, 0.4273] | 0.2824 | [0.2326, 0.3355] | 0.4319 | 0.5150 | [0.4618, 0.5681] | 0.6246 |
 | No-Filter | Hybrid_Weighted | 0.3611 | [0.3172, 0.4075] | 0.2625 | [0.2159, 0.3123] | 0.4153 | 0.5050 | [0.4518, 0.5615] | 0.6113 |
-| Filter | BM25 | 0.4008 | [0.3550, 0.4504] | 0.2957 | [0.2425, 0.3488] | 0.4618 | 0.5449 | [0.4884, 0.6013] | 0.6545 |
-| Filter | Dense | 0.3258 | [0.2806, 0.3718] | 0.2359 | [0.1860, 0.2857] | 0.3821 | 0.4385 | [0.3821, 0.4917] | 0.5349 |
-| Filter | Hybrid_RRF | 0.4260 | [0.3787, 0.4753] | 0.3422 | [0.2890, 0.3953] | 0.4551 | 0.5349 | [0.4784, 0.5914] | 0.6478 |
-| Filter | Hybrid_Weighted | 0.4140 | [0.3688, 0.4644] | 0.3156 | [0.2625, 0.3688] | 0.4618 | 0.5581 | [0.5017, 0.6146] | 0.6545 |
+| Filter | BM25 | 0.4010 | [0.3559, 0.4481] | 0.2924 | [0.2392, 0.3423] | 0.4684 | 0.5449 | [0.4917, 0.6013] | 0.6545 |
+| Filter | Dense | 0.3216 | [0.2769, 0.3666] | 0.2226 | [0.1728, 0.2691] | 0.3787 | 0.4419 | [0.3887, 0.4950] | 0.5581 |
+| Filter | Hybrid_RRF | 0.4204 | [0.3731, 0.4685] | 0.3355 | [0.2857, 0.3887] | 0.4518 | 0.5316 | [0.4750, 0.5880] | 0.6412 |
+| Filter | Hybrid_Weighted | 0.4010 | [0.3538, 0.4493] | 0.2990 | [0.2492, 0.3488] | 0.4551 | 0.5449 | [0.4883, 0.6013] | 0.6445 |
 
 ## 2. Kiểm định Thống kê So cặp (Paired Significance Testing)
 
@@ -29,11 +30,29 @@
 | No-Filter | Hybrid_Weighted vs Hybrid_RRF | -0.0189 | 0.0418 | 0.0597 | Có (p < 0.05) |
 | No-Filter | Hybrid_Weighted vs Dense | +0.0864 | 7.4409e-11 | 4.5783e-12 | Có (p < 0.05) |
 | No-Filter | Hybrid_Weighted vs BM25 | -0.0088 | 0.6160 | 0.5379 | Không (p >= 0.05) |
-| Filter | Hybrid_Weighted vs Hybrid_RRF | -0.0120 | 0.2483 | 0.2682 | Không (p >= 0.05) |
-| Filter | Hybrid_Weighted vs Dense | +0.0882 | 7.0579e-10 | 5.1527e-11 | Có (p < 0.05) |
-| Filter | Hybrid_Weighted vs BM25 | +0.0132 | 0.4647 | 0.4878 | Không (p >= 0.05) |
+| Filter | Hybrid_Weighted vs Hybrid_RRF | -0.0194 | 0.0460 | 0.1117 | Có (p < 0.05) |
+| Filter | Hybrid_Weighted vs Dense | +0.0794 | 1.8272e-09 | 1.2171e-10 | Có (p < 0.05) |
+| Filter | Hybrid_Weighted vs BM25 | -0.0001 | 0.9961 | 0.9522 | Không (p >= 0.05) |
 
-## 3. Khảo sát Mô hình Embedding (Embedding Comparison Scope)
+## 3. Báo cáo Độ chính xác Nhận diện Năm Tuyển sinh (CD2)
+
+> [!NOTE]
+> Để loại bỏ hoàn toàn hiện tượng thổi phồng hiệu năng do lọc bằng nhãn Oracle (Feedback CD2), kịch bản đánh giá đã chuyển sang sử dụng trực tiếp kết quả phân tích thời gian thực từ `year_filter.analyze(query)`.
+> Chế độ **Filter** phản ánh năng lực thực tế của toàn bộ pipeline khi nhận diện và lọc năm từ câu truy vấn.
+
+- **Tổng số câu đánh giá:** 301
+- **Độ chính xác nhận diện năm tổng thể:** 266/301 (**88.37%**)
+- **Độ chính xác trên các câu có nhãn năm xác định:** 263/297 (**88.55%**)
+
+| Năm (Ground Truth) | Số lượng câu (Support) | Nhận diện đúng | Độ chính xác |
+|:---:|---:|---:|---:|
+| 2022 | 11 | 11 | 100.00% |
+| 2023 | 14 | 13 | 92.86% |
+| 2024 | 14 | 13 | 92.86% |
+| 2025 | 41 | 25 | 60.98% |
+| 2026 | 215 | 199 | 92.56% |
+
+## 4. Khảo sát Mô hình Embedding (Embedding Comparison Scope)
 
 > [!NOTE]
 **Minh bạch hóa phạm vi mô hình embedding:**

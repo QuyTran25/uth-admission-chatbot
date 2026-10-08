@@ -1,0 +1,102 @@
+{
+  "tag": "locked",
+  "dataset": "backend/data/test/test_questions_locked.csv",
+  "total_evaluated": 78,
+  "correct_matches": 71,
+  "accuracy": 0.9103,
+  "labeled_total": 78,
+  "labeled_correct": 71,
+  "labeled_accuracy": 0.9103,
+  "by_year_breakdown": {
+    "2022": {
+      "support": 2,
+      "correct": 2,
+      "accuracy": 1.0
+    },
+    "2023": {
+      "support": 5,
+      "correct": 5,
+      "accuracy": 1.0
+    },
+    "2024": {
+      "support": 5,
+      "correct": 5,
+      "accuracy": 1.0
+    },
+    "2025": {
+      "support": 8,
+      "correct": 8,
+      "accuracy": 1.0
+    },
+    "2026": {
+      "support": 57,
+      "correct": 50,
+      "accuracy": 0.8772
+    }
+  },
+  "mismatches": [
+    {
+      "id": 3,
+      "query": "Điểm xét tuyển theo phương thức kết hợp được tính như thế nào?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 8,
+      "query": "Thí sinh cần đạt IELTS bao nhiêu để được cộng điểm xét tuyển?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 27,
+      "query": "Cho em hỏi mức điểm trúng tuyển ngành Công nghệ thông tin là bao nhiêu?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 45,
+      "query": "Thời gian đào tạo liên thông từ trung cấp lên đại học tại trường là bao nhiêu năm?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "training_program",
+      "is_match": false
+    },
+    {
+      "id": 54,
+      "query": "Thí sinh cần đáp ứng những điều kiện gì để được cộng điểm xét tuyển thông qua thư giới thiệu của Hiệu trưởng?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 81,
+      "query": "Ngành Kinh tế xây dựng có mức điểm chuẩn bao nhiêu để em chuẩn bị đăng ký xét tuyển?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    },
+    {
+      "id": 82,
+      "query": "Điểm chuẩn xét tuyển vào ngành Quản lý hàng hải của trường là bao nhiêu?",
+      "ground_truth_year": 2026,
+      "predicted_year": null,
+      "status": "clarification_needed",
+      "document_type": "cutoff_score",
+      "is_match": false
+    }
+  ]
+}
